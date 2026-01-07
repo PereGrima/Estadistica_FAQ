@@ -1,24 +1,60 @@
 project:
   type: book
   output-dir: docs
+lang: es
 
 book:
   title: "Estadística. Preguntas frecuentes"
-  author: "Norah Jones"
-  date: "6/1/2026"
+  subtitle: "Para estudiantes, curiosos y público en general"
+  author: "Roberto Behar, Pere Grima"
+  date: today
+  date-format: medium
+  cover-image: cover.jpg
+  site-url: https://peregrima.github.io/Estadistica_FAQ/
+  
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - Prologo_1E.qmd
+    
+    - part: 01_Estadistica_EsNoEs.qmd
+      chapters: 
+    - 0101_Estadistica_Matematicas.qmd
+    - 0102_Probabilidades_Estadistica.qmd
+    - 0103_Que_es_Estadistica
+    - 0104_DataScience
+    
+    - part: 02_Estadistica_Descriptiva.qmd
+      chapters: 
+    - 0201 Mediana.qmd
+    - 0202_Media_geometrica.qmd
+        
     - references.qmd
 
-bibliography: references.bib
+# Referencias
+biblio-title: "Referencias"
+link-citations: true
+link-bibliography: true
+cite-method: citeproc         # Solo PDF
+biblio-style: 'authoryear'    # Solo PDF
+citations-hover: true         # Solo HTML
+bibliography: references.bib 
+
+# Fuentes ----------------------------
+mainfont: Calibri
+monofont: Verdana
+mathfont: CambriaMath
+fontfamily: baskervald    # -> Solo en PDF
+fontsize: 13pt
+# systemfonts::system_fonts(): Lista de fuentes disponibles en el ordenador.
+
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
+    code-fold: true
+    css: styles.css
+    header-includes:
+      <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
   pdf:
     documentclass: scrreprt
 
