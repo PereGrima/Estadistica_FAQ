@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "Estadística. Preguntas frecuentes",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "PRESENTACIÓN\nTodo esto son pruebas.\nDe qué va este libro\nQué pretende\nCuales son sus peculiaridades\nA quien va dirigido. Lo empezamos a escribir pensando en los profesores de enseñanza secundaria, con la idea de dar una visión general de la estadística, más amplia de la que ellos deben enseñar, que les diera perspectiva y seguridad transmitiendo las ideas clave que deben quedar en los alumnos, evitando planteamientos o enfoques exclusivamente matemáticos.\nAlgunas ideas clave:\n\nDistinguir el conocimiento basado en tradiciones, suposiciones o en el “siempre se ha considerado así” del conocimiento científico basado en datos.\nRecoger datos con la calidad y la representatividad requerida no es fácil. Conviene conocer algunas ideas clave a este respecto.\nLa información que contienen los datos se puede dar con medidas estadísticas o con representaciones gráficas.\nLos datos siempre están afectados por una cierta variabilidad aleatoria. Hay técnicas para separar la señal del ruido. Tan malo es perderse la señan como sobreinterpretar el ruido.\n\nAunque el contenido de este texto es de un nivel más básico que el habitual de los cursos generales de estadística que se imparten en muchos grados universitarios, creemos que si se entienden y se interiorizan estas ideas podemos considerar que se han cumplido los objetivos que se plantean en estos cursos.\n\nTodos los datos que se usan están aquí\n\nLicencia\n\nLA PORTADA ES DE OTRO LIBRO. Solo para ver como queda.",
     "crumbs": [
-      "Preface"
+      "PRESENTACIÓN"
     ]
   },
   {
@@ -37,6 +37,82 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "Prologo_1E.html",
+    "href": "Prologo_1E.html",
+    "title": "Prólogo a la primera edición",
+    "section": "",
+    "text": "Estoy haciendo pruebas.\n\nEstadística y matemáticas\ntexto\n\n\nEstadística y probabilidad\ntexto\n\n\nEstadística y Data Science\ntexto",
+    "crumbs": [
+      "Prólogo a la primera edición"
+    ]
+  },
+  {
+    "objectID": "0101_Estadistica_Matematicas.html",
+    "href": "0101_Estadistica_Matematicas.html",
+    "title": "¿Qué es la estadística?",
+    "section": "",
+    "text": "Estoy haciendo pruebas.\n\nEstadística y matemáticas\ntexto\n\n\nEstadística y probabilidad\ntexto\n\n\nEstadística y Data Science\ntexto",
+    "crumbs": [
+      "Estadística. Lo que es y lo que no es",
+      "¿Qué es la estadística?"
+    ]
+  },
+  {
+    "objectID": "0102_Probabilidad_Estadistica.html",
+    "href": "0102_Probabilidad_Estadistica.html",
+    "title": "¿Qué es la estadística?",
+    "section": "",
+    "text": "Estoy haciendo pruebas.\n\nEstadística y matemáticas\ntexto\n\n\nEstadística y probabilidad\ntexto\n\n\nEstadística y Data Science\ntexto",
+    "crumbs": [
+      "Estadística. Lo que es y lo que no es",
+      "¿Qué es la estadística?"
+    ]
+  },
+  {
+    "objectID": "0103_Que_es_Estadistica.html",
+    "href": "0103_Que_es_Estadistica.html",
+    "title": "¿Qué es la estadística?",
+    "section": "",
+    "text": "Estoy haciendo pruebas.\n\nEstadística y matemáticas\ntexto\n\n\nEstadística y probabilidad\ntexto\n\n\nEstadística y Data Science\ntexto",
+    "crumbs": [
+      "01_Estadistica_EsNoEs.qmd",
+      "¿Qué es la estadística?"
+    ]
+  },
+  {
+    "objectID": "0104_DataScience.html",
+    "href": "0104_DataScience.html",
+    "title": "¿Qué es la estadística?",
+    "section": "",
+    "text": "Estoy haciendo pruebas.\n\nEstadística y matemáticas\ntexto\n\n\nEstadística y probabilidad\ntexto\n\n\nEstadística y Data Science\ntexto",
+    "crumbs": [
+      "01_Estadistica_EsNoEs.qmd",
+      "¿Qué es la estadística?"
+    ]
+  },
+  {
+    "objectID": "0201_Mediana.html",
+    "href": "0201_Mediana.html",
+    "title": "¿Qué es la estadística?",
+    "section": "",
+    "text": "Estoy haciendo pruebas.\n\nEstadística y matemáticas\ntexto\n\n\nEstadística y probabilidad\ntexto\n\n\nEstadística y Data Science\ntexto",
+    "crumbs": [
+      "02_Estadistica_Descriptiva.qmd",
+      "¿Qué es la estadística?"
+    ]
+  },
+  {
+    "objectID": "0202_Media_geometrica.html",
+    "href": "0202_Media_geometrica.html",
+    "title": "¿Qué es la estadística?",
+    "section": "",
+    "text": "Estoy haciendo pruebas.\n\nEstadística y matemáticas\ntexto\n\n\nEstadística y probabilidad\ntexto\n\n\nEstadística y Data Science\ntexto",
+    "crumbs": [
+      "02_Estadistica_Descriptiva.qmd",
+      "¿Qué es la estadística?"
     ]
   }
 ]
