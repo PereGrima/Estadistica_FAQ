@@ -4,7 +4,22 @@ Respondemos a preguntas que pueden surgir en un curso general de estadística. T
 
 Es el resultado de nuestra experienca moviéndonos en este terreno y esperamos que sea útil a estudiantes, profesores que empiezan, e intersados por la estadística en general. Cualquier comentario o sugerencia será bienvenido.
 
-Este sitio web es y siempre será gratuito, con licencia CC BY-NC-ND 4.0. Si desea una copia física del libro, puede solicitarla en Amazon.
+El libro físico se puede comprar en [Amazon.es](https://amzn.eu/d/hGbwqAH "Amazon.es") o [Amazon.com](https://www.amazon.com/dp/B09SL18YRT "Comprar en Amazon.com"). Está impreso en color, encuadernado con tapa blanda e incluye prólogo, índices y referencias.
+
+### Libro impreso
+
+Se puede comprar en [Amazon.es](https://amzn.eu/d/hGbwqAH "Amazon.es") o [Amazon.com](https://www.amazon.com/dp/B09SL18YRT "Comprar en Amazon.com"). Está impreso en color, encuadernado con tapa blanda e incluye prólogo, índices y referencias.
+
+### Autores
+
+Roberto Behar
+
+Pere Grima
+
+### Licencia
+
+Se publica bajo una licencia Creative Commons: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es "Licencia Creative Commons").
+
 
 ------------------------------------------------------------------------
 
