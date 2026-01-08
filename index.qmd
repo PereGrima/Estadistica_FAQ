@@ -4,7 +4,7 @@ Respondemos a preguntas que pueden surgir en un curso general de estadística. T
 
 Es el resultado de nuestra experienca moviéndonos en este terreno y esperamos que sea útil a estudiantes, profesores que empiezan, e intersados por la estadística en general. Cualquier comentario o sugerencia será bienvenido.
 
-Versión 3.0 (Marzo de 2026)
+Versión 4.0 (Marzo de 2026)
 
 ### Autores
 
