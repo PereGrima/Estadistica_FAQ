@@ -3,7 +3,12 @@
 .figure-caption {
   text-align: center;
 }
+
 .poco-espacio p {
  margin-top: 0;
  margin-bottom: 0.2em;
+}
+
+.lista-compacta ul li {
+  margin-bottom: 0.2em;
 }

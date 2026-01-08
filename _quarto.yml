@@ -14,7 +14,6 @@ book:
   
   chapters:
     - index.qmd
-    - Prologo_1E.qmd
     
     - part: Estadística. Lo que es y lo que no es
       chapters: 
@@ -29,20 +28,20 @@ book:
         - 0202_Media_geometrica.qmd
 
 # Referencias
-biblio-title: "Referencias"
-link-citations: true
-link-bibliography: true
-cite-method: citeproc         # Solo PDF
-biblio-style: 'authoryear'    # Solo PDF
-citations-hover: true         # Solo HTML
-bibliography: references.bib 
+# biblio-title: "Referencias"
+# link-citations: true
+# link-bibliography: true
+# cite-method: citeproc         # Solo PDF
+# biblio-style: 'authoryear'    # Solo PDF
+# citations-hover: true         # Solo HTML
+# bibliography: references.bib 
 
 # Fuentes ----------------------------
 mainfont: Calibri
 monofont: Verdana
 mathfont: CambriaMath
 fontfamily: baskervald    # -> Solo en PDF
-fontsize: 13pt
+fontsize: 14pt
 # systemfonts::system_fonts(): Lista de fuentes disponibles en el ordenador.
 
 
@@ -53,8 +52,6 @@ format:
     css: styles.css
     header-includes:
       <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
-  pdf:
-    documentclass: scrreprt
 
 editor: visual
 
