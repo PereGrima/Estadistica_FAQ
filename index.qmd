@@ -8,9 +8,11 @@ Versión 3.0 (Marzo de 2026)
 
 ### Autores
 
+::: {.poco-espacio}
 [Roberto Behar](https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez), profesor en la Universidad del Valle, en Cali, Colombia.
 
-[Pere Grima](https://www-eio.upc.es/~grima/index.html), profesor en la Universitat Politècnica de Catalunya-BarcelonaTech en Barcelona, España
+[Pere Grima](https://www-eio.upc.es/~grima/index.html), profesor en la Universitat Politècnica de Catalunya, en Barcelona, España
+:::
 
 ### Libro impreso
 
