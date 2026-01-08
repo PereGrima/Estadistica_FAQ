@@ -1,35 +1,13 @@
 # PRESENTACIÓN {.unnumbered}
 
-**Todo esto son pruebas.**
+Respondemos a preguntas que pueden surgir en un curso general de estadística. Tratan sobre el material del curso y también sobre temas que pueden aparecer en discusiones sobre lo que es la estadística, sus dificultades y sus aplicaciones.
 
-De qué va este libro
+Es el resultado de nuestra experienca moviéndonos en este terreno y esperamos que sea útil a estudiantes, profesores que empiezan, e intersados por la estadística en general. Cualquier comentario o sugerencia será bienvenido.
 
-Qué pretende
-
-Cuales son sus peculiaridades
-
-A quien va dirigido. Lo empezamos a escribir pensando en los profesores de enseñanza secundaria, con la idea de dar una visión general de la estadística, más amplia de la que ellos deben enseñar, que les diera perspectiva y seguridad transmitiendo las ideas clave que deben quedar en los alumnos, evitando planteamientos o enfoques exclusivamente matemáticos.
-
-Algunas ideas clave:
-
--   Distinguir el conocimiento basado en tradiciones, suposiciones o en el "siempre se ha considerado así" del conocimiento científico basado en datos.
-
--   Recoger datos con la calidad y la representatividad requerida no es fácil. Conviene conocer algunas ideas clave a este respecto.
-
--   La información que contienen los datos se puede dar con medidas estadísticas o con representaciones gráficas.
-
--   Los datos siempre están afectados por una cierta variabilidad aleatoria. Hay técnicas para separar la señal del ruido. Tan malo es perderse la señan como sobreinterpretar el ruido.
-
-Aunque el contenido de este texto es de un nivel más básico que el habitual de los cursos generales de estadística que se imparten en muchos grados universitarios, creemos que si se entienden y se interiorizan estas ideas podemos considerar que se han cumplido los objetivos que se plantean en estos cursos.
-
-------------------------------------------------------------------------
-
-Todos los datos que se usan están aquí
+Este sitio web es y siempre será gratuito, con licencia CC BY-NC-ND 4.0. Si desea una copia física del libro, puede solicitarla en Amazon.
 
 ------------------------------------------------------------------------
 
 Licencia
 
 ------------------------------------------------------------------------
-
-*LA PORTADA ES DE OTRO LIBRO.* Solo para ver como queda.
