@@ -9,26 +9,24 @@ book:
   author: "Roberto Behar, Pere Grima"
   date: today
   date-format: medium
-  cover-image: cover.jpg
+  #cover-image: cover.jpg
   site-url: https://peregrima.github.io/Estadistica_FAQ/
   
   chapters:
     - index.qmd
     - Prologo_1E.qmd
     
-    - part: 01_Estadistica_EsNoEs.qmd
+    - part: Estadística. Lo que es y lo que no es
       chapters: 
-    - 0101_Estadistica_Matematicas.qmd
-    - 0102_Probabilidades_Estadistica.qmd
-    - 0103_Que_es_Estadistica
-    - 0104_DataScience
+        - 0101_Estadistica_Matematicas.qmd
+        - 0102_Probabilidad_Estadistica.qmd
+        - 0103_Que_es_Estadistica.qmd
+        - 0104_DataScience.qmd
     
     - part: 02_Estadistica_Descriptiva.qmd
       chapters: 
-    - 0201 Mediana.qmd
-    - 0202_Media_geometrica.qmd
-        
-    - references.qmd
+        - 0201_Mediana.qmd
+        - 0202_Media_geometrica.qmd
 
 # Referencias
 biblio-title: "Referencias"
@@ -52,7 +50,7 @@ format:
   html:
     theme: cosmo
     code-fold: true
-    css: styles.css
+    #css: styles.css
     header-includes:
       <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
   pdf:
