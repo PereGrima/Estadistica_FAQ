@@ -4,17 +4,18 @@ Respondemos a preguntas que pueden surgir en un curso general de estadística. T
 
 Es el resultado de nuestra experienca moviéndonos en este terreno y esperamos que sea útil a estudiantes, profesores que empiezan, e intersados por la estadística en general. Cualquier comentario o sugerencia será bienvenido.
 
+Versión 3.0 (Marzo de 2026)
+
+### Autores
+
+[Roberto Behar](https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez), profesor en la Universidad del Valle, en Cali, Colombia.
+
+[Pere Grima](https://www-eio.upc.es/~grima/index.html), profesor en la Universitat Politècnica de Catalunya-BarcelonaTech en Barcelona, España
+
 ### Libro impreso
 
 Se puede comprar en [Amazon.es](https://amzn.eu/d/hGbwqAH "Amazon.es") o [Amazon.com](https://www.amazon.com/dp/B09SL18YRT "Comprar en Amazon.com"). Está impreso en color, encuadernado con tapa blanda e incluye prólogo, índices y referencias.
 
-### Autores
-
-Roberto Behar
-
-Pere Grima
-
 ### Licencia
 
 Se publica bajo una licencia Creative Commons: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es "Licencia Creative Commons").
-
