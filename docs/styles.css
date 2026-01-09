@@ -12,3 +12,7 @@
 .lista-compacta ul li {
   margin-bottom: 0.2em;
 }
+
+.center-text {
+  text-align: center;
+}

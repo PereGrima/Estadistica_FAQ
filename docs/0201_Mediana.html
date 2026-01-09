@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>¿Qué es la estadística? – Estadística. Preguntas frecuentes</title>
+<title>¿Para qué sirve la mediana si ya tenemos la media aritmética? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">02_Estadistica_Descriptiva.qmd</a></li><li class="breadcrumb-item"><a href="./0201_Mediana.html">¿Qué es la estadística?</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">02_Estadistica_Descriptiva.qmd</a></li><li class="breadcrumb-item"><a href="./0201_Mediana.html">¿Para qué sirve la mediana si ya tenemos la media aritmética?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -163,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0201_Mediana.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">¿Qué es la estadística?</span></a>
+ <span class="menu-text">¿Para qué sirve la mediana si ya tenemos la media aritmética?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -179,23 +179,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#estadística-y-matemáticas" id="toc-estadística-y-matemáticas" class="nav-link active" data-scroll-target="#estadística-y-matemáticas">Estadística y matemáticas</a></li>
-  <li><a href="#estadística-y-probabilidad" id="toc-estadística-y-probabilidad" class="nav-link" data-scroll-target="#estadística-y-probabilidad">Estadística y probabilidad</a></li>
-  <li><a href="#estadística-y-data-science" id="toc-estadística-y-data-science" class="nav-link" data-scroll-target="#estadística-y-data-science">Estadística y <em>Data Science</em></a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">02_Estadistica_Descriptiva.qmd</a></li><li class="breadcrumb-item"><a href="./0201_Mediana.html">¿Qué es la estadística?</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">02_Estadistica_Descriptiva.qmd</a></li><li class="breadcrumb-item"><a href="./0201_Mediana.html">¿Para qué sirve la mediana si ya tenemos la media aritmética?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">¿Qué es la estadística?</h1>
+<h1 class="title">¿Para qué sirve la mediana si ya tenemos la media aritmética?</h1>
 </div>
 
 
@@ -212,21 +204,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Estoy haciendo pruebas.</p>
-<section id="estadística-y-matemáticas" class="level3">
-<h3 class="anchored" data-anchor-id="estadística-y-matemáticas">Estadística y matemáticas</h3>
-<p>texto</p>
-</section>
-<section id="estadística-y-probabilidad" class="level3">
-<h3 class="anchored" data-anchor-id="estadística-y-probabilidad">Estadística y probabilidad</h3>
-<p>texto</p>
-</section>
-<section id="estadística-y-data-science" class="level3">
-<h3 class="anchored" data-anchor-id="estadística-y-data-science">Estadística y <em>Data Science</em></h3>
-<p>texto</p>
+<p>La media aritmética es una excelente medida de tendencia central, muy usada y también muy apreciada, a veces demasiado, como cuando se pretende resumir en ella toda la información que contienen los datos. La mediana tiene unas propiedades de las que carece la media, por lo que es un buen complemento informativo e incluso puede ser una medida más útil en algunos casos. Vamos a ver estas propiedades.</p>
+<ul>
+<li>Es más robusta que la media frente a la presencia de anomalías. Supongamos que nuestros datos son:</li>
+</ul>
+<div class="center">
+<p>2; 5; 6; 7 y 9</p>
+</div>
+<p>La media es 5,6 y la mediana es 6. Si al introducir los datos al ordenador nos equivocamos y en último lugar en vez de 9 introducimos 99, la media pasa a ser 23,8 mientras que la mediana sigue siendo 6. ```</p>
+<ul>
+<li>Por su propia definición, la mediana deja un 50% de las observaciones por debajo y otro 50% por encima y esto le da unas ventajas que la media no tiene. Si queremos saber si en nuestra empresa estamos entre los que cobran más o entre los que cobran menos, debemos comparar nuestro salario con la mediana, no con la media. Si sólo hay 10 trabajadores y los salarios son (en las unidades que corresponda):</li>
+</ul>
+<div class="center">
+<p>0,8; 0,8; 0,9; 0,9; 1,0; 1,0; 1,1; 1,1; 1,2 y 10</p>
+</div>
+<p>todos menos uno (en este caso el 90%) están por debajo de la media, que es 1,88. Esto no pasa nunca con la mediana: si estamos por encima de la mediana, estamos con el 50% de los que más cobran. Otro ejemplo. Si en un examen las notas van de 0 a 10 y se aprueba sacando una nota igual o superior a 5, si la nota media es 5 no sabemos cuántos han aprobado. Si se han examinado 50 estudiantes, puede ser que 41 hayan suspendido con un 4; 8 hayan sacado un 10 y uno haya obtenido un 6. Esto da media 5, aunque el 82% ha suspendido. Si la mediana es 5, seguro que la mitad han aprobado.</p>
+<p>Si la distribución de los datos es simétrica, la media y la mediana coinciden y entonces todo son ventajas. En una distribución Normal la media y la mediana son iguales, por tanto, si los valores que tenemos provienen de una Normal, la media y la mediana no andarán muy lejos una de otra. En cualquier caso, siempre podemos calcular las dos y aprovechar lo mejor de cada una.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

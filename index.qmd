@@ -8,7 +8,7 @@ Versión 4.0 (Marzo de 2026)
 
 ### Autores
 
-::: {.poco-espacio}
+::: poco-espacio
 [Roberto Behar](https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez), profesor en la Universidad del Valle, en Cali, Colombia.
 
 [Pere Grima](https://www-eio.upc.es/~grima/index.html), profesor en la Universitat Politècnica de Catalunya, en Barcelona, España
