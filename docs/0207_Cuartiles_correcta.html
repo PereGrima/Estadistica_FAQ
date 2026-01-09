@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-edfe04249fbec06fcfc51cecdef6f4b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2cf3c65c5b6db5ec86e992953759863e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -264,7 +293,107 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>texto</p>
+<p>Existen diferentes criterios para determinar los valores de los cuartiles y no todos dan el mismo resultado. Veamos algunos ejemplos.</p>
+<p><strong>John Tukey</strong>, creador de los boxplots, identifica los cuartiles buscando las medianas de los valores que quedan por encima y por debajo de la mediana global. En la determinación de las medianas de cada mitad de datos incluye la mediana global si el número de datos es impar, pero no la incluye si es par. Por ejemplo, para los datos 2, 4, 6, 8 y 10 (número impar) tenemos:</p>
+<div class="fig-compacta">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="02_Fig_Descriptiva/0701_Cuartiles_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+<p>Y si los datos son 2, 4, 6, y 8 (número par):</p>
+<div class="fig-compacta">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="02_Fig_Descriptiva/0702_Cuartiles_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+<p><strong>David Moore y George McCabe</strong> en su libro “Introduction to the Practice of Statistics”, muy valorado por su carácter pedagógico e innovador, proponen un método similar al de Tukey pero sin incluir la mediana global en la determinación de las medianas de cada una de las mitades. Cuando el número de datos es par el valor de los cuartiles coincide con el método de Tukey, pero en general no coincide cuando el número de datos es impar.</p>
+<div class="fig-compacta">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="02_Fig_Descriptiva/0703_Cuartiles_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+<p>El paquete de software estadístico <strong>Minitab</strong> utiliza las expresiones <span class="math inline">\(0,25(n+1)\)</span> y <span class="math inline">\(0,75(n+1)\)</span> para determinar las posiciones de <span class="math inline">\(Q_1\)</span> y <span class="math inline">\(Q_3\)</span> respectivamente. Si la posición obtenida para <span class="math inline">\(Q_1\)</span> es, por ejemplo, 1,25, su valor estará comprendido entre <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span> interpolando de la forma: <span class="math inline">\(Q_1 = x_1 + 0,25(x_2-x_1)\)</span>. Utilizando los mismos datos que en los ejemplos anteriores resultaaa:</p>
+<p><span class="math inline">\(\bullet \;\)</span> Datos: 2, 4, 6, 8, 10 <br> Posición de <span class="math inline">\(Q_1\)</span>: <span class="math inline">\(\;0.25 \cdot 6 = 1.5\)</span>; <span class="math inline">\(\;\)</span> Valor de <span class="math inline">\(Q_1\)</span>: <span class="math inline">\(\; 2  +0.5(4-2) = 3\)</span> <br> Posición de <span class="math inline">\(Q_3\)</span>: $;0.75 = 4.5); <span class="math inline">\(\;\)</span> Valor de <span class="math inline">\(Q_3\)</span>: <span class="math inline">\(\; 8 + 0.5(10-8) = 9\)</span></p>
+<p><span class="math inline">\(\bullet \;\)</span> Datos: 2, 4, 6, 8 <br> Posición <span class="math inline">\(Q_1\)</span>: <span class="math inline">\(\;0.25 \cdot 5 = 1.25)\)</span>; <span class="math inline">\(\;\)</span> Valor <span class="math inline">\(Q_1\)</span>: <span class="math inline">\(\; 2 + 0.25(4-2) = 2.5)\)</span> <br> Posición <span class="math inline">\(Q_3\)</span>: <span class="math inline">\(\;0.75 \cdot 5 = 3.75)\)</span>; <span class="math inline">\(\;\)</span> Valor <span class="math inline">\(Q_3\)</span>: <span class="math inline">\(\; 6 + 0.75(8-6) = 7.5)\)</span></p>
+<p><strong>Excel</strong> dispone de la función CUARTIL que identifica la posición de los cuartiles mediante las expresiones: <span class="math inline">\(0.25(n-1)+1\)</span> y <span class="math inline">\(0.75(n-1)+1\)</span> y los calcula interpolando igual que hace Minitab. Seguramente no satisfechos con su forma de identificar los cuartiles, en las últimas versiones se ha mantenido esa función (se indica que por compatibilidad con versiones anteriores) y se han añadido:</p>
+<div class="lista-compacta">
+<ul>
+<li>CUARTIL.INC: Coincide con la función CUARTIL.</li>
+<li>CUARTIL.EXC: Identifica los cuartiles de la misma forma que Minitab.</li>
+</ul>
+</div>
+<p>En la figura <a href="#fig-cuartilesExcel" class="quarto-xref"><span>1</span></a> se muestran los cuartiles de nuestros datos con las funciones de Excel (versión 2019).</p>
+<div id="fig-cuartilesExcel" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cuartilesExcel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/0704_Cuartiles_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cuartilesExcel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Cálculo de los cuartiles con Excel
+</figcaption>
+</figure>
+</div>
+<p>En resumen, los valores obtenidos con los métodos comentados han sido:</p>
+<!-- ```{=html} -->
+<!-- <h8> -->
+<!-- <table> -->
+<!--     <tr style="border-bottom:0.5px solid grey"> -->
+<!--         <TD style="vertical-align: middle"> Método</TD> -->
+<!--         <TD ALIGN=center COLSPAN=2 >&nbsp &nbsp Datos: 2, 4, 6, 8 &nbsp &nbsp &nbsp &nbsp <br> Q <sub> 1 </sub> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Q<sub> 3 </sub> </TD> -->
+<!--         <TD ALIGN=center COLSPAN=2>Datos: 2, 4, 6, 8, 10 <br> Q<sub> 1 </sub> &nbsp &nbsp &nbsp &nbsp &nbsp Q<sub> 3 </sub></TD> -->
+<!--     </TR> -->
+<!--     <TR >    -->
+<!--     <TD>Tukey <br> Moore y McCabe <br> Minitab <br> Excel, CUARTIL.INC <br> Excel, CUARTIL.INC </TD>  -->
+<!--     <TD ALIGN=center> 3 <br> 3 <br> 2.5 <br> 3.5 <br> 2.5 </TD>  -->
+<!--     <TD ALIGN=center> 7 <br> 7 <br> 7.5 <br> 6.5 <br> 7.5 </TD>    -->
+<!--     <TD ALIGN=center> 4 <br> 3 <br> 3 <br> 4 <br> 3 </TD>  -->
+<!--     <TD ALIGN=center> 8 <br> 9 <br> 9 <br> 8 <br> 9 </TD> -->
+<!--     </TR> -->
+<!-- </table> -->
+<!-- </h8>  -->
+<!-- ``` -->
+<h6 class="anchored">
+<hr><table width="500" cellpadding="1" class="center" style="margin: 0 auto;">
+<tbody><tr><td colspan="100%"></td>
+    </tr><tr>
+        <td style="vertical-align: middle"> Método</td>
+        <td align="center" colspan="2"> Datos: 2, 4, 6, 8  <br> Q <sub> 1 </sub>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Q<sub> 3 </sub> </td>
+        <td align="center" colspan="2">Datos: 2, 4, 6, 8, 10 <br> Q<sub> 1 </sub>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Q<sub> 3 </sub></td>
+        
+    </tr>
+    
+    <tr> 
+    <td>Tukey <br> Moore y McCabe <br> Minitab <br> Excel, CUARTIL.INC <br> Excel, CUARTIL.INC </td> 
+    <td align="center"> 3 <br> 3 <br> 2.5 <br> 3.5 <br> 2.5 </td> 
+    <td align="center"> 7 <br> 7 <br> 7.5 <br> 6.5 <br> 7.5 </td> 
+    <td align="center"> &nbsp; &nbsp; &nbsp;  4 <br> &nbsp; 3 <br> &nbsp; 3 <br> &nbsp; 4 <br> &nbsp; 3  </td> 
+    <td align="center"> 8 &nbsp; &nbsp; &nbsp; <br> 9 <br> 9 <br> 8 <br> 9 </td>
+    </tr>
+</tbody></table>
+</h6>
+<!-- \vspace{0.4cm} -->
+<!-- {\small -->
+<!-- \begin{center} -->
+<!--    \begin{tabular}{ lccccc } \hline -->
+<!--        \multirow{2}{3em}{Método} & \multicolumn{2}{l}{Datos: 2, 4, 6, 8} & &  \multicolumn{2}{c}{Datos: 2, 4, 6, 8, 10} \\ -->
+<!--         & \(\;\;\;\;Q_1\) & \(Q_3\) & \(\;\) & \(\;\;\;\;\;\;\;\;Q_1\) & \(Q_3\) \\ -->
+<!--        \hline -->
+<!--        Tukey & \(\;\;\) 3 & 7 & & \(\;\;\;\;\;\;\) 4 & 8 \\  -->
+<!--        Moore y McCabe \(\;\;\;\) & \(\;\;\) 3 & 7 & & \(\;\;\;\;\;\;\) 3 & 9 \\  -->
+<!--        Minitab & \(\;\;\) 2,5 & 7,5 & &\(\;\;\;\;\;\;\) 3 & 9 \\ -->
+<!--        Excel, CUARTIL.INC &\(\;\;\) 3,5 & 6,5 & & \(\;\;\;\;\;\;\) 4 & 8 \\ -->
+<!--        Excel, CUARTIL.EXC &\(\;\;\) 2,5 & 7,5 & & \(\;\;\;\;\;\;\) 3 & 9 \\ -->
+<!--        \hline  -->
+<!--    \end{tabular} -->
+<!-- \end{center}}  -->
+<!-- \vspace{0.4cm} -->
+<p>¿Qué método es el correcto? ¿Cuál debemos utilizar? <strong>En la práctica no importa demasiado</strong>. Solo se está interesado en conocer los cuartiles cuando el conjunto de datos es grande (nunca si tenemos solo 4 o 5 datos) y en este caso las diferencias entre los distintos métodos no son relevantes. Por ejemplo, si tenemos 500 valores, la posición del primer cuartil con el método de Minitab es 125,25 y con la función CUARTIL.INC de Excel es 125,75. Como habrá poca diferencia entre los valores que ocupan las posiciones 125 y 126, la diferencia en el valor del cuartil no será relevante.</p>
 
 
 

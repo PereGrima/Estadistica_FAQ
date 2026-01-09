@@ -24,3 +24,9 @@
 figure figcaption {
   text-align: center;
 }
+
+.fig-compacta {
+  margin-top: -0.5em;
+  margin-bottom: -1em;
+}
+

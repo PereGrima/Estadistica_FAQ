@@ -1,3 +1,123 @@
 # ¿Cuál es la forma correcta de calcular los cuartiles? {.unnumbered}
 
-texto
+Existen diferentes criterios para determinar los valores de los cuartiles y no todos dan el mismo resultado. Veamos algunos ejemplos.
+
+**John Tukey**, creador de los boxplots, identifica los cuartiles buscando las medianas de los valores que quedan por encima y por debajo de la mediana global. En la determinación de las medianas de cada mitad de datos incluye la mediana global si el número de datos es impar, pero no la incluye si es par. Por ejemplo, para los datos 2, 4, 6, 8 y 10 (número impar) tenemos:
+
+::: {.fig-compacta}
+![](02_Fig_Descriptiva/0701_Cuartiles_1.png){fig-align="center" width="75%"}
+:::
+
+Y si los datos son 2, 4, 6, y 8 (número par):
+
+::: {.fig-compacta}
+![](02_Fig_Descriptiva/0702_Cuartiles_2.png){fig-align="center" width="75%"}
+:::
+
+**David Moore y George McCabe** en su libro “Introduction to the Practice of Statistics”, muy valorado por su carácter pedagógico e innovador, proponen un método similar al de Tukey pero sin incluir la mediana global en la determinación de las medianas de cada una de las mitades. Cuando el número de datos es par el valor de los cuartiles coincide con el método de Tukey, pero en general no coincide cuando el número de datos es impar.
+
+::: {.fig-compacta}
+![](02_Fig_Descriptiva/0703_Cuartiles_3.png){fig-align="center" width="75%"}
+:::
+
+El paquete de software estadístico **Minitab** utiliza las expresiones $0,25(n+1)$ y $0,75(n+1)$ para determinar las posiciones de $Q_1$ y $Q_3$ respectivamente. Si la posición obtenida para $Q_1$ es, por ejemplo, 1,25, su valor estará comprendido entre $x_1$ y $x_2$ interpolando de la forma: $Q_1 = x_1 + 0,25(x_2-x_1)$. Utilizando los mismos datos que en los ejemplos anteriores resultaaa:
+
+$\bullet \;$ Datos: 2, 4, 6, 8, 10 <br>
+Posición de $Q_1$: $\;0.25 \cdot 6 = 1.5$; $\;$ Valor de $Q_1$: $\; 2  +0.5(4-2) = 3$ <br>
+Posición de $Q_3$: $\;0.75 \cdot 6 = 4.5); $\;$ Valor de $Q_3$: $\; 8 + 0.5(10-8) = 9$
+
+$\bullet \;$ Datos: 2, 4, 6, 8 <br>
+Posición $Q_1$: $\;0.25 \cdot 5 = 1.25)$; $\;$ Valor $Q_1$: $\; 2 + 0.25(4-2) = 2.5)$ <br>
+Posición $Q_3$: $\;0.75 \cdot 5 = 3.75)$; $\;$ Valor $Q_3$: $\; 6 + 0.75(8-6) = 7.5)$
+
+**Excel** dispone de la función CUARTIL que identifica la posición de los cuartiles mediante las expresiones: $0.25(n-1)+1$ y $0.75(n-1)+1$ y los calcula interpolando igual que hace Minitab. Seguramente no satisfechos con su forma de identificar los cuartiles, en las últimas versiones se ha mantenido esa función (se indica que por compatibilidad con versiones anteriores) y se han añadido:
+
+::: lista-compacta
+-   CUARTIL.INC: Coincide con la función CUARTIL.
+-   CUARTIL.EXC: Identifica los cuartiles de la misma forma que Minitab.
+:::
+
+En la figura [-@fig-cuartilesExcel] se muestran los cuartiles de nuestros datos con las funciones de Excel (versión 2019).
+
+![Cálculo de los cuartiles con Excel](02_Fig_Descriptiva/0704_Cuartiles_4.png){#fig-cuartilesExcel fig-align="center" width="90%"}
+
+En resumen, los valores obtenidos con los métodos comentados han sido:
+
+<!-- ```{=html} -->
+
+<!-- <h8> -->
+<!-- <table> -->
+<!--     <tr style="border-bottom:0.5px solid grey"> -->
+<!--         <TD style="vertical-align: middle"> Método</TD> -->
+<!--         <TD ALIGN=center COLSPAN=2 >&nbsp &nbsp Datos: 2, 4, 6, 8 &nbsp &nbsp &nbsp &nbsp <br> Q <sub> 1 </sub> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Q<sub> 3 </sub> </TD> -->
+<!--         <TD ALIGN=center COLSPAN=2>Datos: 2, 4, 6, 8, 10 <br> Q<sub> 1 </sub> &nbsp &nbsp &nbsp &nbsp &nbsp Q<sub> 3 </sub></TD> -->
+<!--     </TR> -->
+
+<!--     <TR >    -->
+<!--     <TD>Tukey <br> Moore y McCabe <br> Minitab <br> Excel, CUARTIL.INC <br> Excel, CUARTIL.INC </TD>  -->
+<!--     <TD ALIGN=center> 3 <br> 3 <br> 2.5 <br> 3.5 <br> 2.5 </TD>  -->
+<!--     <TD ALIGN=center> 7 <br> 7 <br> 7.5 <br> 6.5 <br> 7.5 </TD>    -->
+<!--     <TD ALIGN=center> 4 <br> 3 <br> 3 <br> 4 <br> 3 </TD>  -->
+<!--     <TD ALIGN=center> 8 <br> 9 <br> 9 <br> 8 <br> 9 </TD> -->
+<!--     </TR> -->
+<!-- </table> -->
+<!-- </h8>  -->
+<!-- ``` -->
+
+```{=html}
+
+<h6>
+<table width="500" cellpadding="1" class="center" style="margin: 0 auto;">
+<td colspan="100%"></td>
+    <tr>
+        <TD style="vertical-align: middle"> Método</TD>
+        <TD ALIGN=center COLSPAN=2 > Datos: 2, 4, 6, 8  <br> Q <sub> 1 </sub> </sub> &nbsp &nbsp &nbsp &nbsp &nbsp Q<sub> 3 </sub> </TD>
+        <TD ALIGN=center COLSPAN=2>Datos: 2, 4, 6, 8, 10 <br> Q<sub> 1 </sub> </sub> &nbsp &nbsp &nbsp &nbsp &nbsp Q<sub> 3 </sub></TD>
+        <hr>
+    </TR>
+    
+    <TR> 
+    <TD>Tukey <br> Moore y McCabe <br> Minitab <br> Excel, CUARTIL.INC <br> Excel, CUARTIL.INC </TD> 
+    <TD ALIGN=center> 3 <br> 3 <br> 2.5 <br> 3.5 <br> 2.5 </TD> 
+    <TD ALIGN=center> 7 <br> 7 <br> 7.5 <br> 6.5 <br> 7.5 </TD> 
+    <TD ALIGN=center> &nbsp &nbsp &nbsp  4 <br> &nbsp 3 <br> &nbsp 3 <br> &nbsp 4 <br> &nbsp 3  </TD> 
+    <TD ALIGN=center> 8 &nbsp &nbsp &nbsp <br> 9 <br> 9 <br> 8 <br> 9 </TD>
+    </TR>
+</table>
+</h6> 
+```
+
+
+<!-- \vspace{0.4cm} -->
+
+<!-- {\small -->
+
+<!-- \begin{center} -->
+
+<!--    \begin{tabular}{ lccccc } \hline -->
+
+<!--        \multirow{2}{3em}{Método} & \multicolumn{2}{l}{Datos: 2, 4, 6, 8} & &  \multicolumn{2}{c}{Datos: 2, 4, 6, 8, 10} \\ -->
+
+<!--         & \(\;\;\;\;Q_1\) & \(Q_3\) & \(\;\) & \(\;\;\;\;\;\;\;\;Q_1\) & \(Q_3\) \\ -->
+
+<!--        \hline -->
+
+<!--        Tukey & \(\;\;\) 3 & 7 & & \(\;\;\;\;\;\;\) 4 & 8 \\  -->
+
+<!--        Moore y McCabe \(\;\;\;\) & \(\;\;\) 3 & 7 & & \(\;\;\;\;\;\;\) 3 & 9 \\  -->
+
+<!--        Minitab & \(\;\;\) 2,5 & 7,5 & &\(\;\;\;\;\;\;\) 3 & 9 \\ -->
+
+<!--        Excel, CUARTIL.INC &\(\;\;\) 3,5 & 6,5 & & \(\;\;\;\;\;\;\) 4 & 8 \\ -->
+
+<!--        Excel, CUARTIL.EXC &\(\;\;\) 2,5 & 7,5 & & \(\;\;\;\;\;\;\) 3 & 9 \\ -->
+
+<!--        \hline  -->
+
+<!--    \end{tabular} -->
+
+<!-- \end{center}}  -->
+
+<!-- \vspace{0.4cm} -->
+
+¿Qué método es el correcto? ¿Cuál debemos utilizar? **En la práctica no importa demasiado**. Solo se está interesado en conocer los cuartiles cuando el conjunto de datos es grande (nunca si tenemos solo 4 o 5 datos) y en este caso las diferencias entre los distintos métodos no son relevantes. Por ejemplo, si tenemos 500 valores, la posición del primer cuartil con el método de Minitab es 125,25 y con la función CUARTIL.INC de Excel es 125,75. Como habrá poca diferencia entre los valores que ocupan las posiciones 125 y 126, la diferencia en el valor del cuartil no será relevante.
