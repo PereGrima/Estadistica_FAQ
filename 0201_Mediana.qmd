@@ -2,7 +2,7 @@
 
 La media aritmética es una excelente medida de tendencia central, muy usada y también muy apreciada, a veces demasiado, como cuando se pretende resumir en ella toda la información que contienen los datos. La mediana tiene unas propiedades de las que carece la media, por lo que es un buen complemento informativo e incluso puede ser una medida más útil en algunos casos. Vamos a ver estas propiedades.
 
--   Es más robusta que la media frente a la presencia de anomalías. Supongamos que nuestros datos sonn:
+-   Es más robusta que la media frente a la presencia de anomalías. Supongamos que nuestros datos son:
 
     ```         
     2; 5; 6; 7 y 9
