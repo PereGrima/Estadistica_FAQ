@@ -22,7 +22,7 @@ book:
         - 0103_Que_es_Estadistica.qmd
         - 0104_DataScience.qmd
     
-    - part: 02_Estadistica_Descriptiva.qmd
+    - part: Estadística descriptiva
       chapters: 
         - 0201_Mediana.qmd
         - 0202_Media_geometrica.qmd

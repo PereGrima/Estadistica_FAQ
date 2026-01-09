@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>¿Qué es la estadística? – Estadística. Preguntas frecuentes</title>
+<title>¿Tiene alguna aplicación práctica la media geométrica? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -84,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">02_Estadistica_Descriptiva.qmd</a></li><li class="breadcrumb-item"><a href="./0202_Media_geometrica.html">¿Tiene alguna aplicación práctica la media geométrica?</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./0202_Media_geometrica.html">¿Tiene alguna aplicación práctica la media geométrica?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -153,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">02_Estadistica_Descriptiva.qmd</span></a>
+ <span class="menu-text">Estadística descriptiva</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -178,23 +207,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#estadística-y-matemáticas" id="toc-estadística-y-matemáticas" class="nav-link active" data-scroll-target="#estadística-y-matemáticas">Estadística y matemáticas</a></li>
-  <li><a href="#estadística-y-probabilidad" id="toc-estadística-y-probabilidad" class="nav-link" data-scroll-target="#estadística-y-probabilidad">Estadística y probabilidad</a></li>
-  <li><a href="#estadística-y-data-science" id="toc-estadística-y-data-science" class="nav-link" data-scroll-target="#estadística-y-data-science">Estadística y <em>Data Science</em></a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">02_Estadistica_Descriptiva.qmd</a></li><li class="breadcrumb-item"><a href="./0202_Media_geometrica.html">¿Tiene alguna aplicación práctica la media geométrica?</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./0202_Media_geometrica.html">¿Tiene alguna aplicación práctica la media geométrica?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">¿Qué es la estadística?</h1>
+<h1 class="title">¿Tiene alguna aplicación práctica la media geométrica?</h1>
 </div>
 
 
@@ -211,21 +232,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Estoy haciendo pruebas.</p>
-<section id="estadística-y-matemáticas" class="level3">
-<h3 class="anchored" data-anchor-id="estadística-y-matemáticas">Estadística y matemáticas</h3>
-<p>texto</p>
-</section>
-<section id="estadística-y-probabilidad" class="level3">
-<h3 class="anchored" data-anchor-id="estadística-y-probabilidad">Estadística y probabilidad</h3>
-<p>texto</p>
-</section>
-<section id="estadística-y-data-science" class="level3">
-<h3 class="anchored" data-anchor-id="estadística-y-data-science">Estadística y <em>Data Science</em></h3>
-<p>texto</p>
+<p>Sí la tiene, pero mucho menos que la media aritmética. Un caso típico de uso de la media geométrica lo tenemos en el cálculo del valor medio de una tasa de crecimiento. Si una población tenía 10.000 habitantes en el año cero, creció el primer año a una tasa del 5 %, el segundo a una tasa del 20 % y el tercer año al 50 % ¿A que tasa promedio ha crecido en estos tres años?</p>
+<div class="tabla-pequena">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><br>Año</td>
+<td style="text-align: center;">Población<br>inicial</td>
+<td style="text-align: center;">Tasa de crecimiento</td>
+<td style="text-align: center;">Factor de expansión</td>
+<td style="text-align: center;">Población al final del año</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10.000</td>
+<td style="text-align: center;">0,05</td>
+<td style="text-align: center;">1,05</td>
+<td style="text-align: center;">10.500</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10.500</td>
+<td style="text-align: center;">0,20</td>
+<td style="text-align: center;">1,20</td>
+<td style="text-align: center;">12.600</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">12.600</td>
+<td style="text-align: center;">0,50</td>
+<td style="text-align: center;">1,50</td>
+<td style="text-align: center;">18.900</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Si calculamos la media aritmética de la tasa de crecimiento tenemos: <span class="math inline">\((0,05 + 0,20 + 0,50)/3 = 0,25\)</span> y el factor medio de expansión sería <span class="math inline">\(1,25\)</span>. Pero si la población hubiera crecido los tres años de esta forma, no se llegaría al mismo resultado final:</p>
+<div class="tabla-pequena">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><br>Año</td>
+<td style="text-align: center;">Población<br>inicial</td>
+<td style="text-align: center;">Tasa de crecimiento</td>
+<td style="text-align: center;">Factor de expansión</td>
+<td style="text-align: center;">Población al final del año</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10.000</td>
+<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">1,25</td>
+<td style="text-align: center;">12.500</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">12.500</td>
+<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">1,25</td>
+<td style="text-align: center;">15.625</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">15.625</td>
+<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">1,25</td>
+<td style="text-align: center;">19.531</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Por tanto, la media aritmética no es un buen indicador de la tasa media de crecimiento.</p>
+<p>Si la población crece a una tasa constante <span class="math inline">\(i\)</span>, para que al final del tercer año tenga el mismo efecto que las tasas del ejemplo, se debe verificar que:</p>
+<p><span class="math display">\[ 10\,000(1+i)(1+i)(1+i)=10\,000(1+0,05)(1+0,20)(1+0,50) \]</span></p>
+<p>De donde:</p>
+<p><span class="math display">\[(1+i)= \sqrt[3]{1,05 \cdot 1,20 \cdot 1,50}=1,2364\]</span></p>
+<p>Si se hubiera tenido este factor de expansión cada año (nótese que es la media geométrica), hubiera conducido a una población final igual a la que tenemos.</p>
+<p>Curiosidades sobre la media geométrica son:</p>
+<ul>
+<li><p>A diferencia de la media aritmética, la media geométrica sólo se define para números positivos.</p></li>
+<li><p>La media geométrica nunca es mayor que la media aritmética. La demostración para el caso de 2 valores es fácil por reducción al absurdo. Supongamos que: <span class="math inline">\(\sqrt{ab} &gt; (a+b)/2\)</span>, entonces <span class="math inline">\(ab &gt; (a^2+2ab+b^2)/4\)</span>, de donde: <span class="math inline">\(0 &gt;a^2-2ab+b^2\)</span>. Como <span class="math inline">\(a^2-2ab+b^2=(a-b)^2\)</span> es imposible que este valor sea negativo, luego es imposible que <span class="math inline">\(\sqrt{ab}&gt;(a+b)/2\)</span>.</p></li>
+</ul>
+<p>Y ya puestos a hablar de otras medias, podemos hacer un comentario sobre la media armónica, mucho menos conocida pero también útil en algunos casos.</p>
+<p>Se define la media armónica de <span class="math inline">\(x_1, x_2, ..., x_N\)</span> como:</p>
+<p><span class="math display">\[Mh = \frac{N}{\large{\frac{1}{x_1}+\frac{1}{x_2}+...+\frac{1}{x_N}}}\]</span></p>
+<p>Parece que esto sea un retorcimiento sin ningún interés, pero no. Si un coche recorre cierta distancia a una velocidad de 100 km/h y vuelve por el mismo camino a 120 km/h, la velocidad media a que ha realizado el viaje es:</p>
+<p><span class="math display">\[Mh = \frac{2}{\large{\frac{1}{100}+\frac{1}{120}}} = 109,1 \text{ km/h}\]</span></p>
+<p>y no 110 km/h como en principio se podría pensar.</p>
+<p>Observe que la velocidad es igual a la distancia recorrida dividida por el tiempo tardado en recorrerla,</p>
+<p>es decir <span class="math inline">\(v=d/t\)</span> y por tanto <span class="math inline">\(t=d/v\)</span>. En nuestro caso, si la distancia a recorrer es <span class="math inline">\(d\)</span>, el tiempo tardado en la ida es <span class="math inline">\(t_1 =d/100\)</span> y el tiempo tardado en el regreso es <span class="math inline">\(t_2 =d/120\)</span>. De esta manera el tiempo total invertido en todo el recorrido <span class="math inline">\((2d)\)</span> será <span class="math inline">\(t=t_1+t_2\)</span> y la velocidad media se calcula de la forma:</p>
+<p><span class="math display">\[ \text{Velocidad media} = \frac{\text{Distancia total recorrida}}{\text{Tiempo total empleado}} = \frac{2d}{\large{\frac{d}{100}+\frac{d}{120}}} \]</span></p>
+<p>Otro ejemplo: Un avión recorre 3000 km. Los 1000 primeros a 700 km/h, los 1000 siguientes a 800 km/h, y los 1000 restantes a 900 km/h ¿Cuál ha sido su velocidad media? No ha sido 800 km/h sino 791,6 km/h.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
