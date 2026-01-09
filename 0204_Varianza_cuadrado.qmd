@@ -1,0 +1,53 @@
+# ¿Por qué en la fórmula de la varianza se utiliza el cuadrado en vez del módulo? {.unnumbered}
+
+Cuando se calcula la varianza, las diferencias entre cada valor y la media se elevan al cuadrado para evitar que se compensen las positivas con las negativas. Esto provoca que sus unidades sean el cuadrado de las que tienen los datos, lo cual resulta poco intuitivo y difícil de interpretar (no parece natural medir la variabilidad de longitudes en unidades de superficie). Este problema se resuelve usando una nueva medida que es la raíz cuadrada de la varianza: la desviación típica. Todos hemos pensado alguna vez que se podría evitar tener esas dos medidas usando el valor absoluto de las diferencias en vez de su cuadrado. Así ya estaríamos midiendo la variabilidad en las mismas unidades que los datos.
+
+No lo hacemos porque saldríamos perdiendo. La varianza tiene unas propiedades extraordinarias que ni de lejos presenta esa nueva medida usando el módulo. Vamos a desarrollar unas ideas que nos permitirán justificarlo.
+
+Utilizaremos los datos representados en la figura [-@fig-dotplot] en la cual también hemos representado un valor \(a\), en principio arbitrario, con el propósito de descubrir donde conviene colocarlo para que sea un “buen representante” de este conjunto de datos.
+
+![¿Dónde colocar un "buen representante" de estos datos?](02_Fig_Descriptiva/0401_dotplot.png){#fig-dotplot fig-align="center" width="80%"}
+
+\noindent En principio $a$ puede ser cualquier número real pero le vamos a exigir algunos requisitos asociados con nuestra idea de lo que significa “buen representante”, lo cual restringirá el conjunto de valores que puede asumir. Veamos dos criterios para seleccionar el valor de $a$.
+
+### Criterio 1
+
+Escoger el que minimiza la función $f(a)$, definida de la forma:
+
+$$f(a)=\frac{ \sum_{i=1}^{N} \left| x_i-a\right| } {N} $$
+
+\noindent Donde $N$ es el número de datos y los $x_i$ son sus valores. Como la distancia promedio depende sólo de $a$ le hemos llamado $f(a)$. El valor que minimiza esta función y que por tanto es el mejor representante de los datos con el criterio aplicado no es la media sino la mediana.
+
+Al valor mínimo de $f(a)$ le llamamos desviación media $DM$ con respecto a la mediana, y su fórmula es:
+$$DM=\frac{ \sum_{i=1}^{N} \left| x_i-Me\right| } {N} $$
+En nuestro ejemplo, la mediana es 15,5.  Esto significa que de todos los números reales, 15,5 es el que está más cerca de los datos de acuerdo con este criterio. Por tanto, la desviación media para nuestros datos es:
+$$ DM = \frac{\left|10-15,5\right|+\left|12-15,5\right|+...+\left|20-15,5\right|}{10}=2,3 $$
+
+### Criterio 2
+	
+ Escoger el que hace menor la media de los cuadrados de la distancia de los datos al valor \(a\).  Es decir, el que minimiza la función:
+
+$$g(a)=\frac{ \sum_{i=1}^{N} ( x_i-a)^2 } {N} $$
+
+\noindent En este caso el mejor valor de \(a\) puede deducirse derivando \(g(a)\) con respecto de \(a\), igualando a cero y despejando su valor. Veamos:
+
+$$\frac{\text{d} g(a)}{\text{d} a} = \frac{-2}{N} \sum_{i=1}^{N}(x_i-a) = 0$$
+Por tanto $\sum_{i=1}^{N}(x_i-a) = 0$, de donde se deduce que $\sum x_i =N \cdot a$ y despejando $a$ tenemos:
+$$ a = \sum_{i=1}^{N} \frac{x_i}{N} $$
+
+Observe que en este caso el valor de $a$ sí coincide con la media aritmética (le llamamos $\mu$). Si hacemos la segunda derivada vemos que siempre es positiva, lo cual confirma que el punto crítico es $a=\mu$ y que el valor mínimo de $g(a)$ es la varianza de $X$  (le llamamos $\sigma^2$). Con los datos de nuestro ejemplo $\mu$ = 15,1 y el valor mínimo que toma $g(a)$ es $\sigma^2$= 7,89. Sacando raíz cuadrada se obtiene la desviación típica $\sigma$ = 2,81.
+
+¿Por qué se prefiere usar la varianza, deducida a través del criterio 2, en lugar de la desviación media, deducida aplicando el criterio 1? Veamos algunas razones:
+
+-   Los desarrollos anteriores ponen de manifiesto que la media, medida descriptiva por excelencia, está asociada de forma más natural con la varianza que con la $DM$.
+
+-   La $DM$ incluye en su expresión la función “valor absoluto” que se comporta mal desde un punto de vista matemático, mientras que la función cuadrática es muy fácilmente tratable. Observe, por ejemplo, que la demostración de que la media hace mínimo el promedio de los cuadrados se ha realizado de forma casi inmediata, mientras que probar que la mediana hace mínima la media de las distancias es bastante más complejo.
+
+-   La desviación estándar $\sigma$ de la población es usada para definir la distribución más famosa y útil, como es la Normal. Esto posibilita la construcción de intervalos de confianza para estimar, por ejemplo, la media de la población, lo que sería mucho más complejo si se usara la $D$.
+
+-   La varianza es una suma de cuadrados que se puede descomponer en diversos sumandos dando origen al llamado "Análisis de la Varianza". El desarrollo de la teoría de los modelos lineales está basado en gran parte en el criterio de los mínimos cuadrados, que es el mismo en que está basada la varianza. Cuando la población origen de los datos es Normal, el cociente de varianzas muestrales sigue una distribución conocida, llamada $F$ de Snedecor.
+
+-   La varianza de una suma de variables aleatorias se calcula de una forma muy fácil, especialmente si las variables son independientes. Por ejemplo, en un proceso de envasado, si el peso del envase tiene una varianza $V(X)$ y la varianza del contenido es $V(Y)$, la varianza del conjunto es $V(X+Y) = V(X) + V(Y)$.
+
+Nada de esto podríamos hacer si intentamos usar la desviación media como medida de dispersión. En síntesis, la teoría estadística desarrollada en base a la varianza es muy rica,  y no se conoce nada parecido para  la desviación media.
+

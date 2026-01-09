@@ -20,3 +20,7 @@
 .tabla-pequena table {
   font-size: 0.9em;
 }
+
+figure figcaption {
+  text-align: center;
+}

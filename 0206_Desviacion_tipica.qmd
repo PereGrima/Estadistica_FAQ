@@ -1,0 +1,3 @@
+# ¿Por qué la desviación típica es la medida típica de dispersión? {.unnumbered}
+
+texto

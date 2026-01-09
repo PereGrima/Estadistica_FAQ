@@ -26,6 +26,16 @@ book:
       chapters: 
         - 0201_Mediana.qmd
         - 0202_Media_geometrica.qmd
+        - 0203_Variabilidad.qmd
+        - 0204_Varianza_cuadrado.qmd
+        - 0205_Dividir_n_1.qmd
+        - 0206_Desviacion_tipica.qmd
+        - 0207_Cuartiles_correcta.qmd
+        - 0208_Anomalias_boxplot.qmd
+        - 0209_Valores_atipicos.qmd
+        - 0210_Curtosis.qmd
+        - 0211_Graficos_usar.qmd
+        - 0212_Graficos_NO_usar.qmd
 
 # Referencias
 # biblio-title: "Referencias"
