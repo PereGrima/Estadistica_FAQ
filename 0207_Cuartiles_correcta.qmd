@@ -48,7 +48,7 @@ En resumen, los valores obtenidos con los métodos comentados han sido:
 
 <table>
     <tr class="fila-compacta">
-        <td rowspan="2" colspan = "2" class = "celda-centrada"> Métodoo </td>
+        <td rowspan="2" colspan = "2" class = "celda-centrada"> Método </td>
         <td colspan=2 ALIGN=center> &nbsp Datos: 2, 4, 6, 8 </td>
         <td colspan=2 ALIGN=center> Datos: 2, 4, 6, 8, 10 </td>
     </tr>
