@@ -18,7 +18,7 @@ Además, son malos estimadores de los valores correspondientes a la población. 
 <!-- ![Velocidades de paso (km/h) con valores atípicos (1)](02_Fig_Descriptiva/0901_Anomalias_1.png){#fig-Anomalias_1 .fig-compacta2 fig-align="center" width="90%"} -->
 
 
-![Valores de la curtosis en muestras del tamaño n que se indica obtenidas de una distribución exponencial (curtosis = 9).](02_Fig_Descriptiva/1001_Curtosis_1.png){#fig-Curtosis_1 .fig-compacta2 fig-align="center" width="90%"}
+![Valores de la curtosis en muestras del tamaño n que se indica obtenidas de una distribución exponencial (curtosis = 9).](02_Fig_Descriptiva/1001_Curtosis_1.png){#fig-Curtosis_1 .fig-compacta2 fig-align="center" width="80%"}
 
 \
 Si lo que pretendemos es utilizar los valores de la curtosis y el coeficiente de asimetría para predecir el tipo de distribución de que provienen los datos, también lo tenemos mal. La figura [-@fig-Curtosis_2] muestra los valores de ambas medidas calculadas para 100 muestras de tamaño $n = 50$ de la misma distribución exponencial que hemos usado antes. Los verdaderos valores de la distribución (Curtosis = 9; Asimetría = 2) están marcados con un cuadrado rojo. Ya se ve que los valores muestrales no permiten identificar este punto como aquel que representa los parámetros que se están estimando. 
