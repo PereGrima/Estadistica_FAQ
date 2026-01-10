@@ -36,3 +36,7 @@ figure figcaption {
   line-height: 1;
   vertical-align: middle;
 }
+
+.celda-centrada {
+    vertical-align: middle; /* Centra verticalmente */
+}
