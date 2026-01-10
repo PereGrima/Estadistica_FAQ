@@ -1,3 +1,138 @@
 # ¿Qué hay que hacer cuando nos encontramos con valores atípicos? {.unnumbered}
 
-texto
+Para empezar vamos a decir dos cosas que \textbf{no deben hacerse}: 1) ignorarlos como si no existieran o 2) eliminarlos inmediatamente sin más consideraciones.
+
+Seguramente el error más frecuente es no preocuparse de su posible existencia lanzándose directamente a realizar el test que corresponda. Actuando de esta forma se corre el riesgo de trabajar con algún dato erróneo, ya sea por problemas de formato, porque está en unidades que no corresponden, porque ha habido un error en la medida, o por otras razones. Realizar el test con datos erróneos puede conducir a unas conclusiones totalmente equivocadas.
+
+También puede darse el caso de que los valores sean correctos pero no convenga tomarlos en consideración. Supongamos que se desea analizar si un coche de policía aparcado en la orilla de la carretera recuerda a los conductores cual es la velocidad máxima en ese tramo. Para ello, con un radar oculto, se mide la velocidad de los vehículos en una zona en que la máxima permitida es de 60 km/h. Las velocidades obtenidas (también en km/h) son:
+
+```{=html}
+
+<table width="450" cellpadding="1"  border="0" class="center fila-compacta2" style="margin: 0 auto;">
+    
+<tr style="border-bottom:0px solid grey"> </tr>
+<tr>
+<td style="text-align:center">65</td>
+<td style="text-align:center">66</td>
+<td style="text-align:center">80</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">74</td>
+<td style="text-align:center">55</td>
+<td style="text-align:center">58</td>
+<td style="text-align:center">65</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">77</td>
+</tr>
+
+<tr style="border-bottom:0px solid grey">
+<tr>
+<td style="text-align:center">72</td>
+<td style="text-align:center">63</td>
+<td style="text-align:center">55</td>
+<td style="text-align:center">74</td>
+<td style="text-align:center">67</td>
+<td style="text-align:center">63</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">68</td>
+<td style="text-align:center">22</td>
+</tr>
+
+<tr>
+<tr style="border-bottom:0px solid grey">
+<td style="text-align:center">61</td>
+<td style="text-align:center">59</td>
+<td style="text-align:center">77</td>
+<td style="text-align:center">72</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">67</td>
+<td style="text-align:center">58</td>
+<td style="text-align:center">66</td>
+<td style="text-align:center">71</td>
+<td style="text-align:center">56</td>
+<td style="text-align:center">63</td>
+</tr>
+
+</table>
+
+ 
+```
+\
+A continuación se hacen las mismas mediciones pero colocando un coche de la policía aparcado de forma visible al lado de la carretera. En este caso las velocidades son:
+
+```{=html}
+<table width="475" cellpadding="1"  border="0" class="center fila-compacta2" style="margin: 0 auto;">
+  
+<tr style="border-bottom:0px solid grey"></tr>
+<tr>
+<td style="text-align:center">55</td>
+<td style="text-align:center">55</td>
+<td style="text-align:center">63</td>
+<td style="text-align:center">58</td>
+<td style="text-align:center">62</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">59</td>
+<td style="text-align:center">70</td>
+<td style="text-align:center">22</td>
+<td style="text-align:center">58</td>
+<td style="text-align:center">56</td>
+<td style="text-align:center">63</td>
+</tr>
+
+<tr style="border-bottom:0px solid grey">
+<tr>
+<td style="text-align:center">55</td>
+<td style="text-align:center">61</td>
+<td style="text-align:center">58</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">55</td>
+<td style="text-align:center">75</td>
+<td style="text-align:center">58</td>
+<td style="text-align:center">61</td>
+<td style="text-align:center">63</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">63</td>
+</tr>
+
+<tr>
+<tr style="border-bottom:0px solid grey">
+<td style="text-align:center">62</td>
+<td style="text-align:center">55</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">80</td>
+<td style="text-align:center">61</td>
+<td style="text-align:center">61</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">59</td>
+<td style="text-align:center">73</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">60</td>
+</tr>
+ </table>
+```
+\
+Si realizamos el test de la $t$ de Student para muestras independientes contrastando la hipótesis nula de que las velocidades medias son iguales frente a la alternativa de que con el coche de la policía son menores, se obtiene un p-valor de 0,167, por lo que del estudio no se podría deducir que el coche de policía tiene efecto disuasorio. 
+
+Sin embargo, realizando el análisis exploratorio de los datos, se obtiene el gráfico de la figura [-@fig-Anomalias_1] en el que se observan unos valores atípicos, tanto con coche de la policía como sin él, que corresponden a vehículos que han pasado a unos 20-25 km/h. ¿Qué hay que hacer con estos valores? Lo primero es preguntarse a qué corresponden, cómo se han producido. En este caso se llega a la conclusión de que corresponden a vehículos de transporte agrícola que siempre van a esta velocidad, porque no pueden ir a más. Está claro que la posible influencia del método disuasorio no va con este tipo de vehículos y lo más razonable es excluirlos del estudio.
+
+![Velocidades de paso (km/h) con valores atípicos (1)](02_Fig_Descriptiva/0901_Anomalias_1.png){#fig-Anomalias_1 .fig-compacta2 fig-align="center" width="90%"}
+
+Al eliminar estos valores disminuye la variabilidad de las muestras y la diferencia de medias pasa a ser claramente significativa.
+
+Pero tampoco hay que caer en la tentación de eliminar las anomalías automáticamente. Si los valores obtenidos hubieran sido los que se reflejan en la figura [-@fig-Anomalias_2], que son iguales que los anteriores añadiendo 115, 118, 120 y 117 a la velocidad sin coche de policía, tendríamos que en este grupo hay dos conjuntos de valores atípicos, los dos aproximadamente a la misma distancia del centro de los datos, pero aunque hemos visto que era razonable quitar el conjunto de los valores bajos, no hay ninguna razón para quitar el de los altos, que corresponden a coches que circulan a una velocidad mucho mayor a la permitida.
+
+![Velocidades de paso (km/h) con valores atípicos (2)](02_Fig_Descriptiva/0902_Anomalias_2.png){#fig-Anomalias_2 .fig-compacta2 fig-align="center" width="90%"}
+
+Otro aspecto a tener en cuenta es que el análisis de las anomalías puede ser la parte más interesante del estudio. El gráfico de la figura [-@fig-rendimiento] muestra la relación entre el rendimiento y temperatura en una reacción química. Aparecen unos valores claramente anómalos, ¿qué hacer con estos valores? ¿eliminarlos y olvidarse de ellos?
+
+![Rendimiento en función de la temperatura](02_Fig_Descriptiva/0903_Anomalias_3.png){#fig-rendimiento .fig-compacta2 fig-align="center" width="45%"}
+
+Si lo hiciéramos así nos perderíamos la oportunidad de incorporar información valiosa a nuestro conocimiento del proceso. Lo más adecuado sería preguntarnos: ¿Por qué se han dado estas situaciones?, ¿qué ha ocurrido a 185 grados para que se hayan producido unos rendimientos tan anormalmente altos?, ¿por qué una vez a 205 grados y se obtuvo un rendimiento tan bajo? Es posible que la respuesta a estas preguntas aporte una información que puede ser muy útil para tener un mayor dominio  del proceso.
+
+En definitiva, ante un valor atípico lo que hay que hacer es intentar averiguar el por qué se ha producido. Si está claro que la causa es un error se elimina y asunto resuelto. Si no es un error habrá que valorar la conveniencia de incluirlo en el estudio, según sea la razón por la cual se ha producido y la frecuencia con que se esperan valores similares.
+
+También es verdad que en algunos casos uno no sabe si mantener el valor atípico o quitarlo. Cuando se da esta situación una buena idea es realizar el análisis con y sin la presunta anomalía. Si se obtienen las mismas conclusiones la disyuntiva deja de tener importancia. En caso contrario el resultado va a ser dudoso hagamos lo que hagamos, a no ser que podamos recoger más datos.

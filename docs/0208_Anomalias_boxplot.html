@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-edfe04249fbec06fcfc51cecdef6f4b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2cf3c65c5b6db5ec86e992953759863e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -264,9 +293,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>texto</p>
+<p>Parece que ese 1,5 es un número caprichoso. También el 1 o el 2 podrían ser buenos candidatos con la ventaja de ser más sencillos, pero veamos que ocurriría si fueran estos los elegidos.</p>
+<p>En primer lugar debemos tener en cuenta que los valores que aparecen en la zona de anomalías de un boxplot tienen sentido como tales anomalías, si la población de la que provienen es Normal. Consideremos por tanto una distribución Normal, y puestos a elegir una tomaremos <span class="math inline">\(Z \sim N(0;1)\)</span> ya que los cálculos serán más sencillos y no va a restringir nuestras conclusiones. Para determinar los cuartiles buscamos el valor de <span class="math inline">\(z\)</span> que deja un área de cola de 0,25 y resulta ser: <span class="math inline">\(Z_{0,25} = 0,674\)</span>. Por tanto, el rango intercuartílico de una distribución <span class="math inline">\(N(0;1)\)</span> es: <span class="math inline">\(IQR = 0,674 - (-0,674) = 1,348\)</span>.</p>
+<section id="anomalías-a-partir-de-cuartiles-boldsymbolpm-1-cdot-iqr" class="level4">
+<h4 class="anchored" data-anchor-id="anomalías-a-partir-de-cuartiles-boldsymbolpm-1-cdot-iqr">Anomalías a partir de Cuartiles <span class="math inline">\(\boldsymbol{\pm 1 \cdot IQR}\)</span></h4>
+<p>En este caso, fijándonos en el lado derecho, la zona de anomalías empieza en <span class="math inline">\(Q_3 + 1 \cdot IQR = 0,674 + 1,348 = 2,022\)</span>, y <span class="math inline">\(P(Z&gt;2,022) = 0,02\)</span>. Por tanto, la probabilidad de que un valor que pertenezca a la distribución considerada aparezca en la zona de anomalías es del 4% (2% por cada lado).</p>
+<div id="fig-boxplot_1" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boxplot_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/0801_boxplot_1.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Zona de anomalías con el criterio de <span class="math inline">\(\pm 1 \cdot IQR\)</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="anomalías-a-partir-de-cuartiles-boldsymbolpm-2-cdot-iqr" class="level4">
+<h4 class="anchored" data-anchor-id="anomalías-a-partir-de-cuartiles-boldsymbolpm-2-cdot-iqr">Anomalías a partir de Cuartiles <span class="math inline">\(\boldsymbol{\pm 2 \cdot IQR}\)</span></h4>
+<p>Si en vez de 1 tomamos el valor 2 como multiplicador del rango intercuartílico, tendremos que: <span class="math inline">\(Q_3 + 2 \cdot IQR = 0,674 + 2 \cdot 1,348 = 3,37\)</span> y <span class="math inline">\(P(Z&gt;3,37) = 0,0004\)</span>, por lo la probabilidad de que un valor aparezca como anomalía es 0,0008.</p>
+<div id="fig-boxplot_1" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boxplot_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/0802_boxplot_2.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Zona de anomalías con el criterio de <span class="math inline">\(\pm 1 \cdot IQR\)</span>
+</figcaption>
+</figure>
+</div>
+<p>John Tukey, que fue el primero en plantear el uso de los boxplots, ya contempló la posibilidad de usar los valores 1 o 2, pero consideró que 1 es demasiado pequeño ya que la zona de anomalías con este criterio incluye valores que no merecen ser considerados como tales, y el valor 2 resulta excesivamente grande ya que aleja demasiado esta zona y por tanto pueden pasar desapercibidos valores que deben ser considerados como anómalos.</p>
+</section>
+<section id="anomalías-a-partir-de-cuartiles-boldsymbolpm-15-cdot-iqr" class="level4">
+<h4 class="anchored" data-anchor-id="anomalías-a-partir-de-cuartiles-boldsymbolpm-15-cdot-iqr">Anomalías a partir de Cuartiles <span class="math inline">\(\boldsymbol{\pm 1,5 \cdot IQR}\)</span></h4>
+<p>Descartado el 1 y el 2, y estando claro que el más adecuado es un valor entre ellos, aparece la opción del 1,5 como número más sencillo. Este valor define una zona de anomalías con probabilidades muy razonables (p = 0,007) así que este fue el valor que se propuso y así se ha quedado.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

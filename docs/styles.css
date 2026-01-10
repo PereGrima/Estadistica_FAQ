@@ -37,6 +37,28 @@ figure figcaption {
   vertical-align: middle;
 }
 
+.fila-compacta2 {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
 .celda-centrada {
     vertical-align: middle; /* Centra verticalmente */
+}
+
+.fig-compacta2 {
+  margin-top: 0.1em;
+  margin-bottom: 0.3em;
+}
+
+.tabla-pequena td,
+.tabla-pequena th {
+  padding: 4px 6px;     /* menos relleno vertical */
+  line-height: 1.1;    /* reduce altura de línea */
+}
+
+.tabla-pequena td p {
+  margin: 0;           /* elimina espacio extra */
 }
