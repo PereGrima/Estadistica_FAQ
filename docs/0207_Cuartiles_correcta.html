@@ -340,60 +340,58 @@ Figura&nbsp;1: Cálculo de los cuartiles con Excel
 </figure>
 </div>
 <p>En resumen, los valores obtenidos con los métodos comentados han sido:</p>
-<!-- ```{=html} -->
-<!-- <h8> -->
-<!-- <table> -->
-<!--     <tr style="border-bottom:0.5px solid grey"> -->
-<!--         <TD style="vertical-align: middle"> Método</TD> -->
-<!--         <TD ALIGN=center COLSPAN=2 >&nbsp &nbsp Datos: 2, 4, 6, 8 &nbsp &nbsp &nbsp &nbsp <br> Q <sub> 1 </sub> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Q<sub> 3 </sub> </TD> -->
-<!--         <TD ALIGN=center COLSPAN=2>Datos: 2, 4, 6, 8, 10 <br> Q<sub> 1 </sub> &nbsp &nbsp &nbsp &nbsp &nbsp Q<sub> 3 </sub></TD> -->
-<!--     </TR> -->
-<!--     <TR >    -->
-<!--     <TD>Tukey <br> Moore y McCabe <br> Minitab <br> Excel, CUARTIL.INC <br> Excel, CUARTIL.INC </TD>  -->
-<!--     <TD ALIGN=center> 3 <br> 3 <br> 2.5 <br> 3.5 <br> 2.5 </TD>  -->
-<!--     <TD ALIGN=center> 7 <br> 7 <br> 7.5 <br> 6.5 <br> 7.5 </TD>    -->
-<!--     <TD ALIGN=center> 4 <br> 3 <br> 3 <br> 4 <br> 3 </TD>  -->
-<!--     <TD ALIGN=center> 8 <br> 9 <br> 9 <br> 8 <br> 9 </TD> -->
-<!--     </TR> -->
-<!-- </table> -->
-<!-- </h8>  -->
-<!-- ``` -->
-<h6 class="anchored">
-<hr><table width="500" cellpadding="1" class="center" style="margin: 0 auto;">
-<tbody><tr><td colspan="100%"></td>
-    </tr><tr>
-        <td style="vertical-align: middle"> Método</td>
-        <td align="center" colspan="2"> Datos: 2, 4, 6, 8  <br> Q <sub> 1 </sub>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Q<sub> 3 </sub> </td>
-        <td align="center" colspan="2">Datos: 2, 4, 6, 8, 10 <br> Q<sub> 1 </sub>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Q<sub> 3 </sub></td>
-        
-    </tr>
-    
-    <tr> 
-    <td>Tukey <br> Moore y McCabe <br> Minitab <br> Excel, CUARTIL.INC <br> Excel, CUARTIL.INC </td> 
-    <td align="center"> 3 <br> 3 <br> 2.5 <br> 3.5 <br> 2.5 </td> 
-    <td align="center"> 7 <br> 7 <br> 7.5 <br> 6.5 <br> 7.5 </td> 
-    <td align="center"> &nbsp; &nbsp; &nbsp;  4 <br> &nbsp; 3 <br> &nbsp; 3 <br> &nbsp; 4 <br> &nbsp; 3  </td> 
-    <td align="center"> 8 &nbsp; &nbsp; &nbsp; <br> 9 <br> 9 <br> 8 <br> 9 </td>
-    </tr>
-</tbody></table>
-</h6>
-<!-- \vspace{0.4cm} -->
-<!-- {\small -->
-<!-- \begin{center} -->
-<!--    \begin{tabular}{ lccccc } \hline -->
-<!--        \multirow{2}{3em}{Método} & \multicolumn{2}{l}{Datos: 2, 4, 6, 8} & &  \multicolumn{2}{c}{Datos: 2, 4, 6, 8, 10} \\ -->
-<!--         & \(\;\;\;\;Q_1\) & \(Q_3\) & \(\;\) & \(\;\;\;\;\;\;\;\;Q_1\) & \(Q_3\) \\ -->
-<!--        \hline -->
-<!--        Tukey & \(\;\;\) 3 & 7 & & \(\;\;\;\;\;\;\) 4 & 8 \\  -->
-<!--        Moore y McCabe \(\;\;\;\) & \(\;\;\) 3 & 7 & & \(\;\;\;\;\;\;\) 3 & 9 \\  -->
-<!--        Minitab & \(\;\;\) 2,5 & 7,5 & &\(\;\;\;\;\;\;\) 3 & 9 \\ -->
-<!--        Excel, CUARTIL.INC &\(\;\;\) 3,5 & 6,5 & & \(\;\;\;\;\;\;\) 4 & 8 \\ -->
-<!--        Excel, CUARTIL.EXC &\(\;\;\) 2,5 & 7,5 & & \(\;\;\;\;\;\;\) 3 & 9 \\ -->
-<!--        \hline  -->
-<!--    \end{tabular} -->
-<!-- \end{center}}  -->
-<!-- \vspace{0.4cm} -->
-<p>¿Qué método es el correcto? ¿Cuál debemos utilizar? <strong>En la práctica no importa demasiado</strong>. Solo se está interesado en conocer los cuartiles cuando el conjunto de datos es grande (nunca si tenemos solo 4 o 5 datos) y en este caso las diferencias entre los distintos métodos no son relevantes. Por ejemplo, si tenemos 500 valores, la posición del primer cuartil con el método de Minitab es 125,25 y con la función CUARTIL.INC de Excel es 125,75. Como habrá poca diferencia entre los valores que ocupan las posiciones 125 y 126, la diferencia en el valor del cuartil no será relevante.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<tbody>
+<tr class="fila-compacta odd">
+<td colspan="2" rowspan="2">Método</td>
+<td colspan="2" style="text-align: center;">&nbsp; Datos: 2, 4, 6, 8</td>
+<td colspan="2" style="text-align: center;">Datos: 2, 4, 6, 8, 10</td>
+</tr>
+<tr class="fila-compacta even">
+<td style="text-align: center;">&nbsp; &nbsp; Q<sub>1</sub></td>
+<td style="text-align: center;">Q<sub>3</sub> &nbsp; &nbsp;</td>
+<td style="text-align: center;">&nbsp; &nbsp; Q<sub>1</sub></td>
+<td style="text-align: center;">Q<sub>3</sub> &nbsp; &nbsp;</td>
+</tr>
+<tr class="odd">
+<td colspan="2" style="text-align: left;">Tukey<br>
+Moore y McCabe<br>
+Minitab<br>
+Excel, CUARTIL.INC<br>
+Excel, CUARTIL.EXC</td>
+<td style="text-align: center;">&nbsp; &nbsp; 3<br>
+&nbsp; &nbsp; 3<br>
+&nbsp; &nbsp; 2.5<br>
+&nbsp; &nbsp; 3.5<br>
+&nbsp; &nbsp; 2.5</td>
+<td style="text-align: center;">7 &nbsp;<br>
+7 &nbsp;<br>
+7.5 &nbsp;<br>
+6.5 &nbsp;<br>
+7.5 &nbsp;</td>
+<td style="text-align: center;">&nbsp; &nbsp; 4<br>
+&nbsp; &nbsp; 3<br>
+&nbsp; &nbsp; 3<br>
+&nbsp; &nbsp; 4<br>
+&nbsp; &nbsp; 3</td>
+<td style="text-align: center;">8 &nbsp;<br>
+9 &nbsp;<br>
+9 &nbsp;<br>
+8 &nbsp;<br>
+9 &nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+¿Qué método es el correcto? ¿Cuál debemos utilizar? <strong>En la práctica no importa demasiado</strong>. Solo se está interesado en conocer los cuartiles cuando el conjunto de datos es grande (nunca si tenemos solo 4 o 5 datos) y en este caso las diferencias entre los distintos métodos no son relevantes. Por ejemplo, si tenemos 500 valores, la posición del primer cuartil con el método de Minitab es 125,25 y con la función CUARTIL.INC de Excel es 125,75. Como habrá poca diferencia entre los valores que ocupan las posiciones 125 y 126, la diferencia en el valor del cuartil no será relevante.</p>
 
 
 
