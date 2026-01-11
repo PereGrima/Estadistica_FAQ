@@ -1,0 +1,31 @@
+# ¿Cuales son los mejores programas para analizar datos gráficamente? {.unnumbered}
+
+En internet hay muchas páginas donde se explica cuales son los mejores paquetes para la representación gráfica de datos. Sin tener un conocimiento exhaustivo de todo lo que existe --que además va cambiando--, creemos que vale la pena tener presentes las siguientes opciones:
+
+#### Hojas de cálculo
+
+A menudo injustamente ignoradas en los ambientes universitarios más allá del ámbito de la gestión de empresas. Tienen muchas posibilidades y vale la pena dedicar tiempo a conocer sus posibilidades. Los recursos para el filtrado de datos y la realización de las llamadas “tablas dinámicas” permiten realizar análisis detallados con bastante facilidad.
+
+#### Software para la construcción de "Cuadros de control" (Dahsboards)
+
+Uno de los más conocidos es [*Power BI*](https://www.microsoft.com/es-es/power-platform/products/power-bi), que se relaciona muy bien con *Excel* y tiene muchas posibilidades para la creación de gráficos interactivos: se hace clic sobre una parte del gráfico y se abren otros gráficos que detallan esa parte. Existen otros softwares de este tipo (como [*Tableau*](tableau.com/es-es)) pero son caros y solo al alcance de las empresas. *Power BI* es gratuito si se instala localmente, es decir, solo analiza datos que están en el mismo ordenador donde se ha instalado. Esto es útil para aprender su funcionamiento y también para usarlo en el ámbito académico. Las empresas tienen sus datos en bases de datos centralizadas (o eso quisieran) y necesitan la versión de pago.
+
+#### Lenguajes de programación para análisis estadísticos
+
+El más usado en el ámbito universitario --y nunca defrauda-- es [**R**](https://www.r-project.org/). Existen numerosas librerías que se pueden instalar fácilmente y que amplían las posibilidades del paquete base. Cabe destacar la librería **Shiny** que permite crear interficies amigables e interactivas que se pueden distribuir como una página web. La ventaja de *R* es que es gratuito y que tiene muchas posibilidades pero hay que dedicar tiempo a dominarlo y, si no se usa, se olvida rápido. Una alternativa a *R* es el lenguaje [**Python**](https://www.python.org/), también con muchas librerías para realizar análisis estadísticos.
+
+#### Paquetes de software estadístico gratuitos
+
+Una buena opción son los paquetes de software que utilizan el lenguaje y los algoritmos de R añadiendo una presentación con menús, de forma que el proceso de aprendizaje es muy corto y toda la energía se puede dedicar al análisis de los datos. De este tipo tenemos, entre otros:
+
+-   [**BlueSky Statistics**](https://www.blueskystatistics.com/)**:** Tiene muchas posibilidades de análisis gráfico e incluye también una gran variedad de técnicas estadísticas. Tiene un aspecto muy profesional, con una versión gratuita (más que suficiente para los objetivos de un curso introductorio) y también una versión de pago, con más servicios, para empresas.
+
+-   [**Jamovi:**](https://www.jamovi.org/) Es el que más nos gusta para un curso introductorio. Limpio y claro, prácticamente no necesita explicación. Permite realizar las representaciones gráficas más habituales y aplicar las técnicas de análisis que se incluyen los primeros cursos. Presenta también la peculiaridad de que se pueden añadir “paquetes” desarrolados por otras personas –igual que con R– lo que puede darle mucho recorrido.
+
+-   [**JASP**](https://jasp-stats.org/): Es intuitivo y fácil de usar. Vale la pena tenerlo en cuenta. Con muchas posibilidades de análisis –incluyendo estadística bayesiana– que van más allá de los contenidos de un curso de introductorio.
+
+-   [**R Comander**](https://www.john-fox.ca/RCommander/)**:** Ha sido durante muchos años la interfaz utilizada para facilitar el uso de R en cursos introductorios. Se ha convertido en un estándar pero creemos que ahora existen mejores alternativas.
+
+#### Paquetes de software estadístico de pago
+
+Hay bastantes, aunque unos pocos destacan sobre el resto. Nosotros usamos [*Minitab*](https://www.minitab.com/en-us/) que tiene la ventaja de ser muy fácil de usar. Existen licencias anuales con precios especiales para estudiantes y también licencias de campus para universidades que permiten a los estudiantes instalarse una copia en su ordenador personal (la licencia es anual pero se puede ir renovando mientras se es estudiante). Además de una amplia gama de representaciones gráficas incluye la posibilidad de realizar análisis estadísticos avanzados. El problema es que si el acceso gratuito tiene fecha de caducidad, como ocurre con las licencias de campus para estudiantes, hay que buscar una alternativa.

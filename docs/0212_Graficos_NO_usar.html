@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./0213_Software.html" rel="next">
 <link href="./0211_Graficos_usar.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -41,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-edfe04249fbec06fcfc51cecdef6f4b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2cf3c65c5b6db5ec86e992953759863e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -231,6 +261,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">¿Qué gráfico NO debo usar para representar mis datos?</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0213_Software.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cuales son los mejores programas para analizar datos gráficamente?</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -238,8 +274,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#gráficos-con-tres-dimensiones" id="toc-gráficos-con-tres-dimensiones" class="nav-link active" data-scroll-target="#gráficos-con-tres-dimensiones">Gráficos con tres dimensiones</a></li>
+  <li><a href="#diagramas-de-pastel-especialmente-con-tres-dimensiones" id="toc-diagramas-de-pastel-especialmente-con-tres-dimensiones" class="nav-link" data-scroll-target="#diagramas-de-pastel-especialmente-con-tres-dimensiones">Diagramas de pastel, especialmente con tres dimensiones</a></li>
+  <li><a href="#gráficos-que-ocupan-mucho-espacio-y-contienen-poca-información" id="toc-gráficos-que-ocupan-mucho-espacio-y-contienen-poca-información" class="nav-link" data-scroll-target="#gráficos-que-ocupan-mucho-espacio-y-contienen-poca-información">Gráficos que ocupan mucho espacio y contienen poca información</a></li>
+  <li><a href="#gráficos-con-escalas-tendenciosas" id="toc-gráficos-con-escalas-tendenciosas" class="nav-link" data-scroll-target="#gráficos-con-escalas-tendenciosas">Gráficos con escalas tendenciosas</a></li>
+  <li><a href="#comparar-situaciones-usando-distintas-escalas" id="toc-comparar-situaciones-usando-distintas-escalas" class="nav-link" data-scroll-target="#comparar-situaciones-usando-distintas-escalas">Comparar situaciones usando distintas escalas</a></li>
+  <li><a href="#rectas-de-tendencia" id="toc-rectas-de-tendencia" class="nav-link" data-scroll-target="#rectas-de-tendencia">Rectas de tendencia</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -263,9 +310,99 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>texto</p>
+<p>Los gráficos que no se deben usar pueden ser muchos. Aquí comentamos algunas “tentaciones” que conviene evitar, especialmente en contextos científicos y técnicos donde el objetivo es transmitir la información de la forma más clara y fidedigna posible.</p>
+<section id="gráficos-con-tres-dimensiones" class="level3">
+<h3 class="anchored" data-anchor-id="gráficos-con-tres-dimensiones">Gráficos con tres dimensiones</h3>
+<p>Deben evitarse porque la profundidad no aporta ninguna información y en cambio dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios en que se prioriza el impacto visual.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="02_Fig_Descriptiva/1201_Barras3D_34.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<div id="fig-barras3D" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-barras3D-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1202_SerieTiempo3D.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-barras3D-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Gráficos con una tercera dimensión y sin ella. En estos últimos la información se percibe de forma más clara y directa.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="diagramas-de-pastel-especialmente-con-tres-dimensiones" class="level3">
+<h3 class="anchored" data-anchor-id="diagramas-de-pastel-especialmente-con-tres-dimensiones">Diagramas de pastel, especialmente con tres dimensiones</h3>
+<p>Los diagramas de pastel (circulares o de queso, o pizza, si lo prefiere) son representaciones muy utilizadas aunque no tan apreciadas en contextos científico-técnicos donde -en general- se prefieren los diagramas de barras. Si se representan en tres dimensiones y desgajando un sector que se quiere destacar ya entramos en el terreno de los gráficos tendenciosos. Una alternativa similar que transmite la información de forma más clara son los llamados gráficos donut.</p>
+<div id="fig-Pastel3D" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Pastel3D-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1203_Pastel3D.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Pastel3D-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: En el gráfico de la izquierda parece que el mayor sector corresponde a la sanidad, cuando en realidad no es así.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="gráficos-que-ocupan-mucho-espacio-y-contienen-poca-información" class="level3">
+<h3 class="anchored" data-anchor-id="gráficos-que-ocupan-mucho-espacio-y-contienen-poca-información">Gráficos que ocupan mucho espacio y contienen poca información</h3>
+<p>Dedicar media página de un informe, o toda la pantalla de una presentación, a un gráfico de pastel que solo da un porcentaje (de la población con acceso a internet, por ejemplo) no parece una buena forma de aprovechar el papel o las pantallas de la presentación. Es más grave si se van presentando este tipo de gráficos de forma repetitiva (un diagrama para cada región, por ejemplo).</p>
+</section>
+<section id="gráficos-con-escalas-tendenciosas" class="level3">
+<h3 class="anchored" data-anchor-id="gráficos-con-escalas-tendenciosas">Gráficos con escalas tendenciosas</h3>
+<p>Adaptar la escala del eje vertical según convenga es un conocido recurso para influir en la impresión que da el gráfico. La figura <a href="#fig-Escalas12" class="quarto-xref"><span>3</span></a> podría representar las medidas de audiencia de cuatro cadenas de televisión. En el gráfico de la izquierda se observan unas diferencias muy claras y TV1 parece tener la mitad de la audiencia que TV4. Sin embargo, si la escala parte de cero, que es lo correcto cuando se realizan comparaciones, apenas se aprecian esas diferencias.</p>
+<div id="fig-Escalas12" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Escalas12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1204_Escalas_12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Escalas12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: En las comparaciones, lo correcto es partir de cero.
+</figcaption>
+</figure>
+</div>
+<p>En los gráficos en serie temporal, si la escala vertical cubre todo el rango de variación de los datos, dará la impresión de que se ha producido un gran cambio, pero si se parte de cero, puede ocurrir que ese cambio -poco o mucho- apenas se note. En este caso, un buen criterio es que el rango de variación ocupe unos <span class="math inline">\(2/3\)</span> de la amplitud de la escala.</p>
+<div id="fig-Escalas34" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Escalas34-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1205_Escalas_34.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Escalas34-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: En los diagramas temporales se recomienda que el rango de variación de los datos ocupe 2/3 de la amplitud de la escala.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="comparar-situaciones-usando-distintas-escalas" class="level3">
+<h3 class="anchored" data-anchor-id="comparar-situaciones-usando-distintas-escalas">Comparar situaciones usando distintas escalas</h3>
+<p>Observe los histogramas de la figura <a href="#fig-DifEScalas" class="quarto-xref"><span>5</span></a>. Parece que la máquina 2 produce con más variabilidad que la 1 pero no es así. Los dos histogramas se han construido con los mismos datos. El problema está en que las escalas son distintas.</p>
+<div id="fig-DifEScalas" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-DifEScalas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1206_HistoDifEscala.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-DifEScalas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: No es lo que parece. Ojo con las escalas.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="rectas-de-tendencia" class="level3">
+<h3 class="anchored" data-anchor-id="rectas-de-tendencia">Rectas de tendencia</h3>
+<p>No deben añadirse líneas de tendencia cuando la mayoría de los puntos están amontonados en poco espacio. En la figura <a href="#fig-Relacion" class="quarto-xref"><span>6</span></a> hay 50 puntos en el intervalo 1 <span class="math inline">\(\leq\)</span> X <span class="math inline">\(\leq\)</span> 10 que no muestran ninguna relación entre X e Y (gráfico de la derecha). Solo 3 puntos apartados del resto, que seguramente son valores singulares o anómalos, no pueden marcar la tendencia de todo el conjunto de datos.</p>
+<div id="fig-Relacion" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Relacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1207_Relacion.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Relacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: La recta no representa la relación entre X e Y.
+</figcaption>
+</figure>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -675,6 +812,9 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./0213_Software.html" class="pagination-link" aria-label="¿Cuales son los mejores programas para analizar datos gráficamente?">
+        <span class="nav-page-text">¿Cuales son los mejores programas para analizar datos gráficamente?</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

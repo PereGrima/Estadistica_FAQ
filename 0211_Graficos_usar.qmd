@@ -1,3 +1,44 @@
 # ¿Qué gráfico debo usar para representar mis datos? {.unnumbered}
 
-texto
+Naturalmente, depende del tipo de datos y de las características que queramos observar. Veamos algunas recomendaciones para las situaciones más habituales. 
+
+### Variabilidad
+
+El histograma es una buena opción cuando el interés se centra en la variabilidad de los datos, la forma de su distribución, el valor en que están centrados y el rango en que se mueven. La figura [-@fig-Histogramas] compara la producción de dos máquinas que elaboran un producto con un peso que debe estar en el intervalo 210 $\pm$ 10 g. Se han \nolinebreak añadido unas líneas que muestran el valor objetivo y los límites de tolerancia. Se ve muy claro que se debería ajustar la máquina 1.
+
+![Histogramas de los pesos producidos por dos máquinas](02_Fig_Descriptiva/1101_Histogramas_1.png){#fig-Histogramas .fig-compacta2 fig-align="center" width="90%"}
+
+
+Si se tienen pocos datos, un diagrama de puntos puede ser más adecuado. La figura [-@fig-dotplot] muestra que los valores del grupo A se sitúan en torno a 10 mientras que en el grupo B tienden a ser mayores. 
+
+![Diagramas de puntos para comparar dos conjutos de datos](02_Fig_Descriptiva/1102_DotPlot.png){#fig-dotplot .fig-compacta2 fig-align="center" width="92%"}
+
+### Evolución
+
+El diagrama en serie de tiempo es el más adecuado cuando interesa observar la evolución de una variable. La figura [-@fig-TimeSeries] muestra los diámetros de 180 piezas consecutivas fabricadas por dos tornos. Se han añadido los límites de tolerancia y se aprecia claramente que los valores del torno B presentan una tendencia que conduce a la producción de piezas defectuosas. 
+
+
+![Evolución del diámetro de las piezas producidas](02_Fig_Descriptiva/1103_TimeSeries.png){#fig-TimeSeries .fig-compacta2 fig-align="center" width="90%"}
+
+### Relación entre dos variables cuantitativas
+
+La mejor forma de visualizar esta relación es a través de un gráfico de dispersión, como los de la figura [-@fig-ScatterPlot], que ilustran la relación entre la velocidad máxima y la potencia de un conjunto 30 coches.
+
+![Diagramas de dispersión. Versión clásica e incluyendo también información sobre una tercera variable cuantitativa y otra cualitativa](02_Fig_Descriptiva/1104_ScatterPlot.png){#fig-ScatterPlot fig-align="center" width="90%"}
+
+A la izquierda tenemos un diagrama clásico en el que todos los puntos son del mismo tamaño y color. En el de la derecha los puntos se han sustituido por círculos de área proporcional a una tercera variable cuantitativa, que en este caso son las emisiones de CO2. Además, cada círculo es de un color que depende de si el motor es de gasolina o diesel. Estos gráficos con círculos de diferente tamaño que incorporan una nueva variable a la representación, se suelen denominar diagramas de burbujas.
+
+### Relación entre una variable cuantitativa y otra cualitativa
+
+Se pueden usar diagramas similares al de dispersión: para cada valor de la variable cualitativa -en el eje horiontal- se colocan los puntos que representan los valores de la variable cuantitativa (figura [-@fig-boxplot], izquierda). Para evitar que los puntos queden superpuestos y se pierda información sobre su cantidad, muchos programas incluyen la opción "jitter" que les da un cierto "temblor" sacrificando precisión en sus coordenadas pero ganando en visión de cantidad. 
+
+Una alternativa, especialmente recomendable si se tienen muchos puntos, es representar boxplots como en la figura de la derecha.  
+
+![Variable cuantitativa en función de los de otra cualitativa](02_Fig_Descriptiva/1105_BoxPlot.png){#fig-boxplot .fig-compacta2 fig-align="center" width="90%"}
+
+### Frecuencias para variables discretas o cualitativas
+
+El uso de diagramas de barras\index{diagrama de barras} suele ser la forma más clara de representar estos datos. Son similares al histograma pero las barras no se tocan, ya que no hay continuidad en la variable que representan. Los programas que realizan este tipo de gráficos también permiten estratificar las barras tal como se muestra en la figura [-@fig-ChartPlot] derecha.
+
+![Volumen de ventas en distintas zonas del país. A la derecha, estratificado por tipo de producto.](02_Fig_Descriptiva/1106_ChartPlot.png){#fig-ChartPlot .fig-compacta2 fig-align="center" width="90%"}
+

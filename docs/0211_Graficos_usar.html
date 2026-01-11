@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-edfe04249fbec06fcfc51cecdef6f4b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2cf3c65c5b6db5ec86e992953759863e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -232,6 +261,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">¿Qué gráfico NO debo usar para representar mis datos?</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0213_Software.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cuales son los mejores programas para analizar datos gráficamente?</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -239,8 +274,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#variabilidad" id="toc-variabilidad" class="nav-link active" data-scroll-target="#variabilidad">Variabilidad</a></li>
+  <li><a href="#evolución" id="toc-evolución" class="nav-link" data-scroll-target="#evolución">Evolución</a></li>
+  <li><a href="#relación-entre-dos-variables-cuantitativas" id="toc-relación-entre-dos-variables-cuantitativas" class="nav-link" data-scroll-target="#relación-entre-dos-variables-cuantitativas">Relación entre dos variables cuantitativas</a></li>
+  <li><a href="#relación-entre-una-variable-cuantitativa-y-otra-cualitativa" id="toc-relación-entre-una-variable-cuantitativa-y-otra-cualitativa" class="nav-link" data-scroll-target="#relación-entre-una-variable-cuantitativa-y-otra-cualitativa">Relación entre una variable cuantitativa y otra cualitativa</a></li>
+  <li><a href="#frecuencias-para-variables-discretas-o-cualitativas" id="toc-frecuencias-para-variables-discretas-o-cualitativas" class="nav-link" data-scroll-target="#frecuencias-para-variables-discretas-o-cualitativas">Frecuencias para variables discretas o cualitativas</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -264,9 +309,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>texto</p>
+<p>Naturalmente, depende del tipo de datos y de las características que queramos observar. Veamos algunas recomendaciones para las situaciones más habituales.</p>
+<section id="variabilidad" class="level3">
+<h3 class="anchored" data-anchor-id="variabilidad">Variabilidad</h3>
+<p>El histograma es una buena opción cuando el interés se centra en la variabilidad de los datos, la forma de su distribución, el valor en que están centrados y el rango en que se mueven. La figura <a href="#fig-Histogramas" class="quarto-xref"><span>1</span></a> compara la producción de dos máquinas que elaboran un producto con un peso que debe estar en el intervalo 210 <span class="math inline">\(\pm\)</span> 10 g. Se han añadido unas líneas que muestran el valor objetivo y los límites de tolerancia. Se ve muy claro que se debería ajustar la máquina 1.</p>
+<div id="fig-Histogramas" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Histogramas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1101_Histogramas_1.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Histogramas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Histogramas de los pesos producidos por dos máquinas
+</figcaption>
+</figure>
+</div>
+<p>Si se tienen pocos datos, un diagrama de puntos puede ser más adecuado. La figura <a href="#fig-dotplot" class="quarto-xref"><span>2</span></a> muestra que los valores del grupo A se sitúan en torno a 10 mientras que en el grupo B tienden a ser mayores.</p>
+<div id="fig-dotplot" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1102_DotPlot.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Diagramas de puntos para comparar dos conjutos de datos
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="evolución" class="level3">
+<h3 class="anchored" data-anchor-id="evolución">Evolución</h3>
+<p>El diagrama en serie de tiempo es el más adecuado cuando interesa observar la evolución de una variable. La figura <a href="#fig-TimeSeries" class="quarto-xref"><span>3</span></a> muestra los diámetros de 180 piezas consecutivas fabricadas por dos tornos. Se han añadido los límites de tolerancia y se aprecia claramente que los valores del torno B presentan una tendencia que conduce a la producción de piezas defectuosas.</p>
+<div id="fig-TimeSeries" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-TimeSeries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1103_TimeSeries.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TimeSeries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Evolución del diámetro de las piezas producidas
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="relación-entre-dos-variables-cuantitativas" class="level3">
+<h3 class="anchored" data-anchor-id="relación-entre-dos-variables-cuantitativas">Relación entre dos variables cuantitativas</h3>
+<p>La mejor forma de visualizar esta relación es a través de un gráfico de dispersión, como los de la figura <a href="#fig-ScatterPlot" class="quarto-xref"><span>4</span></a>, que ilustran la relación entre la velocidad máxima y la potencia de un conjunto 30 coches.</p>
+<div id="fig-ScatterPlot" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ScatterPlot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1104_ScatterPlot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ScatterPlot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Diagramas de dispersión. Versión clásica e incluyendo también información sobre una tercera variable cuantitativa y otra cualitativa
+</figcaption>
+</figure>
+</div>
+<p>A la izquierda tenemos un diagrama clásico en el que todos los puntos son del mismo tamaño y color. En el de la derecha los puntos se han sustituido por círculos de área proporcional a una tercera variable cuantitativa, que en este caso son las emisiones de CO2. Además, cada círculo es de un color que depende de si el motor es de gasolina o diesel. Estos gráficos con círculos de diferente tamaño que incorporan una nueva variable a la representación, se suelen denominar diagramas de burbujas.</p>
+</section>
+<section id="relación-entre-una-variable-cuantitativa-y-otra-cualitativa" class="level3">
+<h3 class="anchored" data-anchor-id="relación-entre-una-variable-cuantitativa-y-otra-cualitativa">Relación entre una variable cuantitativa y otra cualitativa</h3>
+<p>Se pueden usar diagramas similares al de dispersión: para cada valor de la variable cualitativa -en el eje horiontal- se colocan los puntos que representan los valores de la variable cuantitativa (figura <a href="#fig-boxplot" class="quarto-xref"><span>5</span></a>, izquierda). Para evitar que los puntos queden superpuestos y se pierda información sobre su cantidad, muchos programas incluyen la opción “jitter” que les da un cierto “temblor” sacrificando precisión en sus coordenadas pero ganando en visión de cantidad.</p>
+<p>Una alternativa, especialmente recomendable si se tienen muchos puntos, es representar boxplots como en la figura de la derecha.</p>
+<div id="fig-boxplot" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1105_BoxPlot.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Variable cuantitativa en función de los de otra cualitativa
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="frecuencias-para-variables-discretas-o-cualitativas" class="level3">
+<h3 class="anchored" data-anchor-id="frecuencias-para-variables-discretas-o-cualitativas">Frecuencias para variables discretas o cualitativas</h3>
+<p>El uso de diagramas de barras suele ser la forma más clara de representar estos datos. Son similares al histograma pero las barras no se tocan, ya que no hay continuidad en la variable que representan. Los programas que realizan este tipo de gráficos también permiten estratificar las barras tal como se muestra en la figura <a href="#fig-ChartPlot" class="quarto-xref"><span>6</span></a> derecha.</p>
+<div id="fig-ChartPlot" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ChartPlot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_Fig_Descriptiva/1106_ChartPlot.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ChartPlot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: Volumen de ventas en distintas zonas del país. A la derecha, estratificado por tipo de producto.
+</figcaption>
+</figure>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

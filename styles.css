@@ -49,8 +49,8 @@ figure figcaption {
 }
 
 .fig-compacta2 {
-  margin-top: 0.1em;
-  margin-bottom: 0.3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .tabla-pequena td,
@@ -62,3 +62,4 @@ figure figcaption {
 .tabla-pequena td p {
   margin: 0;           /* elimina espacio extra */
 }
+

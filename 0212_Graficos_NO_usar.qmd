@@ -1,3 +1,45 @@
 # ¿Qué gráfico NO debo usar para representar mis datos? {.unnumbered}
 
-texto
+Los gráficos que no se deben usar pueden ser muchos. Aquí comentamos algunas "tentaciones" que conviene evitar, especialmente en contextos científicos y técnicos donde el objetivo es transmitir la información de la forma más clara y fidedigna posible. 
+
+### Gráficos con tres dimensiones
+
+Deben evitarse porque la profundidad no aporta ninguna información y en cambio dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios  en que se prioriza el impacto visual. 
+
+![](02_Fig_Descriptiva/1201_Barras3D_34.png){.fig-compacta2 fig-align="center" width="90%"}
+
+![Gráficos con una tercera dimensión y sin ella. En estos últimos la información se percibe de forma más clara y directa.](02_Fig_Descriptiva/1202_SerieTiempo3D.png){#fig-barras3D .fig-compacta2 fig-align="center" width="90%"}
+
+### Diagramas de pastel, especialmente con tres dimensiones
+
+Los diagramas de pastel (circulares o de queso, o pizza, si lo prefiere) son representaciones muy utilizadas aunque no tan apreciadas en contextos científico-técnicos donde -en general- se prefieren los diagramas de barras. Si se representan en tres dimensiones y desgajando un sector que se quiere destacar ya entramos en el terreno de los gráficos tendenciosos. Una alternativa similar que transmite la información de forma más clara son los llamados gráficos donut.
+
+
+![En el gráfico de la izquierda parece que el mayor sector corresponde a la sanidad, cuando en realidad no es así.](02_Fig_Descriptiva/1203_Pastel3D.png){#fig-Pastel3D .fig-compacta2 fig-align="center" width="90%"}
+
+### Gráficos que ocupan mucho espacio y contienen poca información
+
+Dedicar media página de un informe, o toda la pantalla de una presentación, a un gráfico de pastel que solo da un porcentaje (de la población con acceso a internet, por ejemplo) no parece una buena forma de aprovechar el papel o las pantallas de la presentación. Es más grave si se van presentando este tipo de gráficos de forma repetitiva (un diagrama para cada región, por ejemplo). 
+
+### Gráficos con escalas tendenciosas
+
+Adaptar la escala del eje vertical según convenga es un conocido recurso para influir en la impresión que da el gráfico. La figura [-@fig-Escalas12] podría representar las medidas de audiencia de cuatro cadenas de televisión. En el gráfico de la izquierda se observan unas diferencias muy claras y TV1 parece tener la mitad de la audiencia que TV4. Sin embargo, si la escala parte de cero,  que es lo correcto cuando se realizan comparaciones, apenas se aprecian esas diferencias.
+
+![En las comparaciones, lo correcto es partir de cero.](02_Fig_Descriptiva/1204_Escalas_12.png){#fig-Escalas12  fig-align="center" width="90%"}
+
+En los gráficos en serie temporal, si la escala vertical cubre todo el rango de variación de los datos, dará la impresión de que se ha producido un gran cambio, pero si se parte de cero, puede ocurrir que ese cambio -poco o mucho- apenas se note. En este caso, un buen criterio es que el rango de variación ocupe unos $2/3$ de la amplitud de la escala.
+
+![En los diagramas temporales se recomienda que el rango de variación de los datos ocupe 2/3 de la amplitud de la escala.](02_Fig_Descriptiva/1205_Escalas_34.png){#fig-Escalas34 .fig-compacta2 fig-align="center" width="90%"}
+
+### Comparar situaciones usando distintas escalas
+
+Observe los histogramas de la figura [-@fig-DifEScalas]. Parece que la máquina 2 produce con más variabilidad que la 1 pero no es así. Los dos histogramas se han construido con los mismos datos. El problema está en que las escalas son distintas. 
+
+![No es lo que parece. Ojo con las escalas.](02_Fig_Descriptiva/1206_HistoDifEscala.png){#fig-DifEScalas .fig-compacta2 fig-align="center" width="88%"}
+
+### Rectas de tendencia
+
+No deben añadirse líneas de tendencia cuando la mayoría de los puntos están amontonados en poco espacio. En la figura [-@fig-Relacion] hay 50 puntos en el intervalo  1 $\leq$ X $\leq$ 10 que no muestran ninguna relación entre X e Y (gráfico de la derecha). Solo 3 puntos apartados del resto, que seguramente son valores singulares o anómalos, no pueden marcar la tendencia de todo el conjunto de datos.
+
+![La recta no representa la relación entre X e Y.](02_Fig_Descriptiva/1207_Relacion.png){#fig-Relacion .fig-compacta2 fig-align="center" width="90%"}
+
