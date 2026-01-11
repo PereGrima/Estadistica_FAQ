@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://peregrima.github.io/Estadistica_FAQ/index.html</loc>
-    <lastmod>2026-01-09T07:53:43.626Z</lastmod>
+    <lastmod>2026-01-11T16:41:41.847Z</lastmod>
   </url>
   <url>
-    <loc>https://peregrima.github.io/Estadistica_FAQ/Prologo_1E.html</loc>
-    <lastmod>2026-01-08T08:01:41.724Z</lastmod>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0213_Software.html</loc>
+    <lastmod>2026-01-11T08:44:54.130Z</lastmod>
   </url>
   <url>
     <loc>https://peregrima.github.io/Estadistica_FAQ/0101_Estadistica_Matematicas.html</loc>
@@ -73,7 +73,43 @@
     <lastmod>2026-01-11T07:44:31.665Z</lastmod>
   </url>
   <url>
-    <loc>https://peregrima.github.io/Estadistica_FAQ/0213_Software.html</loc>
-    <lastmod>2026-01-11T08:44:54.130Z</lastmod>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0301_Frecuencia_densidad.html</loc>
+    <lastmod>2026-01-11T20:26:58.329Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0302_Que_Distribucion.html</loc>
+    <lastmod>2026-01-11T20:56:54.554Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0303_Media_var_aleatoria.html</loc>
+    <lastmod>2026-01-11T21:14:08.377Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0304_formula_Normal.html</loc>
+    <lastmod>2026-01-11T17:10:34.875Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0305_Solo_N01.html</loc>
+    <lastmod>2026-01-11T17:10:59.754Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0306_Estatura_cero.html</loc>
+    <lastmod>2026-01-11T17:11:27.175Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0307_Contrario_Normal.html</loc>
+    <lastmod>2026-01-11T17:12:02.016Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0308_Formula_Poisson.html</loc>
+    <lastmod>2026-01-11T17:12:22.704Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0309_Varianza_Chi_cuadrado.html</loc>
+    <lastmod>2026-01-11T17:12:54.005Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peregrima.github.io/Estadistica_FAQ/0310_Sumark_Multiplicark.html</loc>
+    <lastmod>2026-01-11T17:14:16.844Z</lastmod>
   </url>
 </urlset>

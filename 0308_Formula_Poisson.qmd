@@ -1,0 +1,3 @@
+# ¿De dónde sale la fórmula de la distribución de Poisson?? {.unnumbered}
+
+texto

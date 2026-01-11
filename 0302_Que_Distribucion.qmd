@@ -1,0 +1,34 @@
+# ¿Cómo se sabe qué distribución sigue una variable aleatoria? {.unnumbered}
+
+#### Preámbulo: ¿qué es una distribución de probabilidad?
+
+Parece que si un valor depende del azar poco se puede hacer para describir su comportamiento, depende del azar y listo. Azar suena a impredecible, a lotería. En un juego de azar solo afecta la suerte y no hay manera de prever qué resultado saldrá.
+
+Pero no es cierto que al decir que un valor depende del azar ya esté todo dicho. El azar se puede clasificar en familias y cada una tiene un patrón de comportamiento específico (aunque también en este caso las grandes familias están emparentadas entre ellas). Los que no entendemos de carpintería decimos que un mueble es de madera sin entrar en más consideraciones, pero el carpintero sabe que maderas hay de muchos tipos, caras y baratas, con unas propiedades u otras, y que no todas sirven para todo. Los que nos dedicamos a la estadística no hace falta que sepamos de maderas, pero sí debemos conocer las clases de azar y si la variable que nos ocupa pertenece a una de las familias conocidas podemos aplicar sus propiedades -sin tenerlas que deducir- y todo se hace mucho más fácil. Claro que no hablamos de familias sino de distribuciones de probabilidad, o de distribuciones, sin más.
+
+#### ¿Cómo seleccionar la distribución que mejor se adapta a nuestra variable?
+
+No se trata de ir haciendo pruebas para ver cual encaja mejor en nuestros datos (si se tienen pocos encajarán casi todas) sino que hay que basarse en las características de esos datos y en la forma en que se han obtenido.
+
+Si la variable es **continua** (puede tomar cualquier valor dentro de un intervalo), presenta una distribución simétrica en torno a su valor central y a medida que nos alejamos de ese valor central -por encima y por debajo- disminuye el número de valores observados, como en el caso de las estaturas, seguramente su comportamiento se puede modelar a través de la distribución **Normal**. Si todos los valores son igualmente probables, entonces la distribución se llama **uniforme**. Este es el caso de los números aleatorios que genera Excel con la función `=ALEATORIO()`, pertenecen a una distribución uniforme entre 0 y 1.
+
+Otras variables continuas tienen una distribución no simétrica. Esta circunstancia se da cuando los valores se alejan con más libertad hacia un lado que hacia el otro, en el que normalmente hay un frontera que impide el paso. Por ejemplo, la redondez de una pieza se mide como la diferencia entre sus diámetros máximo y mínimo. Si intentamos que las piezas sean perfectamente redondas estos valores se amontonarán contra el cero sin que haya límite para los valores grandes, con lo que se obtiene una distribución asimétrica. En alguna de estas situaciones el logaritmo de los datos sigue una distribución que puede considerarse Normal, por lo que esa distribución se llama **lognormal**.
+
+Si la variable es **discreta** (solo pueden tomar valores a saltos -en general números enteros-) el caso más sencillo es cuando todos los valores tienen la misma probabilidad de aparecer, como el resultado de lanzar un dado, en cuyo caso se llama **uniforme discreta**}. Otro caso muy típico es el número de "éxitos" al realizar $n$ experimentos siendo $p$ la probabilidad de éxito, como el número de piezas defectuosas en un lote de 100 unidades si la probabilidad de que una pieza sea defectuosa es 0,05. También tenemos una distribución para contar ocurrencias como el número de veces que se estropea un ascensor en un año o el número de visitas diarias a una página web. La primera distribución recibe el nombre de **binomial** y la segunda es la distribución de **Poisson**.
+
+Al principio puede costar distinguir cuando una variable sigue una distribución binomial o de Poisson, pero es muy fácil fijándose en los detalles que se indican en la siguiente tabla.
+
+
+::: tabla-pequena
+|                |                                                                            |                                                                                                                    |                                              
+|:--------------:|:--------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------:|
+|                | Binomial                                                                   |    Poisson                                                                                                         |      
+|Forma de contar | Se pueden contar éxitos o <br>fracasos, piezas correctas o <br>piezas defectuosas  | Solo hay una forma de contar las <br>ocurrencias. No se puede contar el <br>número de veces que no se <br>estropea un ascensor | 
+|Valor máximo    | Existe un máximo. En un lote <br>de 100 piezas como máximo <br>hay 100 defectuosas | No hay valor máximo (al menos en <br>teoría). No hay máximo en el <br>número de veces que se puede <br>estropear el ascensor                                            |
+
+:::
+
+\
+También existen distribuciones teóricas que se utilizan como referencia en los contrastes de hipótesis. Las más conocidas son la t-Student, la Chi-cuadrado y la F de Snedecor. Según sea el test que se realiza, la distribución adecuada será una u otra. En los libros también aparecen distribuciones “para hacer ejercicios”, que sólo son expresiones matemáticas en las que no se comenta cual es el fenómeno a que se refieren ni cual es el sentido físico de la variable en cuestión. Hay que entender estas distribuciones como instrumentos para practicar las propiedades de las distribuciones de probabilidad, aunque también es verdad que determinadas variables se pueden modelar con funciones específicas, “no catalogadas” como las que aparecen en ese tipo de ejercicios.
+
+En cualquier caso, catalogado o no, no hay que confundir el modelo con la realidad. Uno de los ejemplos más socorridos es el de la estatura para ilustrar la distribución Normal, pero si tuviéramos las estaturas de los millones de habitantes adultos del planeta, podríamos comprobar que no se ajustan "exactamente" a la conocida campana de Gauss, y tampoco lo harían si estratificamos por sexo, raza, o lo que sea. Se trata, como en los otros casos, de un buen modelo que permite realizar estimaciones con suficiente precisión a efectos prácticos pero que no deja de ser un modelo teórico que no coincide exactamente con la realidad. Lo mismo ocurre con las otras distribuciones que, aun siendo modelos teóricos (lo de teórico para un modelo es un adjetivo innecesario) son muy útiles en la práctica.

@@ -1,0 +1,3 @@
+# ¿Por qué para la distribución Normal solo se necesita la tabla de la N(0; 1)? {.unnumbered}
+
+texto

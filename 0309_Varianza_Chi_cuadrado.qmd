@@ -1,0 +1,3 @@
+# ¿Cómo se relaciona la varianza muestral con la distribución Chi-cuadrado? {.unnumbered}
+
+texto

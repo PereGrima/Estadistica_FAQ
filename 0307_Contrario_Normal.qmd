@@ -1,0 +1,3 @@
+# ¿Existen variables con comportamiento contrario a la distribución Normal? {.unnumbered}
+
+texto

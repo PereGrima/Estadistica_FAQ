@@ -10,6 +10,8 @@ book:
   date: today
   date-format: medium
   cover-image: cover.png
+  sidebar:
+      collapse-level: 1
   site-url: https://peregrima.github.io/Estadistica_FAQ/
   
   chapters:
@@ -38,6 +40,19 @@ book:
         - 0212_Graficos_NO_usar.qmd
         - 0213_Software.qmd
 
+    - part: Distribuciones de probabilidad
+      chapters: 
+        - 0301_Frecuencia_densidad.qmd
+        - 0302_Que_Distribucion.qmd
+        - 0303_Media_var_aleatoria.qmd
+        - 0304_formula_Normal.qmd
+        - 0305_Solo_N01.qmd
+        - 0306_Estatura_cero.qmd
+        - 0307_Contrario_Normal.qmd
+        - 0308_Formula_Poisson.qmd
+        - 0309_Varianza_Chi_cuadrado.qmd
+        - 0310_Sumark_Multiplicark.qmd
+        
 # Referencias
 # biblio-title: "Referencias"
 # link-citations: true
@@ -61,9 +76,6 @@ format:
     theme: cosmo
     code-fold: true
     css: styles.css
-    toc: true
-    toc-depth: 2
-    toc-expand: false
     header-includes:
       <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
 

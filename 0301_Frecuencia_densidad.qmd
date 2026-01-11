@@ -1,0 +1,62 @@
+# ¿Cómo se pasa de la frecuencia a la densidad de probabilidad? {.unnumbered}
+
+Al construir un histograma lo habitual es colocar la frecuencia en el eje vertical, pero también se puede usar la *densidad de frecuencia*. Para cada intervalo $i$, la densidad de frecuencia $f_i^*$ es igual a su frecuencia relativa $f_i$ dividida por su anchura $c_i$. Es decir: $f_i^\ast= f_i/c_i$. De esta forma el área de cada barra $(c_i\cdot f_i/c_i)$ es igual a la frecuencia relativa. Si todos los intervalos tienen la misma anchura usar la densidad de frecuencia es una complicación innecesaria ya que tanto la altura de las barras como su área son proporcionales a la frecuencia y es más directo fijarse en la altura. Sin embargo, si los intervalos tienen distinta anchura resulta más apropiado usar la densidad.
+
+Vamos a suponer que una empresa toma una muestra de 500 empleados con el fin de analizar la antigüedad en su puesto de trabajo y que, por razones de índole administrativa, desea considerar los intervalos que se indican en la siguiente tabla (los años de antigüedad deben leerse como: de más de ... hasta ...).
+
+::: {.tabla-pequena} 
+|                                                      |                                 |                                      |                                              |                                               |
+|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+|                Años de <br>antigüedad                | Anchura del <br>intervalo $c_i$ |    Frecuencia <br>absoluta $n_i$     |        Frecuencia <br>relativa $f_i$         |     Densidad de <br>frecuencia $f_i/c_i$      |
+| 0 - 2 <br> 2 - 3 <br> 3 - 5 <br> 5 - 10 <br> 10 - 20 | 2 <br> 1 <br> 2 <br> 5 <br> 10  | 50 <br> 25 <br> 200 <br> 200 <br> 25 | 0,10 <br> 0,05 <br> 0,40 <br> 0,40 <br> 0,05 | 0,05 <br> 0,05 <br> 0,20 <br> 0,08 <br> 0,005 |
+|                        Total                         |               20                |                 500                  |                      1                       |                                               |
+:::
+
+Realizar el histograma con esos intervalos y las frecuencias absolutas (o relativas) no es una buena idea porque se tiende a comparar las frecuencias sin tener en cuenta la diferencia en la anchura de los intervalos. No es lo mismo tener 200 observaciones en un intervalo ancho (por ejemplo, de 5 a 10 años) que en otro más estrecho (de 3 a 5). Usar la densidad de frecuencia da una visión de los datos más acorde con la realidad.
+
+La forma de calcular la densidad de frecuencia para cada intervalo es muy fácil, para el primer intervalo tenemos $f_1^\ast=f_1/c_1=0,10/2 = 0,05$ y así la calculamos para todos. El área del segundo intervalo deberá ser la mitad del área del primero porque tiene la mitad de observaciones, y el área sobre el tercero deberá ser cuatro veces el área sobre el primero.
+
+![Histograma con intervalos desiguales](03_Fig_Distribuciones/0101_Densidad_1.png){#fig-Densidad1 .fig-compacta2 fig-align="center" width="45%"}
+
+Es intuitivamente claro que si el primer intervalo contiene el 10 % de los datos y estos están distribuidos en una anchura de 2 unidades, en promedio tenemos un 5 % en cada unidad. En el cuarto intervalo, por ejemplo, sus 5 años contienen el 40 % de los empleados, así que en promedio tenemos un 8% de los empleados cada año, o lo que es lo mismo: $f_4^*=0,08/año$. En las ordenadas tenemos la frecuencia relativa por unidad de intervalo, por eso se denomina densidad de frecuencia.
+
+De esta forma, la estimación de un porcentaje relacionado con la antigüedad se convierte en el cálculo de un área. Así, por ejemplo, si se está interesado en estimar el porcentaje de empleados con una antigüedad menor o igual a 4 años, digamos $P(X \le 4)$, bastará con calcular el área del histograma comprendida entre 0 y 4 tal como muestra la figura [-@fig-Densidad2] (izquierda).
+
+Observe que el área sombreada se calcula sumando por un lado las áreas de los primeros rectángulos (0,10 + 0,05) y por otro lado la parte del tercer rectángulo comprendida entre 3 y 4. Como en este tercer rectángulo se conoce su densidad, que es de 0,20, y se requiere un año, el porcentaje de empleados entre 3 y 4 años será 0,20·1 = 0,20. Finalmente, tenemos que la proporción de empleados con una antigüedad de 4 años o menos se estima en: $P(X\le4)=0,10+0,05+0,20=0,35$.
+
+Análogamente, si se desea estimar la proporción con una antigüedad entre 4 y 7,5 años habrá que calcular el área entre dichos valores, tal como muestra la figura [-@fig-Densidad2] (derecha). Haciendo el cálculo se obtiene: $P(4\le X\le7.5)=0,40$.
+
+![Cálculo de frecuencias a través de áreas](03_Fig_Distribuciones/0102_Densidad_2.png){#fig-Densidad2 .fig-compacta2 fig-align="center" width="90%"}
+
+#### De la densidad de frecuencias a la función densidad de probabilidad
+
+Supongamos ahora que tenemos una muestra de 10.000 valores de una cierta variable $X$. En el lado izquierdo de la figura [-@fig-Densidad3] tenemos su histograma y en el derecho ese mismo histograma pero con la densidad de frecuencias en el eje de ordenadas y superponiendo dos líneas que parece razonable considerar que representan a la población de la que provienen estos datos.
+
+![Histograma con frecuencias absolutas (izquierda) y con densidad de frecuencia (derecha)](03_Fig_Distribuciones/0103_Densidad_3.png){#fig-Densidad3 .fig-compacta2 fig-align="center" width="90%"}
+
+La función que describe esas líneas que hemos añadido es la **función densidad de probabilidad**. Respecto a las muestras hablamos de **frecuencia**, mientras que en el contexto de las poblaciones usamos el término **probabilidad**.
+
+En este caso la función densidad de probabilidad $f(x)$ es:
+
+\begin{equation*}
+
+   f(x) = \left \{
+
+   \begin{aligned}
+
+       x\;\; & \quad\text{para}\;\; 0<x \leq 1 \\
+
+       2-x & \quad\text{para}\;\; 1<x \leq 2
+
+   \end{aligned}
+
+   \right.
+
+\end{equation*}
+
+\noindent En la muestra, la frecuencia entre 0,5 y 1,5 será igual a la suma de las áreas de las barras que se encuentran en esos valores. Para la población, la probabilidad de que $x$ se encuentre entre esos valores será igual al área que definen en el triángulo:
+
+$$P(0,5 \leq x \leq 1,5) = \int_{0,5}^1 x \; dx + \int_1^{1,5}(2-x) \; dx =\frac{3}{4}$$
+![Cálculo de frecuencias (izquierda) y de probabilidades (derecha) a través de áreas](03_Fig_Distribuciones/0104_Densidad_4.png){#fig-Densidad3 .fig-compacta2 fig-align="center" width="90%"}
+
+Si en vez de una distribución triangular tenemos -por ejemplo- una distribución Normal, la expresión de $f(x)$ es más complicada, pero el planteamiento es exactamente el mismo.
