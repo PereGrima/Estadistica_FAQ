@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Roberto Behar, Pere Grima">
 
-<title>Estadística. Preguntas frecuentes</title>
+<title>¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./0101_Estadistica_Matematicas.html" rel="next">
+<link href="./0405_Muestra_poblacion.html" rel="next">
+<link href="./0403_Factor_correccion.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">PRESENTACIÓN</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0404_Elementos_muestra.html">¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -141,7 +141,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PRESENTACIÓN</span></a>
   </div>
 </li>
@@ -342,13 +342,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Muestreo y Estimación</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0401_Creemos_muestra.html" class="sidebar-item-text sidebar-link">
@@ -369,7 +369,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./0404_Elementos_muestra.html" class="sidebar-item-text sidebar-link">
+  <a href="./0404_Elementos_muestra.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?</span></a>
   </div>
 </li>
@@ -410,46 +410,22 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación">PRESENTACIÓN</a>
-  <ul class="collapse">
-  <li><a href="#autores" id="toc-autores" class="nav-link" data-scroll-target="#autores">Autores</a></li>
-  <li><a href="#libro-impreso" id="toc-libro-impreso" class="nav-link" data-scroll-target="#libro-impreso">Libro impreso</a></li>
-  <li><a href="#licencia" id="toc-licencia" class="nav-link" data-scroll-target="#licencia">Licencia</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0404_Elementos_muestra.html">¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Estadística. Preguntas frecuentes</h1>
-<p class="subtitle lead">Para estudiantes, curiosos y público en general</p>
+<h1 class="title">¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Roberto Behar, Pere Grima </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">12 ene 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -459,29 +435,648 @@ window.Quarto = {
 </header>
 
 
-
-<section id="presentación" class="level1 unnumbered">
-<h1 class="unnumbered">PRESENTACIÓN</h1><p><img src="cover.png" title="Estadística. Preguntas frecuentes" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>Respondemos a preguntas que pueden surgir en un curso general de estadística. Tratan sobre el material del curso y también sobre temas que pueden aparecer en discusiones sobre lo que es la estadística, sus dificultades y sus aplicaciones.</p>
-<p>Es el resultado de nuestra experienca moviéndonos en este terreno y esperamos que sea útil a estudiantes, profesores que empiezan, e intersados por la estadística en general. Cualquier comentario o sugerencia será bienvenido.</p>
-<p>Versión 4.0 (Marzo de 2026)</p>
-<section id="autores" class="level3">
-<h3 class="anchored" data-anchor-id="autores">Autores</h3>
-<div class="poco-espacio">
-<p><a href="https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez">Roberto Behar</a>, profesor en la Universidad del Valle, en Cali, Colombia.</p>
-<p><a href="https://www-eio.upc.es/~grima/index.html">Pere Grima</a>, profesor en la Universitat Politècnica de Catalunya, en Barcelona, España</p>
-</div>
+<p>En el ámbito del muestreo probabilístico, el tamaño de muestra se calcula aplicando una fórmula que puede ser más o menos complicada dependiendo del tipo de muestreo. En el caso del muestreo aleatorio simple y para la estimación de una proporción, <span class="math inline">\(p\)</span>, tenemos: <span class="math display">\[ n = \frac{Np(1-p)}{(N-1)(E^2/z^2)+p(1-p)} \]</span></p>
+<p>Esta fórmula se deduce a partir de la expresión del intervalo de confianza para <span class="math inline">\(p\)</span> con la corrección para población finita. Para obtener el valor de <span class="math inline">\(n\)</span> basta con asignar valores a las variables que intervienen. Estas variables son:</p>
+<section id="e-margen-de-error" class="level5">
+<h5 class="anchored" data-anchor-id="e-margen-de-error"><strong><em>E</em></strong>: Margen de error</h5>
+<p>Si le piden que a través de una muestra estime la proporción de jóvenes de su ciudad que son usuarios habituales de una red social, nadie le va a exigir que dé el valor exacto, tipo el 23,7 %. En su informe usted hará constar que el porcentaje estimado es de 23,7 $$3,3 %. El 23,7 % es la proporción obtenida en la muestra y ese 3,3 % de incertidumbre en torno al valor de la muestra es lo que llamamos margen de error. En igualdad de valores del resto de variables que intervienen, si quiere dar el resultado con menos margen de error deberá usar un mayor tamaño de muestra.</p>
 </section>
-<section id="libro-impreso" class="level3">
-<h3 class="anchored" data-anchor-id="libro-impreso">Libro impreso</h3>
-<p>Se puede comprar en <a href="https://amzn.eu/d/hGbwqAH" title="Amazon.es">Amazon.es</a> o <a href="https://www.amazon.com/dp/B09SL18YRT" title="Comprar en Amazon.com">Amazon.com</a>. Está impreso en color, encuadernado con tapa blanda e incluye prólogo, índices y referencias.</p>
+<section id="z-relacionado-con-el-nivel-de-confianza" class="level5">
+<h5 class="anchored" data-anchor-id="z-relacionado-con-el-nivel-de-confianza"><strong><em>z</em></strong>: Relacionado con el nivel de confianza</h5>
+<p>Si llega a la conclusión de que esa proporción está en el intervalo 23,7$$3,3 % ¿Puede usted afirmar con total seguridad que el verdadero valor está dentro de este intervalo? No, no puede hacerlo, su afirmación siempre tendrá un cierto nivel de confianza. Si ese nivel de confianza es del 95 % significa que el intervalo se ha construido siguiendo un procedimiento que acierta (incluye el verdadero valor) el 95 % de las veces, es como una información que da alguien que dice la verdad el 95 % de las veces. El nivel de confianza está relacionado con el valor de <span class="math inline">\(z\)</span>. Para un nivel de confianza <span class="math inline">\(1-\alpha\)</span> el valor de <span class="math inline">\(z\)</span> es aquel que deja un área de cola de <span class="math inline">\(\alpha/2\)</span> en la distribución <span class="math inline">\(N(0; 1)\)</span>. Si el nivel de confianza es el 95 % tenemos que <span class="math inline">\(z_{0,025} = 1,96\)</span> (cuando los medios de cálculo eran rudimentarios ese 1,96 se redondeaba a 2 obteniéndose un nivel de confianza del 95,5 %). ¿Podemos construir el intervalo de manera que acierte el 99 % de las veces? Sí podemos, incluso podemos lograr que acierte el 99,99 %, pero no lo hacemos porque al aumentar el nivel de confianza aumenta también margen de error y podemos llegar a la conclusión de que el porcentaje que andamos buscando está en el intervalo 23,7 <span class="math inline">\(\pm\)</span> 20 %. De eso estaremos muy seguros pero no hacía falta ningún estudio para llegar a esa conclusión.</p>
+<p>En general, la determinación del margen de error y del nivel de confianza ``adecuados’’, no es un tema de la Estadística, ni de los estadísticos, es una decisión del equipo de investigación, que tiene conocimiento de los riesgos reales de equivocarse y del presupuesto disponible.</p>
 </section>
-<section id="licencia" class="level3">
-<h3 class="anchored" data-anchor-id="licencia">Licencia</h3>
-<p>Se publica bajo una licencia Creative Commons: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es" title="Licencia Creative Commons">CC BY-NC-ND 4.0</a>.</p>
+<section id="p-la-variabilidad-en-la-población" class="level5">
+<h5 class="anchored" data-anchor-id="p-la-variabilidad-en-la-población"><strong><em>p</em></strong>: La variabilidad en la población</h5>
+<p>Si en una población no hay variabilidad basta con mirar un solo elemento para saber cómo son todos. Cuando la variabilidad aumenta también lo hace el tamaño de muestra necesario para estimar sus características. Si se trata de estimar una proporción esa variabilidad está relacionada con el valor de la propia proporción <span class="math inline">\(p\)</span>, o más concretamente con <span class="math inline">\(p(1-p)\)</span>. Aquí aparece un problema porque si queremos estimar una proporción no podemos usar el valor de esa proporción –que no conocemos– para calcular el tamaño de muestra necesario. La solución es calcular el tamaño de la muestra poniéndonos en el caso más desfavorable que es cuando <span class="math inline">\(p = 50\%\)</span>. A <span class="math inline">\(1-p\)</span> también se le denomina <span class="math inline">\(q\)</span>, por esta razón muchas veces se habla del supuesto de <span class="math inline">\(p=q=50 %\)</span> en las fichas técnicas de las encuestas.</p>
+</section>
+<section id="n-el-tamaño-de-la-población" class="level5">
+<h5 class="anchored" data-anchor-id="n-el-tamaño-de-la-población"><strong><em>N</em></strong>: El tamaño de la población</h5>
+<p>Parece que esta es la variable cuya influencia está más justificada, pero no es así. Si la población es grande –y esto es lo más habitual– su tamaño prácticamente no influye. Usando la fórmula que hemos visto y con la ayuda de una hoja de cálculo se puede construir la tabla donde se aprecia la poca influencia del tamaño de la población.</p>
+<table style="border-collapse:collapse; width:90%; font-size:0.85em; text-align:center; margin-bottom:2em;">
+<style>
+/* Selecciona cada 5ª fila del cuerpo de la tabla */
+table tbody tr:nth-child(5n) {
+    border-bottom: 2px solid #d3d3d3 !important;
+}
+</style>
+<caption style="caption-side:top; text-align:center; font-size:1em; font-style:italic; margin-bottom:0.5em;">
+Tamaños de muestra para la estimación de una proporción con un nivel de confianza del 95 %
+</caption>
+<thead>
+<tr style="border-top:1px solid #000; border-bottom:1px solid #000;">
+<th rowspan="2" style="padding:4px;">
+Tamaño de <br>la población
+</th>
+<th colspan="6" style="padding:4px;">
+Margen de error
+</th>
+</tr>
+<tr style="border-bottom:1px solid #000;">
+<th>
+±1 %
+</th>
+<th>
+±2 %
+</th>
+<th>
+±3 %
+</th>
+<th>
+±4 %
+</th>
+<th>
+±5 %
+</th>
+<th>
+±10 %
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+500
+</td>
+<td>
+476
+</td>
+<td>
+414
+</td>
+<td>
+341
+</td>
+<td>
+273
+</td>
+<td>
+218
+</td>
+<td>
+81
+</td>
+</tr>
+<tr>
+<td>
+1.000
+</td>
+<td>
+906
+</td>
+<td>
+707
+</td>
+<td>
+517
+</td>
+<td>
+376
+</td>
+<td>
+278
+</td>
+<td>
+88
+</td>
+</tr>
+<tr>
+<td>
+1.500
+</td>
+<td>
+1.298
+</td>
+<td>
+924
+</td>
+<td>
+624
+</td>
+<td>
+429
+</td>
+<td>
+306
+</td>
+<td>
+91
+</td>
+</tr>
+<tr>
+<td>
+2.000
+</td>
+<td>
+1.656
+</td>
+<td>
+1.092
+</td>
+<td>
+697
+</td>
+<td>
+462
+</td>
+<td>
+323
+</td>
+<td>
+92
+</td>
+</tr>
+<tr>
+<td>
+2.500
+</td>
+<td>
+1.984
+</td>
+<td>
+1.225
+</td>
+<td>
+749
+</td>
+<td>
+485
+</td>
+<td>
+334
+</td>
+<td>
+93
+</td>
+</tr>
+<tr>
+<td>
+3.000
+</td>
+<td>
+2.287
+</td>
+<td>
+1.334
+</td>
+<td>
+788
+</td>
+<td>
+501
+</td>
+<td>
+341
+</td>
+<td>
+94
+</td>
+</tr>
+<tr>
+<td>
+3.500
+</td>
+<td>
+2.566
+</td>
+<td>
+1.425
+</td>
+<td>
+818
+</td>
+<td>
+513
+</td>
+<td>
+347
+</td>
+<td>
+94
+</td>
+</tr>
+<tr>
+<td>
+4.000
+</td>
+<td>
+2.825
+</td>
+<td>
+1.501
+</td>
+<td>
+843
+</td>
+<td>
+523
+</td>
+<td>
+351
+</td>
+<td>
+94
+</td>
+</tr>
+<tr>
+<td>
+4.500
+</td>
+<td>
+3.065
+</td>
+<td>
+1.566
+</td>
+<td>
+863
+</td>
+<td>
+530
+</td>
+<td>
+355
+</td>
+<td>
+95
+</td>
+</tr>
+<tr>
+<td>
+5.000
+</td>
+<td>
+3.289
+</td>
+<td>
+1.623
+</td>
+<td>
+880
+</td>
+<td>
+536
+</td>
+<td>
+357
+</td>
+<td>
+95
+</td>
+</tr>
+<tr>
+<td>
+6.000
+</td>
+<td>
+3.694
+</td>
+<td>
+1.715
+</td>
+<td>
+907
+</td>
+<td>
+546
+</td>
+<td>
+362
+</td>
+<td>
+95
+</td>
+</tr>
+<tr>
+<td>
+7.000
+</td>
+<td>
+4.050
+</td>
+<td>
+1.788
+</td>
+<td>
+927
+</td>
+<td>
+553
+</td>
+<td>
+365
+</td>
+<td>
+95
+</td>
+</tr>
+<tr>
+<td>
+8.000
+</td>
+<td>
+4.365
+</td>
+<td>
+1.847
+</td>
+<td>
+942
+</td>
+<td>
+559
+</td>
+<td>
+367
+</td>
+<td>
+95
+</td>
+</tr>
+<tr>
+<td>
+9.000
+</td>
+<td>
+4.647
+</td>
+<td>
+1.896
+</td>
+<td>
+955
+</td>
+<td>
+563
+</td>
+<td>
+369
+</td>
+<td>
+96
+</td>
+</tr>
+<tr>
+<td>
+10.000
+</td>
+<td>
+4.900
+</td>
+<td>
+1.937
+</td>
+<td>
+965
+</td>
+<td>
+567
+</td>
+<td>
+370
+</td>
+<td>
+96
+</td>
+</tr>
+<tr>
+<td>
+15.000
+</td>
+<td>
+5.856
+</td>
+<td>
+2.070
+</td>
+<td>
+997
+</td>
+<td>
+578
+</td>
+<td>
+375
+</td>
+<td>
+96
+</td>
+</tr>
+<tr>
+<td>
+20.000
+</td>
+<td>
+6.489
+</td>
+<td>
+2.144
+</td>
+<td>
+1.014
+</td>
+<td>
+583
+</td>
+<td>
+377
+</td>
+<td>
+96
+</td>
+</tr>
+<tr>
+<td>
+25.000
+</td>
+<td>
+6.939
+</td>
+<td>
+2.191
+</td>
+<td>
+1.024
+</td>
+<td>
+587
+</td>
+<td>
+379
+</td>
+<td>
+96
+</td>
+</tr>
+<tr>
+<td>
+50.000
+</td>
+<td>
+8.057
+</td>
+<td>
+2.291
+</td>
+<td>
+1.045
+</td>
+<td>
+594
+</td>
+<td>
+382
+</td>
+<td>
+96
+</td>
+</tr>
+<tr>
+<td>
+100.000
+</td>
+<td>
+8.763
+</td>
+<td>
+2.345
+</td>
+<td>
+1.056
+</td>
+<td>
+597
+</td>
+<td>
+383
+</td>
+<td>
+96
+</td>
+</tr>
+<tr>
+<td>
+500.000
+</td>
+<td>
+9.423
+</td>
+<td>
+2.390
+</td>
+<td>
+1.065
+</td>
+<td>
+600
+</td>
+<td>
+384
+</td>
+<td>
+97
+</td>
+</tr>
+<tr>
+<td>
+1.000.000
+</td>
+<td>
+9.513
+</td>
+<td>
+2.396
+</td>
+<td>
+1.066
+</td>
+<td>
+600
+</td>
+<td>
+384
+</td>
+<td>
+97
+</td>
+</tr>
+<tr>
+<td>
+1.500.000
+</td>
+<td>
+9.543
+</td>
+<td>
+2.398
+</td>
+<td>
+1.067
+</td>
+<td>
+600
+</td>
+<td>
+385
+</td>
+<td>
+97
+</td>
+</tr>
+<tr>
+<td>
+2.000.000
+</td>
+<td>
+9.558
+</td>
+<td>
+2.399
+</td>
+<td>
+1.067
+</td>
+<td>
+601
+</td>
+<td>
+385
+</td>
+<td>
+97
+</td>
+</tr>
+<tr style="border-bottom:1px solid #000;">
+<td>
+50.000.000
+</td>
+<td>
+9.602
+</td>
+<td>
+2.401
+</td>
+<td>
+1.068
+</td>
+<td>
+601
+</td>
+<td>
+385
+</td>
+<td>
+97
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="presupuesto-disponible" class="level5">
+<h5 class="anchored" data-anchor-id="presupuesto-disponible">Presupuesto disponible</h5>
+<p>Aunque no aparece en la fórmula, el presupuesto disponible (tiempo, dinero, recursos) es seguramente la variable más influyente, de manera que muy a menudo la muestra es tan grande como los recursos permiten. En este caso, dado el tamaño de muestra, y establecido un nivel de confianza, se puede calcular el margen de error obtenido.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -887,10 +1482,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./0403_Factor_correccion.html" class="pagination-link" aria-label="¿Qué es el factor de corrección por población finita?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Qué es el factor de corrección por población finita?</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./0101_Estadistica_Matematicas.html" class="pagination-link" aria-label="¿La estadística es una parte de las matemáticas?">
-        <span class="nav-page-text">¿La estadística es una parte de las matemáticas?</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./0405_Muestra_poblacion.html" class="pagination-link" aria-label="¿Qué relación hay entre tamaño de muestra y tamaño de población?">
+        <span class="nav-page-text">¿Qué relación hay entre tamaño de muestra y tamaño de población?</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

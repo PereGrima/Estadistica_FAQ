@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Roberto Behar, Pere Grima">
 
-<title>Estadística. Preguntas frecuentes</title>
+<title>¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./0101_Estadistica_Matematicas.html" rel="next">
+<link href="./0402_Intervalo_confianza.html" rel="next">
+<link href="./0310_Sumark_Multiplicark.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">PRESENTACIÓN</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -141,7 +141,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PRESENTACIÓN</span></a>
   </div>
 </li>
@@ -342,16 +342,16 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Muestreo y Estimación</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./0401_Creemos_muestra.html" class="sidebar-item-text sidebar-link">
+  <a href="./0401_Creemos_muestra.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos?</span></a>
   </div>
 </li>
@@ -410,46 +410,22 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación">PRESENTACIÓN</a>
-  <ul class="collapse">
-  <li><a href="#autores" id="toc-autores" class="nav-link" data-scroll-target="#autores">Autores</a></li>
-  <li><a href="#libro-impreso" id="toc-libro-impreso" class="nav-link" data-scroll-target="#libro-impreso">Libro impreso</a></li>
-  <li><a href="#licencia" id="toc-licencia" class="nav-link" data-scroll-target="#licencia">Licencia</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Estadística. Preguntas frecuentes</h1>
-<p class="subtitle lead">Para estudiantes, curiosos y público en general</p>
+<h1 class="title">¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos?</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Roberto Behar, Pere Grima </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">12 ene 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -459,29 +435,27 @@ window.Quarto = {
 </header>
 
 
-
-<section id="presentación" class="level1 unnumbered">
-<h1 class="unnumbered">PRESENTACIÓN</h1><p><img src="cover.png" title="Estadística. Preguntas frecuentes" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>Respondemos a preguntas que pueden surgir en un curso general de estadística. Tratan sobre el material del curso y también sobre temas que pueden aparecer en discusiones sobre lo que es la estadística, sus dificultades y sus aplicaciones.</p>
-<p>Es el resultado de nuestra experienca moviéndonos en este terreno y esperamos que sea útil a estudiantes, profesores que empiezan, e intersados por la estadística en general. Cualquier comentario o sugerencia será bienvenido.</p>
-<p>Versión 4.0 (Marzo de 2026)</p>
-<section id="autores" class="level3">
-<h3 class="anchored" data-anchor-id="autores">Autores</h3>
-<div class="poco-espacio">
-<p><a href="https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez">Roberto Behar</a>, profesor en la Universidad del Valle, en Cali, Colombia.</p>
-<p><a href="https://www-eio.upc.es/~grima/index.html">Pere Grima</a>, profesor en la Universitat Politècnica de Catalunya, en Barcelona, España</p>
-</div>
+<p>En pocas palabras: porque serán distintos pero . Además, sabemos como se comportan nuestras estimaciones y usando las propiedades de las distribuciones de probabilidad –las que convengan en cada caso– podemos obtener los niveles de confianza y los márgenes de error deseados. Claro que hace falta que las muestras sean aleatorias y de tamaño suficiente.</p>
+<p>Vamos a ver porque esto es así centrándonos en la media. La clave está en que la media de la muestra, como estimador de la media de la población, tiene dos importantes propiedades:</p>
+<section id="el-valor-medio-de-la-media-muestral-coincide-con-la-media-de-la-población" class="level5">
+<h5 class="anchored" data-anchor-id="el-valor-medio-de-la-media-muestral-coincide-con-la-media-de-la-población">1) El valor medio de la media muestral coincide con la media de la población</h5>
+<p>La media varía de una muestra a otra, pero esa variabilidad se produce en torno al valor de la media poblacional. Es decir, si repetimos varias veces el proceso de muestreo, aunque los valores de las medias serán distintos, todos ellos se encontrarán agrupados (con mayor o menor dispersión) en torno a la media de la población. Cuando un estimador tiene esta propiedad se dice que es insesgado.</p>
+<p>También es cierto que al tomar una sola muestra conocemos un solo valor de la media muestral, y no tenemos manera de saber si se encuentra cerca o lejos de la media poblacional. Para tratar con este inconveniente utilizamos la siguiente propiedad.</p>
 </section>
-<section id="libro-impreso" class="level3">
-<h3 class="anchored" data-anchor-id="libro-impreso">Libro impreso</h3>
-<p>Se puede comprar en <a href="https://amzn.eu/d/hGbwqAH" title="Amazon.es">Amazon.es</a> o <a href="https://www.amazon.com/dp/B09SL18YRT" title="Comprar en Amazon.com">Amazon.com</a>. Está impreso en color, encuadernado con tapa blanda e incluye prólogo, índices y referencias.</p>
-</section>
-<section id="licencia" class="level3">
-<h3 class="anchored" data-anchor-id="licencia">Licencia</h3>
-<p>Se publica bajo una licencia Creative Commons: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es" title="Licencia Creative Commons">CC BY-NC-ND 4.0</a>.</p>
+<section id="la-variabilidad-de-la-media-disminuye-al-aumentar-el-tamaño-de-la-muestra" class="level5">
+<h5 class="anchored" data-anchor-id="la-variabilidad-de-la-media-disminuye-al-aumentar-el-tamaño-de-la-muestra">2) La variabilidad de la media disminuye al aumentar el tamaño de la muestra</h5>
+<p>Supongamos que la variabilidad de los datos viene definida por <span class="math inline">\(\sigma=4\)</span>. Podemos calcular el número de elementos que debemos incluir en la muestra para que, por ejemplo, el 99,7 % de las medias muestrales, caigan a una distancia de menos de 2 unidades de la media poblacional.</p>
+<p>El tamaño de muestra requerido para cumplir con estas especificaciones es<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> n=36. Si se toman muchas muestras de este tamaño, ¿qué tan distintos serán los valores que presentarán sus medias? En este caso, el 99,7 % de las veces caerán a una distancia de menos de 2 unidades de la verdadera media poblacional.</p>
+<p>Está claro que en la práctica tomaremos una sola muestra pero, sabiendo que “casi” en todos los casos su media se encontrará a menos de 2 unidades de la media poblacional, esperamos que la obtenida por nosotros sea una de esas, aunque a decir verdad, no podremos asegurarlo puesto que 3 de cada mil se salen de esa distancia. No tenemos más remedio que asumir un cierto riesgo de equivocarnos pero nosotros hemos podido fijar previamente la magnitud de ese riesgo. En nuestro ejemplo, equivale a comprar 997 boletos de una rifa que tiene 1000 y que no nos toque el premio. Hay que tener muy mala suerte para que esto pase.</p>
+<p>En resumen, siempre que en base a una muestra queramos conocer un rasgo de la población con un margen de error especificado, corremos un riesgo de equivocarnos, pero este riesgo se puede controlar, llevándolo al valor que convenga, utilizando el tamaño de muestra adecuado. Otra cosa es que dispongamos del presupuesto y de los medios necesarios para tomar una muestra aleatoria del tamaño necesario.</p>
 
 
 </section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><small>La fórmula que permite calcular el tamaño de la muestra, cuando el tamaño de la población se supone infinito, o muy grande respecto al tamaño de la muestra, es: <span class="math inline">\(n=z_{\alpha/2}^2 \sigma^2 /E^2\)</span>, donde el valor <span class="math inline">\(z_{\alpha/2}\)</span> depende del nivel de confianza (para el 99,7 % vale 2,97), <span class="math inline">\(\sigma\)</span> es la desviación típica de la población y <span class="math inline">\(E\)</span> es el margen de error. Si suponemos <span class="math inline">\(\sigma=4\)</span>, el nivel de confianza indicado y <span class="math inline">\(E=2\)</span>, se obtiene <span class="math inline">\(n=35,3\)</span>. Este valor siempre se redondea por exceso.</small><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -887,10 +861,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./0310_Sumark_Multiplicark.html" class="pagination-link" aria-label="¿Por qué no es lo mismo sumar $k$ veces una variable aleatoria que multiplicarla por $k$?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Por qué no es lo mismo sumar <span class="math inline">\(k\)</span> veces una variable aleatoria que multiplicarla por <span class="math inline">\(k\)</span>?</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./0101_Estadistica_Matematicas.html" class="pagination-link" aria-label="¿La estadística es una parte de las matemáticas?">
-        <span class="nav-page-text">¿La estadística es una parte de las matemáticas?</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./0402_Intervalo_confianza.html" class="pagination-link" aria-label="¿De dónde sale la expresión del intervalo de confianza?">
+        <span class="nav-page-text">¿De dónde sale la expresión del intervalo de confianza?</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

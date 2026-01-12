@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Roberto Behar, Pere Grima">
 
-<title>Estadística. Preguntas frecuentes</title>
+<title>¿De dónde sale la expresión del intervalo de confianza? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./0101_Estadistica_Matematicas.html" rel="next">
+<link href="./0403_Factor_correccion.html" rel="next">
+<link href="./0401_Creemos_muestra.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">PRESENTACIÓN</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0402_Intervalo_confianza.html">¿De dónde sale la expresión del intervalo de confianza?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -141,7 +141,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PRESENTACIÓN</span></a>
   </div>
 </li>
@@ -342,13 +342,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Muestreo y Estimación</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0401_Creemos_muestra.html" class="sidebar-item-text sidebar-link">
@@ -357,7 +357,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./0402_Intervalo_confianza.html" class="sidebar-item-text sidebar-link">
+  <a href="./0402_Intervalo_confianza.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">¿De dónde sale la expresión del intervalo de confianza?</span></a>
   </div>
 </li>
@@ -410,46 +410,22 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación">PRESENTACIÓN</a>
-  <ul class="collapse">
-  <li><a href="#autores" id="toc-autores" class="nav-link" data-scroll-target="#autores">Autores</a></li>
-  <li><a href="#libro-impreso" id="toc-libro-impreso" class="nav-link" data-scroll-target="#libro-impreso">Libro impreso</a></li>
-  <li><a href="#licencia" id="toc-licencia" class="nav-link" data-scroll-target="#licencia">Licencia</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0402_Intervalo_confianza.html">¿De dónde sale la expresión del intervalo de confianza?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Estadística. Preguntas frecuentes</h1>
-<p class="subtitle lead">Para estudiantes, curiosos y público en general</p>
+<h1 class="title">¿De dónde sale la expresión del intervalo de confianza?</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Roberto Behar, Pere Grima </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">12 ene 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -459,29 +435,45 @@ window.Quarto = {
 </header>
 
 
-
-<section id="presentación" class="level1 unnumbered">
-<h1 class="unnumbered">PRESENTACIÓN</h1><p><img src="cover.png" title="Estadística. Preguntas frecuentes" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>Respondemos a preguntas que pueden surgir en un curso general de estadística. Tratan sobre el material del curso y también sobre temas que pueden aparecer en discusiones sobre lo que es la estadística, sus dificultades y sus aplicaciones.</p>
-<p>Es el resultado de nuestra experienca moviéndonos en este terreno y esperamos que sea útil a estudiantes, profesores que empiezan, e intersados por la estadística en general. Cualquier comentario o sugerencia será bienvenido.</p>
-<p>Versión 4.0 (Marzo de 2026)</p>
-<section id="autores" class="level3">
-<h3 class="anchored" data-anchor-id="autores">Autores</h3>
-<div class="poco-espacio">
-<p><a href="https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez">Roberto Behar</a>, profesor en la Universidad del Valle, en Cali, Colombia.</p>
-<p><a href="https://www-eio.upc.es/~grima/index.html">Pere Grima</a>, profesor en la Universitat Politècnica de Catalunya, en Barcelona, España</p>
+<p>Vamos a empezar con el intervalo de confianza para la media de una población Normal, con desviación típica conocida y calculado a partir de una sola observación.</p>
+<p>En la figura <a href="#fig-IC" class="quarto-xref"><span>1</span></a> tenemos representada la distribución cuya media <span class="math inline">\(\mu\)</span> se desea estimar. Se han sombreado las colas de forma que la probabilidad de que una observación caiga en esa zona sea igual a <span class="math inline">\(\alpha\)</span> (<span class="math inline">\(\alpha\)</span>/2 en cada lado). Por tanto, la probabilidad de que caiga en la zona interior es <span class="math inline">\(1-\alpha\)</span>.</p>
+<div id="fig-IC" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-IC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04_Fig_Muestreo/0201_IntConf_1.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%">
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-IC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Intervalos construidos sumando y restando <span class="math inline">\(z_{\alpha/2}\sigma\)</span> a un valor obtenido al azar
+</figcaption>
+</figure>
+</div>
+<p>Veamos ahora cuánto vale la distancia desde la media <span class="math inline">\(\mu\)</span> al punto <span class="math inline">\(x_{\alpha/2}\)</span> en que empieza la zona sombreada. Como el valor de <span class="math inline">\(\alpha/2\)</span> es conocido (lo hemos elegido nosotros) podemos determinar el valor de <span class="math inline">\(Z \sim N(0; 1)\)</span> que deja esa área de cola.</p>
+<p>Por otra parte, sabemos que si <span class="math inline">\(X \sim N(\mu; \sigma)\)</span> entonces <span class="math inline">\(Z = \frac{X-\mu}{\sigma}\)</span> sigue una distribución <span class="math inline">\(N(0; 1)\)</span>, por tanto: <span class="math display">\[ z_{\alpha/2} = \frac{x_{\alpha/2} - \mu} {\sigma} \]</span></p>
+<p>Y ya es inmediato deducir que la distancia entre <span class="math inline">\(x_{\alpha/2}\)</span> y <span class="math inline">\(\mu\)</span> es igual a <span class="math inline">\(z_{\alpha/2}\sigma\)</span>. Sumando y restando esa distancia un valor (<span class="math inline">\(x\)</span>) obtenido al azar, tenemos el intervalo: <span class="math display">\[x \pm z_{\alpha/2}\sigma \]</span></p>
+<p>Observe que si el valor de <span class="math inline">\(x\)</span> está en la zona de probabilidad <span class="math inline">\(1 - \alpha\)</span>, tal como ocurre con <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span> en la figura <a href="#fig-IC" class="quarto-xref"><span>1</span></a>, el intervalo obtenido incluye el valor de <span class="math inline">\(\mu\)</span>. Sin embargo, si <span class="math inline">\(x\)</span> cae en la zona de las colas, como ocurre con <span class="math inline">\(x_3\)</span>, el intervalo no llega a alcanzar el valor de <span class="math inline">\(\mu\)</span>. Por tanto, los intervalos calculados con este procedimiento aciertan si el valor obtenido al azar cae en la zona <span class="math inline">\(1- \alpha\)</span> y esto ocurre una proporción de veces <span class="math inline">\(1 - \alpha\)</span>. Por esta razón se denominan intervalos de confianza <span class="math inline">\(1 - \alpha\)</span>. El valor <span class="math inline">\(1 - \alpha\)</span> se da normalmente en porcentaje y si <span class="math inline">\(\alpha = 0,05\)</span> hablaremos de intervalo de confianza del 95%.</p>
+<section id="y-si-lo-que-tenemos-no-es-una-única-observación-sino-una-muestra" class="level4">
+<h4 class="anchored" data-anchor-id="y-si-lo-que-tenemos-no-es-una-única-observación-sino-una-muestra">¿Y si lo que tenemos no es una única observación sino una muestra?</h4>
+<p>Construimos el intervalo en torno a la media de la muestra. La media muestral también sigue una distribución Normal con la misma media <span class="math inline">\(\mu\)</span> que la población pero ahora la desviación típica será <span class="math inline">\(\sigma /\sqrt{n}\)</span>. La media de nuestra muestra, <span class="math inline">\(\bar{x}\)</span>, pertenerá a la distribución de las medias, así que la expresión del intervalo de confianza ahora será: <span class="math display">\[ \bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \]</span></p>
 </section>
-<section id="libro-impreso" class="level3">
-<h3 class="anchored" data-anchor-id="libro-impreso">Libro impreso</h3>
-<p>Se puede comprar en <a href="https://amzn.eu/d/hGbwqAH" title="Amazon.es">Amazon.es</a> o <a href="https://www.amazon.com/dp/B09SL18YRT" title="Comprar en Amazon.com">Amazon.com</a>. Está impreso en color, encuadernado con tapa blanda e incluye prólogo, índices y referencias.</p>
+<section id="y-si-la-población-no-es-normal" class="level4">
+<h4 class="anchored" data-anchor-id="y-si-la-población-no-es-normal">¿Y si la población no es Normal?</h4>
+<p>Si la muestra no muy pequeña, pongamos que tiene más de 10 observaciones, sabemos que la media también seguirá una distribución aproximadamente Normal. A efectos prácticos puede calcularse el intervalo como si la población fuera Normal.</p>
 </section>
-<section id="licencia" class="level3">
-<h3 class="anchored" data-anchor-id="licencia">Licencia</h3>
-<p>Se publica bajo una licencia Creative Commons: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es" title="Licencia Creative Commons">CC BY-NC-ND 4.0</a>.</p>
+<section id="y-si-no-conocemos-el-valor-de-sigma" class="level4">
+<h4 class="anchored" data-anchor-id="y-si-no-conocemos-el-valor-de-sigma">¿Y si no conocemos el valor de <span class="math inline">\(\sigma\)</span>?</h4>
+<p>En este caso hay que sustituir <span class="math inline">\(\sigma\)</span> por su estimador <span class="math inline">\(s\)</span> pero este cambio tiene consecuencias porque la distribución de $ $ ya no es una distribución $ N(0; 1) $ sino una t-Student con los mismos grados de libertad, <span class="math inline">\(\nu\)</span>, que tiene <span class="math inline">\(s\)</span>. Así pues, la expresión del intervalo de confianza queda: <span class="math display">\[ \bar{x} \pm t_{\nu;\alpha/2} \frac{s}{\sqrt{n}} \]</span></p>
+<p>Siendo esta es la expresión de uso más habitual del intervalo de confianza para la media de la población.</p>
+</section>
+<section id="y-si-lo-que-queremos-estimar-es-una-proporción" class="level4">
+<h4 class="anchored" data-anchor-id="y-si-lo-que-queremos-estimar-es-una-proporción">¿Y si lo que queremos estimar es una proporción?</h4>
+<p>Proporción y media son más similares de lo que parece. En realidad son lo mismo. Supongamos que hablamos de una proporción de piezas defectuosas, si tenemos 10 piezas y asignamos un 1 a las defectuosas y un 0 a las correctas, podemos tener algo así como: <span class="math inline">\(0;\;\; 0;\;\; 1;\;\; 0;\;\; 1;\;\; 0;\;\; 0;\;\; 0;\;\; 1;\;\; 0\)</span></p>
+<p>Hay 3 defectos en 10 piezas, una proporción de 0,3, y esa proporción es precisamente la media de los 10 valores.</p>
+<p>Cuando los elementos de una población se pueden clasificar en dos grupos: el grupo de interés, con una probabilidad de ocurrencia <span class="math inline">\(p\)</span> y el resto con una probabilidad <span class="math inline">\(1-p\)</span>, en una muestra de tamaño <span class="math inline">\(n\)</span> la proporción de elementos que pertenecen al grupo de interés es una variable aleatoria <span class="math inline">\(\hat{p}\)</span> con media <span class="math inline">\(p\)</span> y varianza <span class="math inline">\(p(1-p)/n\)</span>.</p>
+<p>Si <span class="math inline">\(n\)</span> no es muy pequeña ni <span class="math inline">\(p\)</span> muy cercana a 0 o a 1, la variable <span class="math inline">\(\hat{p}\)</span> se puede aproximar a la distribución Normal. <span class="math display">\[ \hat{p} \sim N \left( p; \sqrt{\frac{p(1-p)}{n}} \right)\]</span></p>
+<p>Siguiendo el mismo razonamiento que conduce a la expresión del intervalo de confianza para <span class="math inline">\(\mu\)</span>, usando el valor de <span class="math inline">\(\hat{p}\)</span> (el de <span class="math inline">\(p\)</span> no lo conocemos) llegamos a la siguiente expresión para el intervalo de confianza <span class="math inline">\(1-\alpha\)</span> para <span class="math inline">\(p\)</span>: <span class="math display">\[ \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \]</span></p>
+<p>En todos los casos hemos supuesto que la población es infinita. Esto es lo habitual, ya que la población es un modelo teórico o es tan grande que a efectos prácticos puede considerarse infinita. Si la población es finita las fórmulas cambian un poco, pero eso lo comentamos en la siguiente pregunta.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -887,10 +879,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./0401_Creemos_muestra.html" class="pagination-link" aria-label="¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos?</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./0101_Estadistica_Matematicas.html" class="pagination-link" aria-label="¿La estadística es una parte de las matemáticas?">
-        <span class="nav-page-text">¿La estadística es una parte de las matemáticas?</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./0403_Factor_correccion.html" class="pagination-link" aria-label="¿Qué es el factor de corrección por población finita?">
+        <span class="nav-page-text">¿Qué es el factor de corrección por población finita?</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -53,6 +53,18 @@ book:
         - 0309_Varianza_Chi_cuadrado.qmd
         - 0310_Sumark_Multiplicark.qmd
         
+    - part: Muestreo y Estimación
+      chapters: 
+        - 0401_Creemos_muestra.qmd
+        - 0402_Intervalo_confianza.qmd
+        - 0403_Factor_correccion.qmd
+        - 0404_Elementos_muestra.qmd
+        - 0405_Muestra_poblacion.qmd
+        - 0406_Tipo_muestreo.qmd
+        - 0407_Aleatoria_representativa.qmd
+        - 0408_Acertar_sondeos.qmd
+        - 0409_Maximoverosimil.qmd
+        
 # Referencias
 # biblio-title: "Referencias"
 # link-citations: true

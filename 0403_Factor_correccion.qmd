@@ -1,0 +1,40 @@
+# ¿Qué es el factor de corrección por población finita? {.unnumbered}
+
+Aunque sobre esto no se habla mucho, la fórmula de la varianza muestral $\sigma_{\bar{x}}^2 =\sigma^2/n $ donde $\sigma^2$ es la varianza poblacional y $n$ el tamaño de muestra, solo es válida si la población es infinita.
+
+Podemos verlo a través de un caso muy sencillo en que la población solo tiene $ N=3 $ elementos con valores: 7, 8 y 9. Su varianza es $\sigma^2 = 2/3$ y si consideremos las muestras de tamaño $n=2$, solo hay 3 medias muestrales, las correspondientes a las únicas 3 muestras que se pueden obtener:
+
+::: {.tabla-pequena style="width:30%; margin-left:auto; margin-right:auto;margin-bottom:1em;"}
+|              |           | 
+|:------------:|:---------:|
+| Muestra      |   Media   | 
+|7; 8 <br> 9; 9<br>  8; 9    | 7,5 <br> 8 <br> 8,5  |
+
+:::
+
+Se comprueba fácilmente que la varianza de las medias muestrales es: $\sigma_{\bar{x}}^2 = 1/6$, distinto de $\sigma^2 /n = 1/3$
+ 
+Las peculiaridades de las poblaciones finitas tienen que ver con que el muestreo se realiza sin reposición. Una vez elegido un elemento ese ya no forma parte de los elegibles y, en consecuencia, las probabilidades de incorporar a la muestra elementos de un cierto tipo depende de cuantos han salido ya de ese tipo. Esto complica los cálculos, pero solo cuando la población es finita. Con el supuesto de población infinita no importa si el muestreo es con o sin reposición: En una baraja infinita, si la probabilidad de sacar una carta de espadas es ¼, esa probabilidad se mantiene constante con independencia del palo a que pertenezcan las cartas que van saliendo. Sin embargo, en una baraja normal de 48 cartas, si la primera es de espadas, la segunda tiene una probabilidad menor de ser de espadas porque del resto de palos quedan 12 y de espadas solo 11. 
+
+Cuando la población es finita la varianza de la media muestral se obtiene aplicando la fórmula general ($\sigma^2/n$) con un factor $f$ que llamamos ``factor de corrección por población finita''. 
+$$f=\frac{N-n}{N-1}$$
+
+\noindent En nuestro caso, en que $N=3$ y $n=2$ tenemos:
+$$\sigma_{\bar{x}}^2 = \frac{\sigma^2}{n} \cdot \frac{N-n}{N-1} = \frac{\frac{2}{3}}{2} \cdot \frac{3-2}{3-1} = \frac{1}{6} $$
+
+\noindent Que sí cuadra con el valor correcto. Seguramente la pregunta que ahora surge es: ¿de dónde sale esta expresión? pero no vamos a entrar en este tema porque a pesar de su apariencia inocente, la deducción del factor de corrección no es trivial[^Nota-1] 
+
+[^Nota-1]:<small>El lector interesado puede consultar, por ejemplo: Steven K. Thompson: ``Sampling'', Wiley, 2012, pp. 20-22.</small>
+
+Para deducir la expresión que aparece en los intervalos de confianza hay que tener en cuenta otra peculiaridad que se da en las poblaciones finitas, la varianza muestral calculada de la forma habitual:
+$$ s^2 = \frac{\sum_{i=1}^n \left( x_i - \bar{x} \right)^2}{n-1} $$
+
+\noindent no es un estimador insesgado de $\sigma^2$ sino de:
+
+$$ \sigma_{N-1}^2 = \frac{\sum_{i=1}^N \left( x_i - \mu \right)^2}{N-1} $$
+
+\noindent Por tanto, el estimador insesgado de la varianza de $\bar{x}$ con el factor de corrección por población finita es:
+
+$$ s_{\bar{x}}^2 = \frac{s^2}{n} \cdot \frac{N-1}{N} \cdot \frac{N-n}{N-1} = \frac{s^2}{n} \cdot \frac{N-n}{N}  $$
+
+\noindent Es interesante observar que casi siempre nos referimos a poblaciones infinitas y que estas no son en realidad "poblaciones" en el sentido de "conjunto de elementos o individuos objeto de estudio" sino modelos teóricos, hipótesis sobre el comportamiento de los datos. Son poblaciones de resultados, o de mediciones, nunca de individuos. Evidentemente, no existen conjuntos infinitos de objetos reales.

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Roberto Behar, Pere Grima">
 
-<title>Estadística. Preguntas frecuentes</title>
+<title>¿Qué relación hay entre tamaño de muestra y tamaño de población? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./0101_Estadistica_Matematicas.html" rel="next">
+<link href="./0406_Tipo_muestreo.html" rel="next">
+<link href="./0404_Elementos_muestra.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">PRESENTACIÓN</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0405_Muestra_poblacion.html">¿Qué relación hay entre tamaño de muestra y tamaño de población?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -141,7 +141,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PRESENTACIÓN</span></a>
   </div>
 </li>
@@ -342,13 +342,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Muestreo y Estimación</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0401_Creemos_muestra.html" class="sidebar-item-text sidebar-link">
@@ -375,7 +375,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./0405_Muestra_poblacion.html" class="sidebar-item-text sidebar-link">
+  <a href="./0405_Muestra_poblacion.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">¿Qué relación hay entre tamaño de muestra y tamaño de población?</span></a>
   </div>
 </li>
@@ -410,46 +410,22 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación">PRESENTACIÓN</a>
-  <ul class="collapse">
-  <li><a href="#autores" id="toc-autores" class="nav-link" data-scroll-target="#autores">Autores</a></li>
-  <li><a href="#libro-impreso" id="toc-libro-impreso" class="nav-link" data-scroll-target="#libro-impreso">Libro impreso</a></li>
-  <li><a href="#licencia" id="toc-licencia" class="nav-link" data-scroll-target="#licencia">Licencia</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0405_Muestra_poblacion.html">¿Qué relación hay entre tamaño de muestra y tamaño de población?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Estadística. Preguntas frecuentes</h1>
-<p class="subtitle lead">Para estudiantes, curiosos y público en general</p>
+<h1 class="title">¿Qué relación hay entre tamaño de muestra y tamaño de población?</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Roberto Behar, Pere Grima </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">12 ene 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -459,30 +435,37 @@ window.Quarto = {
 </header>
 
 
-
-<section id="presentación" class="level1 unnumbered">
-<h1 class="unnumbered">PRESENTACIÓN</h1><p><img src="cover.png" title="Estadística. Preguntas frecuentes" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>Respondemos a preguntas que pueden surgir en un curso general de estadística. Tratan sobre el material del curso y también sobre temas que pueden aparecer en discusiones sobre lo que es la estadística, sus dificultades y sus aplicaciones.</p>
-<p>Es el resultado de nuestra experienca moviéndonos en este terreno y esperamos que sea útil a estudiantes, profesores que empiezan, e intersados por la estadística en general. Cualquier comentario o sugerencia será bienvenido.</p>
-<p>Versión 4.0 (Marzo de 2026)</p>
-<section id="autores" class="level3">
-<h3 class="anchored" data-anchor-id="autores">Autores</h3>
-<div class="poco-espacio">
-<p><a href="https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez">Roberto Behar</a>, profesor en la Universidad del Valle, en Cali, Colombia.</p>
-<p><a href="https://www-eio.upc.es/~grima/index.html">Pere Grima</a>, profesor en la Universitat Politècnica de Catalunya, en Barcelona, España</p>
+<p>Guiándonos solo por la intuición parece razonable considerar que el tamaño de la muestra debe estar muy relacionado con el de la población. Nos parece que para un país de 50 millones de habitantes hará falta una muestra mucho mayor que para una ciudad de 50 mil. A veces se ponen en duda los resultados de un estudio con el argumento de que la muestra no llega ni al 10 % de la población. Pues resulta que esas intuiciones son falsas. #### ¿Le falta sal a la sopa?</p>
+<p>Para responder a esta pregunta el cocinero debe tomar una muestra <em>representativa</em> de la sopa y probarla ¿Le parece sensato recomendar al cocinero que pruebe el 10 % de la sopa para poder tomar una buena decisión? Esta recomendación contradice todas nuestras experiencias, ya que la cucharilla que usamos en nuestras casas para probar la sopa que preparamos habitualmente es la misma que cuando usamos una olla más grande porque tenemos invitados, y eso nunca nos ha sorprendido.</p>
+<div id="fig-cucharillaOlla" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cucharillaOlla-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04_Fig_Muestreo/0501_cucharillaOlla.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
-</section>
-<section id="libro-impreso" class="level3">
-<h3 class="anchored" data-anchor-id="libro-impreso">Libro impreso</h3>
-<p>Se puede comprar en <a href="https://amzn.eu/d/hGbwqAH" title="Amazon.es">Amazon.es</a> o <a href="https://www.amazon.com/dp/B09SL18YRT" title="Comprar en Amazon.com">Amazon.com</a>. Está impreso en color, encuadernado con tapa blanda e incluye prólogo, índices y referencias.</p>
-</section>
-<section id="licencia" class="level3">
-<h3 class="anchored" data-anchor-id="licencia">Licencia</h3>
-<p>Se publica bajo una licencia Creative Commons: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es" title="Licencia Creative Commons">CC BY-NC-ND 4.0</a>.</p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cucharillaOlla-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: La misma cuchara para las dos ollas
+</figcaption>
+</figure>
+</div>
+<p>Lo que todos hacemos antes de sacar la muestra es dar un buen meneo con el cucharón para homogeneizar la sopa. Sabemos que es mucho más importante mezclar bien antes de tomar la muestra que aumentar el tamaño de la cuchara y, por supuesto, los problemas derivados de no remover bien no se resuelven con el uso de una cuchara más grande.</p>
+<p>Doctor, ¿para saber mi grupo sanguíneo me va usted a sacar una muestra con el 10 % de mi sangre?</p>
+<p>Es bien sabido que basta con una muestra de una gota de sangre para conocer en forma inequívoca el tipo de sangre de una persona. Todas las gotas de sangre de una persona son del mismo tipo, así que vista una, quedan vistas todas. La misma cantidad de sangre se requiere para un niño recién nacido que para su padre.</p>
+<p><br>
+<span class="math display">\[ \bullet \;\;\;\;\; \bullet \;\;\;\;\; \bullet \]</span></p>
+<p><br>
+La figura <a href="#fig-curvas" class="quarto-xref"><span>2</span></a> se ha construido usando la fórmula del tamaño de muestra para estimar una proporción. Puede apreciarse que a partir de un cierto tamaño de la población, que podemos situar en torno a 50.000, el tamaño de la muestra apenas cambia.</p>
+<div id="fig-curvas" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-curvas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04_Fig_Muestreo/0502_TamMuyPo.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-curvas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: amaño de muestra en función del tamaño de la población para los márgenes de error (E) que se indican, bajo el supuesto de <span class="math inline">\(p=q=0,5\)</span> y un nivel de confianza del 80 %
+</figcaption>
+</figure>
+</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -887,10 +870,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./0404_Elementos_muestra.html" class="pagination-link" aria-label="¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./0101_Estadistica_Matematicas.html" class="pagination-link" aria-label="¿La estadística es una parte de las matemáticas?">
-        <span class="nav-page-text">¿La estadística es una parte de las matemáticas?</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./0406_Tipo_muestreo.html" class="pagination-link" aria-label="¿Qué tipo de muestreo conviene elegir?">
+        <span class="nav-page-text">¿Qué tipo de muestreo conviene elegir?</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

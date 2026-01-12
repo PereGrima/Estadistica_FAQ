@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Roberto Behar, Pere Grima">
 
-<title>Estadística. Preguntas frecuentes</title>
+<title>¿Qué es el factor de corrección por población finita? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./0101_Estadistica_Matematicas.html" rel="next">
+<link href="./0404_Elementos_muestra.html" rel="next">
+<link href="./0402_Intervalo_confianza.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">PRESENTACIÓN</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0403_Factor_correccion.html">¿Qué es el factor de corrección por población finita?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -141,7 +141,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PRESENTACIÓN</span></a>
   </div>
 </li>
@@ -342,13 +342,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Muestreo y Estimación</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0401_Creemos_muestra.html" class="sidebar-item-text sidebar-link">
@@ -363,7 +363,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./0403_Factor_correccion.html" class="sidebar-item-text sidebar-link">
+  <a href="./0403_Factor_correccion.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">¿Qué es el factor de corrección por población finita?</span></a>
   </div>
 </li>
@@ -410,46 +410,22 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación">PRESENTACIÓN</a>
-  <ul class="collapse">
-  <li><a href="#autores" id="toc-autores" class="nav-link" data-scroll-target="#autores">Autores</a></li>
-  <li><a href="#libro-impreso" id="toc-libro-impreso" class="nav-link" data-scroll-target="#libro-impreso">Libro impreso</a></li>
-  <li><a href="#licencia" id="toc-licencia" class="nav-link" data-scroll-target="#licencia">Licencia</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0403_Factor_correccion.html">¿Qué es el factor de corrección por población finita?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Estadística. Preguntas frecuentes</h1>
-<p class="subtitle lead">Para estudiantes, curiosos y público en general</p>
+<h1 class="title">¿Qué es el factor de corrección por población finita?</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Roberto Behar, Pere Grima </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">12 ene 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -459,29 +435,40 @@ window.Quarto = {
 </header>
 
 
-
-<section id="presentación" class="level1 unnumbered">
-<h1 class="unnumbered">PRESENTACIÓN</h1><p><img src="cover.png" title="Estadística. Preguntas frecuentes" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>Respondemos a preguntas que pueden surgir en un curso general de estadística. Tratan sobre el material del curso y también sobre temas que pueden aparecer en discusiones sobre lo que es la estadística, sus dificultades y sus aplicaciones.</p>
-<p>Es el resultado de nuestra experienca moviéndonos en este terreno y esperamos que sea útil a estudiantes, profesores que empiezan, e intersados por la estadística en general. Cualquier comentario o sugerencia será bienvenido.</p>
-<p>Versión 4.0 (Marzo de 2026)</p>
-<section id="autores" class="level3">
-<h3 class="anchored" data-anchor-id="autores">Autores</h3>
-<div class="poco-espacio">
-<p><a href="https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez">Roberto Behar</a>, profesor en la Universidad del Valle, en Cali, Colombia.</p>
-<p><a href="https://www-eio.upc.es/~grima/index.html">Pere Grima</a>, profesor en la Universitat Politècnica de Catalunya, en Barcelona, España</p>
+<p>Aunque sobre esto no se habla mucho, la fórmula de la varianza muestral $_{{x}}^2 =^2/n $ donde <span class="math inline">\(\sigma^2\)</span> es la varianza poblacional y <span class="math inline">\(n\)</span> el tamaño de muestra, solo es válida si la población es infinita.</p>
+<p>Podemos verlo a través de un caso muy sencillo en que la población solo tiene $ N=3 $ elementos con valores: 7, 8 y 9. Su varianza es <span class="math inline">\(\sigma^2 = 2/3\)</span> y si consideremos las muestras de tamaño <span class="math inline">\(n=2\)</span>, solo hay 3 medias muestrales, las correspondientes a las únicas 3 muestras que se pueden obtener:</p>
+<div class="tabla-pequena" style="width:30%; margin-left:auto; margin-right:auto;margin-bottom:1em;">
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Muestra</td>
+<td style="text-align: center;">Media</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7; 8 <br> 9; 9<br> 8; 9</td>
+<td style="text-align: center;">7,5 <br> 8 <br> 8,5</td>
+</tr>
+</tbody>
+</table>
 </div>
-</section>
-<section id="libro-impreso" class="level3">
-<h3 class="anchored" data-anchor-id="libro-impreso">Libro impreso</h3>
-<p>Se puede comprar en <a href="https://amzn.eu/d/hGbwqAH" title="Amazon.es">Amazon.es</a> o <a href="https://www.amazon.com/dp/B09SL18YRT" title="Comprar en Amazon.com">Amazon.com</a>. Está impreso en color, encuadernado con tapa blanda e incluye prólogo, índices y referencias.</p>
-</section>
-<section id="licencia" class="level3">
-<h3 class="anchored" data-anchor-id="licencia">Licencia</h3>
-<p>Se publica bajo una licencia Creative Commons: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es" title="Licencia Creative Commons">CC BY-NC-ND 4.0</a>.</p>
+<p>Se comprueba fácilmente que la varianza de las medias muestrales es: <span class="math inline">\(\sigma_{\bar{x}}^2 = 1/6\)</span>, distinto de <span class="math inline">\(\sigma^2 /n = 1/3\)</span></p>
+<p>Las peculiaridades de las poblaciones finitas tienen que ver con que el muestreo se realiza sin reposición. Una vez elegido un elemento ese ya no forma parte de los elegibles y, en consecuencia, las probabilidades de incorporar a la muestra elementos de un cierto tipo depende de cuantos han salido ya de ese tipo. Esto complica los cálculos, pero solo cuando la población es finita. Con el supuesto de población infinita no importa si el muestreo es con o sin reposición: En una baraja infinita, si la probabilidad de sacar una carta de espadas es ¼, esa probabilidad se mantiene constante con independencia del palo a que pertenezcan las cartas que van saliendo. Sin embargo, en una baraja normal de 48 cartas, si la primera es de espadas, la segunda tiene una probabilidad menor de ser de espadas porque del resto de palos quedan 12 y de espadas solo 11.</p>
+<p>Cuando la población es finita la varianza de la media muestral se obtiene aplicando la fórmula general (<span class="math inline">\(\sigma^2/n\)</span>) con un factor <span class="math inline">\(f\)</span> que llamamos ``factor de corrección por población finita’’. <span class="math display">\[f=\frac{N-n}{N-1}\]</span></p>
+<p>En nuestro caso, en que <span class="math inline">\(N=3\)</span> y <span class="math inline">\(n=2\)</span> tenemos: <span class="math display">\[\sigma_{\bar{x}}^2 = \frac{\sigma^2}{n} \cdot \frac{N-n}{N-1} = \frac{\frac{2}{3}}{2} \cdot \frac{3-2}{3-1} = \frac{1}{6} \]</span></p>
+<p>Que sí cuadra con el valor correcto. Seguramente la pregunta que ahora surge es: ¿de dónde sale esta expresión? pero no vamos a entrar en este tema porque a pesar de su apariencia inocente, la deducción del factor de corrección no es trivial<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Para deducir la expresión que aparece en los intervalos de confianza hay que tener en cuenta otra peculiaridad que se da en las poblaciones finitas, la varianza muestral calculada de la forma habitual: <span class="math display">\[ s^2 = \frac{\sum_{i=1}^n \left( x_i - \bar{x} \right)^2}{n-1} \]</span></p>
+<p>no es un estimador insesgado de <span class="math inline">\(\sigma^2\)</span> sino de:</p>
+<p><span class="math display">\[ \sigma_{N-1}^2 = \frac{\sum_{i=1}^N \left( x_i - \mu \right)^2}{N-1} \]</span></p>
+<p>Por tanto, el estimador insesgado de la varianza de <span class="math inline">\(\bar{x}\)</span> con el factor de corrección por población finita es:</p>
+<p><span class="math display">\[ s_{\bar{x}}^2 = \frac{s^2}{n} \cdot \frac{N-1}{N} \cdot \frac{N-n}{N-1} = \frac{s^2}{n} \cdot \frac{N-n}{N}  \]</span></p>
+<p>Es interesante observar que casi siempre nos referimos a poblaciones infinitas y que estas no son en realidad “poblaciones” en el sentido de “conjunto de elementos o individuos objeto de estudio” sino modelos teóricos, hipótesis sobre el comportamiento de los datos. Son poblaciones de resultados, o de mediciones, nunca de individuos. Evidentemente, no existen conjuntos infinitos de objetos reales.</p>
 
 
-</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><small>El lector interesado puede consultar, por ejemplo: Steven K. Thompson: ``Sampling’’, Wiley, 2012, pp.&nbsp;20-22.</small><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -887,10 +874,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./0402_Intervalo_confianza.html" class="pagination-link" aria-label="¿De dónde sale la expresión del intervalo de confianza?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿De dónde sale la expresión del intervalo de confianza?</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./0101_Estadistica_Matematicas.html" class="pagination-link" aria-label="¿La estadística es una parte de las matemáticas?">
-        <span class="nav-page-text">¿La estadística es una parte de las matemáticas?</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./0404_Elementos_muestra.html" class="pagination-link" aria-label="¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?">
+        <span class="nav-page-text">¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

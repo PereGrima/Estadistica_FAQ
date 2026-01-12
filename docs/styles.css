@@ -57,10 +57,10 @@ figure figcaption {
 .tabla-pequena td,
 .tabla-pequena th {
   padding: 4px 6px;     /* menos relleno vertical */
-  line-height: 1.1;    /* reduce altura de línea */
+  line-height: 1.2;    /* reduce altura de línea */
 }
 
 .tabla-pequena td p {
-  margin: 0;           /* elimina espacio extra */
+  margin: 0px;           /* elimina espacio extra */
 }
 

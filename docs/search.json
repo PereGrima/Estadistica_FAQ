@@ -327,5 +327,126 @@
       "Distribuciones de probabilidad",
       "¿De dónde sale la fórmula de la distribución Normal?"
     ]
+  },
+  {
+    "objectID": "0401_Creemos_muestra.html",
+    "href": "0401_Creemos_muestra.html",
+    "title": "¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos?",
+    "section": "",
+    "text": "1) El valor medio de la media muestral coincide con la media de la población\nEn pocas palabras: porque serán distintos pero . Además, sabemos como se comportan nuestras estimaciones y usando las propiedades de las distribuciones de probabilidad –las que convengan en cada caso– podemos obtener los niveles de confianza y los márgenes de error deseados. Claro que hace falta que las muestras sean aleatorias y de tamaño suficiente.\nVamos a ver porque esto es así centrándonos en la media. La clave está en que la media de la muestra, como estimador de la media de la población, tiene dos importantes propiedades:\nLa media varía de una muestra a otra, pero esa variabilidad se produce en torno al valor de la media poblacional. Es decir, si repetimos varias veces el proceso de muestreo, aunque los valores de las medias serán distintos, todos ellos se encontrarán agrupados (con mayor o menor dispersión) en torno a la media de la población. Cuando un estimador tiene esta propiedad se dice que es insesgado.\nTambién es cierto que al tomar una sola muestra conocemos un solo valor de la media muestral, y no tenemos manera de saber si se encuentra cerca o lejos de la media poblacional. Para tratar con este inconveniente utilizamos la siguiente propiedad.",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos?"
+    ]
+  },
+  {
+    "objectID": "0402_Intervalo_confianza.html",
+    "href": "0402_Intervalo_confianza.html",
+    "title": "¿De dónde sale la expresión del intervalo de confianza?",
+    "section": "",
+    "text": "Vamos a empezar con el intervalo de confianza para la media de una población Normal, con desviación típica conocida y calculado a partir de una sola observación.\nEn la figura 1 tenemos representada la distribución cuya media \\(\\mu\\) se desea estimar. Se han sombreado las colas de forma que la probabilidad de que una observación caiga en esa zona sea igual a \\(\\alpha\\) (\\(\\alpha\\)/2 en cada lado). Por tanto, la probabilidad de que caiga en la zona interior es \\(1-\\alpha\\).\n\n\n\n\n\n\nFigura 1: Intervalos construidos sumando y restando \\(z_{\\alpha/2}\\sigma\\) a un valor obtenido al azar\n\n\n\nVeamos ahora cuánto vale la distancia desde la media \\(\\mu\\) al punto \\(x_{\\alpha/2}\\) en que empieza la zona sombreada. Como el valor de \\(\\alpha/2\\) es conocido (lo hemos elegido nosotros) podemos determinar el valor de \\(Z \\sim N(0; 1)\\) que deja esa área de cola.\nPor otra parte, sabemos que si \\(X \\sim N(\\mu; \\sigma)\\) entonces \\(Z = \\frac{X-\\mu}{\\sigma}\\) sigue una distribución \\(N(0; 1)\\), por tanto: \\[ z_{\\alpha/2} = \\frac{x_{\\alpha/2} - \\mu} {\\sigma} \\]\nY ya es inmediato deducir que la distancia entre \\(x_{\\alpha/2}\\) y \\(\\mu\\) es igual a \\(z_{\\alpha/2}\\sigma\\). Sumando y restando esa distancia un valor (\\(x\\)) obtenido al azar, tenemos el intervalo: \\[x \\pm z_{\\alpha/2}\\sigma \\]\nObserve que si el valor de \\(x\\) está en la zona de probabilidad \\(1 - \\alpha\\), tal como ocurre con \\(x_1\\) y \\(x_2\\) en la figura 1, el intervalo obtenido incluye el valor de \\(\\mu\\). Sin embargo, si \\(x\\) cae en la zona de las colas, como ocurre con \\(x_3\\), el intervalo no llega a alcanzar el valor de \\(\\mu\\). Por tanto, los intervalos calculados con este procedimiento aciertan si el valor obtenido al azar cae en la zona \\(1- \\alpha\\) y esto ocurre una proporción de veces \\(1 - \\alpha\\). Por esta razón se denominan intervalos de confianza \\(1 - \\alpha\\). El valor \\(1 - \\alpha\\) se da normalmente en porcentaje y si \\(\\alpha = 0,05\\) hablaremos de intervalo de confianza del 95%.\n\n¿Y si lo que tenemos no es una única observación sino una muestra?\nConstruimos el intervalo en torno a la media de la muestra. La media muestral también sigue una distribución Normal con la misma media \\(\\mu\\) que la población pero ahora la desviación típica será \\(\\sigma /\\sqrt{n}\\). La media de nuestra muestra, \\(\\bar{x}\\), pertenerá a la distribución de las medias, así que la expresión del intervalo de confianza ahora será: \\[ \\bar{x} \\pm z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}} \\]\n\n\n¿Y si la población no es Normal?\nSi la muestra no muy pequeña, pongamos que tiene más de 10 observaciones, sabemos que la media también seguirá una distribución aproximadamente Normal. A efectos prácticos puede calcularse el intervalo como si la población fuera Normal.\n\n\n¿Y si no conocemos el valor de \\(\\sigma\\)?\nEn este caso hay que sustituir \\(\\sigma\\) por su estimador \\(s\\) pero este cambio tiene consecuencias porque la distribución de $ $ ya no es una distribución $ N(0; 1) $ sino una t-Student con los mismos grados de libertad, \\(\\nu\\), que tiene \\(s\\). Así pues, la expresión del intervalo de confianza queda: \\[ \\bar{x} \\pm t_{\\nu;\\alpha/2} \\frac{s}{\\sqrt{n}} \\]\nSiendo esta es la expresión de uso más habitual del intervalo de confianza para la media de la población.\n\n\n¿Y si lo que queremos estimar es una proporción?\nProporción y media son más similares de lo que parece. En realidad son lo mismo. Supongamos que hablamos de una proporción de piezas defectuosas, si tenemos 10 piezas y asignamos un 1 a las defectuosas y un 0 a las correctas, podemos tener algo así como: \\(0;\\;\\; 0;\\;\\; 1;\\;\\; 0;\\;\\; 1;\\;\\; 0;\\;\\; 0;\\;\\; 0;\\;\\; 1;\\;\\; 0\\)\nHay 3 defectos en 10 piezas, una proporción de 0,3, y esa proporción es precisamente la media de los 10 valores.\nCuando los elementos de una población se pueden clasificar en dos grupos: el grupo de interés, con una probabilidad de ocurrencia \\(p\\) y el resto con una probabilidad \\(1-p\\), en una muestra de tamaño \\(n\\) la proporción de elementos que pertenecen al grupo de interés es una variable aleatoria \\(\\hat{p}\\) con media \\(p\\) y varianza \\(p(1-p)/n\\).\nSi \\(n\\) no es muy pequeña ni \\(p\\) muy cercana a 0 o a 1, la variable \\(\\hat{p}\\) se puede aproximar a la distribución Normal. \\[ \\hat{p} \\sim N \\left( p; \\sqrt{\\frac{p(1-p)}{n}} \\right)\\]\nSiguiendo el mismo razonamiento que conduce a la expresión del intervalo de confianza para \\(\\mu\\), usando el valor de \\(\\hat{p}\\) (el de \\(p\\) no lo conocemos) llegamos a la siguiente expresión para el intervalo de confianza \\(1-\\alpha\\) para \\(p\\): \\[ \\hat{p} \\pm z_{\\alpha/2} \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}} \\]\nEn todos los casos hemos supuesto que la población es infinita. Esto es lo habitual, ya que la población es un modelo teórico o es tan grande que a efectos prácticos puede considerarse infinita. Si la población es finita las fórmulas cambian un poco, pero eso lo comentamos en la siguiente pregunta.",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿De dónde sale la expresión del intervalo de confianza?"
+    ]
+  },
+  {
+    "objectID": "0403_Factor_correccion.html",
+    "href": "0403_Factor_correccion.html",
+    "title": "¿Qué es el factor de corrección por población finita?",
+    "section": "",
+    "text": "Aunque sobre esto no se habla mucho, la fórmula de la varianza muestral $_{{x}}^2 =^2/n $ donde \\(\\sigma^2\\) es la varianza poblacional y \\(n\\) el tamaño de muestra, solo es válida si la población es infinita.\nPodemos verlo a través de un caso muy sencillo en que la población solo tiene $ N=3 $ elementos con valores: 7, 8 y 9. Su varianza es \\(\\sigma^2 = 2/3\\) y si consideremos las muestras de tamaño \\(n=2\\), solo hay 3 medias muestrales, las correspondientes a las únicas 3 muestras que se pueden obtener:\nSe comprueba fácilmente que la varianza de las medias muestrales es: \\(\\sigma_{\\bar{x}}^2 = 1/6\\), distinto de \\(\\sigma^2 /n = 1/3\\)\nLas peculiaridades de las poblaciones finitas tienen que ver con que el muestreo se realiza sin reposición. Una vez elegido un elemento ese ya no forma parte de los elegibles y, en consecuencia, las probabilidades de incorporar a la muestra elementos de un cierto tipo depende de cuantos han salido ya de ese tipo. Esto complica los cálculos, pero solo cuando la población es finita. Con el supuesto de población infinita no importa si el muestreo es con o sin reposición: En una baraja infinita, si la probabilidad de sacar una carta de espadas es ¼, esa probabilidad se mantiene constante con independencia del palo a que pertenezcan las cartas que van saliendo. Sin embargo, en una baraja normal de 48 cartas, si la primera es de espadas, la segunda tiene una probabilidad menor de ser de espadas porque del resto de palos quedan 12 y de espadas solo 11.\nCuando la población es finita la varianza de la media muestral se obtiene aplicando la fórmula general (\\(\\sigma^2/n\\)) con un factor \\(f\\) que llamamos ``factor de corrección por población finita’’. \\[f=\\frac{N-n}{N-1}\\]\nEn nuestro caso, en que \\(N=3\\) y \\(n=2\\) tenemos: \\[\\sigma_{\\bar{x}}^2 = \\frac{\\sigma^2}{n} \\cdot \\frac{N-n}{N-1} = \\frac{\\frac{2}{3}}{2} \\cdot \\frac{3-2}{3-1} = \\frac{1}{6} \\]\nQue sí cuadra con el valor correcto. Seguramente la pregunta que ahora surge es: ¿de dónde sale esta expresión? pero no vamos a entrar en este tema porque a pesar de su apariencia inocente, la deducción del factor de corrección no es trivial1\nPara deducir la expresión que aparece en los intervalos de confianza hay que tener en cuenta otra peculiaridad que se da en las poblaciones finitas, la varianza muestral calculada de la forma habitual: \\[ s^2 = \\frac{\\sum_{i=1}^n \\left( x_i - \\bar{x} \\right)^2}{n-1} \\]\nno es un estimador insesgado de \\(\\sigma^2\\) sino de:\n\\[ \\sigma_{N-1}^2 = \\frac{\\sum_{i=1}^N \\left( x_i - \\mu \\right)^2}{N-1} \\]\nPor tanto, el estimador insesgado de la varianza de \\(\\bar{x}\\) con el factor de corrección por población finita es:\n\\[ s_{\\bar{x}}^2 = \\frac{s^2}{n} \\cdot \\frac{N-1}{N} \\cdot \\frac{N-n}{N-1} = \\frac{s^2}{n} \\cdot \\frac{N-n}{N}  \\]\nEs interesante observar que casi siempre nos referimos a poblaciones infinitas y que estas no son en realidad “poblaciones” en el sentido de “conjunto de elementos o individuos objeto de estudio” sino modelos teóricos, hipótesis sobre el comportamiento de los datos. Son poblaciones de resultados, o de mediciones, nunca de individuos. Evidentemente, no existen conjuntos infinitos de objetos reales.",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿Qué es el factor de corrección por población finita?"
+    ]
+  },
+  {
+    "objectID": "0404_Elementos_muestra.html",
+    "href": "0404_Elementos_muestra.html",
+    "title": "¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?",
+    "section": "",
+    "text": "En el ámbito del muestreo probabilístico, el tamaño de muestra se calcula aplicando una fórmula que puede ser más o menos complicada dependiendo del tipo de muestreo. En el caso del muestreo aleatorio simple y para la estimación de una proporción, \\(p\\), tenemos: \\[ n = \\frac{Np(1-p)}{(N-1)(E^2/z^2)+p(1-p)} \\]\nEsta fórmula se deduce a partir de la expresión del intervalo de confianza para \\(p\\) con la corrección para población finita. Para obtener el valor de \\(n\\) basta con asignar valores a las variables que intervienen. Estas variables son:\n\nE: Margen de error\nSi le piden que a través de una muestra estime la proporción de jóvenes de su ciudad que son usuarios habituales de una red social, nadie le va a exigir que dé el valor exacto, tipo el 23,7 %. En su informe usted hará constar que el porcentaje estimado es de 23,7 $$3,3 %. El 23,7 % es la proporción obtenida en la muestra y ese 3,3 % de incertidumbre en torno al valor de la muestra es lo que llamamos margen de error. En igualdad de valores del resto de variables que intervienen, si quiere dar el resultado con menos margen de error deberá usar un mayor tamaño de muestra.\n\n\nz: Relacionado con el nivel de confianza\nSi llega a la conclusión de que esa proporción está en el intervalo 23,7$$3,3 % ¿Puede usted afirmar con total seguridad que el verdadero valor está dentro de este intervalo? No, no puede hacerlo, su afirmación siempre tendrá un cierto nivel de confianza. Si ese nivel de confianza es del 95 % significa que el intervalo se ha construido siguiendo un procedimiento que acierta (incluye el verdadero valor) el 95 % de las veces, es como una información que da alguien que dice la verdad el 95 % de las veces. El nivel de confianza está relacionado con el valor de \\(z\\). Para un nivel de confianza \\(1-\\alpha\\) el valor de \\(z\\) es aquel que deja un área de cola de \\(\\alpha/2\\) en la distribución \\(N(0; 1)\\). Si el nivel de confianza es el 95 % tenemos que \\(z_{0,025} = 1,96\\) (cuando los medios de cálculo eran rudimentarios ese 1,96 se redondeaba a 2 obteniéndose un nivel de confianza del 95,5 %). ¿Podemos construir el intervalo de manera que acierte el 99 % de las veces? Sí podemos, incluso podemos lograr que acierte el 99,99 %, pero no lo hacemos porque al aumentar el nivel de confianza aumenta también margen de error y podemos llegar a la conclusión de que el porcentaje que andamos buscando está en el intervalo 23,7 \\(\\pm\\) 20 %. De eso estaremos muy seguros pero no hacía falta ningún estudio para llegar a esa conclusión.\nEn general, la determinación del margen de error y del nivel de confianza ``adecuados’’, no es un tema de la Estadística, ni de los estadísticos, es una decisión del equipo de investigación, que tiene conocimiento de los riesgos reales de equivocarse y del presupuesto disponible.\n\n\np: La variabilidad en la población\nSi en una población no hay variabilidad basta con mirar un solo elemento para saber cómo son todos. Cuando la variabilidad aumenta también lo hace el tamaño de muestra necesario para estimar sus características. Si se trata de estimar una proporción esa variabilidad está relacionada con el valor de la propia proporción \\(p\\), o más concretamente con \\(p(1-p)\\). Aquí aparece un problema porque si queremos estimar una proporción no podemos usar el valor de esa proporción –que no conocemos– para calcular el tamaño de muestra necesario. La solución es calcular el tamaño de la muestra poniéndonos en el caso más desfavorable que es cuando \\(p = 50\\%\\). A \\(1-p\\) también se le denomina \\(q\\), por esta razón muchas veces se habla del supuesto de \\(p=q=50 %\\) en las fichas técnicas de las encuestas.\n\n\nN: El tamaño de la población\nParece que esta es la variable cuya influencia está más justificada, pero no es así. Si la población es grande –y esto es lo más habitual– su tamaño prácticamente no influye. Usando la fórmula que hemos visto y con la ayuda de una hoja de cálculo se puede construir la tabla donde se aprecia la poca influencia del tamaño de la población.\n\n\n\nTamaños de muestra para la estimación de una proporción con un nivel de confianza del 95 %\n\n\n\n\nTamaño de la población\n\n\nMargen de error\n\n\n\n\n±1 %\n\n\n±2 %\n\n\n±3 %\n\n\n±4 %\n\n\n±5 %\n\n\n±10 %\n\n\n\n\n\n\n500\n\n\n476\n\n\n414\n\n\n341\n\n\n273\n\n\n218\n\n\n81\n\n\n\n\n1.000\n\n\n906\n\n\n707\n\n\n517\n\n\n376\n\n\n278\n\n\n88\n\n\n\n\n1.500\n\n\n1.298\n\n\n924\n\n\n624\n\n\n429\n\n\n306\n\n\n91\n\n\n\n\n2.000\n\n\n1.656\n\n\n1.092\n\n\n697\n\n\n462\n\n\n323\n\n\n92\n\n\n\n\n2.500\n\n\n1.984\n\n\n1.225\n\n\n749\n\n\n485\n\n\n334\n\n\n93\n\n\n\n\n3.000\n\n\n2.287\n\n\n1.334\n\n\n788\n\n\n501\n\n\n341\n\n\n94\n\n\n\n\n3.500\n\n\n2.566\n\n\n1.425\n\n\n818\n\n\n513\n\n\n347\n\n\n94\n\n\n\n\n4.000\n\n\n2.825\n\n\n1.501\n\n\n843\n\n\n523\n\n\n351\n\n\n94\n\n\n\n\n4.500\n\n\n3.065\n\n\n1.566\n\n\n863\n\n\n530\n\n\n355\n\n\n95\n\n\n\n\n5.000\n\n\n3.289\n\n\n1.623\n\n\n880\n\n\n536\n\n\n357\n\n\n95\n\n\n\n\n6.000\n\n\n3.694\n\n\n1.715\n\n\n907\n\n\n546\n\n\n362\n\n\n95\n\n\n\n\n7.000\n\n\n4.050\n\n\n1.788\n\n\n927\n\n\n553\n\n\n365\n\n\n95\n\n\n\n\n8.000\n\n\n4.365\n\n\n1.847\n\n\n942\n\n\n559\n\n\n367\n\n\n95\n\n\n\n\n9.000\n\n\n4.647\n\n\n1.896\n\n\n955\n\n\n563\n\n\n369\n\n\n96\n\n\n\n\n10.000\n\n\n4.900\n\n\n1.937\n\n\n965\n\n\n567\n\n\n370\n\n\n96\n\n\n\n\n15.000\n\n\n5.856\n\n\n2.070\n\n\n997\n\n\n578\n\n\n375\n\n\n96\n\n\n\n\n20.000\n\n\n6.489\n\n\n2.144\n\n\n1.014\n\n\n583\n\n\n377\n\n\n96\n\n\n\n\n25.000\n\n\n6.939\n\n\n2.191\n\n\n1.024\n\n\n587\n\n\n379\n\n\n96\n\n\n\n\n50.000\n\n\n8.057\n\n\n2.291\n\n\n1.045\n\n\n594\n\n\n382\n\n\n96\n\n\n\n\n100.000\n\n\n8.763\n\n\n2.345\n\n\n1.056\n\n\n597\n\n\n383\n\n\n96\n\n\n\n\n500.000\n\n\n9.423\n\n\n2.390\n\n\n1.065\n\n\n600\n\n\n384\n\n\n97\n\n\n\n\n1.000.000\n\n\n9.513\n\n\n2.396\n\n\n1.066\n\n\n600\n\n\n384\n\n\n97\n\n\n\n\n1.500.000\n\n\n9.543\n\n\n2.398\n\n\n1.067\n\n\n600\n\n\n385\n\n\n97\n\n\n\n\n2.000.000\n\n\n9.558\n\n\n2.399\n\n\n1.067\n\n\n601\n\n\n385\n\n\n97\n\n\n\n\n50.000.000\n\n\n9.602\n\n\n2.401\n\n\n1.068\n\n\n601\n\n\n385\n\n\n97\n\n\n\n\n\n\nPresupuesto disponible\nAunque no aparece en la fórmula, el presupuesto disponible (tiempo, dinero, recursos) es seguramente la variable más influyente, de manera que muy a menudo la muestra es tan grande como los recursos permiten. En este caso, dado el tamaño de muestra, y establecido un nivel de confianza, se puede calcular el margen de error obtenido.",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?"
+    ]
+  },
+  {
+    "objectID": "0405_Muestra_poblacion.html",
+    "href": "0405_Muestra_poblacion.html",
+    "title": "¿Qué relación hay entre tamaño de muestra y tamaño de población?",
+    "section": "",
+    "text": "Guiándonos solo por la intuición parece razonable considerar que el tamaño de la muestra debe estar muy relacionado con el de la población. Nos parece que para un país de 50 millones de habitantes hará falta una muestra mucho mayor que para una ciudad de 50 mil. A veces se ponen en duda los resultados de un estudio con el argumento de que la muestra no llega ni al 10 % de la población. Pues resulta que esas intuiciones son falsas. #### ¿Le falta sal a la sopa?\nPara responder a esta pregunta el cocinero debe tomar una muestra representativa de la sopa y probarla ¿Le parece sensato recomendar al cocinero que pruebe el 10 % de la sopa para poder tomar una buena decisión? Esta recomendación contradice todas nuestras experiencias, ya que la cucharilla que usamos en nuestras casas para probar la sopa que preparamos habitualmente es la misma que cuando usamos una olla más grande porque tenemos invitados, y eso nunca nos ha sorprendido.\n\n\n\n\n\n\nFigura 1: La misma cuchara para las dos ollas\n\n\n\nLo que todos hacemos antes de sacar la muestra es dar un buen meneo con el cucharón para homogeneizar la sopa. Sabemos que es mucho más importante mezclar bien antes de tomar la muestra que aumentar el tamaño de la cuchara y, por supuesto, los problemas derivados de no remover bien no se resuelven con el uso de una cuchara más grande.\nDoctor, ¿para saber mi grupo sanguíneo me va usted a sacar una muestra con el 10 % de mi sangre?\nEs bien sabido que basta con una muestra de una gota de sangre para conocer en forma inequívoca el tipo de sangre de una persona. Todas las gotas de sangre de una persona son del mismo tipo, así que vista una, quedan vistas todas. La misma cantidad de sangre se requiere para un niño recién nacido que para su padre.\n\n\\[ \\bullet \\;\\;\\;\\;\\; \\bullet \\;\\;\\;\\;\\; \\bullet \\]\n\nLa figura 2 se ha construido usando la fórmula del tamaño de muestra para estimar una proporción. Puede apreciarse que a partir de un cierto tamaño de la población, que podemos situar en torno a 50.000, el tamaño de la muestra apenas cambia.\n\n\n\n\n\n\nFigura 2: amaño de muestra en función del tamaño de la población para los márgenes de error (E) que se indican, bajo el supuesto de \\(p=q=0,5\\) y un nivel de confianza del 80 %",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿Qué relación hay entre tamaño de muestra y tamaño de población?"
+    ]
+  },
+  {
+    "objectID": "0406_Tipo_muestreo.html",
+    "href": "0406_Tipo_muestreo.html",
+    "title": "¿Qué tipo de muestreo conviene elegir?",
+    "section": "",
+    "text": "texto",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿Qué tipo de muestreo conviene elegir?"
+    ]
+  },
+  {
+    "objectID": "0407_Aleatoria_representativa.html",
+    "href": "0407_Aleatoria_representativa.html",
+    "title": "¿Es lo mismo muestra aleatoria que muestra representativa?",
+    "section": "",
+    "text": "texto",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿Es lo mismo muestra aleatoria que muestra representativa?"
+    ]
+  },
+  {
+    "objectID": "0408_Acertar_sondeos.html",
+    "href": "0408_Acertar_sondeos.html",
+    "title": "¿Por qué cuesta acertar en los sondeos electorales?",
+    "section": "",
+    "text": "texto",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿Por qué cuesta acertar en los sondeos electorales?"
+    ]
+  },
+  {
+    "objectID": "0409_Maximoverosimil.html",
+    "href": "0409_Maximoverosimil.html",
+    "title": "¿Qué es un estimador de máxima verosimilitud?",
+    "section": "",
+    "text": "texto",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿Qué es un estimador de máxima verosimilitud?"
+    ]
+  },
+  {
+    "objectID": "0401_Creemos_muestra.html#footnotes",
+    "href": "0401_Creemos_muestra.html#footnotes",
+    "title": "¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos?",
+    "section": "",
+    "text": "La fórmula que permite calcular el tamaño de la muestra, cuando el tamaño de la población se supone infinito, o muy grande respecto al tamaño de la muestra, es: \\(n=z_{\\alpha/2}^2 \\sigma^2 /E^2\\), donde el valor \\(z_{\\alpha/2}\\) depende del nivel de confianza (para el 99,7 % vale 2,97), \\(\\sigma\\) es la desviación típica de la población y \\(E\\) es el margen de error. Si suponemos \\(\\sigma=4\\), el nivel de confianza indicado y \\(E=2\\), se obtiene \\(n=35,3\\). Este valor siempre se redondea por exceso.↩︎",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos?"
+    ]
+  },
+  {
+    "objectID": "0403_Factor_correccion.html#footnotes",
+    "href": "0403_Factor_correccion.html#footnotes",
+    "title": "¿Qué es el factor de corrección por población finita?",
+    "section": "",
+    "text": "El lector interesado puede consultar, por ejemplo: Steven K. Thompson: ``Sampling’’, Wiley, 2012, pp. 20-22.↩︎",
+    "crumbs": [
+      "Muestreo y Estimación",
+      "¿Qué es el factor de corrección por población finita?"
+    ]
   }
 ]
