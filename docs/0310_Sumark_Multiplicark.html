@@ -322,7 +322,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0308_Formula_Poisson.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿De dónde sale la fórmula de la distribución de Poisson??</span></a>
+ <span class="menu-text">¿De dónde sale la fórmula de la distribución de Poisson?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -369,7 +369,37 @@ window.Quarto = {
 </header>
 
 
-<p>texto</p>
+<p>El resultado es el mismo cuando las cantidades a que nos referimos son magnitudes constantes. Para saber cuántos huevos hay en 8 docenas, como el número de huevos en una docena es una constante, podemos sumar 12 huevos 8 veces o multiplicar 12 por 8 (¡evidente!). Pero si lo que tenemos es una variable aleatoria, como el peso de un huevo, esto ya no es verdad.</p>
+<p>No es lo mismo el peso de una docena de huevos que el peso de un huevo multiplicado por 12 porque aunque estas dos variables tienen el mismo valor medio no tienen la misma variabilidad y, por tanto, no podemos decir que son iguales.</p>
+<p>Para entender porque esto es así, aclararemos en primer lugar el significado de la notación que vamos a utilizar. Llamaremos <span class="math inline">\(X\)</span> a la variable aleatoria que consideramos (en nuestro ejemplo es el peso de un huevo), podríamos decir que <span class="math inline">\(X\)</span> se distribuye según una Normal, pero no necesitamos hacer referencia a ninguna distribución en concreto, sólo hay que tener claro que no es un valor fijo, sino una variable aleatoria. Si tomamos una docena, designaremos los pesos como <span class="math inline">\(X_1, X_2, \ldots, X_{12}\)</span>. Cada una de las <span class="math inline">\(X_i\)</span> es una variable aleatoria con la misma distribución que <span class="math inline">\(X\)</span>. En realidad son extracciones de la misma población, el subíndice sólo indica el orden en que extraen.</p>
+<p>Echando mano de las fórmulas correspondientes y suponiendo que los 12 pesos son independientes, tendremos que la esperanza matemática y la varianza del peso de una docena será:</p>
+<p><span class="math display">\[E(X_1+X_2+\ldots+X_{12})=E(X_1)+\ldots+E(X_{12})=12 \cdot E(X)\]</span> <span class="math display">\[V(X_1+X_2\ldots+X_{12})=V(X_1)+ \ldots+V(X_{12})=12 \cdot V(X)\]</span></p>
+<p>Pensemos ahora en la variable “peso de un huevo multiplicado por 12”, es decir, la variable <span class="math inline">\(12X\)</span>. Ahora tendremos:</p>
+<p><span class="math display">\[E(12X)=12 \cdot E(X)\]</span></p>
+<p><span class="math display">\[V(12X)=12^2 \cdot V(X)=144 \cdot V(X)\]</span></p>
+<p>Vamos a ver que estas fórmulas reflejan lo que ocurre en la realidad a través una mirada intuitiva al problema. Cuando formamos una docena de huevos, aunque tomemos uno singularmente pequeño no hay que temer que esta docena salga con un peso muy por debajo del valor medio, ya que seguramente también habrá otros con un peso por encima de lo normal de forma que los más grandes compensarán el peso de los más pequeños y viceversa.</p>
+<div id="fig-Huevos_1" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Huevos_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03_Fig_Distribuciones/1001_Huevos_1.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Huevos_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Una docena de huevos (exagerando las diferencias)
+</figcaption>
+</figure>
+</div>
+<p>Sin embargo, en la variable “peso de un huevo multiplicado por 12”, si el huevo elegido resulta ser pequeño, es como tener una docena de huevos pequeños, y si es grande sería como una docena de huevos grandes, con lo que tendremos pesos totales con más dispersión que en el caso anterior (en este caso no se compensan los grandes con los pequeños).</p>
+<div id="fig-Huevos_2" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Huevos_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03_Fig_Distribuciones/1002_Huevos_2.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Huevos_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Un huevo multiplicado por 12. Si es pequeño es como tener una docena de huevos pequeños. Igual si es grande.
+</figcaption>
+</figure>
+</div>
+<p>Por tanto, tiene más dispersión la variable aleatoria “peso de un huevo multiplicado por 12” que la variable “peso de una docena”. Y si la variabilidad es distinta, evidentemente las variables son distintas.</p>
 
 
 

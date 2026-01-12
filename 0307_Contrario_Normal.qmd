@@ -1,3 +1,13 @@
 # ¿Existen variables con comportamiento contrario a la distribución Normal? {.unnumbered}
 
-texto
+Entendemos por ``contrario a la Normal'' que la mayor frecuencia se da en los extremos, en vez de en torno al valor medio. 
+
+Por ejemplo, la edad al morir sigue una distribución con picos en los extremos. Si siguiera una distribución Normal la mayoría de personas moriría en torno a los 40 años y sabemos que esto no es así. Actualmente la distribución de la edad al morir tiene forma de J, es decir, el pico alto se da en los valores más altos aunque también hay un pico pequeño (cada vez más pequeño) que tiene que ver con la mortalidad infantil. Con la duración de los productos tecnológicos pasa algo parecido, y también existe una cierta "mortalidad infantil", para eso está la garantía.
+
+Otro ejemplo que se suele citar es el de la distribución del porcentaje de cielo cubierto. Parece que en general es más frecuente que el cielo esté totalmente cubierto o totalmente despejado a que esté cubierto en torno al 50 %. La cobertura de las nubes se mide en octas (u octavas) pero no es fácil encontrar datos sobre esta variable. Las webs de estaciones meteorológicas que hemos consultado, no lo registran o no informan.
+
+En el terreno de los modelos teóricos este fenómeno se da en la distribución del coeficiente de correlación entre variables independientes con muestras de tamaño $n=3$. Si $n=1$ solo se tiene un punto y no es posible calcular ninguna correlación. Si $n=2$ solo puede tomar los valores 1 y -1, es decir, solo los valores extremos. Cuando $n=3$ ya puede tomar cualquier valor entre -1 y 1 pero es más probable que tome valores cerca de los extremos. Si $n=4$ todos los valores tienen la misma densidad de probabilidad (y como $r$ está definido entre -1 y 1, seguro que será 0,5 para que el área sea 1). A medida que $n$ aumenta va apareciendo la típica forma de campana.
+
+Utilizando la fórmula de la función densidad de probabilidad de $r$ (coeficiente de correlación muestral) cuando en la población es igual a cero ($\rho$ =0) hemos construido la figura [-@fig-ContrarioNormal] donde se puede observar la forma de la $f(r)$ para diversos valores de $n$. Para $n=30$ se ha superpuesto una distribución Normal con la misma media y desviación típica. Para ese valor de $ n $ las dos distribuciones ya son casi idénticas pero no llega a ser Normal porque $f(r)$ está definida en el intervalo $(-1, 1)$ mientras que en una Normal el rango de variación no está acotado.
+
+![Función densidad de probabilidad del coeficiente de correlación para variables independientes según el tamaño de muestra](03_Fig_Distribuciones/0701 ContrarioNormal_1.png){#fig-ContrarioNormal .fig-compacta2 fig-align="center" width="90%"}

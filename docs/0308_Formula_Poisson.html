@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>¿De dónde sale la fórmula de la distribución de Poisson?? – Estadística. Preguntas frecuentes</title>
+<title>¿De dónde sale la fórmula de la distribución de Poisson? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0301_Frecuencia_densidad.html">Distribuciones de probabilidad</a></li><li class="breadcrumb-item"><a href="./0308_Formula_Poisson.html">¿De dónde sale la fórmula de la distribución de Poisson??</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0301_Frecuencia_densidad.html">Distribuciones de probabilidad</a></li><li class="breadcrumb-item"><a href="./0308_Formula_Poisson.html">¿De dónde sale la fórmula de la distribución de Poisson?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -323,7 +323,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0308_Formula_Poisson.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">¿De dónde sale la fórmula de la distribución de Poisson??</span></a>
+ <span class="menu-text">¿De dónde sale la fórmula de la distribución de Poisson?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -351,9 +351,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0301_Frecuencia_densidad.html">Distribuciones de probabilidad</a></li><li class="breadcrumb-item"><a href="./0308_Formula_Poisson.html">¿De dónde sale la fórmula de la distribución de Poisson??</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0301_Frecuencia_densidad.html">Distribuciones de probabilidad</a></li><li class="breadcrumb-item"><a href="./0308_Formula_Poisson.html">¿De dónde sale la fórmula de la distribución de Poisson?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">¿De dónde sale la fórmula de la distribución de Poisson??</h1>
+<h1 class="title">¿De dónde sale la fórmula de la distribución de Poisson?</h1>
 </div>
 
 
@@ -370,9 +370,54 @@ window.Quarto = {
 </header>
 
 
-<p>texto</p>
+<p>Vamos a partir de la distribución binomial cuando el número de pruebas <span class="math inline">\(n\)</span> tiende a infinito y la probabilidad de éxito <span class="math inline">\(p\)</span> tiende a cero, manteniéndose constante el valor <span class="math inline">\(np\)</span> al que llamamos <span class="math inline">\(\lambda\)</span>.</p>
+<p>Sabemos que si <span class="math inline">\(X\)</span> sigue una distribución binomial con parámetros <span class="math inline">\(n\)</span>, <span class="math inline">\(p\)</span>:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+    P(X=x) &amp;=\frac{n!}{x!(n-x)!}p^x(1-p)^{n-x} \\
+        &amp;= \frac{n!}{x!(n-x)!} \left(\frac{\lambda}{n} \right )^{x} \left(1-\frac{\lambda}{n} \right )^{n-x}\\
+        &amp;=\frac{n(n-1) \ldots (n-x+1)}{x!} \cdot \frac{\lambda^{x}}{n^x} \cdot \left(1-\frac{\lambda}{n} \right )^{n} \left(1-\frac{\lambda}{n} \right)^{-x}\\
+        &amp;= \underbrace{\vphantom{\left(1-\frac{\lambda}{n} \right )^{-x}} \frac{n(n-1)\ldots(n-x+1)}{n^x} }_1 \cdot
+            \underbrace{\vphantom{\left(1-\frac{\lambda}{n} \right )^{-x}} {\frac{\lambda^x}{x!}}}_2 \cdot      
+        \underbrace{\left(1-\frac{\lambda}{n} \right )^{n}}_3  \underbrace{\left(1-\frac{\lambda}{n} \right )^{-x}}_4
+\end{split}
+\end{equation*}\]</span></p>
+<p>En el primer paso simplemente se ha sustituido <span class="math inline">\(p\)</span> por <span class="math inline">\(\lambda/n\)</span>. A continuación se simplifica la expresión del número combinatorio y se realizan cambios evidentes. Finalmente se intercambian los valores de <span class="math inline">\(n^x\)</span> y <span class="math inline">\(x!\)</span> en los denominadores de los 2 primeros términos y dividimos la expresión en 4 partes que analizamos a continuación:</p>
+<section id="parte-1" class="level4">
+<h4 class="anchored" data-anchor-id="parte-1">Parte 1:</h4>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \frac{n(n-1)\ldots(n-x+1)}{n^x} &amp;=\frac{n}{n} \cdot \frac{n-1}{n} \cdot \frac{n-2}{n}\ldots\frac{n-x+1}{n}= \\
+        &amp;=1 \cdot\left(1-\frac{1}{n} \right) \left(1-\frac{2}{n} \right) \ldots \left(1-\frac{x-1}{n} \right)
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Está claro que si <span class="math inline">\(n \to \infty\)</span> manteniéndose <span class="math inline">\(x\)</span> constante, cada uno de los términos tiende a 1 y, por tanto: <span class="math display">\[\displaystyle\lim_{n \to \infty} \frac{n(n-1) \ldots (n-x+1)}{n^x} =1 \]</span></p>
+</section>
+<section id="parte-2" class="level4">
+<h4 class="anchored" data-anchor-id="parte-2">Parte 2:</h4>
+<p>La expresión <span class="math inline">\(\frac{\lambda^x}{x!}\)</span> la dejamos tal como está.</p>
+</section>
+<section id="parte-3" class="level4">
+<h4 class="anchored" data-anchor-id="parte-3">Parte 3:</h4>
+<p>El análisis de esta tercera parte va a ser un poco más largo. Partiremos de la definición del número <span class="math inline">\(e\)</span> como <span class="math inline">\(\displaystyle\lim_{n \to \infty} \left( 1+\frac{1}{n} \right)^n\)</span> e intentaremos poner nuestra expresión de una forma parecida a esta.</p>
+<p>Para empezar puede comprobarse que se verifica: <span class="math display">\[\left( 1-\frac{\lambda}{n} \right)^n =  \left [\left( 1-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}} \right ]^{-\lambda}\]</span> Operando solo con la expresión del interior del corchete: <span class="math display">\[\left( 1-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}}=\left( \frac{n/\lambda}{n/\lambda}-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}} =  \left( \frac{n/\lambda-1}{n/\lambda} \right)^{\frac{-n}{\lambda}} = \left( \frac{n/\lambda}{n/\lambda-1} \right )^{\frac{n}{\lambda}}\]</span> y también podemos hacer:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \left(\frac{n/\lambda}{n/\lambda-1} \right)^{\frac{n}{\lambda}}&amp;=\left(1+\frac{1}{n/\lambda-1} \right)^{\frac{n}{\lambda}} =\\
+        &amp;= \left(1+\frac{1}{n/\lambda-1} \right)^{\frac{n}{\lambda}-1} \cdot \left(1+\frac{1}{n/\lambda-1} \right)
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Obsérvese que siendo <span class="math inline">\(\lambda\)</span> una constante, cuando <span class="math inline">\(n \to\infty\)</span> también <span class="math inline">\((n/\lambda-1) \to\infty\)</span>. Por tanto el primer factor de la última expresión es igual a <span class="math inline">\(e\)</span> cuando <span class="math inline">\(n \to\infty\)</span>. El segundo factor evidentemente es igual a 1 cuando <span class="math inline">\(n \to\infty\)</span>, por tanto:</p>
+<p><span class="math display">\[ \displaystyle\lim_{n \to \infty} \left( 1-\frac{\lambda}{n} \right)^n  = \displaystyle\lim_{n \to \infty} \left [\left( 1-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}} \right ]^{-\lambda} = e^{-\lambda} \]</span></p>
+</section>
+<section id="parte-4" class="level4">
+<h4 class="anchored" data-anchor-id="parte-4">Parte 4:</h4>
+<p>En esta última parte resulta claro que <span class="math inline">\(\displaystyle\lim_{n \to \infty} \left( 1-\frac{\lambda}{n} \right)^{-x}  =1.\)</span></p>
+<p>Recopilando, tenemos que en las condiciones indicadas de <span class="math inline">\(n \to\infty\)</span>, <span class="math inline">\(p \to 0\)</span> con <span class="math inline">\(np\)</span> constante e igual a <span class="math inline">\(\lambda\)</span>, se verifica que:</p>
+<p><span class="math display">\[P(X=x)=e^{-\lambda}\frac{\lambda^x}{x!}\]</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

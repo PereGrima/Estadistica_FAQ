@@ -370,9 +370,26 @@ window.Quarto = {
 </header>
 
 
-<p>texto</p>
+<p>Si usted mide 1,68 m y considerando que las estaturas siguen una distribución Normal calcula la probabilidad de que se dé ese valor, descubrirá que esa probabilidad es cero ¡pero usted existe! Esta paradoja, que se da -por supuesto- para todas las estaturas, es debida a que en la práctica tratamos como discretas a las variables que en realidad son continuas.</p>
+<p>Cuando decimos que <span class="math inline">\(X\)</span> sigue una distribución <span class="math inline">\(N(\mu; \sigma)\)</span>, estamos diciendo también que <span class="math inline">\(X\)</span> es una variable continua que puede tomar infinitos valores. Sabemos que la probabilidad de que tome valores comprendidos entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> es igual al área definida por su función densidad de probabilidad entre estos valores, es decir: <span class="math display">\[ P(a \leq X \leq b) = \int_{a}^{b} f(x) dx \]</span> Por tanto: <span class="math display">\[ P(X=1,68) = P(1,68 \leq X \leq 1,68) = \int_{1,68}^{1,68} f(x) dx = 0 \]</span> Pero cuando decimos que alguien mide 1,68 metros no queremos decir que mide exactamente 1,680000000… con infinitos ceros, sino que entendemos que el valor se ha redondeado y lo que queremos decir es que su altura está comprendida entre 1,675 y 1,685 (si fuera menor de 1,675 lo habríamos aproximado a 1,67 y si mayor de 1,685 a 1,69)</p>
+<p>Suponiendo que las alturas se distribuyen según una Normal con media <span class="math inline">\(\mu\)</span>=1,70 m y desviación típica <span class="math inline">\(\sigma\)</span>=0,07 m, la probabilidad de que una persona mida 1,68 m (entendido como valor redondeado, que es como hablamos), es de 0,0547 (figura <a href="#fig-Estatura" class="quarto-xref"><span>1</span></a>).</p>
+<div id="fig-Estatura" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Estatura-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03_Fig_Distribuciones/0601_EstaturaProb_1.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Estatura-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Probabilidad de tener valores entre 1,675 y 1,685
+</figcaption>
+</figure>
+</div>
+<p>Todas las variables continuas se discretizan para tratar con ellas en la práctica. Casi siempre se redondea, como en el caso de la estatura, aunque en algunos casos se trunca, como hacemos con las edades. Si hoy es día de elecciones y usted cumple los 18 años mañana, hoy tiene 17+364/365 = 17,997 años, pero no le dejarán votar.</p>
+<section id="observación-final" class="level4">
+<h4 class="anchored" data-anchor-id="observación-final">Observación final</h4>
+<p>Un argumento falaz, pero muchas veces convincente haciendo mención a aquello de los casos favorables partido por los casos posibles, es considerar que si la variable puede tomar infinitos valores, la probabilidad de que tome uno en concreto es cero. Esto es falso porque la regla de casos favorables partido por casos posibles solo vale cuando todos los sucesos tienen la misma probabilidad de ocurrir y este no es nuestro caso. Por otra parte, es perfectamente posible que una variable pueda tomar infinitos valores y que ninguno de ellos tenga probabilidad cero. Piense, por ejemplo, en la distribución de Poisson.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

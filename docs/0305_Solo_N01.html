@@ -370,7 +370,45 @@ window.Quarto = {
 </header>
 
 
-<p>texto</p>
+<p>Aunque las tablas estadísticas ya son algo del pasado, es interesante ver porqué habiendo infinitas distribuciones Normales (tantas como parejas <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma\)</span>) basta la tabla de solo una para poder calcular probabilidades en todas ellas.</p>
+<p>Lo veremos con razonamientos básicamente geométricos. Sea <span class="math inline">\(X \sim N(\mu; \sigma)\)</span> y deseamos calcular <span class="math inline">\(P(X&gt;x)\)</span>. Si definimos <span class="math inline">\(Y = X - \mu\)</span> está claro que <span class="math inline">\(Y \sim N(0; \sigma)\)</span> y con ayuda de la figura <a href="#fig-Normal01_1" class="quarto-xref"><span>1</span></a> es fácil observar que <span class="math inline">\(P(X&gt;x)=P(Y&gt;x-\mu)\)</span> ya que la forma de las dos distribuciones es idéntica y al punto <span class="math inline">\(x\)</span> en la distribución de <span class="math inline">\(X\)</span> le corresponde <span class="math inline">\(x-\mu\)</span> en la de <span class="math inline">\(Y\)</span>.</p>
+<div id="fig-Normal01_1" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Normal01_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03_Fig_Distribuciones/0501_Normal01_1.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Normal01_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Transformación de <span class="math inline">\(X \sim N(\mu; \sigma)\)</span> en <span class="math inline">\(Y \sim N(0; \sigma)\)</span>
+</figcaption>
+</figure>
+</div>
+<p>Si <span class="math inline">\(Y \sim N(0; \sigma)\)</span> y <span class="math inline">\(k\)</span> es una constante, entonces <span class="math inline">\(kY \sim N(0; k\sigma)\)</span> ya que <span class="math inline">\(E(kY) = kE(Y) = 0\)</span> y <span class="math inline">\(V(kY) = k^2 \sigma^2\)</span>. Veamos ahora como representar la distribución de <span class="math inline">\(kY\)</span>.</p>
+<p>Si representamos <span class="math inline">\(f(Y)\)</span> y <span class="math inline">\(f(kY)\)</span> utilizando los mismos ejes, las formas de las distribuciones serán distintas, por tener distinto valor de <span class="math inline">\(\sigma\)</span>, pero también podemos representarlas usando la misma forma para la distribución (misma campana) y cambiar las escalas de los ejes, tal como se indica en la figura <a href="#fig-Normal01_2" class="quarto-xref"><span>2</span></a>.</p>
+<p>Recordando que la función densidad de probabilidad de <span class="math inline">\(Y \sim N(0; \sigma)\)</span> es: <span class="math inline">\(f(y) = \frac{1}{\sigma \sqrt{2 \pi}}e^{- \frac{y^2}{2\sigma^2}}\)</span>, se deduce que:</p>
+<p><span class="math display">\[ f(ky) = \frac{1}{k\sigma \sqrt{2 \pi}}e^{- \frac{k^2y^2}{2 k^2 \sigma^2}} = \frac{1}{k}f(y) \]</span></p>
+<div id="fig-Normal01_2" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Normal01_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03_Fig_Distribuciones/0502_Normal01_2.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:57.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Normal01_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Distribución con <span class="math inline">\(\sigma\)</span> =1 o con <span class="math inline">\(\sigma = k\)</span> según la escala
+</figcaption>
+</figure>
+</div>
+<p>Por tanto, las campanas se pueden representar de forma idéntica multiplicando por <span class="math inline">\(k\)</span> el eje de abscisas y dividiendo por el mismo valor el de ordenadas (que no hemos representado).</p>
+<p>Si hacemos <span class="math inline">\(k= \frac{1}{\sigma}\)</span> tendremos <span class="math inline">\(Z = \frac{Y}{\sigma}\)</span>, o lo que es lo mismo: <span class="math inline">\(Z = (X-\mu)/ \sigma\)</span>. Por lo comentado anteriormente, la distribución de <span class="math inline">\(Z\)</span> se puede representar con la misma campana que la utilizada para la distribución de $ Y $ (<a href="#fig-Normal01_3" class="quarto-xref"><span>3</span></a>).</p>
+<div id="fig-Normal01_3" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Normal01_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03_Fig_Distribuciones/0503_Normal01_3.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:57.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Normal01_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Transformación de <span class="math inline">\(Y \sim N(0; \sigma)\)</span> en <span class="math inline">\(Z \sim N(0; 1)\)</span>}
+</figcaption>
+</figure>
+</div>
+<p>Si la forma de las campanas es la misma y solo hemos sustituido el punto <span class="math inline">\(x - \mu\)</span> por el <span class="math inline">\(\frac{x - \mu}{\sigma}\)</span> resulta claro que <span class="math inline">\(P \left( Z &gt; \frac{x -\mu}{\sigma} \right) = P\left( Y &gt; X - \mu \right)\)</span> y, por tanto, <span class="math inline">\(P\left( X&gt;x\right) = P\left(Z&gt; \frac{x-\mu}{\sigma}\right)\)</span>.</p>
 
 
 
