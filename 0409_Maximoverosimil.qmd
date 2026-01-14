@@ -1,3 +1,38 @@
 # ¿Qué es un estimador de máxima verosimilitud? {.unnumbered}
 
-texto
+Cuando queremos estimar un parámetro de una población cuya distribución es conocida (Normal, binomial, Poisson, ...), tomamos una muestra aleatoria para a partir de ella estimar dicho parámetro. Por ejemplo, si se sabe que una situación puede modelarse con una distribución de Poisson, para estimar el valor de su media $\lambda$, podemos tomar una muestra aleatoria $(x_1, x_2, ..., x_n)$ de $n$ observaciones e intentar responder a la siguiente pregunta ¿cuál de todos los posibles valores de $\lambda$ produce con mayor verosimilitud (credibilidad) una muestra como la observada? La respuesta a esta pregunta corresponde al estimador de máxima verosimilitud.
+
+Para hacer operativo el criterio descrito vamos a deducir la expresión del estimador máximoverosimil de $\lambda$ en nuestro ejemplo de la distribución de Poisson. La matemática es quizá un poco aparatosa pero fácil de seguir.
+
+Consideremos la muestra aleatoria $(x_1, x_2, ..., x_n)$. Como las variables aleatorias que componen la muestra son independientes, la probabilidad conjunta es igual al producto de las probabilidades de cada una de ellas, de manera que:
+
+```{=tex}
+\begin{equation*}
+    \begin{split}
+        L &=P(X_1=x_1;\;X_2=x_2;\;...; \;X_n=x_n\mid \lambda) \\[1mm]
+        &= \underbrace{P(X_1=x_1\mid \lambda)}_{\LARGE{ \frac{e^{-\lambda}\lambda^{x_1}}{x_1!}}} \cdot \underbrace{P(X_2=x_2\mid \lambda)}_{\LARGE{ \frac{e^{-\lambda}\lambda^{x_2}}{x_2!}}} \cdot ... \cdot \underbrace{P(X_n=x_n\mid \lambda)}_{\LARGE{ \frac{e^{-\lambda}\lambda^{x_n}}{x_n!}}}
+    \end{split}
+\end{equation*}
+```
+La expresión que hemos nombrado con la letra $L$, es una función de $\lambda$, pues se supone que $(x_1, x_2, ... , x_n)$ es una realización de la muestra, es decir, son números concretos. Así que en $L$ el parámetro $\lambda$ es nuestra única incógnita. Esto podemos escribirlo así: $$L(\lambda \mid x_1,\;x_2,\;..., x_n)=\frac{e^{-\lambda}\lambda^{x_1}}{x_1!} \cdot \frac{e^{-\lambda}\lambda^{x_2}}{x_2!} \cdot ... \cdot \frac{e^{-\lambda}\lambda^{x_n}}{x_n!}$$
+
+La pregunta ahora puede formularse de la siguiente manera: Si se obtuvo la muestra $(x_1, x_2, ..., x_n)$, ¿cuál es el valor de $\lambda$ (en términos de las $x_i$) que hace máxima la función $L(\lambda \mid x_1,\;x_2,\;..., x_n)$?
+
+De esta manera el problema queda convertido en un problema de optimización, del tipo de los que resolvimos en nuestros cursos de cálculo. De aquellos en los que debía derivarse e igualar a cero la derivada para encontrar puntos críticos, que luego serían probados con la segunda derivada para identificar si correspondían con un punto máximo o con un mínimo.
+
+Para que la deducción sea más cómoda, un truco que suele dar buenos resultados es tratar con el logaritmo de $L$ en vez de con $L$ directamente, ya que el valor de $\lambda$ que maximice una expresión, maximizará también la otra. En nuestro caso lo haremos de esta forma, obteniéndose: 
+
+$$
+\begin{flalign*}
+\log \left[ L(\lambda) \right] &= \log \left(\frac{e^{-\lambda}\lambda^{x_1}}{x_1!} \cdot \frac{e^{-\lambda}\lambda^{x_2}}{x_2!} \cdot ... \cdot \frac{e^{-\lambda}\lambda^{x_n}}{x_n!} \right) = &&\\[4mm]
+&= \log \left(\frac{e^{-\lambda}\lambda^{x_1}}{x_1!} \right) + \log \left( \frac{e^{-\lambda}\lambda^{x_2}}{x_2!} \right) +...+ \log \left(\frac{e^{-\lambda}\lambda^{x_n}}{x_n!} \right) =\\[4mm]
+&= \left[-\lambda+x_1 \log(\lambda)-\log(x_1!) \right] +...+ \left[-\lambda+x_n \log(\lambda)-\log(x_n!) \right] =\\[4mm]
+&=-n \lambda + \log(\lambda) \sum_{i=1}^n x_i - \sum_{i=1}^n \log(x_i!)
+\end{flalign*}
+$$
+
+Derivando respecto a $\lambda$ e igualando a cero: $$\frac{\partial\; [ \log\;L(\lambda)]}{\partial \lambda} = -n + \frac{1}{\lambda} \sum_{i=1}^n x_i =0$$
+
+Para asegurar que estamos ante un máximo podemos hacer la segunda derivada y comprobar que da un valor negativo. De la primera derivada se deduce fácilmente que el valor de $\lambda$ que maximiza $\log[L(\lambda)]$, y por tanto también $L(\lambda)$ es: $$ \lambda = \frac{\sum_{i=1}^n x_i}{n} = \bar{x} $$
+
+Por tanto, diremos que la media de la muestra es el estimador de máxima verosimilitud para el parámetro $\lambda$ de una distribución de Poisson.

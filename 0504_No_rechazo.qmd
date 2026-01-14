@@ -1,0 +1,13 @@
+# ¿Por qué se habla de “no rechazo” y no de “aceptación”? {.unnumbered}
+
+Esta es una característica general de la búsqueda del conocimiento científico. Veamos un ejemplo.
+
+En un juego se trata de descubrir un animal oculto y los participantes (los científicos) deben hacer preguntas sobre características de dicho animal con el propósito de descubrirlo. Uno de ellos tiene como hipótesis que el animal es una paloma y para contrastar su hipótesis pregunta: ¿tiene alas? Se le responde que sí, que efectivamente el animal tiene alas.
+
+¿Qué conclusión puede sacarse hasta el momento? ¿Puede decirse que su hipótesis es cierta y que el animal es una paloma? Sabemos que la respuesta es no. La evidencia (tener alas) es compatible con su hipótesis, pero ello no significa que sea verdadera, pues existen muchas otras hipótesis que son igualmente compatibles con dicha evidencia, por ejemplo, que el animal sea un murciélago.
+
+El científico hace una nueva pregunta (observación): ¿el animal es vertebrado? y se le responde que no. ¿Qué pasa con su hipótesis ahora? ¿El animal podría ser una paloma? No. Ahora rechazamos la hipótesis de forma contundente para replantearla de tal manera que sea compatible con los nuevos hechos: tiene alas y no es vertebrado. La nueva hipótesis puede ser: el animal es un mosquito.
+
+Todas las verdades en la ciencia son de carácter transitorio, de forma que una afirmación sobre la naturaleza es verdadera porque no ha podido demostrarse que sea falsa. Pueden existir muchas hipótesis compatibles con los hechos, no solo la nuestra, por lo que el no rechazo de una hipótesis no implica su veracidad. No ocurre lo mismo cuando los hechos contradicen la hipótesis, si el animal no es vertebrado, estamos muy seguros de que no es una paloma.
+
+Volviendo a nuestro tema, al contrastar la hipótesis nula de que la media poblacional es $\mu=10$ frente a la alternativa $\mu \ne 10$, suponiendo que la desviación típica es $\sigma=6$, si se obtiene que la media de una muestra de 9 observaciones es $\bar{x}=25$, claramente podemos rechazar la hipótesis nula, pero si sale $\bar{x}=11$ no la podemos rechazar, aunque tampoco afirmar que es cierta porque nuestros datos también serían coherentes con hipótesis del tipo $\mu=10.5$ o $\mu=11$.
