@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>¿Qué tipo de muestreo conviene elegir? – Estadística. Preguntas frecuentes</title>
+<title>¿Qué tipos de error se pueden cometer en un contraste de hipótesis? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./0407_Aleatoria_representativa.html" rel="next">
-<link href="./0405_Muestra_poblacion.html" rel="prev">
+<link href="./0508_Significativa.html" rel="next">
+<link href="./0506_p_valor.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0406_Tipo_muestreo.html">¿Qué tipo de muestreo conviene elegir?</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0501_Que_es.html">Contraste de hipótesis</a></li><li class="breadcrumb-item"><a href="./0507_Tipos_error.html">¿Qué tipos de error se pueden cometer en un contraste de hipótesis?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -342,13 +342,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Muestreo y Estimación</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0401_Creemos_muestra.html" class="sidebar-item-text sidebar-link">
@@ -381,7 +381,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./0406_Tipo_muestreo.html" class="sidebar-item-text sidebar-link active">
+  <a href="./0406_Tipo_muestreo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">¿Qué tipo de muestreo conviene elegir?</span></a>
   </div>
 </li>
@@ -405,6 +405,71 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Contraste de hipótesis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0501_Que_es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Qué es un contraste de hipótesis?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0502_Controvertido.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Por qué es controvertido el uso del contraste de hipótesis?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0503_Que_alternativa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cómo elegir la hipótesis alternativa que conviene plantear?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0504_No_rechazo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Por qué se habla de “no rechazo” y no de “aceptación”?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0505_Lado_cola.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cómo se sabe hacia qué lado hay que mirar el área de cola?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0506_p_valor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿A partir de qué p-valor se debe rechazar la hipótesis nula?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0507_Tipos_error.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">¿Qué tipos de error se pueden cometer en un contraste de hipótesis?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0508_Significativa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Es lo mismo diferencia significativa que diferencia importante?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0509_Por2_cola_F.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Es correcto multiplicar por dos el área de la cola en los test de igualdad de varianzas?</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -416,9 +481,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0406_Tipo_muestreo.html">¿Qué tipo de muestreo conviene elegir?</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0501_Que_es.html">Contraste de hipótesis</a></li><li class="breadcrumb-item"><a href="./0507_Tipos_error.html">¿Qué tipos de error se pueden cometer en un contraste de hipótesis?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">¿Qué tipo de muestreo conviene elegir?</h1>
+<h1 class="title">¿Qué tipos de error se pueden cometer en un contraste de hipótesis?</h1>
 </div>
 
 
@@ -435,36 +500,44 @@ window.Quarto = {
 </header>
 
 
-<p>Los tipos de muestreo se pueden dividir en dos grandes grupos: muestreo <em>probabilístico</em> y muestreo <em>no probabilístico</em>.</p>
-<section id="muestreo-probabilístico" class="level4">
-<h4 class="anchored" data-anchor-id="muestreo-probabilístico">Muestreo probabilístico</h4>
-<p>El más típico –en los libros– es el muestreo probabilístico. La idea es tomar una muestra al azar (siempre más fácil de decir que de hacer) y en función de la estrategia seguida y de los resultados obtenidos se construyen los intervalos de confianza y se dan márgenes de error usando razonamientos puramente matemáticos. Según la estrategia seguida para seleccionar la muestra el muestreo probabilístico puede ser (la lista no es exhaustiva):</p>
-<ul>
-<li><p><strong>Aleatorio simple</strong>: Se elige la muestra al azar de entre todo el conjunto de la población. Seguramente el más fácil de tratar en la teoría y el más difícil de llevar a cabo en la práctica.</p></li>
-<li><p><strong>Estratificado</strong>: Se divide la población en estratos homogéneos y se extrae una muestra de cada estrato. Dado un mismo tamaño de muestra global permite realizar estimaciones más precisas para cada estrato.</p></li>
-<li><p><strong>Sistemático</strong>: Se selecciona la muestra siguiendo un criterio que facilita la selección y evita discrecionalidad, que en general no es lo mismo que aleatoriedad. Por ejemplo, en las entrevistas a pie de urna se va preguntando a uno de cada 10 por orden de salida.</p></li>
-<li><p><strong>Multietápico</strong>: Primero se seleccionan zonas (barrios, estanterías del almacén,…) y dentro de cada zona se seccionan unidades (individuos, piezas,…). En general es menos costoso porque las unidades están agrupadas y cuesta menos llegar a ellas.</p></li>
-</ul>
-</section>
-<section id="muestreo-no-probabilístico" class="level4">
-<h4 class="anchored" data-anchor-id="muestreo-no-probabilístico">Muestreo no probabilístico</h4>
-<p>El problema del muestreo probabilístico es que en muchos casos la selección al azar no es viable, especialmente en el ámbito de las ciencias sociales. En estos casos no hay más remedio que usar métodos de muestreo no probabilístico, entre estos se encuentran:</p>
-<ul>
-<li><p><strong>Muestreo por cuotas</strong>: Se trata de definir grupos que tengan la máxima homogeneidad. La selección dentro de cada grupo no se realiza al azar sino que cualquier persona que cumpla los requisitos del grupo puede ser incluida en la muestra (al haber poca variabilidad dentro de cada grupo cualquier individuo puede ser un buen representante). Este procedimiento se adapta muy bien a las entrevistas telefónicas marcando números al azar. La entrevista se puede realizar a la persona que responde si no está completo el grupo al que pertenece, o se puede preguntar si en el hogar hay alguien con el perfil de un grupo que todavía esté sin completar. Cuando todos los grupos se han completado se entiende que la muestra es un buen reflejo de la población.</p></li>
-<li><p><strong>Muestreo razonado</strong>: En ocasiones lo más conveniente puede ser tomar una muestra que responda a unas características específicas. Por ejemplo, si se viene comprobando que los resultados en un colegio electoral son un buen reflejo de lo que ocurre en todo el país, tomar a los votantes de ese colegio como muestra de todo el país puede ser lo más adecuado.</p></li>
-<li><p><strong>Encuestas informales</strong>: Programa de televisión: “Salimos a la calle y preguntamos la opinión de los ciudadanos sobre…”. Más allá del tamaño de la muestra, los que pasan por ese sitio a esa hora y se prestan a responder delante de la cámara, no son una muestra representativa de la población. Casi siempre es evidente que se trata de un. Lo peor es cuando en un trabajo académico se realiza una encuesta más o menos de este tipo y se pretende dar a los resultados un valor que no tienen (a veces incluyendo niveles de confianza y márgenes de error).</p></li>
-<li><p><strong>Encuestas de cortesía</strong>: En algunas ocasiones se nos pide que rellenemos un cuestionario dando nuestra opinión sobre un producto o servicio. En general solo responden los que están muy descontentos o muy satisfechos. La encuesta puede servir para detectar esos casos, pero es evidente que sus resultados no se pueden extrapolar a todos los clientes.</p></li>
-</ul>
-</section>
-<section id="qué-tipo-elegir" class="level4">
-<h4 class="anchored" data-anchor-id="qué-tipo-elegir">¿Qué tipo elegir?</h4>
-<p>En contextos relacionados con la ingeniería, donde la población es un conjunto de unidades físicas (lote de producción, existencias en el almacén…) el muestreo probabilístico es, en general, una buena opción porque es relativamente fácil (o al menos es viable) elegir la muestra aleatoriamente</p>
-<p>En el ámbito de las ciencias sociales es mucho más difícil disponer de muestras verdaderamente aleatorias por lo que en muchos casos no queda más remedio que optar por muestreos no probabilísticos. Dentro de este grupo también está el <em>hacer lo que se pueda</em> sacando el máximo provecho a los recursos disponibles.</p>
-<p>Lo que no debe hacerse es utilizar muestras claramente no aleatorias y presentar los resultados ignorando ese <em>detalle</em>. Presentar niveles de confianza y márgenes de error puede dar un aire científico al estudio, pero si las muestras no son aleatorias esos valores son totalmente arbitrarios. Es como si le dicen `Supongamos que una castaña es una esfera…’’ y partir de ahí llegan a una serie de conclusiones sobre el comportamiento y las características geométricas de las castañas. No hay ninguna garantía de que esas conclusiones sean ciertas, no porque el método usado para obtenerlas sea incorrecto –puede ser una deducción impecable–, sino porque la hipótesis en que se basa es falsa. Exactamente lo mismo ocurre cuando se dice “Bajo la hipótesis de muestreo aleatorio simple…” y a continuación se dan márgenes de error, niveles de confianza y demás jerga estadística. En la presentación de trabajos académicos esto puede servir para dar un aire de rigor científico y enfriar las ganas de preguntar que pueden tener los miembros del jurado poco duchos en estas cosas, pero solo para eso.</p>
-<p>Para conocer la opinión de una población de interés, existen otros métodos además de las encuestas. En estudios de mercado suelen utilizarse los llamados <em>focus groups</em>. Se trata de elegir un grupo reducido de personas –en torno a 8 o 10– que incluya representantes de distintos sectores de la población de interés. Las conversaciones/entrevistas con estas personas, llevadas a cabo por personal experto, permiten obtener información para valorar en nivel de satisfacción con un producto o servicio y también obtener ideas para mejorarlo.</p>
+<p>Recordemos que se empieza suponiendo que las cosas son de una determinada forma, y que este planteamiento, normalmente conservador y relacionado con no cambiar, es lo que se denomina hipótesis nula. Esto será lo que creeremos a no ser que los datos lo contradigan, en cuyo caso consideraremos cierta la hipótesis alternativa (no pueden haber situaciones intermedias).</p>
+<p>Por ejemplo, una línea de envasado de detergente llena los paquetes con un peso que sigue una distribución N(4 kg; 0,03 kg). Para comprobar que todo marcha correctamente cada cierto tiempo se toma una muestra, supongamos que de <span class="math inline">\(n=9\)</span> paquetes y si su peso medio <span class="math inline">\((\bar{x})\)</span> está fuera de un intervalo previamente fijado –los llamados límites de control– se considera que el proceso está descentrado. En este caso la hipótesis nula es que el proceso está centrado (<span class="math inline">\(H_0: \mu = 4\)</span> kg) y la alternativa es que está descentrado (<span class="math inline">\(H_1: \mu \ne 4\)</span> kg). El valor de la media de 9 paquetes con el proceso centrado se distribuye según N(4 kg; 0,03/<span class="math inline">\(\sqrt{9}\)</span> kg). Si los límites de control se fijan a ± 2 desviaciones típicas del valor nominal, la zona de rechazo será la que está fuera del intervalo 4,00 ± 0,02, tal como se indica en la figura <a href="#fig-TiposError1" class="quarto-xref"><span>1</span></a>.</p>
+<div id="fig-TiposError1" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-TiposError1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05_Fig_Contraste/0701_TiposError.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TiposError1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: SZonas de rechazo y de no rechazo
+</figcaption>
+</figure>
+</div>
+<p>Con esta forma de decidir se pueden cometer dos tipos de error:</p>
+<ol type="1">
+<li><strong>Rechazar la hipótesis nula cuando en realidad es cierta</strong>. En nuestro caso esto significa que aunque el proceso esté centrado, es posible que la media de la muestra esté fuera del intervalo (3,98; 4,02). La probabilidad de que esto ocurra, con nuestros números, es del orden del 5 % (exactamente 0,0455).</li>
+<li><strong>No rechazar la hipótesis nula cuando en realidad es falsa</strong>. Puede ser que la media muestral nos dé 4,01 en cuyo caso no rechazamos la hipótesis nula, pero el proceso podría estar centrado en <span class="math inline">\(\mu=4,02\)</span>, o en <span class="math inline">\(\mu=4,03\)</span>.</li>
+</ol>
+<p>Al primer tipo de error se le llama error tipo I, y al segundo, error tipo II. La verdad es que, aparte de utilizar números romanos, hay poca originalidad en la denominación.</p>
+<p>Podemos decidir la probabilidad de cometer el error tipo I fijando los límites a partir de los cuales se rechaza la hipótesis nula. Por ejemplo, si los límites los fijamos a <span class="math inline">\(\pm 3 \sigma\)</span>, la probabilidad de rechazarla equivocadamente será del orden del 3 por mil (exactamente 0,0027). Si queremos que esta probabilidad sea del 1 por mil, los límites deberán estar en 3,967 y 4,033. A la máxima probabilidad de rechazar equivocadamente la hipótesis nula se le denomina <span class="math inline">\(\alpha\)</span>, y en función de ese valor se coloca la frontera entre la zona de aceptación y la de rechazo.</p>
+<p>Veamos ahora que pasa con el error tipo II. La probabilidad de cometer este tipo de error no se puede calcular sin fijar un valor concreto para la hipótesis alternativa. Por ejemplo, si el proceso se descentra y pasa a llenar los paquetes con un peso medio de 4,03 kg, la probabilidad de que la media de una muestra de 9 paquetes esté dentro de los límites de control es de 0,1587. Luego existe una probabilidad del orden del 16 % de que consideremos que el proceso está centrado en su valor nominal, cuando en realidad lo está en <span class="math inline">\(\mu=4,03\)</span>. A esta probabilidad de cometer el error tipo II se le denomina <span class="math inline">\(\beta\)</span>.</p>
+<div id="fig-TiposError2" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-TiposError2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05_Fig_Contraste/0302_QueH1.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TiposError2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Zonas de rechazo y de no rechazo
+</figcaption>
+</figure>
+</div>
+<p>La probabilidad <span class="math inline">\(\alpha\)</span> depende sólo de la regla de decisión (situación de los límites de control), mientras que la <span class="math inline">\(\beta\)</span> depende además del valor que tome la media <span class="math inline">\(\mu\)</span>. Al valor <span class="math inline">\(1-\beta\)</span> se le denomina potencia de la prueba. Si representamos los valores de <span class="math inline">\(1-\beta\)</span> para los distintos valores posibles de <span class="math inline">\(\mu\)</span>, obtenemos una curva que se conoce como “curva de potencia de la prueba”.</p>
+<p>¿Cómo disminuir la probabilidad <span class="math inline">\(\beta\)</span>? Una opción es aumentar <span class="math inline">\(\alpha\)</span>. Si en nuestro caso los límites de control los ponemos a <span class="math inline">\(\pm 1\sigma\)</span>, la probabilidad <span class="math inline">\(\alpha\)</span> pasará a ser del orden del 32 %, pero para <span class="math inline">\(\mu =\)</span> 4,03 la probabilidad <span class="math inline">\(\beta\)</span> en vez de ser del 16 %, pasará a ser del 2,5 %.</p>
+<p>¿Y si queremos disminuir <span class="math inline">\(\alpha\)</span>? Si ponemos los límites a <span class="math inline">\(\pm 3\sigma\)</span>, <span class="math inline">\(\alpha\)</span> pasa a ser del 3 por mil, pero <span class="math inline">\(\beta\)</span>, para $=$4,03, pasa a ser del 50 %.</p>
+<p>¿Es posible disminuir <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span> a la vez? Sí, aumentando el tamaño de la muestra. Si el tamaño de la muestra en vez de ser 9 fuera 25, la desviación típica de la media pasaría a ser <span class="math inline">\(0,03/\sqrt{25} =0,006\)</span>. Una probabilidad <span class="math inline">\(\alpha\)</span> de 0,05 significa poner los límites a <span class="math inline">\(\pm 2 \sigma\)</span>, es decir a <span class="math inline">\(4,00 \pm 0,012\)</span>. En este caso, si el proceso se descentra pasando a tener uma media de 4,03 la probabilidad <span class="math inline">\(\beta\)</span> será prácticamente cero.</p>
+<p>Del trío <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> y <span class="math inline">\(n\)</span>, dados dos se puede deducir el tercero. Por ejemplo, si en nuestro caso queremos una probabilidad <span class="math inline">\(\alpha\)</span> del 5 % y una <span class="math inline">\(\beta\)</span> también de 5 % cuando la media se coloque en 4,03, el tamaño de la muestra debe ser n=13.</p>
+<p>En definitiva, para un esfuerzo dado (esfuerzo = tamaño de muestra) si queremos reducir <span class="math inline">\(\alpha\)</span> debe ser a costa de <span class="math inline">\(\beta\)</span> y viceversa. Si se quieren reducir las dos a la vez no queda más remedio que hacer más esfuerzo (mayor tamaño de muestra). En este contexto también vale aquello de que “el que algo quiere algo le cuesta”.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -869,13 +942,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./0405_Muestra_poblacion.html" class="pagination-link" aria-label="¿Qué relación hay entre tamaño de muestra y tamaño de población?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Qué relación hay entre tamaño de muestra y tamaño de población?</span>
+      <a href="./0506_p_valor.html" class="pagination-link" aria-label="¿A partir de qué p-valor se debe rechazar la hipótesis nula?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿A partir de qué p-valor se debe rechazar la hipótesis nula?</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./0407_Aleatoria_representativa.html" class="pagination-link" aria-label="¿Es lo mismo muestra aleatoria que muestra representativa?">
-        <span class="nav-page-text">¿Es lo mismo muestra aleatoria que muestra representativa?</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./0508_Significativa.html" class="pagination-link" aria-label="¿Es lo mismo diferencia significativa que diferencia importante?">
+        <span class="nav-page-text">¿Es lo mismo diferencia significativa que diferencia importante?</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

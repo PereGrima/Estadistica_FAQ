@@ -1,0 +1,3 @@
+# Cuando se habla de transformación logarítmica ¿se refiere al logaritmo decimal o al neperiano? {.unnumbered}
+
+texto

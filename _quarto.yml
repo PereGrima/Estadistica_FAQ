@@ -64,7 +64,54 @@ book:
         - 0407_Aleatoria_representativa.qmd
         - 0408_Acertar_sondeos.qmd
         - 0409_Maximoverosimil.qmd
+
+    - part: Contraste de hipótesis
+      chapters: 
+        - 0501_Que_es.qmd
+        - 0502_Controvertido.qmd
+        - 0503_Que_alternativa.qmd
+        - 0504_No_rechazo.qmd
+        - 0505_Lado_cola.qmd
+        - 0506_p_valor.qmd
+        - 0507_Tipos_error.qmd
+        - 0508_Significativa.qmd
+        - 0509_Por2_cola_F.qmd
         
+    - part: Diseño de experimentos
+      chapters: 
+        - 0601_FisicaQuimica.qmd
+        - 0602_tStudent.qmd
+        - 0603_ANOVA_Medias.qmd
+        - 0604_No_UnaaUna.qmd
+        - 0605_Efecto_separado.qmd
+        - 0606_Ecuacion.qmd
+        - 0607_Bloqueo.qmd
+        - 0608_Interacciones.qmd
+        - 0609_Aleatorizar.qmd
+
+    - part: Correlación y regresión
+      chapters: 
+        - 0701_Formula_covarianza.qmd
+        - 0702_Coef_correlacion.qmd
+        - 0703_Valores_criticos.qmd
+        - 0704_Tablas_CoefCorre.qmd
+        - 0705_Minimos_cuadrados.qmd
+        - 0706_Coef_VariablesAleatorias.qmd
+        - 0707_R2.qmd
+        - 0708_Recta_Origen_R2.qmd
+        - 0709_R2_ajustado.qmd
+        - 0710_Variables_cualitativas.qmd
+        - 0711_Varibles_Modelo.qmd
+        
+    - part: Miscelánea
+      chapters: 
+        - 0801_Logaritmo.qmd
+        - 0802_TCL.qmd
+        - 0803_Grados_libertad.qmd
+        - 0804_Loteria.qmd
+        - 0805_Rojo_Negro.qmd
+        - 0806_Como_se_dice.qmd
+
 # Referencias
 # biblio-title: "Referencias"
 # link-citations: true

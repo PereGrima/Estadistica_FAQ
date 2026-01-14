@@ -1,0 +1,3 @@
+# ¿Por qué las variables que se incluyen en el modelo no necesariamente son las más correlacionadas con la respuesta? {.unnumbered}
+
+texto

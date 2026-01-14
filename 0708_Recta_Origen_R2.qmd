@@ -1,0 +1,3 @@
+# ¿Por qué cuando se ajusta la recta por el origen no se debe usar $R^2$ {.unnumbered}
+
+texto

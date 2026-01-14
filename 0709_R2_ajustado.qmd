@@ -1,0 +1,3 @@
+# ¿Por qué hace falta el valor de R2 -ajustado si ya tenemos el de $R^2$? {.unnumbered}
+
+texto

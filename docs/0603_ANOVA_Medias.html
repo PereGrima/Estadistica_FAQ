@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>¿Qué tipo de muestreo conviene elegir? – Estadística. Preguntas frecuentes</title>
+<title>¿Por qué se llama Análisis de la Varianza si lo que se compara son medias? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./0407_Aleatoria_representativa.html" rel="next">
-<link href="./0405_Muestra_poblacion.html" rel="prev">
+<link href="./0604_No_UnaaUna.html" rel="next">
+<link href="./0602_tStudent.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0406_Tipo_muestreo.html">¿Qué tipo de muestreo conviene elegir?</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0601_FisicaQuimica.html">Diseño de experimentos</a></li><li class="breadcrumb-item"><a href="./0603_ANOVA_Medias.html">¿Por qué se llama <em>Análisis de la Varianza</em> si lo que se compara son medias?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -342,13 +342,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Muestreo y Estimación</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0401_Creemos_muestra.html" class="sidebar-item-text sidebar-link">
@@ -381,7 +381,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./0406_Tipo_muestreo.html" class="sidebar-item-text sidebar-link active">
+  <a href="./0406_Tipo_muestreo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">¿Qué tipo de muestreo conviene elegir?</span></a>
   </div>
 </li>
@@ -405,6 +405,136 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Contraste de hipótesis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0501_Que_es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Qué es un contraste de hipótesis?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0502_Controvertido.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Por qué es controvertido el uso del contraste de hipótesis?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0503_Que_alternativa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cómo elegir la hipótesis alternativa que conviene plantear?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0504_No_rechazo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Por qué se habla de “no rechazo” y no de “aceptación”?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0505_Lado_cola.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cómo se sabe hacia qué lado hay que mirar el área de cola?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0506_p_valor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿A partir de qué p-valor se debe rechazar la hipótesis nula?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0507_Tipos_error.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Qué tipos de error se pueden cometer en un contraste de hipótesis?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0508_Significativa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Es lo mismo diferencia significativa que diferencia importante?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0509_Por2_cola_F.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Es correcto multiplicar por dos el área de la cola en los test de igualdad de varianzas?</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Diseño de experimentos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0601_FisicaQuimica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cómo que diseño de experimentos? ¿no es eso de física o de química?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0602_tStudent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Por qué no se usa el test de la t-Student para comparar más de dos tratamientos?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0603_ANOVA_Medias.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">¿Por qué se llama <em>Análisis de la Varianza</em> si lo que se compara son medias?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0604_No_UnaaUna.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Por qué no hay que mover las variables una a una?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0605_Efecto_separado.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cómo es posible estudiar por separado el efecto de cada variable?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0606_Ecuacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cómo se puede escribir una ecuación para la respuesta con los resultados de un diseño factorial?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0607_Bloqueo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Qué es un diseño bloqueado?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0608_Interacciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Por qué se suponen no significativas las interacciones de tres o más factores?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0609_Aleatorizar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Qué hacer si al aleatorizar aparece el orden estándar de la matriz de diseño?</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -416,9 +546,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0406_Tipo_muestreo.html">¿Qué tipo de muestreo conviene elegir?</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0601_FisicaQuimica.html">Diseño de experimentos</a></li><li class="breadcrumb-item"><a href="./0603_ANOVA_Medias.html">¿Por qué se llama <em>Análisis de la Varianza</em> si lo que se compara son medias?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">¿Qué tipo de muestreo conviene elegir?</h1>
+<h1 class="title">¿Por qué se llama <em>Análisis de la Varianza</em> si lo que se compara son medias?</h1>
 </div>
 
 
@@ -435,36 +565,166 @@ window.Quarto = {
 </header>
 
 
-<p>Los tipos de muestreo se pueden dividir en dos grandes grupos: muestreo <em>probabilístico</em> y muestreo <em>no probabilístico</em>.</p>
-<section id="muestreo-probabilístico" class="level4">
-<h4 class="anchored" data-anchor-id="muestreo-probabilístico">Muestreo probabilístico</h4>
-<p>El más típico –en los libros– es el muestreo probabilístico. La idea es tomar una muestra al azar (siempre más fácil de decir que de hacer) y en función de la estrategia seguida y de los resultados obtenidos se construyen los intervalos de confianza y se dan márgenes de error usando razonamientos puramente matemáticos. Según la estrategia seguida para seleccionar la muestra el muestreo probabilístico puede ser (la lista no es exhaustiva):</p>
-<ul>
-<li><p><strong>Aleatorio simple</strong>: Se elige la muestra al azar de entre todo el conjunto de la población. Seguramente el más fácil de tratar en la teoría y el más difícil de llevar a cabo en la práctica.</p></li>
-<li><p><strong>Estratificado</strong>: Se divide la población en estratos homogéneos y se extrae una muestra de cada estrato. Dado un mismo tamaño de muestra global permite realizar estimaciones más precisas para cada estrato.</p></li>
-<li><p><strong>Sistemático</strong>: Se selecciona la muestra siguiendo un criterio que facilita la selección y evita discrecionalidad, que en general no es lo mismo que aleatoriedad. Por ejemplo, en las entrevistas a pie de urna se va preguntando a uno de cada 10 por orden de salida.</p></li>
-<li><p><strong>Multietápico</strong>: Primero se seleccionan zonas (barrios, estanterías del almacén,…) y dentro de cada zona se seccionan unidades (individuos, piezas,…). En general es menos costoso porque las unidades están agrupadas y cuesta menos llegar a ellas.</p></li>
-</ul>
-</section>
-<section id="muestreo-no-probabilístico" class="level4">
-<h4 class="anchored" data-anchor-id="muestreo-no-probabilístico">Muestreo no probabilístico</h4>
-<p>El problema del muestreo probabilístico es que en muchos casos la selección al azar no es viable, especialmente en el ámbito de las ciencias sociales. En estos casos no hay más remedio que usar métodos de muestreo no probabilístico, entre estos se encuentran:</p>
-<ul>
-<li><p><strong>Muestreo por cuotas</strong>: Se trata de definir grupos que tengan la máxima homogeneidad. La selección dentro de cada grupo no se realiza al azar sino que cualquier persona que cumpla los requisitos del grupo puede ser incluida en la muestra (al haber poca variabilidad dentro de cada grupo cualquier individuo puede ser un buen representante). Este procedimiento se adapta muy bien a las entrevistas telefónicas marcando números al azar. La entrevista se puede realizar a la persona que responde si no está completo el grupo al que pertenece, o se puede preguntar si en el hogar hay alguien con el perfil de un grupo que todavía esté sin completar. Cuando todos los grupos se han completado se entiende que la muestra es un buen reflejo de la población.</p></li>
-<li><p><strong>Muestreo razonado</strong>: En ocasiones lo más conveniente puede ser tomar una muestra que responda a unas características específicas. Por ejemplo, si se viene comprobando que los resultados en un colegio electoral son un buen reflejo de lo que ocurre en todo el país, tomar a los votantes de ese colegio como muestra de todo el país puede ser lo más adecuado.</p></li>
-<li><p><strong>Encuestas informales</strong>: Programa de televisión: “Salimos a la calle y preguntamos la opinión de los ciudadanos sobre…”. Más allá del tamaño de la muestra, los que pasan por ese sitio a esa hora y se prestan a responder delante de la cámara, no son una muestra representativa de la población. Casi siempre es evidente que se trata de un. Lo peor es cuando en un trabajo académico se realiza una encuesta más o menos de este tipo y se pretende dar a los resultados un valor que no tienen (a veces incluyendo niveles de confianza y márgenes de error).</p></li>
-<li><p><strong>Encuestas de cortesía</strong>: En algunas ocasiones se nos pide que rellenemos un cuestionario dando nuestra opinión sobre un producto o servicio. En general solo responden los que están muy descontentos o muy satisfechos. La encuesta puede servir para detectar esos casos, pero es evidente que sus resultados no se pueden extrapolar a todos los clientes.</p></li>
-</ul>
-</section>
-<section id="qué-tipo-elegir" class="level4">
-<h4 class="anchored" data-anchor-id="qué-tipo-elegir">¿Qué tipo elegir?</h4>
-<p>En contextos relacionados con la ingeniería, donde la población es un conjunto de unidades físicas (lote de producción, existencias en el almacén…) el muestreo probabilístico es, en general, una buena opción porque es relativamente fácil (o al menos es viable) elegir la muestra aleatoriamente</p>
-<p>En el ámbito de las ciencias sociales es mucho más difícil disponer de muestras verdaderamente aleatorias por lo que en muchos casos no queda más remedio que optar por muestreos no probabilísticos. Dentro de este grupo también está el <em>hacer lo que se pueda</em> sacando el máximo provecho a los recursos disponibles.</p>
-<p>Lo que no debe hacerse es utilizar muestras claramente no aleatorias y presentar los resultados ignorando ese <em>detalle</em>. Presentar niveles de confianza y márgenes de error puede dar un aire científico al estudio, pero si las muestras no son aleatorias esos valores son totalmente arbitrarios. Es como si le dicen `Supongamos que una castaña es una esfera…’’ y partir de ahí llegan a una serie de conclusiones sobre el comportamiento y las características geométricas de las castañas. No hay ninguna garantía de que esas conclusiones sean ciertas, no porque el método usado para obtenerlas sea incorrecto –puede ser una deducción impecable–, sino porque la hipótesis en que se basa es falsa. Exactamente lo mismo ocurre cuando se dice “Bajo la hipótesis de muestreo aleatorio simple…” y a continuación se dan márgenes de error, niveles de confianza y demás jerga estadística. En la presentación de trabajos académicos esto puede servir para dar un aire de rigor científico y enfriar las ganas de preguntar que pueden tener los miembros del jurado poco duchos en estas cosas, pero solo para eso.</p>
-<p>Para conocer la opinión de una población de interés, existen otros métodos además de las encuestas. En estudios de mercado suelen utilizarse los llamados <em>focus groups</em>. Se trata de elegir un grupo reducido de personas –en torno a 8 o 10– que incluya representantes de distintos sectores de la población de interés. Las conversaciones/entrevistas con estas personas, llevadas a cabo por personal experto, permiten obtener información para valorar en nivel de satisfacción con un producto o servicio y también obtener ideas para mejorarlo.</p>
+<p>No es por ganas de confundir. Supongamos que se desea comparar las medias de las muestras representadas en la figura <a href="#fig-dotplot1" class="quarto-xref"><span>1</span></a>.</p>
+<div id="fig-dotplot1" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dotplot1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06_Fig_DEX/0301_PorqueANOVA.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dotplot1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: La diferencia de medias está clara
+</figcaption>
+</figure>
+</div>
+<p>¿Qué impresión nos da este gráfico? Estará de acuerdo que parece claro que B da un nivel de respuesta mayor que A o C, no apreciándose diferencias entre estos dos últimos.</p>
+<p>Veamos ahora otra situación. Supongamos que los valores obtenidos son los de la figura <a href="#fig-dotplot2" class="quarto-xref"><span>2</span></a>.</p>
+<div id="fig-dotplot2" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dotplot2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06_Fig_DEX/0302_PorqueANOVA.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dotplot2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: La diferencia de medias está clara
+</figcaption>
+</figure>
+</div>
+<p>¿Qué opina sobre las diferencias en este caso? Ahora no está tan claro que sean significativas. Las tres muestras pueden provenir perfectamente de la misma población.</p>
+<p>Veamos ahora cuales son las medias en ambos casos:</p>
+<table style="width:65%; margin-left:auto; margin-right:auto; font-size:0.95em; text-align:center; margin-bottom:2em;">
+<thead>
+<tr style="border-top:1px solid #000;">
+<td colspan="2" style="padding:4px;">
+Caso 1<br> Muestra <span class="math inline">\(\;\;\;\;\;\;\;\)</span> Media
+</td>
+<td colspan="2" style="padding:4px;">
+Caso 2<br> Muestra <span class="math inline">\(\;\;\;\;\;\;\;\)</span> Media
+</td>
+</tr>
+</thead>
+<tbody>
+<tr style="border-top:1px solid #000;">
+<td>
+<span class="math inline">\(\;\;\;\;\;\)</span> A <br> <span class="math inline">\(\;\;\;\;\;\)</span> B <br> <span class="math inline">\(\;\;\;\;\;\)</span> C
+</td>
+<td>
+<span class="math inline">\(\;\;\)</span> 13,73 <br> <span class="math inline">\(\;\;\)</span> 15,71 <br> <span class="math inline">\(\;\;\)</span> 14,00
+</td>
+<td>
+<span class="math inline">\(\;\;\;\;\;\)</span> D <br> <span class="math inline">\(\;\;\;\;\;\)</span> E <br> <span class="math inline">\(\;\;\;\;\;\)</span> F
+</td>
+<td>
+<span class="math inline">\(\;\;\)</span> 13,73 <br> <span class="math inline">\(\;\;\)</span> 15,71 <br> <span class="math inline">\(\;\;\)</span> 14,00
+</td>
+</tr>
+<tr style="border-bottom:1px solid #000;">
+</tr></tbody>
+</table>
+<p>¡Las medias son idénticas! Entonces, ¿por qué las conclusiones han sido distintas?</p>
+<p>Porque, de una forma intuitiva, hemos comparado la variabilidad de los valores en cada muestra con las diferencias (es decir, también variabilidad) que presentan sus medias. En el primer caso, si las tres muestras provienen de la misma población, las diferencias entre sus medias son mayores de lo que cabe esperar a partir de la variabilidad observada dentro de cada muestra. En el segundo caso, la variabilidad dentro de las muestras es mucho mayor y por eso nos parece que la diferencia de medias es compatible con el hecho de que las tres provengan de la misma población.</p>
+<p>En ambos casos hemos llegado a nuestras conclusiones sobre la igualdad de medias analizando variabilidades. Cuando la comparación se realiza analíticamente (en vez de gráficamente como hemos hecho nosotros) las variabilidades se miden a través de las varianzas. Lo que se hace es comparar varianzas. Por eso la técnica se llama Análisis de la Varianza.</p>
+<p><span class="math display">\[\bullet \;\;\;\; \bullet \;\;\;\; \bullet\]</span></p>
+<p>Los valores representados son:</p>
+<p>Situación 1:</p>
+<table width="550" cellpadding="1" border="0" class="center fila-compacta2" style="margin: 0 auto;">
+    
+<tbody><tr style="border-bottom:0px solid grey"> </tr>
+<tr>
+<td style="text-align:center">A:</td>
+<td style="text-align:center">13,7</td>
+<td style="text-align:center">13,5</td>
+<td style="text-align:center">13,2</td>
+<td style="text-align:center">14,6</td>
+<td style="text-align:center">14,4</td>
+<td style="text-align:center">13,2</td>
+<td style="text-align:center">14,0</td>
+<td style="text-align:center">13,5</td>
+<td style="text-align:center">13,7</td>
+<td style="text-align:center">13,5</td>
+</tr>
+
+<tr style="border-bottom:0px solid grey">
+</tr><tr>
+<td style="text-align:center">B:</td>
+<td style="text-align:center">15,2</td>
+<td style="text-align:center">16,8</td>
+<td style="text-align:center">16,5</td>
+<td style="text-align:center">14,9</td>
+<td style="text-align:center">15,5</td>
+<td style="text-align:center">16,0</td>
+<td style="text-align:center">16,0</td>
+<td style="text-align:center">14,7</td>
+<td style="text-align:center">16,3</td>
+<td style="text-align:center">15,2</td>
+</tr>
+
+<tr>
+</tr><tr style="border-bottom:0px solid grey">
+<td style="text-align:center">C:</td>
+<td style="text-align:center">14,6</td>
+<td style="text-align:center">15,2</td>
+<td style="text-align:center">13,8</td>
+<td style="text-align:center">13,2</td>
+<td style="text-align:center">13,5</td>
+<td style="text-align:center">13,8</td>
+<td style="text-align:center">14,3</td>
+<td style="text-align:center">14,3</td>
+<td style="text-align:center">13,8</td>
+<td style="text-align:center">13,5</td>
+</tr>
+
+</tbody></table>
+<p><br>
+Situación 2:</p>
+<table width="550" cellpadding="1" border="0" class="center fila-compacta2" style="margin: 0 auto;">
+    
+<tbody><tr style="border-bottom:0px solid grey"> </tr>
+<tr>
+<td style="text-align:center">D:</td>
+<td style="text-align:center">14,9</td>
+<td style="text-align:center">16,4</td>
+<td style="text-align:center">14,2</td>
+<td style="text-align:center">7,7</td>
+<td style="text-align:center">11,8</td>
+<td style="text-align:center">7,7</td>
+<td style="text-align:center">17,4</td>
+<td style="text-align:center">10,4</td>
+<td style="text-align:center">20,3</td>
+<td style="text-align:center">17,2</td>
+</tr>
+
+<tr style="border-bottom:0px solid grey">
+</tr><tr>
+<td style="text-align:center">E:</td>
+<td style="text-align:center">14,4</td>
+<td style="text-align:center">15,1</td>
+<td style="text-align:center">12,2</td>
+<td style="text-align:center">20,5</td>
+<td style="text-align:center">10,5</td>
+<td style="text-align:center">19,9</td>
+<td style="text-align:center">23,0</td>
+<td style="text-align:center">14,3</td>
+<td style="text-align:center">10,8</td>
+<td style="text-align:center">16,4</td>
+</tr>
+
+<tr>
+</tr><tr style="border-bottom:0px solid grey">
+<td style="text-align:center">F:</td>
+<td style="text-align:center">11,4</td>
+<td style="text-align:center">19,5</td>
+<td style="text-align:center">10,7</td>
+<td style="text-align:center">14,2</td>
+<td style="text-align:center">14,8</td>
+<td style="text-align:center">8,0</td>
+<td style="text-align:center">21,2</td>
+<td style="text-align:center">8,7</td>
+<td style="text-align:center">21,8</td>
+<td style="text-align:center">9,7</td>
+</tr>
+
+</tbody></table>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -869,13 +1129,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./0405_Muestra_poblacion.html" class="pagination-link" aria-label="¿Qué relación hay entre tamaño de muestra y tamaño de población?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Qué relación hay entre tamaño de muestra y tamaño de población?</span>
+      <a href="./0602_tStudent.html" class="pagination-link" aria-label="¿Por qué no se usa el test de la t-Student para comparar más de dos tratamientos?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Por qué no se usa el test de la t-Student para comparar más de dos tratamientos?</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./0407_Aleatoria_representativa.html" class="pagination-link" aria-label="¿Es lo mismo muestra aleatoria que muestra representativa?">
-        <span class="nav-page-text">¿Es lo mismo muestra aleatoria que muestra representativa?</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./0604_No_UnaaUna.html" class="pagination-link" aria-label="¿Por qué no hay que mover las variables una a una?">
+        <span class="nav-page-text">¿Por qué no hay que mover las variables una a una?</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,3 @@
+# ¿Cómo se interpreta el valor de $R^2$ {.unnumbered}
+
+texto

@@ -1,0 +1,32 @@
+# ¿Por qué se utiliza el método de los mínimos cuadrados? {.unnumbered}
+
+Se trata de ajustar una nube de puntos a una ecuación del tipo $Y=b_0+b_1X$. Llamamos residuo a la diferencia entre el valor real de $Y$ y el valor estimado mediante la recta. Para el punto $i$ el residuo será $r_i = Y_i - b_0 - b_1X_i$.
+
+Decidir qué recta es la que mejor ajusta es decidir qué valores deben tener $b_0$ y $b_1$. Una opción es hacer que $b_0$ y $b_1$ tomen los valores que hagan que la suma de los residuos sea igual a cero, es decir, que se compensen los valores positivos (los puntos caen por encima de la recta) con los negativos (caen por debajo). Si tenemos $n$ puntos ($i=1, 2,\ldots, n$) esto sería: $\sum Y_i - nb_0 - b_1 \sum X_i = 0$. No hay solución única y es fácil comprobar que esta idea no funciona. 
+
+En la figura [-@fig-MinimosCuadrados1] (izq.) hemos colocado 3 puntos y el ajuste que haríamos a ojo (método que también tiene sus ventajas). A la derecha tenemos esos mismos puntos con uno de los ajustes que se obtienen haciendo que la suma de los residuos sea igual a cero. Es evidente que este último es un mal ajuste.
+
+![Ajuste a ojo y haciendo igual a cero la suma de los residuos](07_Fig_Regresion/0501_MinimizarResiduos_1ojo.png){#fig-MinimosCuadrados1 .fig-compacta2 fig-align="center" width="85%"}
+
+Otra opción que parece razonable es minimizar la suma de los residuos en valor absoluto, pero este tipo de ajuste tampoco da los resultados esperados [-@fig-MinimosCuadrados2], izq.). El método que da mejores resultados --el que proporciona la recta que mejor se ajusta a la nube de puntos-- es el que minimiza la suma de los cuadrados de los residuos (figura [-@fig-MinimosCuadrados2], der.). De ahí que el método de ajuste por excelencia sea el de los \textit{mínimos cuadrados}.
+
+![Ajustes minimizando la suma de los residuos en valor absoluto (izq.) y la suma de sus cuadrados (der.)](07_Fig_Regresion/0502_MinimizarResiduos_2.png){#fig-MinimosCuadrados2 .fig-compacta2 fig-align="center" width="85%"}
+
+Muchos métodos estadísticos están relacionados con el análisis de los cuadrados de los residuos (el análisis de la varianza, por ejemplo). Sin embargo, tampoco es prudente despreciar otros criterios como el de minimizar la suma de su valor absoluto. Supongamos que tenemos los siguientes datos en los que se ha cometido un error al introducir uno de los valores de $Y$.
+
+::: {.tabla-pequena style="width:40%; margin-left:auto; margin-right:auto;margin-bottom:1em;"}
+|        |      | 
+|:------:|:-----:
+| X      |  Y   | 
+| 3 <br> 6 <br> 9 <br> 12 <br> 15 | 6 <br> 5 <br> 4 <br> 13* <br> 2 |  
+<center><small>*Es un error, debería ser 3</small></center>
+:::
+
+
+El modelo que se obtiene ajustando por el método de los mínimos cuadrados es $Y = 6$ (es decir $Y=6+0X$) porque el valor anómalo tiene una gran influencia sobre la ecuación obtenida.  Sin embargo, ajustándolo con el criterio de minimizar la suma de los residuos en valor absoluto se obtiene $Y = 7 - (1/3)X$, que es el modelo que se obtendría si el valor erróneo se hubiera entrado correctamente.
+
+![Ajustes minimizando la suma de los cuadrados de los residuos (izq.) y la suma de su valor absoluto (der.))](07_Fig_Regresion/0503_MinimizarResiduos_3.png){#fig-MinimosCuadrados3 .fig-compacta2 fig-align="center" width="85%"}
+
+Cuando se tiene una sola variable regresora es fácil identificar estos puntos anómalos, pero cuando se tienen muchas puede no ser tan fácil hacerlo y criterios de ajuste como éste, robustos ante la presencia de valores anómalos, pueden ser contemplados aunque sólo sea como punto de vista complementario.
+
+En general, las ventajas y desventajas de los dos criterios de ajuste son análogas a las que se han comentado al comparar la media y la mediana.

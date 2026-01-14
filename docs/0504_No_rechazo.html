@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>¿Qué tipo de muestreo conviene elegir? – Estadística. Preguntas frecuentes</title>
+<title>¿Por qué se habla de “no rechazo” y no de “aceptación”? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./0407_Aleatoria_representativa.html" rel="next">
-<link href="./0405_Muestra_poblacion.html" rel="prev">
+<link href="./0505_Lado_cola.html" rel="next">
+<link href="./0503_Que_alternativa.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0406_Tipo_muestreo.html">¿Qué tipo de muestreo conviene elegir?</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0501_Que_es.html">Contraste de hipótesis</a></li><li class="breadcrumb-item"><a href="./0504_No_rechazo.html">¿Por qué se habla de “no rechazo” y no de “aceptación”?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -342,13 +342,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Muestreo y Estimación</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0401_Creemos_muestra.html" class="sidebar-item-text sidebar-link">
@@ -381,7 +381,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./0406_Tipo_muestreo.html" class="sidebar-item-text sidebar-link active">
+  <a href="./0406_Tipo_muestreo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">¿Qué tipo de muestreo conviene elegir?</span></a>
   </div>
 </li>
@@ -405,6 +405,71 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Contraste de hipótesis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0501_Que_es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Qué es un contraste de hipótesis?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0502_Controvertido.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Por qué es controvertido el uso del contraste de hipótesis?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0503_Que_alternativa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cómo elegir la hipótesis alternativa que conviene plantear?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0504_No_rechazo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">¿Por qué se habla de “no rechazo” y no de “aceptación”?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0505_Lado_cola.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Cómo se sabe hacia qué lado hay que mirar el área de cola?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0506_p_valor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿A partir de qué p-valor se debe rechazar la hipótesis nula?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0507_Tipos_error.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Qué tipos de error se pueden cometer en un contraste de hipótesis?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0508_Significativa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Es lo mismo diferencia significativa que diferencia importante?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./0509_Por2_cola_F.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Es correcto multiplicar por dos el área de la cola en los test de igualdad de varianzas?</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -416,9 +481,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0406_Tipo_muestreo.html">¿Qué tipo de muestreo conviene elegir?</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0501_Que_es.html">Contraste de hipótesis</a></li><li class="breadcrumb-item"><a href="./0504_No_rechazo.html">¿Por qué se habla de “no rechazo” y no de “aceptación”?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">¿Qué tipo de muestreo conviene elegir?</h1>
+<h1 class="title">¿Por qué se habla de “no rechazo” y no de “aceptación”?</h1>
 </div>
 
 
@@ -435,36 +500,14 @@ window.Quarto = {
 </header>
 
 
-<p>Los tipos de muestreo se pueden dividir en dos grandes grupos: muestreo <em>probabilístico</em> y muestreo <em>no probabilístico</em>.</p>
-<section id="muestreo-probabilístico" class="level4">
-<h4 class="anchored" data-anchor-id="muestreo-probabilístico">Muestreo probabilístico</h4>
-<p>El más típico –en los libros– es el muestreo probabilístico. La idea es tomar una muestra al azar (siempre más fácil de decir que de hacer) y en función de la estrategia seguida y de los resultados obtenidos se construyen los intervalos de confianza y se dan márgenes de error usando razonamientos puramente matemáticos. Según la estrategia seguida para seleccionar la muestra el muestreo probabilístico puede ser (la lista no es exhaustiva):</p>
-<ul>
-<li><p><strong>Aleatorio simple</strong>: Se elige la muestra al azar de entre todo el conjunto de la población. Seguramente el más fácil de tratar en la teoría y el más difícil de llevar a cabo en la práctica.</p></li>
-<li><p><strong>Estratificado</strong>: Se divide la población en estratos homogéneos y se extrae una muestra de cada estrato. Dado un mismo tamaño de muestra global permite realizar estimaciones más precisas para cada estrato.</p></li>
-<li><p><strong>Sistemático</strong>: Se selecciona la muestra siguiendo un criterio que facilita la selección y evita discrecionalidad, que en general no es lo mismo que aleatoriedad. Por ejemplo, en las entrevistas a pie de urna se va preguntando a uno de cada 10 por orden de salida.</p></li>
-<li><p><strong>Multietápico</strong>: Primero se seleccionan zonas (barrios, estanterías del almacén,…) y dentro de cada zona se seccionan unidades (individuos, piezas,…). En general es menos costoso porque las unidades están agrupadas y cuesta menos llegar a ellas.</p></li>
-</ul>
-</section>
-<section id="muestreo-no-probabilístico" class="level4">
-<h4 class="anchored" data-anchor-id="muestreo-no-probabilístico">Muestreo no probabilístico</h4>
-<p>El problema del muestreo probabilístico es que en muchos casos la selección al azar no es viable, especialmente en el ámbito de las ciencias sociales. En estos casos no hay más remedio que usar métodos de muestreo no probabilístico, entre estos se encuentran:</p>
-<ul>
-<li><p><strong>Muestreo por cuotas</strong>: Se trata de definir grupos que tengan la máxima homogeneidad. La selección dentro de cada grupo no se realiza al azar sino que cualquier persona que cumpla los requisitos del grupo puede ser incluida en la muestra (al haber poca variabilidad dentro de cada grupo cualquier individuo puede ser un buen representante). Este procedimiento se adapta muy bien a las entrevistas telefónicas marcando números al azar. La entrevista se puede realizar a la persona que responde si no está completo el grupo al que pertenece, o se puede preguntar si en el hogar hay alguien con el perfil de un grupo que todavía esté sin completar. Cuando todos los grupos se han completado se entiende que la muestra es un buen reflejo de la población.</p></li>
-<li><p><strong>Muestreo razonado</strong>: En ocasiones lo más conveniente puede ser tomar una muestra que responda a unas características específicas. Por ejemplo, si se viene comprobando que los resultados en un colegio electoral son un buen reflejo de lo que ocurre en todo el país, tomar a los votantes de ese colegio como muestra de todo el país puede ser lo más adecuado.</p></li>
-<li><p><strong>Encuestas informales</strong>: Programa de televisión: “Salimos a la calle y preguntamos la opinión de los ciudadanos sobre…”. Más allá del tamaño de la muestra, los que pasan por ese sitio a esa hora y se prestan a responder delante de la cámara, no son una muestra representativa de la población. Casi siempre es evidente que se trata de un. Lo peor es cuando en un trabajo académico se realiza una encuesta más o menos de este tipo y se pretende dar a los resultados un valor que no tienen (a veces incluyendo niveles de confianza y márgenes de error).</p></li>
-<li><p><strong>Encuestas de cortesía</strong>: En algunas ocasiones se nos pide que rellenemos un cuestionario dando nuestra opinión sobre un producto o servicio. En general solo responden los que están muy descontentos o muy satisfechos. La encuesta puede servir para detectar esos casos, pero es evidente que sus resultados no se pueden extrapolar a todos los clientes.</p></li>
-</ul>
-</section>
-<section id="qué-tipo-elegir" class="level4">
-<h4 class="anchored" data-anchor-id="qué-tipo-elegir">¿Qué tipo elegir?</h4>
-<p>En contextos relacionados con la ingeniería, donde la población es un conjunto de unidades físicas (lote de producción, existencias en el almacén…) el muestreo probabilístico es, en general, una buena opción porque es relativamente fácil (o al menos es viable) elegir la muestra aleatoriamente</p>
-<p>En el ámbito de las ciencias sociales es mucho más difícil disponer de muestras verdaderamente aleatorias por lo que en muchos casos no queda más remedio que optar por muestreos no probabilísticos. Dentro de este grupo también está el <em>hacer lo que se pueda</em> sacando el máximo provecho a los recursos disponibles.</p>
-<p>Lo que no debe hacerse es utilizar muestras claramente no aleatorias y presentar los resultados ignorando ese <em>detalle</em>. Presentar niveles de confianza y márgenes de error puede dar un aire científico al estudio, pero si las muestras no son aleatorias esos valores son totalmente arbitrarios. Es como si le dicen `Supongamos que una castaña es una esfera…’’ y partir de ahí llegan a una serie de conclusiones sobre el comportamiento y las características geométricas de las castañas. No hay ninguna garantía de que esas conclusiones sean ciertas, no porque el método usado para obtenerlas sea incorrecto –puede ser una deducción impecable–, sino porque la hipótesis en que se basa es falsa. Exactamente lo mismo ocurre cuando se dice “Bajo la hipótesis de muestreo aleatorio simple…” y a continuación se dan márgenes de error, niveles de confianza y demás jerga estadística. En la presentación de trabajos académicos esto puede servir para dar un aire de rigor científico y enfriar las ganas de preguntar que pueden tener los miembros del jurado poco duchos en estas cosas, pero solo para eso.</p>
-<p>Para conocer la opinión de una población de interés, existen otros métodos además de las encuestas. En estudios de mercado suelen utilizarse los llamados <em>focus groups</em>. Se trata de elegir un grupo reducido de personas –en torno a 8 o 10– que incluya representantes de distintos sectores de la población de interés. Las conversaciones/entrevistas con estas personas, llevadas a cabo por personal experto, permiten obtener información para valorar en nivel de satisfacción con un producto o servicio y también obtener ideas para mejorarlo.</p>
+<p>Esta es una característica general de la búsqueda del conocimiento científico. Veamos un ejemplo.</p>
+<p>En un juego se trata de descubrir un animal oculto y los participantes (los científicos) deben hacer preguntas sobre características de dicho animal con el propósito de descubrirlo. Uno de ellos tiene como hipótesis que el animal es una paloma y para contrastar su hipótesis pregunta: ¿tiene alas? Se le responde que sí, que efectivamente el animal tiene alas.</p>
+<p>¿Qué conclusión puede sacarse hasta el momento? ¿Puede decirse que su hipótesis es cierta y que el animal es una paloma? Sabemos que la respuesta es no. La evidencia (tener alas) es compatible con su hipótesis, pero ello no significa que sea verdadera, pues existen muchas otras hipótesis que son igualmente compatibles con dicha evidencia, por ejemplo, que el animal sea un murciélago.</p>
+<p>El científico hace una nueva pregunta (observación): ¿el animal es vertebrado? y se le responde que no. ¿Qué pasa con su hipótesis ahora? ¿El animal podría ser una paloma? No.&nbsp;Ahora rechazamos la hipótesis de forma contundente para replantearla de tal manera que sea compatible con los nuevos hechos: tiene alas y no es vertebrado. La nueva hipótesis puede ser: el animal es un mosquito.</p>
+<p>Todas las verdades en la ciencia son de carácter transitorio, de forma que una afirmación sobre la naturaleza es verdadera porque no ha podido demostrarse que sea falsa. Pueden existir muchas hipótesis compatibles con los hechos, no solo la nuestra, por lo que el no rechazo de una hipótesis no implica su veracidad. No ocurre lo mismo cuando los hechos contradicen la hipótesis, si el animal no es vertebrado, estamos muy seguros de que no es una paloma.</p>
+<p>Volviendo a nuestro tema, al contrastar la hipótesis nula de que la media poblacional es <span class="math inline">\(\mu=10\)</span> frente a la alternativa <span class="math inline">\(\mu \ne 10\)</span>, suponiendo que la desviación típica es <span class="math inline">\(\sigma=6\)</span>, si se obtiene que la media de una muestra de 9 observaciones es <span class="math inline">\(\bar{x}=25\)</span>, claramente podemos rechazar la hipótesis nula, pero si sale <span class="math inline">\(\bar{x}=11\)</span> no la podemos rechazar, aunque tampoco afirmar que es cierta porque nuestros datos también serían coherentes con hipótesis del tipo <span class="math inline">\(\mu=10.5\)</span> o <span class="math inline">\(\mu=11\)</span>.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -869,13 +912,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./0405_Muestra_poblacion.html" class="pagination-link" aria-label="¿Qué relación hay entre tamaño de muestra y tamaño de población?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Qué relación hay entre tamaño de muestra y tamaño de población?</span>
+      <a href="./0503_Que_alternativa.html" class="pagination-link" aria-label="¿Cómo elegir la hipótesis alternativa que conviene plantear?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Cómo elegir la hipótesis alternativa que conviene plantear?</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./0407_Aleatoria_representativa.html" class="pagination-link" aria-label="¿Es lo mismo muestra aleatoria que muestra representativa?">
-        <span class="nav-page-text">¿Es lo mismo muestra aleatoria que muestra representativa?</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./0505_Lado_cola.html" class="pagination-link" aria-label="¿Cómo se sabe hacia qué lado hay que mirar el área de cola?">
+        <span class="nav-page-text">¿Cómo se sabe hacia qué lado hay que mirar el área de cola?</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,3 @@
+# ¿Debe decirse “Teorema central del límite” o “Teorema del límite central”? {.unnumbered}
+
+texto
