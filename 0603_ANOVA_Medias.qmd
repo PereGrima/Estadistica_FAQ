@@ -1,0 +1,151 @@
+# ¿Por qué se llama *Análisis de la Varianza* si lo que se compara son medias? {.unnumbered}
+
+No es por ganas de confundir. Supongamos que se desea comparar las medias de las muestras representadas en la figura [-@fig-dotplot1].
+
+![La diferencia de medias está clara](06_Fig_DEX/0301_PorqueANOVA.png){#fig-dotplot1 .fig-compacta2 fig-align="center" width="75%"}
+
+¿Qué impresión nos da este gráfico? Estará de acuerdo que parece claro que B da un nivel de respuesta mayor que A o C, no apreciándose diferencias entre estos dos últimos.
+
+Veamos ahora otra situación. Supongamos que los valores obtenidos son los de la figura [-@fig-dotplot2].
+
+![La diferencia de medias está clara](06_Fig_DEX/0302_PorqueANOVA.png){#fig-dotplot2 .fig-compacta2 fig-align="center" width="75%"}
+
+¿Qué opina sobre las diferencias en este caso? Ahora no está tan claro que sean significativas. Las tres muestras pueden provenir perfectamente de la misma población.
+
+Veamos ahora cuales son las medias en ambos casos:
+
+<table style="width:65%; margin-left:auto; margin-right:auto; font-size:0.95em; text-align:center; margin-bottom:2em;">
+  <thead>
+    <tr style="border-top:1px solid #000;">
+      <td colspan="2" style="padding:4px;">Caso 1<br> Muestra $\;\;\;\;\;\;\;$ Media </td>
+      <td colspan="2" style="padding:4px;">Caso 2<br> Muestra $\;\;\;\;\;\;\;$ Media</td>
+    </tr>
+  </thead>
+
+  <tbody>
+  <tr style="border-top:1px solid #000;">
+    <td> $\;\;\;\;\;$ A <br> $\;\;\;\;\;$ B <br> $\;\;\;\;\;$ C </td>
+    <td> $\;\;$ 13,73 <br> $\;\;$ 15,71 <br> $\;\;$ 14,00 </td>
+    <td> $\;\;\;\;\;$ D <br> $\;\;\;\;\;$ E <br> $\;\;\;\;\;$ F </td>
+    <td> $\;\;$ 13,73 <br> $\;\;$ 15,71 <br> $\;\;$ 14,00 </td>
+  </tr>
+  <tr style="border-bottom:1px solid #000;">
+  </tbody>
+</table>
+
+
+¡Las medias son idénticas! Entonces, ¿por qué las conclusiones han sido distintas?
+
+Porque, de una forma intuitiva, hemos comparado la variabilidad de los valores en cada muestra con las diferencias (es decir, también variabilidad) que presentan sus medias. En el primer caso, si las tres muestras provienen de la misma población, las diferencias entre sus medias son mayores de lo que cabe esperar a partir de la variabilidad observada dentro de cada muestra. En el segundo caso, la variabilidad dentro de las muestras es mucho mayor y por eso nos parece que la diferencia de medias es compatible con el hecho de que las tres provengan de la misma población.
+
+En ambos casos hemos llegado a nuestras conclusiones sobre la igualdad de medias analizando variabilidades. Cuando la comparación se realiza analíticamente (en vez de gráficamente como hemos hecho nosotros) las variabilidades se miden a través de las varianzas. Lo que se hace es comparar varianzas. Por eso la técnica se llama Análisis de la Varianza.
+
+$$\bullet \;\;\;\; \bullet \;\;\;\; \bullet$$
+
+Los valores representados son:
+
+Situación 1:
+```{=html}
+
+<table width="550" cellpadding="1"  border="0" class="center fila-compacta2" style="margin: 0 auto;">
+    
+<tr style="border-bottom:0px solid grey"> </tr>
+<tr>
+<td style="text-align:center">A:</td>
+<td style="text-align:center">13,7</td>
+<td style="text-align:center">13,5</td>
+<td style="text-align:center">13,2</td>
+<td style="text-align:center">14,6</td>
+<td style="text-align:center">14,4</td>
+<td style="text-align:center">13,2</td>
+<td style="text-align:center">14,0</td>
+<td style="text-align:center">13,5</td>
+<td style="text-align:center">13,7</td>
+<td style="text-align:center">13,5</td>
+</tr>
+
+<tr style="border-bottom:0px solid grey">
+<tr>
+<td style="text-align:center">B:</td>
+<td style="text-align:center">15,2</td>
+<td style="text-align:center">16,8</td>
+<td style="text-align:center">16,5</td>
+<td style="text-align:center">14,9</td>
+<td style="text-align:center">15,5</td>
+<td style="text-align:center">16,0</td>
+<td style="text-align:center">16,0</td>
+<td style="text-align:center">14,7</td>
+<td style="text-align:center">16,3</td>
+<td style="text-align:center">15,2</td>
+</tr>
+
+<tr>
+<tr style="border-bottom:0px solid grey">
+<td style="text-align:center">C:</td>
+<td style="text-align:center">14,6</td>
+<td style="text-align:center">15,2</td>
+<td style="text-align:center">13,8</td>
+<td style="text-align:center">13,2</td>
+<td style="text-align:center">13,5</td>
+<td style="text-align:center">13,8</td>
+<td style="text-align:center">14,3</td>
+<td style="text-align:center">14,3</td>
+<td style="text-align:center">13,8</td>
+<td style="text-align:center">13,5</td>
+</tr>
+
+</table>
+```
+\
+Situación 2:
+```{=html}
+
+<table width="550" cellpadding="1"  border="0" class="center fila-compacta2" style="margin: 0 auto;">
+    
+<tr style="border-bottom:0px solid grey"> </tr>
+<tr>
+<td style="text-align:center">D:</td>
+<td style="text-align:center">14,9</td>
+<td style="text-align:center">16,4</td>
+<td style="text-align:center">14,2</td>
+<td style="text-align:center">7,7</td>
+<td style="text-align:center">11,8</td>
+<td style="text-align:center">7,7</td>
+<td style="text-align:center">17,4</td>
+<td style="text-align:center">10,4</td>
+<td style="text-align:center">20,3</td>
+<td style="text-align:center">17,2</td>
+</tr>
+
+<tr style="border-bottom:0px solid grey">
+<tr>
+<td style="text-align:center">E:</td>
+<td style="text-align:center">14,4</td>
+<td style="text-align:center">15,1</td>
+<td style="text-align:center">12,2</td>
+<td style="text-align:center">20,5</td>
+<td style="text-align:center">10,5</td>
+<td style="text-align:center">19,9</td>
+<td style="text-align:center">23,0</td>
+<td style="text-align:center">14,3</td>
+<td style="text-align:center">10,8</td>
+<td style="text-align:center">16,4</td>
+</tr>
+
+<tr>
+<tr style="border-bottom:0px solid grey">
+<td style="text-align:center">F:</td>
+<td style="text-align:center">11,4</td>
+<td style="text-align:center">19,5</td>
+<td style="text-align:center">10,7</td>
+<td style="text-align:center">14,2</td>
+<td style="text-align:center">14,8</td>
+<td style="text-align:center">8,0</td>
+<td style="text-align:center">21,2</td>
+<td style="text-align:center">8,7</td>
+<td style="text-align:center">21,8</td>
+<td style="text-align:center">9,7</td>
+</tr>
+
+</table>
+```

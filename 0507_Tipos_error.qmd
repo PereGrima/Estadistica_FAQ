@@ -1,0 +1,32 @@
+# ¿Qué tipos de error se pueden cometer en un contraste de hipótesis? {.unnumbered}
+
+Recordemos que se empieza suponiendo que las cosas son de una determinada forma, y que este planteamiento, normalmente conservador y relacionado con no cambiar, es lo que se denomina hipótesis nula. Esto será lo que creeremos a no ser que los datos lo contradigan, en cuyo caso consideraremos cierta la hipótesis alternativa (no pueden haber situaciones intermedias).
+
+Por ejemplo, una línea de envasado de detergente llena los paquetes con un peso que sigue una distribución N(4 kg; 0,03 kg). Para comprobar que todo marcha correctamente cada cierto tiempo se toma una muestra, supongamos que de $n=9$ paquetes y si su peso medio $(\bar{x})$ está fuera de un intervalo previamente fijado --los llamados límites de control-- se considera que el proceso está descentrado. En este caso la hipótesis nula es que el proceso está centrado ($H_0: \mu = 4$ kg) y la alternativa es que está descentrado ($H_1: \mu \ne 4$ kg). El valor de la media de 9 paquetes con el proceso centrado se distribuye según N(4 kg; 0,03/$\sqrt{9}$ kg). Si los límites de control se fijan a ± 2 desviaciones típicas del valor nominal, la zona de rechazo será la que está fuera del intervalo 4,00 ± 0,02, tal como se indica en la figura [-@fig-TiposError1].
+
+![SZonas de rechazo y de no rechazo](05_Fig_Contraste/0701_TiposError.png){#fig-TiposError1 .fig-compacta2 fig-align="center" width="60%"}
+
+Con esta forma de decidir se pueden cometer dos tipos de error:
+
+1.    **Rechazar la hipótesis nula cuando en realidad es cierta**. En nuestro caso esto significa que aunque el proceso esté centrado, es posible que la media de la muestra esté fuera del intervalo (3,98; 4,02). La probabilidad de que esto ocurra, con nuestros números, es del orden del 5 % (exactamente 0,0455).
+2.    **No rechazar la hipótesis nula cuando en realidad es falsa**. Puede ser que la media muestral nos dé 4,01 en cuyo caso no rechazamos la hipótesis nula, pero el proceso podría estar centrado en $\mu=4,02$, o en $\mu=4,03$.
+
+Al primer tipo de error se le llama error tipo I, y al segundo, error tipo II. La verdad es que, aparte de utilizar números romanos, hay poca originalidad en la denominación.
+
+Podemos decidir la probabilidad de cometer el error tipo I fijando los límites a partir de los cuales se rechaza la hipótesis nula. Por ejemplo, si los límites los fijamos a $\pm 3 \sigma$, la probabilidad de rechazarla equivocadamente será del orden del 3 por mil (exactamente 0,0027). Si queremos que esta probabilidad sea del 1 por mil, los límites deberán estar en 3,967 y 4,033. A la máxima probabilidad de rechazar equivocadamente la hipótesis nula se le denomina $\alpha$, y en función de ese valor se coloca la frontera entre la zona de aceptación y la de rechazo.
+
+Veamos ahora que pasa con el error tipo II. La probabilidad de cometer este tipo de error no se puede calcular sin fijar un valor concreto para la hipótesis alternativa. Por ejemplo, si el proceso se descentra y pasa a llenar los paquetes con un peso medio de 4,03 kg, la probabilidad de que la media de una muestra de 9 paquetes esté dentro de los límites de control es de 0,1587. Luego existe una probabilidad del orden del 16 % de que consideremos que el proceso está centrado en su valor nominal, cuando en realidad lo está en $\mu=4,03$. A esta probabilidad de cometer el error tipo II se le denomina $\beta$.
+
+![Zonas de rechazo y de no rechazo](05_Fig_Contraste/0302_QueH1.png){#fig-TiposError2 .fig-compacta2 fig-align="center" width="85%"}
+
+La probabilidad $\alpha$ depende sólo de la regla de decisión (situación de los límites de control), mientras que la $\beta$ depende además del valor que tome la media $\mu$. Al valor $1-\beta$ se le denomina potencia de la prueba. Si representamos los valores de $1-\beta$ para los distintos valores posibles de $\mu$, obtenemos una curva que se conoce como “curva de potencia de la prueba”.
+
+¿Cómo disminuir la probabilidad $\beta$? Una opción es aumentar $\alpha$. Si en nuestro caso los límites de control los ponemos a $\pm 1\sigma$, la probabilidad $\alpha$ pasará a ser del orden del 32 %, pero para $\mu =$ 4,03 la probabilidad $\beta$ en vez de ser del 16 %, pasará a ser del 2,5 %.
+
+¿Y si queremos disminuir $\alpha$? Si ponemos los límites a $\pm 3\sigma$, $\alpha$ pasa a ser del 3 por mil, pero $\beta$, para $\mu=$4,03, pasa a ser del 50 %.
+
+¿Es posible disminuir $\alpha$ y $\beta$ a la vez? Sí, aumentando el tamaño de la muestra. Si el tamaño de la muestra en vez de ser 9 fuera 25, la desviación típica de la media pasaría a ser $0,03/\sqrt{25} =0,006$. Una probabilidad $\alpha$ de 0,05 significa poner los límites a $\pm 2 \sigma$, es decir a $4,00 \pm 0,012$. En este caso, si el proceso se descentra pasando a tener uma media de 4,03 la probabilidad $\beta$ será prácticamente cero.
+
+Del trío $\alpha$, $\beta$ y $n$, dados dos se puede deducir el tercero. Por ejemplo, si en nuestro caso queremos una probabilidad $\alpha$ del 5 % y una $\beta$ también de 5 % cuando la media se coloque en 4,03, el tamaño de la muestra debe ser n=13.
+
+En definitiva, para un esfuerzo dado (esfuerzo = tamaño de muestra) si queremos reducir $\alpha$ debe ser a costa de $\beta$ y viceversa. Si se quieren reducir las dos a la vez no queda más remedio que hacer más esfuerzo (mayor tamaño de muestra). En este contexto también vale aquello de que “el que algo quiere algo le cuesta”.

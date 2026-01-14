@@ -1,0 +1,30 @@
+# ¿Cómo es posible estudiar por separado el efecto de cada variable? {.unnumbered}
+
+De entrada resulta chocante que para estudiar experimentalmente como un conjunto de variables afectan a una respuesta lo mejor sea moverlas todas a la vez realizando lo que se conoce como *diseño factorial*. Inmediatamente surgen dos pegas:
+
+1.    Un diseño factorial exige experimentar en todas las combinaciones de valores de las variables y eso implica realizar muchos experimentos, tantos que seguramente esta estrategia no es viable.
+
+2.    Si se mueven todas las variables a la vez no va a ser posible identificar cuáles de ellas son las que están produciendo los cambios en la respuesta. 
+
+Respecto al primer punto, uno de los "trucos" es que en cada tanda de experimentación cada variable --le llamaremos factor-- toma solo dos valores --niveles-- distintos, de manera que si tenemos $k$ factores el número de experimentos a realizar es $2^k$. Esto no quiere decir que solo se pueda experimentar con dos valores de cada factor, en general el diseño consta de varias tandas y si en la primera vemos que al aumentar el valor de un factor mejora la respuesta, en la siguiente tanda podemos seguir explorando con nuevos valores. Claro que $2^k$ también son muchos experimentos, pero este tipo de diseños permiten obtener la información más relevante haciendo solo una parte (fracción) del diseño completo, realizando lo que se denomina *diseño fraccional*.
+
+Entramos ya en el problema de interpretar los resultados si movemos todos los factores a la vez. Supongamos que tenemos tres factores: A, B y C y que a cada uno le asignamos dos valores que codificamos como $-1$ y $+1$. Habrá que realizar $2^3=8$ experimentos. Las condiciones de experimentación y la respuesta ($y$) obtenida en cada caso son las que se indican en la siguiente.
+
+::: {style="width:50%; margin-left:auto; margin-right:auto;margin-bottom:1em;"}
+|        |           | 
+|:------:|:----:|:----:|:----:|:-----:|
+| nº     |  A   |  B   |  C   |  $y$  | 
+| 1 <br> 2 <br> 3 <br> 4 <br> 5 <br> 6 <br> 7 <br> 8 <br> | -1 <br> 1 <br> -1 <br> 1 <br> -1 <br> 1 <br> -1 <br> 1  |  -1 <br> -1 <br> 1 <br> 1 <br> -1 <br> -1 <br> 1 <br> 1 | -1 <br> -1 <br>- 1 <br> -1 <br> 1 <br> 1 <br> 1 <br> 1  | $y_1$ <br> $y_2$ <br> $y_3$ <br> $y_4$ <br> $y_5$ <br> $y_6$ <br> $y_7$ <br> $y_8$ <br> | 
+:::
+
+Estos resultados se pueden representar en los vértices de un cubo tal como se indica en la figura [-@fig-dex1], donde cada eje corresponde a un factor. Observe que la única diferencia entre las condiciones que dan la respuesta $y_5$ y las que dan $y_1$ es la debida al nivel del factor $C$, no cambia nada más. Lo mismo ocurre con las diferencias entre $y_7$ e $y_3$, entre $y_8$ e $y_4$ y entre $y_6$ e $y_2$. Al promedio de esas cuatro diferencias se le denomina *efecto principal del factor C*. Ese mismo valor también se puede calcular como el promedio de respuestas con $C$ a nivel $+$ menos el promedio con $C$ a nivel $-$.
+
+![Representación gráfica de las variables y la respuesta](06_Fig_DEX/0501_EstSeparado.png){#fig-dex1 .fig-compacta2 fig-align="center" width="95%"}
+
+\noindent Lo mismo ocurre con los otros factores, su efecto principal se calcula como el promedio de respuestas con el factor a nivel $+$ menos el promedio a nivel $-$ (figura [-@fig-dex2]).
+
+![Representación gráfica de las variables y la respuesta](06_Fig_DEX/0502_EstSeparado.png){#fig-dex2 .fig-compacta2 fig-align="center" width="100%"}
+
+Observe que se saca mucho jugo a las 8 respuestas obtenidas. Siempre usamos las 8 y depende de como se hagan los cálculos se mide el efecto de un factor o de otro. Naturalmente, esto no solo ocurre cuando se tienen tres factores. Con tres factores se puede representar fácilmente como hemos hecho nosotros, pero el procedimiento es el mismo para cualquier número de factores.
+
+Y no todo queda aquí. Esta disposición de las condiciones de experimentación también permite calcular fácilmente las interacciones entre los factores, aspecto muy importante para entender el comportamiento de la respuesta y que es imposible analizar moviendo los factores uno a uno.

@@ -1,0 +1,43 @@
+# ¿Es lo mismo diferencia significativa que diferencia importante? {.unnumbered}
+
+Aunque a veces se utiliza la palabra "significativo" para enfatizar la importancia o la relevancia de algo, en el contexto de los estudios estadísticos no es lo mismo significativo diferencia significativa diferencia importante que importante. Una diferencia altamente significativa puede ser irrelevante a efectos prácticos, y también puede ocurrir que una diferencia importante no sea significativa.
+
+En los procesos de soldadura por puntos se hace pasar una gran cantidad de corriente eléctrica (miles de amperios) durante un corto espacio de tiempo (milisegundos) pero suficiente para que las dos superficies metálicas se fundan en los puntos de contacto por el calor producido. Al fundirse se mezclan los materiales de las dos chapas y al solidificarse esa mezcla se forma lo que llamamos punto de soldadura.
+
+Un problema que se puede presentar en estos procesos está relacionado con el tratamiento superficial que se da a las chapas para que no se oxiden durante el periodo en que están almacenadas. Este tratamiento suele consistir en un recubrimiento con cierto producto (le llamaremos pintura) que no es tan buen conductor como el metal y dificulta el paso de la corriente, lo que puede repercutir en las propiedades del punto de soldadura.
+
+Se decide comparar la pintura habitual, A, con otra alternativa, B, que aseguran es más conductora y permite mejores soldaduras. Para realizar la comparación se llevan a cabo un cierto número de soldaduras en chapas pintadas con A, y otras en chapas pintadas con B. Lo que se mide es la resistencia a la cizalladura. Vamos a analizar cuáles serían nuestras conclusiones en dos situaciones con distintos resultados.
+
+```{=html}
+<table>
+    <tr class="fila-compacta">
+        <td rowspan="2" class = "celda-centrada" width="26%"> </td>
+        <td colspan=2 ALIGN=center width="37%"> Situación 1 </td>
+        <td colspan=2 ALIGN=center width="37%"> Situación 2 </td>
+    </tr>
+    
+    <tr class="fila-compacta">
+    <td ALIGN=center> &nbsp &nbsp Pint. A</sub> </td>
+    <td ALIGN=center> Pint. B &nbsp &nbsp </td>
+    <td ALIGN=center> &nbsp &nbsp Pint. A</sub> </td>
+    <td ALIGN=center> Pint. B &nbsp &nbsp </td>
+    </tr>
+
+    <tr class="fila-compacta2">
+    <TD ALIGN=left> Tamaño muestras: <br> Media: <br> Desviación típica:  </TD>
+    <TD ALIGN=center> &nbsp &nbsp 100 <br> &nbsp &nbsp 1750 kg <br> &nbsp &nbsp 3,70 kg </TD>
+    <TD ALIGN=center> 100 &nbsp <br> 1752 kg &nbsp <br> 3,69 kg </TD>
+    <TD ALIGN=center> &nbsp &nbsp 10 <br> &nbsp &nbsp 1750 kg <br> &nbsp &nbsp 169 kg </TD>
+    <TD ALIGN=center> 10 &nbsp <br> 1850 kg &nbsp <br> 193 kg </TD>
+    </TR>
+</table>
+```
+\
+
+\noindent Si los resultados son como los reflejados en la situación 1, la diferencia es claramente significativa, pero 2 kg sobre 1750 seguramente es una diferencia poco importante, y si cambiar de pintura entraña alguna dificultad o algún riesgo, por pequeño que sea, lo más probable es que no se cambie.
+
+En la situación 2 la diferencia son 100 kg, lo cual ya puede ser una diferencia importante, al menos por comparación con el caso anterior. Pero ahora la diferencia no es significativa, es decir, puede ser debida al azar y no estaría justificado cambiar de pintura en base a estos resultados.
+
+Obsérvese que hay dos características que tienen distinto orden de magnitud en ambas situaciones: el tamaño de las muestras y las desviaciones típicas. En la situación 1 (diferencia significativa) el tamaño de las muestras es grande, $n=100,$ y la desviación típica es pequeña, $s_A=3,70$ y $s_B=3,69$, frente a la situación 2 (diferencia no significativa) en que el tamaño de las muestras es $n=10$ y las desviaciones típicas son 169 y 193 kg. Tamaños de muestra grandes y con poca variabilidad permiten detectar diferencias muy pequeñas y quizá irrelevantes a efectos prácticos. Sin embargo, si los tamaños de muestra son pequeños y la variabilidad grande, no se ponen de manifiesto las diferencias aunque estas existan y sean importantes.
+
+Por tanto, hay que andarse con cuidado con la interpretación de lo que significa "diferencia significativa", porque el hecho de que lo sea no significa que también sea relevante. Y que la diferencia salga no significativa no implica que no haya diferencia, es posible que el pequeño tamaño de muestra y/o la variabilidad que existe en los datos no nos deje ver esa diferencia que sí existe, y que además puede ser importante.

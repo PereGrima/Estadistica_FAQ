@@ -1,0 +1,37 @@
+# ¿Cómo se sabe hacia qué lado hay que mirar el área de cola? {.unnumbered}
+
+Cuando se plantean dudas de este tipo siempre es mejor encontrar la respuesta razonando, ya que echar mano de recetas puede llevar a cometer errores de mucho bulto. Supongamos que el planteamiento del contraste es:
+
+\begin{equation*}
+\begin{split}
+H_0: \mu_A &= \mu_B \\
+H_0: \mu_A &< \mu_B 
+\end{split}
+\end{equation*}
+	
+Una vez tengamos los resultados de las medias muestrales estaremos en una de los siguientes casos:
+
+#### 1) $\;\bar{y}_A > \bar{y}_B$: 
+
+Estamos de suerte en cuanto a facilidad de cálculo. No hace falta que calculemos nada. Seguro que no se puede rechazar la hipótesis nula. Por ejemplo, si se analiza la eficacia de un complemento mineral en el fertilizante de una plantación y resulta que las plantas con que se ha utilizado este complemento dan una producción menor, es evidente que no podremos rechazar la hipótesis nula y concluir que el complemento mineral aumenta la cosecha. 
+
+#### 2) $\;\bar{y}_A < \bar{y}_B$:
+
+Seguramente este es el resultado que esperábamos, y ahora lo que toca es analizar si la diferencia observada puede considerarse estadísticamente significativa. En este ejemplo del complemento para el abono podremos elegir como estadísticos de prueba[^nota-1].
+
+[^nota-1]: Entendemos que se cumplen las condiciones para poder aplicar el test de la t de Student.
+
+$$t_1 = \frac{\bar{y}_A-\bar{y}_B}{s \sqrt{\frac{1}{n_A}+\frac{1}{n_B}}} \;\;\;\;\;\;\;\;\;t_2 = \frac{\bar{y}_B-\bar{y}_A}{s \sqrt{\frac{1}{n_A}+\frac{1}{n_B}}}$$ 
+La única diferencia entre uno y otro es que $t_1$ será negativo y $t_2$ positivo (exactamente $t_1=-t_2$).
+
+Si se toma el valor positivo habrá que mirar el área de cola hacia la derecha para ver que tan lejos está el valor obtenido en la distribución de referencia, y si es negativa habrá que mirar la cola hacia la izquierda. Obsérvese que si se hace al revés, cuanto más raro sea el valor (más alejado quede del centro de la distribución) mayor sería el área de cola.
+
+![](05_Fig_Contraste/0501_LadoCola.png){.fig-compacta2 fig-align="center" width="75%"}
+
+Aunque en esencia es exactamente lo mismo, gusta más trabajar con valores positivos. Es más cómodo y además son los que encontramos en las tablas. 
+
+#### 3) $\;\bar{y}_A = \bar{y}_B$:
+
+Si esto ocurre no hace falta calcular nada sea cual sea la hipótesis alternativa. ¡Cómo vamos a demostrar que una diferencia es significativa si no existe tal diferencia!.
+
+En cualquier caso, siempre hay que comprobar la coherencia del resultado obtenido con el planteamiento realizado. 

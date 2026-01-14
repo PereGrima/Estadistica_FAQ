@@ -1,0 +1,20 @@
+# ¿Es correcto multiplicar por dos el área de la cola en los test de igualdad de varianzas? {.unnumbered}
+
+En este tipo de test el estadístico de prueba es el cociente de las varianzas muestrales y la distribución de referencia es la $F$ de Snedecor, con los grados de libertad de las varianzas que hemos colocado en el numerador y el denominador, en este orden.
+
+Como la distribución $F$ de Snedecor no es simétrica, parece que cuando la hipótesis alternativa es del tipo “distinto de” no se puede multiplicar por dos el área de una de las colas, tal como hacemos en las distribuciones que son simétricas, como la Normal o la $t$ de Student. 
+
+Pues bien, sí se puede multiplicar por 2 el área de cola también en este caso. Sean $s_A^2$ y $s_B^2$ las dos varianzas que queremos comparar, y supongamos que $s_A^2 > s_B^2$. El estadístico de prueba es el cociente de las dos varianzas, y podemos elegir tanto $s_A^2/s_B^2$, como al revés, es decir su inversa $s_B^2/s_A^2$.
+
+Si elegimos $s_A^2/s_B^2$, como el numerador es mayor que el denominador tendremos un cociente mayor que 1, y será tanto mayor cuanto mayor sea la diferencia entre varianzas. En este caso tendremos que mirar el área de cola hacia la derecha en una distribución F de Snedecor con $\nu_A$ y $\nu_B$ grados de libertad.
+
+Si por el contrario, elegimos $s_B^2/s_A^2$ al ser $s_A^2 > s_B^2$ el cociente será menor que 1, tanto menor cuanto mayor sea la diferencia entre varianzas. En este caso, lo que interesa es la cola hacia la izquierda, pero no en la misma distribución que en el caso anterior, porque ahora se ha cambiado el orden de los grados de libertad.
+
+Intuitivamente parece razonable que si el cociente de varianzas (insistimos: nada se dice sobre el orden en que se colocan) sigue una distribución $F$, las probabilidades $P(\frac{s_A^2}{s_B^2}>k)$ y $P(\frac{s_B^2}{s_A^2}<\frac{1}{k})$ deben ser iguales. Esta igualdad viene resumida en la siguiente propiedad:
+
+$$F_{\nu_1, \nu_2 (\alpha)}=\frac{1}{F_{\nu_2, \nu_1 (1-\alpha)}}$$
+
+De aquí se deduce que las dos áreas son idénticas y que basta con calcular sólo una y multiplicarla por 2. Como no es necesario mirar las dos áreas de cola, las tablas que vienen en los libros sólo dan colas hacia la derecha y el estadístico que se usa es el cociente de la varianza mayor partido por la menor (cociente mayor que 1, área de cola hacia la derecha).
+
+![Las dos áreas de cola en un test de igualdad de varianzas](05_Fig_Contraste/0901 Fx2_1.png){#fig-Fx2 .fig-compacta2 fig-align="center" width="75%"}
+
