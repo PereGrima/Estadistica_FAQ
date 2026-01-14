@@ -1,0 +1,77 @@
+# ¿Cómo se calculan los valores críticos del coeficiente de correlación? {.unnumbered}
+
+El coeficiente de correlación \index{coeficiente de correlación}$r$ tiene su propia función densidad de probabilidad y con ella se pueden calcular los valores críticos que se desee. Sin embargo, seguramente por economía de cálculo, las primeras tablas se construyeron usando la distribución $t$-Student. 
+
+Dado un conjunto de $n$ pares de valores de $X$ e $Y$, contrastar que el coeficiente de correlación ($\rho$) entre esas variables es igual a cero es lo mismo que contrastar que es igual a cero la pendiente de la recta ajustada ($\beta_1$). No tendría sentido -sería una contradicción- que los dos análisis dieran resultados distintos. 
+
+Sabemos que si $\beta_1=0$, el estadístico $T_0 = b_1/s_{b_1}$ sigue una distribución $t$-Student\index{distribución!t-Student} con $n-2$ grados de libertad. Pues bien, se puede demostrar que:
+$$ \frac{b_1}{s_{b_1}} = \frac{r  \sqrt{n-2}}{\sqrt{1 - r^2}} $$
+
+\noindent Por tanto, bajo la hipótesis de $\beta_1=0$, que es lo mismo que $\rho = 0$, tenemos que:
+$$ \frac{r  \sqrt{n-2}}{\sqrt{1 - r^2}} \sim t\text{-Student con $n-2$ grados de libertad} $$
+
+\noindent Ya podemos calcular valores críticos para $r$. Es inmediato comprobar que para un tamaño de muestra $n$ y un nivel de significación $\alpha$ (prueba bilateral) tenemos:
+$$ r_ {\alpha, n} = \frac{t_{\alpha/2, n-2}}{\sqrt{n-2 + t_{\alpha/2, n-2}^2}} $$
+
+\noindent La función densidad de probabilidad de $r$ se puede obtener a partir de la de $t$. Realizando el correspondiente cambio de variable se llega a la siguiente expresión:
+$$ f(r \mid \rho =0) = \frac{ \Gamma \left [\frac{1}{2} (n-1) \right ]} { \Gamma \left [\frac{1}{2} (n-2) \right ] \sqrt{\pi}
+} (1-r^2)^{\frac{1}{2}(n-4)} $$
+
+\noindent  Donde el símbolo $\Gamma$ representa la función gamma de Euler. En general, las tablas presentan los valores críticos en función de los grados de libertad de la distribución $t$-Student usada para determinarlos, no en función de $n$ que sería lo más cómodo y natural. Es una forma algo confusa, ya que el coeficiente de correlación no tiene asociado ningún tipo de grados de libertad. Que las tablas se presenten de esta forma es, sin duda, un vestigio del pasado. Bueno, ahora también lo son las tablas enteras.
+
+#### ¿Cómo se llega a $\frac{r  \sqrt{n-2}}{\sqrt{1 - r^2}}$ a partir de $\frac{b_1}{s_{b_1}}$ ?
+
+\noindent  Para aligerar la notación escribiremos los sumatorios sin límites, que siempre son desde $i=1$ hasta $n$. Tenemos:
+$$b_1 = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2} \hspace{20pt} \text{y} \hspace{20pt} r = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum(x_i-\bar{x})^2} \sqrt{\sum(y_i-\bar{y})^2}} $$ 
+
+\noindent Combinando estas dos expresiones podemos escribir:
+$$ b_1 = r \frac{\sqrt{\sum(y_i-\bar{y})^2}}{\sqrt{\sum(x_i-\bar{x})^2}} $$
+
+\noindent  Por otro lado:
+$$ s_{b_1} = \sqrt{\frac{s_R^2}{\sum(x_i-\bar{x})^2}} \hspace{20pt} \text{con} \hspace{20pt} s_R^2 = \frac{\sum(y_i-\hat{y_i})^2}{n-2}$$
+
+\noindent En el numerador de $s_R^2$ sustituimos $ \hat{y}_i$ por $b_0 + b_1x_i $ y dentro de esta expresión $b_0$ por $ \bar{y} - b_1 \bar{x} $:
+\begin{equation*}
+	\begin{split}
+		\sum(y_i-\hat{y}_i)^2 &= \sum \left ( y_i - \bar{y}  + b_1 \bar{x} -b_1 x_i \right )^2 = \\
+		&= \sum \left [ \left ( y_i - \bar{y} \right ) - b_1 \left (  x_i - \bar{x} \right ) \right ]^2 = \\
+		&= \sum \left [ \left ( y_i - \bar{y} \right )^2 - 2 b_1 \left (  x_i - \bar{x} \right )  \left( y_i - \bar{y} \right )   + b_1^2 \left (  x_i - \bar{x} \right )^2 \right ] \\
+	\end{split}
+\end{equation*}
+
+
+\noindent El tercer término de la expresión anterior lo podemos escribir de la forma:
+\begin{equation*}
+	\begin{split}
+		\sum  b_1^2 \left (  x_i - \bar{x} \right )^2  &= b_1 \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2} \sum(x_i-\bar{x})^2 = \\
+		&= b_1 \sum(x_i-\bar{x})(y_i-\bar{y}) \\
+	\end{split}
+\end{equation*}
+
+\noindent Por tanto, nos queda:
+\begin{equation*}
+	\begin{split}
+		\sum (y_i-\hat{y})^2 &= \sum(y_i-\bar{y})^2 - b_1 \sum(x_i-\bar{x})(y_i-\bar{y}) \\
+		&=  \sum(y_i-\bar{y})^2 -  r \frac{\sqrt{\sum(y_i-\bar{y})^2}}{\sqrt{\sum(x_i-\bar{x})^2}} \sum(x_i-\bar{x})(y_i-\bar{y})  \\
+	\end{split}
+\end{equation*}
+
+\noindent Ya podemos volver a la expresión de $T_0$. Para que no salgan expresiones muy grandes, usaremos la notación:
+$$S_{XX} = \sum(x_i-\bar{x})^2;  \hspace{10pt}  S_{YY} = \sum(y_i-\bar{y})^2; \hspace{10pt}  S_{XY} = \sum(x_i-\bar{x})(y_i-\bar{y}) $$ 
+
+\noindent y como tanto el denominador de $b_1$ como en el de $s_{b_1}$ es igual a $\sqrt{\sum(x_i-\bar{x})^2}$, lo podemos eliminar y ya no lo escribimos:
+
+\begin{equation*}
+	\begin{split}
+		T_0 = \frac {r  \sqrt {S_{YY}}}     
+		{\sqrt {\frac{S_{YY} - r \frac{\sqrt{S_{YY}}}{\sqrt{S_{XX}}} S_{XY}}{n-2}}} &=  
+		r  \sqrt {n-2} \sqrt {\frac { S_{YY}}     
+			{S_{YY} - r \frac{\sqrt{S_{YY}}}{\sqrt{S_{XX}}} S_{XY}}} = \\
+		&= r  \sqrt {n-2} \sqrt {\frac {\sqrt{S_{YY}} }     
+			{\sqrt{S_{YY}} - r \frac{S_{XY}}{\sqrt{S_{XX}}} }} =\\[5pt]
+		&= r  \sqrt {n-2} \sqrt {\frac {1}     
+			{1 - r \frac{S_{XY}}{\sqrt{S_{XX}} \sqrt{S_{YY}}} }} = \\[5pt]
+		&= r  \sqrt {n-2} \sqrt {\frac {1} {1 - r^2}} = \\[5pt]
+		&= \frac{r  \sqrt{n-2}}{\sqrt{1 - r^2}}  \\
+	\end{split}
+\end{equation*}

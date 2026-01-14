@@ -1,0 +1,59 @@
+# ¿De dónde sale la fórmula del coeficiente de correlación? {.unnumbered}
+
+Simplemente se divide la expresión de la covarianza por el producto de las desviaciones típicas de las dos variables $X$ e $Y$. Es fácil comprobar que desaparecen los denominadores tanto de la covarianza como de las desviaciones típicas, quedando:
+$$ r  = \frac{\sum_{i=1}^n \left ( x_i - \bar{x} \right ) \left ( y_i - \bar{y} \right ) } 
+		{\sqrt {\sum_{i=1}^n \left ( x_i - \bar{x} \right )^2}  \sqrt{\sum_{i=1}^n \left ( y_i - \bar{y} \right )^2 }} $$
+
+Con esta sencilla transformación se resuelven los problemas de la covarianza: su valor ya no depende de las unidades usadas y además queda acotado entre -1 y 1 (correlación perfecta negativa y positiva repectivamente).
+
+Que desaparecen las unidades es evidente, puesto que en el numerador tenemos las mismas que en el denominador, pero ver que está acotado entre -1 y 1 exige una mirada más detenida.
+
+Si la correlación es perfecta todos los puntos estarán alineados según una recta, es decir: $y_i =a+bx_i$. Además, seguro que[^Nota-1]:  $\bar {y} =a+b \bar{x}$. Así pues, podemos escribir el numerador de la expresión de $r$ de la forma:
+
+[^Nota-1]:<small>Si todos los puntos están sobre la recta: $\sum y_i = \sum (a+bx_i) \rightarrow n\bar{y} = na + bn \bar{x}$</small>
+
+\begin{equation*}
+	\begin{split}
+		\sum_{i=1}^n \left ( x_i - \bar{x} \right ) \left ( y_i - \bar{y} \right ) &= \sum_{i=1}^n \left ( x_i - \bar{x} \right ) \left ( a+bx_i - (a+b\bar{x}) \right ) \\
+		&= \sum_{i=1}^n \left ( x_i - \bar{x} \right )   b \left ( x_i - \bar{x} \right ) = b \sum_{i=1}^n \left ( x_i - \bar{x} \right )^2
+	\end{split}
+\end{equation*}
+
+Con un razonamineto similar, en el denominador podemos escribir el término en que aparecen los valores $y_i$ de la forma:
+
+\begin{equation*}
+	\begin{split}
+		\sqrt{\sum_{i=1}^n \left ( y_i - \bar{y} \right )^2 } &= \sqrt{\sum_{i=1}^n \left ( a+bx_i - ( a+b \bar{x} ) \right )^2 } =  b \sqrt{ \sum_{i=1}^n \left ( x_i -  \bar{x}  \right )^2 } \\
+	\end{split}
+\end{equation*}
+
+Recuperando el término correspondiente a los valores de $x$, el denominador nos queda:
+$$ 	\sqrt {\sum_{i=1}^n \left ( x_i - \bar{x} \right )^2} \cdot b \sqrt{\sum_{i=1}^n \left ( x_i - \bar{x} \right )^2 } = b \sum_{i=1}^n \left ( x_i - \bar{x} \right )^2 $$
+
+Igual que el numerador, aunque con la diferencia de que su valor seguro que es positivo (proviene de un producto de desviaciones típicas) mientras que el valor de $b$ en el numerador será positivo o negativo según sea el signo de la pendiente de la recta.
+
+Así pues, si los puntos se alinean según una recta, el valor del coeficiente de correlación será -1 o 1 según la pendiente sea negativa o positiva. 
+
+Otra forma de verlo, que además sirve para probar que $r$ no puede estar fuera de ese intervalo, es usando la expresión del coeficiente de determinación $R^2$:
+$$R^2 = \frac{\sum_{i=1}^{n}( \hat{y_i} - \bar{y} ) ^2}{\sum_{i=1}^{n}( y_i - \bar{y})^2} $$
+
+Este coeficiente solo puede variar entre 0 y 1. Es igual a 0 cuando los valores estimados $\hat{y_i}$ siguen una recta horizontal, es decir, cuando la predicción de $y$ no depende del valor de $x$, y es igual a 1 cuando la explicación es perfecta: todos los valores previstos $\hat{y_i}$ coinciden con sus correspondientes valores reales $y_i$. En el numerador tenemos:
+
+\begin{equation*}
+	\begin{split}
+		 \sum_{i=1}^{n}( \hat{y_i} - \bar{y} ) ^2 &=   \sum_{i=1}^{n}( b_0 + b_1 x_i - \bar{y} ) ^2 =  \sum_{i=1}^{n}( \bar{y} - b_1 \bar{x}+ b_1 x_i - \bar{y} ) ^2 \\ 
+		&=  b_1^2  \sum_{i=1}^n \left ( x_i -  \bar{x} \right )^2  \\
+	\end{split}
+\end{equation*}
+
+Sustituyendo el numerador de $R^2$ por esta nueva expresión:
+
+\begin{equation*}
+	\begin{split}
+		R^2 &= b_1^2  \cdot \frac{\sum( x_i - \bar{x} ) ^2}{\sum( y_i - \bar{y})^2} =
+		\frac{\left[ \sum(x_i-\bar{x})(y_i-\bar{y}) \right]^2}{\left [\sum (x_i- \bar{x})^2 \right]^2} \cdot  \frac{\sum ( x_i - \bar{x} ) ^2}{\sum ( y_i - \bar{y})^2} =\\[10pt]
+		&= \left[ \frac{\sum(x_i-\bar{x})(y_i-\bar{y})} {\sqrt{\sum (x_i - \bar{x})^2} \sqrt{\sum (y_i - \bar{y})^2}} \right] ^2 = r^2\\
+	\end{split}
+\end{equation*}
+
+Si $R^2$ puede variar entre 0 y 1, está claro que $r$ solo puede hacerlo entre -1 y 1.

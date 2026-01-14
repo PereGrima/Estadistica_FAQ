@@ -1,0 +1,22 @@
+# ¿Cómo se justifica la fórmula de la covarianza? {.unnumbered}
+
+La figura [-@fig-Covarianza] muestra la relación entre dos variables $X$ e $Y$.  En la derecha el diagrama se ha dividido en cuatro cuadrantes trazando una línea vertical que pasa por la media de los valores de $x$ y una horizontal por la media de los valores de $y$. A estos valores medios los designamos $\bar{x}$ e $\bar{y}$ respectivamente. Los cuadrantes van del I al IV en el sentido de las agujas del reloj.
+
+![Diagrama de dispersión y distancia de cada coordenada a su valor medio para el cálculo de la covarianza](07_Fig_Regresion/0101_Covarianza.png){#fig-Covarianza .fig-compacta2 fig-align="center" width="85%"}
+
+En todos los puntos del primer cuadrante la distancia  $x - \bar{x}$  es positiva, ya que todos se encuentran a la derecha de  $\bar{x}$. También será positiva la distancia $y - \bar{y}$ ya que todos están por encima de $\bar{y}$. Por tanto, el producto de ambas distancias  $(x - \bar{x})(y - \bar{y})$ será positivo para todos los puntos que se hayan en el primer cuadrante.
+
+Para los del segundo cuadrante este producto es negativo ya que la distancia $x - \bar{x}$ sigue siendo positiva (todos los puntos se encuentran a la derecha de $\bar{x}$), pero $y - \bar{y}$ será negativo (todos están por debajo de $\bar{y}$).
+
+En el tercer cuadrante el producto de las distancias es positivo porque ambas distancias son negativas y en el cuarto vuelve a ser negativo ya que $y - \bar{y}$ es positivo pero $x - \bar{x}$ es negativo.
+
+Con $n$ puntos, la suma de todos estos productos será $\sum_{i=1}^{n} (x_i -\bar {x})(y_i -\bar {y})$. Si la mayoría se encuentra en los cuadrantes I y III, tal como ocurre en la figura [-@fig-Covarianza], el resultado del sumatorio será un valor positivo, mientras que si están en los cuadrantes II y IV el resultado será negativo. Si no existe ninguna relación entre $X$ e $Y$ los puntos se repartiran de forma más menos equilibrada, tendiendo a compensarse los productos positivos con los negativos y dando un resultado alrededor de cero.
+
+La covarianza es el valor de ese sumatorio dividido por el número de puntos que intervienen en su cálculo, algo así como el promedio de los productos $(x_i -\bar {x})(y_i -\bar {y})$. Si nuestro interés no es conocer la covarianza de los datos disponibles, sino estimar su valor en la población, dividimos por $n-1$ en vez de por $n$, por la misma razón que lo hacemos cuando estimamos el valor de la varianza. Como lo habitual es esto último, escribimos la fórmula de la forma:
+$$ \widehat{\text{Cov}}(X,Y) = \frac{\sum_{i=1}^{n} (x_i -\bar {x})(y_i -\bar {y})}{n-1} $$	
+
+La covarianza tiene un gran protagonismo en el terreno de los modelos teóricos, pero apenas se usa para valorar la relación lineal en un conjunto de datos. Para este menester tiene el inconveniente de que su valor depende de las unidades utilizadas. Si se mide la covarianza entre el peso y la estatura se tendrá un valor distinto si la estatura se da en metros o en centímetros (100 veces mayor en este último caso) y también será distinta si los datos se presentan en unidades anglosajonas de pulgadas y libras, aunque el diagrama de dispersión tendrá el mismo aspecto en todos los casos. Además, para su valoración no tenemos ningún marco de referencia sobre lo que representa un valor grande o pequeño. Todos estos problemas quedan resueltos con el uso del coeficiente de correlación.
+
+##### Curiosidad:
+
+Dados unos valores de $X$, la máxima covarianza no se obtiene cuando los valores de $Y$ se alinean según una recta. Por ejemplo, sean los valores de $X$ = 1, 2, 3, 4 y 5, si los de $Y$ son: 2, 4, 6, 8, y 10 (relación lineal perfecta) la covarianza entre $X$ e $Y$ es igual a 5 pero si sustuimos el último 10 por 15, la covarianza aumenta y pasa a valer 7,5. Esto no deja en muy buen lugar a la covarianza como medida de relación lineal.
