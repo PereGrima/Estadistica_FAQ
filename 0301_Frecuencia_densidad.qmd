@@ -4,7 +4,7 @@ Al construir un histograma lo habitual es colocar la frecuencia en el eje vertic
 
 Vamos a suponer que una empresa toma una muestra de 500 empleados con el fin de analizar la antigüedad en su puesto de trabajo y que, por razones de índole administrativa, desea considerar los intervalos que se indican en la siguiente tabla (los años de antigüedad deben leerse como: de más de ... hasta ...).
 
-::: {.tabla-pequena} 
+::: tabla-pequena
 |                                                      |                                 |                                      |                                              |                                               |
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
 |                Años de <br>antigüedad                | Anchura del <br>intervalo $c_i$ |    Frecuencia <br>absoluta $n_i$     |        Frecuencia <br>relativa $f_i$         |     Densidad de <br>frecuencia $f_i/c_i$      |
@@ -38,6 +38,7 @@ La función que describe esas líneas que hemos añadido es la **función densid
 
 En este caso la función densidad de probabilidad $f(x)$ es:
 
+```{=tex}
 \begin{equation*}
 
    f(x) = \left \{
@@ -53,10 +54,9 @@ En este caso la función densidad de probabilidad $f(x)$ es:
    \right.
 
 \end{equation*}
-
+```
 \noindent En la muestra, la frecuencia entre 0,5 y 1,5 será igual a la suma de las áreas de las barras que se encuentran en esos valores. Para la población, la probabilidad de que $x$ se encuentre entre esos valores será igual al área que definen en el triángulo:
 
-$$P(0,5 \leq x \leq 1,5) = \int_{0,5}^1 x \; dx + \int_1^{1,5}(2-x) \; dx =\frac{3}{4}$$
-![Cálculo de frecuencias (izquierda) y de probabilidades (derecha) a través de áreas](03_Fig_Distribuciones/0104_Densidad_4.png){#fig-Densidad3 .fig-compacta2 fig-align="center" width="90%"}
+$$P(0,5 \leq x \leq 1,5) = \int_{0,5}^1 x \; dx + \int_1^{1,5}(2-x) \; dx =\frac{3}{4}$$ ![Cálculo de frecuencias (izquierda) y de probabilidades (derecha) a través de áreas](03_Fig_Distribuciones/0104_Densidad_4.png){.fig-compacta2 fig-align="center" width="90%"}
 
 Si en vez de una distribución triangular tenemos -por ejemplo- una distribución Normal, la expresión de $f(x)$ es más complicada, pero el planteamiento es exactamente el mismo.
