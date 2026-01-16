@@ -1,3 +1,11 @@
 # ¿Debe decirse “Teorema central del límite” o “Teorema del límite central”? {.unnumbered}
 
-texto
+Lo central, en el sentido de clave o fundamental, es el teorema, no el límite que es como todos los límites. Debe decirse, por tanto, “**Teorema central del límite**” y no de la otra forma.
+
+¿Y por qué este teorema es central en la teoría estadística?
+
+Cuando se tiene la suerte de enfrentar un fenómeno cuya característica de interés se puede modelar con una distribución Normal, heredamos de inmediato un arsenal de resultados útiles para la estimación de los parámetros y para hacer contraste de hipótesis. Si la aplicación de toda esa valiosa teoría dependiera de la suerte de toparse con variables de distribución Normal, su aplicación quedaría bastante restringida en la solución de problemas reales, pues existe también un amplio abanico de fenómenos en la naturaleza que no se ajustan a la distribución Normal.
+
+Lo que le da un potente valor agregado a la batería de resultados de la inferencia estadística basada en la ley Normal es saber que gran parte de dicho conocimiento es útil, aun cuando la característica de estudio no se pueda modelar con esta distribución. Esto se justifica precisamente con el teorema a que estamos haciendo referencia, pues demuestra que es plausible modelar la variable aleatoria media muestral por medio de la distribución Normal, aun cuando la población madre de donde se extrae la muestra tenga otra distribución distinta de la Normal, exigiendo para su aplicación un conjunto no muy fuerte de condiciones que pueden hacerse cumplir en la práctica.
+
+Hay pocos resultados tan importantes como este, por eso se trata de un **teorema central** en la teoría estadística y, disculpe que insistamos, el calificativo “central” no indica que esté en el centro de nada, como no debe estar necesariamente en el centro la estación central en una ciudad o el banco central en un país.

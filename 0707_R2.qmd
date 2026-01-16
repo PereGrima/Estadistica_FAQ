@@ -1,3 +1,31 @@
 # ¿Cómo se interpreta el valor de $R^2$ {.unnumbered}
 
-texto
+ A la vista de una ecuación de regresión es imposible saber si el ajuste es bueno, regular o malo, hace falta añadir alguna medida que informe de lo que se ha dado en llamar "bondad del ajuste". También es verdad que si solo se tiene una variable regresora basta dar un vistazo a la nube de puntos para tener una idea de como es el ajuste, pero interesa una medida objetiva y que se pueda generalizar al caso de la regresión múltiple, donde los gráficos ya no son tan claros.
+
+Como la calidad del ajuste tiene que ver con la magnitud de los residuos (la distancia entre los puntos y la recta), una primera idea podría ser medirla a través de su suma, pero sumarlos ``tal cual'' seguro que no funciona porque se compensan los positivos con los negativos. Este problema se puede resolver sumando los valores absolutos o elevando los residuos al cuadrado. Usaremos la suma del cuadrado de los residuos que --entre otras ventajas-- está más alineada con nuestro criterio de considerar como mejor ajuste aquel que minimiza esta suma.
+
+En la figura [-@fig-R2_1] se han representado en la izquierda los valores de la estatura y el peso de 5 personas y en la derecha se ha añadido la recta que mejor se ajusta a estos puntos indicando el valor del residuo que corresponde a cada uno.
+
+![Valores de los residuos](07_Fig_Regresion/0701_R2.png){#fig-R2_1 .fig-compacta2 fig-align="center" width="85%"}
+
+En este caso la suma de los cuadrados de los residuos es $Q=16$ ¿este es un valor grande o pequeño? Pues depende.
+
+Depende del número de puntos o, lo que es lo mismo, de la cantidad de residuos que se tengan. Este inconveniente se puede resolver calculando el valor $Q/n$, siendo $n$ el número de puntos. En nuestro ejemplo sería 15/5 = 3,2.
+
+Pero hay otro problema: los residuos tienen unidades, las mismas que la variable respuesta, y si cambiamos las unidades cambia el valor de $Q$. Anteriormente deberíamos haber puesto $Q=16 \text{ kg}^2$ y si en vez tener el peso en kilos lo tenemos en libras (1 libra = 0,4536 kg) el aspecto del gáfico será el mismo y el ajuste será igual de bueno, pero en este caso tendremos que $Q=77,77 \text{ lb}^2$ y $Q/n =15,55 \text{ lb}^2$.
+
+Lo ideal es tener una medida que no dependa de las unidades y que esté acotada entre dos extremos, por ejemplo entre 0 y 1, de manera que valores próximos a 0 indiquen ajustes muy malos y próximos a 1 muy buenos. Lo que haremos será calcular el valor de $Q$ ignorando la información que proporciona la variable $X$ y también el que se obtiene utilizando esa información. Comparar esos dos valores nos dará una buena idea de la capacidad de $X$ para explicar el comportamiento de $Y$.
+
+Si en nuestro ejemplo solo tenemos los valores de los pesos y nos piden que estimemos el de un individuo tomado al azar, nuestra mejor opción será dar la media de los valores disponibles. Esta situación equivale al ajuste de una recta horizontal que pasa por el valor medio del peso (figura [-@fig-R2_2]). La previsión del valor de $Y$ siempre es su valor medio con independencia del valor de $X$. En esta situación vamos a llamar $Q_Y$ a la suma de los cuadrados de los residuos. En nuestro caso $Q_Y = 56$.
+
+Cuando ajustamos la recta de regresión evidentemente disminuye el valor de $Q_Y$. En realidad, ajustamos la recta de manera que ese valor sea el mínimo posible. Gracias a disponer de los valores de $X$ hemos logrado bajar el valor de $Q$ de $Q_Y=56$ a $Q_R=16$. Usar $X$ nos ha permitido reducir un $100 \cdot (56-16)/56$ = 71,43\% la suma de los cuadrados de los residuos. Este es el valor de $R^2$, que puede escribirse de la forma:
+$$ R^2 = \frac{Q_Y-Q_R}{Q_Y}$$
+
+![Residuos en un "ajuste" sin considerar los valores de la estatura.](07_Fig_Regresion/0702_R2.png){#fig-R2_2 .fig-compacta2 fig-align="center" width="85%"}
+
+\noindent Una explicación gráfica se encuentra en la figura [-@fig-R2_3].
+
+![Interpretación del valor de $R^2$](07_Fig_Regresion/0703_R2.png){#fig-R2_3 .fig-compacta2 fig-align="center" width="65%"}
+
+
+

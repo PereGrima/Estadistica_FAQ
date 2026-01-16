@@ -145,6 +145,12 @@ window.Quarto = {
  <span class="menu-text">PRESENTACIÓN</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lista.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">LISTA DE PREGUNTAS</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -689,9 +695,248 @@ window.Quarto = {
 </header>
 
 
-<p>texto</p>
+<p>Sí se puede, pero no como si fueran cuantitativas. Si queremos usar el día de la semana como variable explicativa y tenemos los días codificados como lunes = 1, martes = 2, …, es evidente que esta variable no se puede considerar así, ya que el modelo entendería que el domingo es 7 veces el lunes, cosa evidentemente falsa. Sin embargo sí hay forma de utilizar variables cualitativas.</p>
+<p>En la siguiente tabla tenemos los datos correspondientes al peso, la estatura y el sexo de 20 individuos<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Se trata de encontrar una ecuación para explicar el peso en función de la estatura y el sexo.</p>
+<div class="tabla-wrapper">
+
+<table class="tabla-muestras caption-top table">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Individuo</th>
+<th data-quarto-table-cell-role="th">Peso (kg)</th>
+<th data-quarto-table-cell-role="th">Altura (cm)</th>
+<th data-quarto-table-cell-role="th">Sexo: Hom/Muj</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+<tr class="even" style="border-bottom: 1px solid #000;">
+<td>1</td>
+<td>55,0</td>
+<td>1,60</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>Lo primero será echar un vistazo a los datos a través de un gráfico. En este caso basta con un diagrama bivariante usando distinto símbolo según el sexo (figura <a href="#fig-Cualitativas1" class="quarto-xref"><span>1</span></a>). Está claro que tanto la estatura como el sexo influyen en el peso.</p>
+<div id="fig-Cualitativas1" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Cualitativas1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="07_Fig_Regresion/1001_VarCualitativas.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Cualitativas1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Datos del ejemplo estratificados según el sexo
+</figcaption>
+</figure>
+</div>
+<p>Cuando tenemos una variable cualitativa que solo toma dos valores se puede introducir en el modelo codificándola con valores numéricos. Para facilitar la interpretación de los resultados lo mejor es codificar un valor como 0 y el otro como 1. En este caso convenimos: Mujer = 0 y Hombre = 1. Ajustando la ecuación de regresión se obtiene:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07_Fig_Regresion/1002_Modelo1.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></p>
+</figure>
+</div>
+<p>Del resultado anterior se deduce que sí hay diferencias debido al sexo, ya que el coeficiente de esta variable es significativo. Sustituyéndola por sus valores 0 y 1, se obtienen los modelos específicos para mujeres y hombres:</p>
+<p>Así de sencillo, pero ajustando el modelo de esta forma la pendiente de la recta siempre es la misma, tanto para mujeres como para hombres (figura <a href="#fig-Cualitativas2" class="quarto-xref"><span>2</span></a>). Esto es debido a que al cambiar el valor de la variable codificada solo cambia el intercepto <span class="math inline">\(b_0\)</span>.</p>
+<div id="fig-Cualitativas2" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Cualitativas2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="07_Fig_Regresion/1003_VarCualitativas.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Cualitativas2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Ajustes sin considerar el término Sexo*Estatura
+</figcaption>
+</figure>
+</div>
+<p>Si queremos que la pendiente de las rectas pueda ser distinta deberemos incluir en el modelo el producto de la variable cualitativa por las otras variables regresoras (en este caso sólo la altura). De esta forma se obtiene la siguiente ecuación:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07_Fig_Regresion/1004_Modelo2.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></p>
+</figure>
+</div>
+<p>La significación del término Altura*Sexo pone de manifiesto la diferencia en las pendientes de las rectas. Los modelos que se obtienen en este caso son:</p>
+<p>En la figura <a href="#fig-Cualitativas3" class="quarto-xref"><span>3</span></a>} tenemos su representación gráfica. Seguro que ahora nos quedamos más tranquilos con los ajustes obtenidos.</p>
+<div id="fig-Cualitativas3" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Cualitativas3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="07_Fig_Regresion/1005_VarCualitativas.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Cualitativas3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Ajustes considerando el término Sexo*Estatura
+</figcaption>
+</figure>
+</div>
+<p>¿Y si la variable cualitativa tiene más de dos valores distintos? La regla general es que una variable cualitativa con $ k $ valores debe sustituirse por $ k-1 $ variables binarias que toman valores 0 y 1. En el caso de la variable “día de la semana”, como <span class="math inline">\(k=7\)</span> habrá que sustituirla por 6 variables binarias tal como se indica en la siguiente tabla.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Valores<br>
+originales</th>
+<th>Variables auxiliares</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>$Z_1$</td>
+<td>$Z_2$</td>
+</tr>
+<tr class="even">
+<td>Lunes</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Martes</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Miércoles</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>Jueves</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Viernes</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>Sábado</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Domingo</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Si el número de observaciones de que se dispone no da para estimar con solvencia tantos coeficientes, una opción podría ser usar los días clasificados solo como laborables y festivos. De esta forma el análisis es más sencillo y la presentación de los resultados se puede realizar de forma más clara y compacta, lo cual también es importante.</p>
 
 
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><small>Son datos ficticios, hemos puesto unos valores que ilustren de forma clara la situación que queremos mostrar</small><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

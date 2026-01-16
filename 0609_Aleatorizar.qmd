@@ -5,29 +5,29 @@ Siempre se insiste en que una cosa es el orden en que se presenta la matriz de d
 ```{=html}
 <div style="width:300px; margin:0 auto;">
   <table style="width:100%; table-layout:fixed;">
-  <colgroup>
-      <col style="width:20%">
-      <col style="width:60%">
-      <col style="width:20%">
-    </colgroup>
-    <tr>
-      <td align="center"><br>Orden</td>
-      <td align="center">Matriz de diseño<br>A &nbsp &nbsp &nbsp &nbsp B &nbsp &nbsp &nbsp &nbsp C</td>
-      <td align="center"><br>Respuesta</td>
-    </tr>
-    <tr>
-      <td align="center">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8</td>
-      <td align="center"> - &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp &nbsp - <br>
-                          + &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp &nbsp - <br> 
-                          - &nbsp &nbsp &nbsp &nbsp + &nbsp &nbsp &nbsp &nbsp - <br>
-                          + &nbsp &nbsp &nbsp &nbsp + &nbsp &nbsp &nbsp &nbsp - <br>
-                          - &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp &nbsp + <br>
-                          + &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp &nbsp + <br>
-                          - &nbsp &nbsp &nbsp &nbsp + &nbsp &nbsp &nbsp &nbsp + <br>
-                          + &nbsp &nbsp &nbsp &nbsp + &nbsp &nbsp &nbsp &nbsp + </td>
-      <td align="center"> y<sub>1</sub> <br> y<sub>2</sub> <br> y<sub>3</sub> <br> y<sub>4</sub> <br> y<sub>5</sub> <br> y<sub>6</sub> <br> y<sub>7</sub> <br> y<sub>8</sub> </td>
-    </tr>
-  </table>
+<colgroup>
+    <col style="width:20%">
+    <col style="width:60%">
+    <col style="width:20%">
+  </colgroup>
+  <tr>
+    <td align="center"><br>Orden</td>
+    <td align="center">Matriz de diseño<br>A &nbsp &nbsp &nbsp &nbsp B &nbsp &nbsp &nbsp &nbsp C</td>
+    <td align="center"><br>Respuesta</td>
+  </tr>
+  <tr>
+    <td align="center">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8</td>
+    <td align="center"> - &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp &nbsp - <br>
+                        + &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp &nbsp - <br> 
+                        - &nbsp &nbsp &nbsp &nbsp + &nbsp &nbsp &nbsp &nbsp - <br>
+                        + &nbsp &nbsp &nbsp &nbsp + &nbsp &nbsp &nbsp &nbsp - <br>
+                        - &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp &nbsp + <br>
+                        + &nbsp &nbsp &nbsp &nbsp - &nbsp &nbsp &nbsp &nbsp + <br>
+                        - &nbsp &nbsp &nbsp &nbsp + &nbsp &nbsp &nbsp &nbsp + <br>
+                        + &nbsp &nbsp &nbsp &nbsp + &nbsp &nbsp &nbsp &nbsp + </td>
+    <td align="center"> y<sub>1</sub> <br> y<sub>2</sub> <br> y<sub>3</sub> <br> y<sub>4</sub> <br> y<sub>5</sub> <br> y<sub>6</sub> <br> y<sub>7</sub> <br> y<sub>8</sub> </td>
+  </tr>
+</table>
 </div>
 ```
 \
@@ -40,4 +40,3 @@ Algunas personas (les llamaremos “académicos”) consideran que el orden est�
 Otras personas (les llamaremos “prácticos”) opinan que si al aleatorizar sale el orden estándar lo mejor es volver a realizar la aleatorización. Porque aunque es verdad que la tendencia vinculada al orden puede ser de cualquier tipo, en el caso de que exista es más razonable considerar que sea monótona creciente o decreciente y en ese caso el orden estándar sale especialmente perjudicado. Además, es difícil explicar que el denostado orden estándar para realizar la experimentación es el que finalmente hay que llevar cabo. Consuela saber que las probabilidades de que esto ocurra son pocas. Exactamente 1 entre 40.320 en un diseño $2^3$ y del orden de 1 entre 21 billones en un $2^4$.
 
 Quizá en esta polémica conviene tener presente que la palabra “aleatorizar” se utiliza en estadística con dos significados distintos. Una cosa es aleatorizar la selección de una muestra que se va a considerar aleatoria, en cuyo caso esta es una condición crítica y hay que andarse con cuidado con los relajamientos, y otra cosa es aleatorizar el orden de realización de los experimentos. Aunque la palabra es la misma (quizá la más sacralizada de las que usamos en estadística) en el último caso se trata de una práctica del tipo “curarse en salud” de forma que su significado e implicaciones son distintas.
-

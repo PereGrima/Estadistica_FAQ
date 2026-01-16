@@ -14,25 +14,50 @@ Veamos ahora otra situación. Supongamos que los valores obtenidos son los de la
 
 Veamos ahora cuales son las medias en ambos casos:
 
-<table style="width:65%; margin-left:auto; margin-right:auto; font-size:0.95em; text-align:center; margin-bottom:2em;">
+```{=html}
+<div class="tabla-wrapper">
+<table class="tabla-peq">
   <thead>
     <tr style="border-top:1px solid #000;">
-      <td colspan="2" style="padding:4px;">Caso 1<br> Muestra $\;\;\;\;\;\;\;$ Media </td>
-      <td colspan="2" style="padding:4px;">Caso 2<br> Muestra $\;\;\;\;\;\;\;$ Media</td>
+      <th colspan="2">Caso 1</th>
+      <th style="width:1.5em;"></th>
+      <th colspan="2">Caso 2</th>
+    </tr>
+    <tr style="border-bottom:1px solid #000;">
+      <th>Muestra</th>
+      <th>Media</th>
+      <th></th>
+      <th>Muestra</th>
+      <th>Media</th>
     </tr>
   </thead>
 
   <tbody>
-  <tr style="border-top:1px solid #000;">
-    <td> $\;\;\;\;\;$ A <br> $\;\;\;\;\;$ B <br> $\;\;\;\;\;$ C </td>
-    <td> $\;\;$ 13,73 <br> $\;\;$ 15,71 <br> $\;\;$ 14,00 </td>
-    <td> $\;\;\;\;\;$ D <br> $\;\;\;\;\;$ E <br> $\;\;\;\;\;$ F </td>
-    <td> $\;\;$ 13,73 <br> $\;\;$ 15,71 <br> $\;\;$ 14,00 </td>
-  </tr>
-  <tr style="border-bottom:1px solid #000;">
+    <tr>
+      <td>A</td>
+      <td>13,73</td>
+      <td></td>
+      <td>D</td>
+      <td>13,73</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>15,71</td>
+      <td></td>
+      <td>E</td>
+      <td>15,71</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #000;">
+      <td>C</td>
+      <td>14,00</td>
+      <td></td>
+      <td>F</td>
+      <td>14,00</td>
+    </tr>
   </tbody>
 </table>
-
+</div>
+```
 
 ¡Las medias son idénticas! Entonces, ¿por qué las conclusiones han sido distintas?
 
@@ -45,107 +70,52 @@ $$\bullet \;\;\;\; \bullet \;\;\;\; \bullet$$
 Los valores representados son:
 
 Situación 1:
+
 ```{=html}
 
-<table width="550" cellpadding="1"  border="0" class="center fila-compacta2" style="margin: 0 auto;">
-    
-<tr style="border-bottom:0px solid grey"> </tr>
-<tr>
-<td style="text-align:center">A:</td>
-<td style="text-align:center">13,7</td>
-<td style="text-align:center">13,5</td>
-<td style="text-align:center">13,2</td>
-<td style="text-align:center">14,6</td>
-<td style="text-align:center">14,4</td>
-<td style="text-align:center">13,2</td>
-<td style="text-align:center">14,0</td>
-<td style="text-align:center">13,5</td>
-<td style="text-align:center">13,7</td>
-<td style="text-align:center">13,5</td>
-</tr>
-
-<tr style="border-bottom:0px solid grey">
-<tr>
-<td style="text-align:center">B:</td>
-<td style="text-align:center">15,2</td>
-<td style="text-align:center">16,8</td>
-<td style="text-align:center">16,5</td>
-<td style="text-align:center">14,9</td>
-<td style="text-align:center">15,5</td>
-<td style="text-align:center">16,0</td>
-<td style="text-align:center">16,0</td>
-<td style="text-align:center">14,7</td>
-<td style="text-align:center">16,3</td>
-<td style="text-align:center">15,2</td>
-</tr>
-
-<tr>
-<tr style="border-bottom:0px solid grey">
-<td style="text-align:center">C:</td>
-<td style="text-align:center">14,6</td>
-<td style="text-align:center">15,2</td>
-<td style="text-align:center">13,8</td>
-<td style="text-align:center">13,2</td>
-<td style="text-align:center">13,5</td>
-<td style="text-align:center">13,8</td>
-<td style="text-align:center">14,3</td>
-<td style="text-align:center">14,3</td>
-<td style="text-align:center">13,8</td>
-<td style="text-align:center">13,5</td>
-</tr>
-
+<table class="center fila-ultra-compacta">
+  <tbody>
+    <tr>
+      <td>A:</td>
+      <td>13,7</td><td>13,5</td><td>13,2</td><td>14,6</td><td>14,4</td>
+      <td>13,2</td><td>14,0</td><td>13,5</td><td>13,7</td><td>13,5</td>
+    </tr>
+    <tr>
+      <td>B:</td>
+      <td>15,2</td><td>16,8</td><td>16,5</td><td>14,9</td><td>15,5</td>
+      <td>16,0</td><td>16,0</td><td>14,7</td><td>16,3</td><td>15,2</td>
+    </tr>
+    <tr>
+      <td>C:</td>
+      <td>14,6</td><td>15,2</td><td>13,8</td><td>13,2</td><td>13,5</td>
+      <td>13,8</td><td>14,3</td><td>14,3</td><td>13,8</td><td>13,5</td>
+    </tr>
+  </tbody>
 </table>
 ```
 \
 Situación 2:
+
 ```{=html}
 
-<table width="550" cellpadding="1"  border="0" class="center fila-compacta2" style="margin: 0 auto;">
-    
-<tr style="border-bottom:0px solid grey"> </tr>
-<tr>
-<td style="text-align:center">D:</td>
-<td style="text-align:center">14,9</td>
-<td style="text-align:center">16,4</td>
-<td style="text-align:center">14,2</td>
-<td style="text-align:center">7,7</td>
-<td style="text-align:center">11,8</td>
-<td style="text-align:center">7,7</td>
-<td style="text-align:center">17,4</td>
-<td style="text-align:center">10,4</td>
-<td style="text-align:center">20,3</td>
-<td style="text-align:center">17,2</td>
-</tr>
-
-<tr style="border-bottom:0px solid grey">
-<tr>
-<td style="text-align:center">E:</td>
-<td style="text-align:center">14,4</td>
-<td style="text-align:center">15,1</td>
-<td style="text-align:center">12,2</td>
-<td style="text-align:center">20,5</td>
-<td style="text-align:center">10,5</td>
-<td style="text-align:center">19,9</td>
-<td style="text-align:center">23,0</td>
-<td style="text-align:center">14,3</td>
-<td style="text-align:center">10,8</td>
-<td style="text-align:center">16,4</td>
-</tr>
-
-<tr>
-<tr style="border-bottom:0px solid grey">
-<td style="text-align:center">F:</td>
-<td style="text-align:center">11,4</td>
-<td style="text-align:center">19,5</td>
-<td style="text-align:center">10,7</td>
-<td style="text-align:center">14,2</td>
-<td style="text-align:center">14,8</td>
-<td style="text-align:center">8,0</td>
-<td style="text-align:center">21,2</td>
-<td style="text-align:center">8,7</td>
-<td style="text-align:center">21,8</td>
-<td style="text-align:center">9,7</td>
-</tr>
-
+<table class="center fila-ultra-compacta">
+  <tbody>
+    <tr>
+      <td>A:</td>
+      <td>14,9</td><td>16,4</td><td>14,2</td><td>7,7</td><td>11,8</td>
+      <td>7,7</td><td>17,4</td><td>10,4</td><td>20,3</td><td>17,2</td>
+    </tr>
+    <tr>
+      <td>B:</td>
+      <td>14,4</td><td>15,1</td><td>12,2</td><td>20,5</td><td>10,5</td>
+      <td>19,9</td><td>23,0</td><td>14,3</td><td>10,8</td><td>16,4</td>
+    </tr>
+    <tr>
+      <td>C:</td>
+      <td>11,4</td><td>19,5</td><td>10,7</td><td>14,2</td><td>14,8</td>
+      <td>8,0</td><td>21,2</td><td>8,7</td><td>21,8</td><td>9,7</td>
+    </tr>
+  </tbody>
 </table>
 ```
+

@@ -689,7 +689,19 @@ window.Quarto = {
 </header>
 
 
-<p>texto</p>
+<p>Si el objetivo que se pretende es la normalidad de los datos o la homogeneidad de su varianza, es indiferente cual sea la base de la transformación logarítmica.</p>
+<p>Recordemos que <span class="math inline">\(z\)</span> es el logaritmo en base <span class="math inline">\(a\)</span> de <span class="math inline">\(y\)</span> si <span class="math inline">\(a^z=y\)</span>. En el caso del logaritmo neperiano la base es el famoso número <span class="math inline">\(e\)</span> y tenemos: <span class="math display">\[\ln(y) = x \qquad  \Leftrightarrow \qquad e^x = y\]</span></p>
+<p>Comparemos ahora el <span class="math inline">\(\ln(y)\)</span>, con el logaritmo en cualquier otra base, por ejemplo en base 10. Tenemos:</p>
+<p><span class="math display">\[x=\ln(y) \qquad \;\, \Leftrightarrow \qquad e^x = y\]</span> <span class="math display">\[z=\log_{10}(y) \qquad  \Leftrightarrow \qquad 10^z = y\]</span></p>
+<p>Por tanto, podemos escribir: <span class="math display">\[\begin{equation*}
+    \begin{split}
+        e^x &amp;=10^z\\
+        \ln(e^x)&amp;= \ln(10^z)\\
+        x &amp;= \ln(10^z) = z\ln(10)
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Como <span class="math inline">\(x\)</span> es el nombre que hemos dado a <span class="math inline">\(\ln(y)\)</span>, el <span class="math inline">\(\ln(10)\)</span> es una constante igual a 2,3026 y <span class="math inline">\(z\)</span> es el nombre asignado a <span class="math inline">\(\log_{10}(y)\)</span>, tenemos: <span class="math display">\[\ln(y)=z\ln(10)=2,3026z=2,3026\log_{10}(y)\]</span></p>
+<p>Es decir que el logaritmo neperiano se convierte en logaritmo en base 10 al multiplicarlo por una constante, lo cual significa que si al aplicar una transformación con logaritmo neperiano se logra la distribución Normal o la homogeneidad de varianza, idéntico efecto surte la aplicación del logaritmo en cualquier otra base, en particular en base 10.</p>
 
 
 

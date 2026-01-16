@@ -1,3 +1,50 @@
 # ¿Qué significan los llamados “grados de libertad”? {.unnumbered}
 
-texto
+Aunque el concepto de grados de libertad está muy presente en los métodos estadísticos, los libros de texto no suelen entrar en él con mucho detalle, quizá porque hacerlo implica meterse en el terreno de la geometría vectorial que complica las cosas y se aparta de los objetivos de un curso general de estadística. Nosotros, siguiendo con la intuición como principal arma, vamos a presentarlo primero desde un punto de vista geométrico para después pasar al contexto estadístico.
+
+#### Visión geométrica
+
+Si le piden que elija un par de números $(x, y)$ totalmente al azar, usted tiene libertad completa para su elección. Esos números pueden considerarse las coordenadas de un punto localizado en el plano $XY$, el cual es un espacio bidimensional. El punto es libre de moverse en ambas direcciones, tiene dos grados de libertad.
+
+Ahora supongamos que nos ponen a elegir un par de números cuya suma sea igual a 7. Está claro que sólo podemos elegir libremente uno de ellos, pues el segundo queda fijado una vez se conozca el primero. Aunque aquí también hay dos variables, sólo una es independiente, por lo que el número de grados de libertad se reduce de dos a uno. El punto ahora es libre de moverse en el plano $XY$ pero restringido a permanecer sobre la recta $x+y=7$. Esta línea es un espacio unidimensional que está contenido en el espacio bidimensional original.
+
+Supongamos ahora que nos piden escoger un par de números, tal que la suma de sus cuadrados sea 25. De nuevo, está claro que sólo somos libres de escoger uno de los números, pues una vez seleccionemos el primero el otro queda fijado. El punto en cuestión permanece en una circunferencia de radio 5 y con centro en el origen. La circunferencia también es un espacio unidimensional contenido en un plano bidimensional. El punto solo puede moverse hacia delante o hacia atrás a lo largo de la circunferencia y por eso tiene un solo grado de libertad. Hay dos números escogidos ($N = 2$) sujetos a una restricción ($r = 1$) y el número resultante de grados de libertad es $N-r=2-1=1$.
+
+Supongamos ahora que imponemos simultáneamente las dos condiciones $x+y=7$ y también $x^2+y^2=25$. Si nosotros resolvemos algebraicamente estas ecuaciones, obtenemos que sólo son posibles dos soluciones $x=3$, $y=4$ o bien $x=4$, $y=3$. Ninguna variable puede escogerse a voluntad. El punto está restringido por la ecuación $x+y=7$ a moverse a lo largo de una recta y además está restringido por la ecuación $x^2+y^2=25$ a moverse a lo largo de una circunferencia. Las dos restricciones simultaneas lo confinan a la intersección entre la recta y la circunferencia, dejándolo sin libertad de movimiento, es decir sin grados de libertad.
+
+Estas ideas se pueden generalizar para $N>2$, de forma que cualquier conjunto de $N$ números determinan un punto en el espacio $N$-dimensional. Si no se impone ninguna restricción, cada número es libre de variar independientemente de los otros y por lo tanto el número de grados de libertad es $N$. Cada relación impuesta sobre ellos reduce el número de grados de libertad en 1. Cualquier ecuación de primer grado que conecte las $N$ variables es un espacio de $N-1$ dimensiones. Si por ejemplo, consideramos solamente los puntos cuya suma de coordenadas es una constante, $\sum x_i=c$, hemos limitado el punto a un espacio de $N-1$ dimensiones. 
+
+También una muestra de tamaño $N$, a la que no se ha impuesto ninguna restricción, puede ser representada por un punto $(X_1, X_2, X_3,\, \dotsi, X_N)$  en un espacio $N$-dimensional con $N$ grados de libertad. Ahora bien, si forzamos que su media sea $\bar{X}$ ya tenemos una restricción y, por tanto, $N-1$ grados de libertad. Todas las muestras de tamaño $N$ con la misma media $\bar{X}$, estarán representadas por los puntos que pertenecen al hiperplano $\sum X_i=N\bar{X}$, que es un espacio de ($N-1$) dimensiones.
+
+#### Grados de libertad en la varianza muestral
+
+Seguramente las primeras reflexiones sobre la idea de grados de libertad en el contexto de la estadística surgen cuando queremos explicar por qué para calcular la varianza muestral se recomienda dividir por $n-1$, en lugar de dividir por $n$, siendo este es el número total de datos que componen la muestra. 
+
+Sabemos que la suma de las desviaciones de los datos con respecto a su media es siempre nula, es decir que $\sum_{i=1}^n (x_i - \bar{x})=0$. Esto significa que de los $n$ sumandos que tiene el numerador de la varianza solo $n-1$ son independientes, es decir, sólo podemos “inventarnos” $n-1$ si queremos que los $n$ tengan la media definida. 
+
+Por esta razón, aunque la varianza se ha calculado a partir de $n$ datos, es importante el hecho de que estos tengan sólo $n-1$ grados de libertad, ya que para obtener un estimador insesgado de la varianza poblacional, debemos dividir la suma de cuadrados por el número de sus grados de libertad, y no por el número de datos.
+
+#### Grados de libertad en las ecuaciones de regresión
+
+\noindent Veamos ahora que ocurre en el caso de querer ajustar una línea recta a un conjunto de puntos usando el método de los mínimos cuadrados. La familia de modelos a considerar es de la forma $y_i = \beta_0+\beta_1x_i+\varepsilon_i$  y de entre todas las posibles rectas, queremos aquella con coeficientes $b_0$, $b_1$ que haga mínima la suma de los cuadrados de los residuos $SCR$. Para esto se realiza un proceso de optimización matemática, obteniéndose que dichos valores $b_0$, $b_1$ deben cumplir con las siguientes restricciones:
+\begin{equation*}
+	\begin{split}
+		e_1+e_2+e_3+ \dotsi + e_{n-1}+e_n &= 0 \\
+		e_1x_1 + e_2x_2 +e_3x_3 + \dotsi + e_{n-1}x_{n-1}+e_nx_n &= 0
+	\end{split}
+\end{equation*}
+
+La primera restricción quita un grado de libertad a los residuos, ya que conocidos cualesquiera $n-1$ queda unívocamente definido el enésimo. Además, esto implica que la recta debe pasar por el punto $(\bar{x}, \bar{y})$.
+
+Podemos imaginarnos que las posibilidades se restringen a un haz de rectas que pasan por $(\bar{x}$, $\bar{y})$, pero de todas ellas escogeremos aquella que cumpla con la segunda restricción, con lo cual el error pierde otro grado de libertad, quedando con $n-2$.
+
+Es conveniente saber que $SCR/(n-2)$ es un estimador insesgado de la varianza del error $\sigma^2$ y que, en general, para un modelo de regresión múltiple con $ p $ parámetros ($p-1$ variables predictoras), el número de grados de libertad de los residuos es $(n-p)$ y por lo tanto $SCR/(n-p)$ es también un estimador insesgado para la varianza del error. 
+
+#### Generalización del concepto de grados de libertad
+
+Una definición formal de grados de libertad, muy orientada a su cálculo podría ser: ``Número de unidades independientes de información en una muestra, que son relevantes para la estimación de un parámetro o para el cálculo de un estadístico''.
+
+En el ejemplo del estadístico ``varianza'' existe una sola restricción por lo que los grados de libertad se reducen a $n-1$, y el número de unidades de información que consideramos a efectos de la estimación de la varianza poblacional son $n-1$. De la misma forma, en un modelo de regresión con $n$ puntos y $p$ parámetros los residuos tienen $n-p$ grados de libertad, por lo que en la estimación de la varianza de los errores $\sigma^2$ tenemos $n-p$ unidades independientes de información y dividimos la suma de cuadrados por $n-p$. 
+
+El número de grados de libertad también forma parte de la descripción de algunas distribuciones de probabilidad, que toman esta característica de su relación con ciertos estadísticos. Así, por ejemplo, si $X \sim N(\mu; \sigma)$ y $S$ es un estimador de $\sigma$ calculado a partir de una muestra con $n-1$ grados de libertad, entonces la variable $(X-\mu)/S$ se distribuye según una $t$ de Student con $n-1$ grados de libertad (los de $S$). Para describir la variabilidad que presenta la varianza muestral $S^2$ utilizamos la distribución Chi-cuadrado también con $n-1$ grados de libertad (los de $S^2$). Finalmente, si tenemos dos muestras de tamaños $n_1$ y $n_2$ de una población Normal, el cociente $S_1^2/S_2^2$ sigue una distribución $F$ de Snedecor con $n_1-1$ (los de la varianza del numerador) y $n_2-1$ (los de la varianza del denominador) grados de libertad.
+

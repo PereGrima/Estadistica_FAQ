@@ -689,9 +689,28 @@ window.Quarto = {
 </header>
 
 
-<p>texto</p>
+<p>El coeficiente de determinación <span class="math inline">\(R^2\)</span> es una excelente medida de bondad del ajuste en el ámbito de la regresión simple y también en el de la regresión múltiple cuando se comparan ajustes con el mismo número de variable regresoras. El problema que presenta <span class="math inline">\(R^2\)</span> es que su valor aumenta siempre al añadir nuevas variables aunque estas no expliquen nada.</p>
+<p>Si usted ajusta un modelo para explicar el peso de las personas a partir de los datos de un conjunto de 50 individuos, puede empezar ajustando el peso en función de la estatura y obtendrá un determinado valor de <span class="math inline">\(R^2\)</span>, si añade una variable que no tiene nada que ver, como el dinero que cada uno lleva en el bolsillo ¿cómo cambiará <span class="math inline">\(R^2\)</span>? Pues sí, aumentará. Y si añadimos el número de la casa donde vive cada uno volverá a aumentar, de manera que si lo que buscamos es un ajuste con el máximo valor de <span class="math inline">\(R^2\)</span> vamos a acabar con un modelo grande y enredado lleno de variables que no explican absolutamente nada, y eso no nos interesa.</p>
+<p>Hemos hablado de añadir nuevas variables, pero lo dicho también sirve si se añaden transformaciones de variables ya usadas. En la figura <a href="#fig-R2Ajustado" class="quarto-xref"><span>1</span></a> tenemos 4 situaciones en las que 5 puntos son ajustados por un modelo lineal, cuadrático, cúbico y de cuarto grado.</p>
+<div id="fig-R2Ajustado" class="fig-compacta2 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-R2Ajustado-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="07_Fig_Regresion/0901_R2Ajustado.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-R2Ajustado-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Diferentes ajustes a un conjunto de 5 puntos
+</figcaption>
+</figure>
+</div>
+<p>En el último modelo ocurre una gran paradoja. Sin necesidad de conocer los datos se puede afirmar que el ajuste será perfecto, pues así como por dos puntos pasa una única recta, tres puntos se pueden ajustar perfectamente a un polinomio de segundo grado, cuatro puntos a uno de tercer grado, y cinco puntos a uno de grado cuatro. Siempre por <span class="math inline">\(n+1\)</span> puntos pasará un polinomio de grado <span class="math inline">\(n\)</span>, y el ajuste será “perfecto” sin importar cuales sean los datos. Esto es un verdadero adefesio ya que este tipo de ecuaciones no tienen ningún poder de predicción, que es lo realmente importante.</p>
+<p>Para evitar este problema se ha corregido la definición de <span class="math inline">\(R^2\)</span>, dando origen al coeficiente de determinación ajustado. Simplemente se dividen las sumas de cuadrados por sus grados de libertad. Los grados de libertad de la <span class="math inline">\(Q_R\)</span> son <span class="math inline">\(n-p\)</span>, y ese valor de <span class="math inline">\(p\)</span> penaliza la incorporación de nuevas variables. <span class="math display">\[ R^2 = 1 - \frac{Q_R}{Q_Y}\;\; \rightarrow \;\; R_{\text{Aj}}^2= 1 - \frac{\frac{Q_R}{n-p}}{\frac{Q_Y}{n-1}} \;\; \rightarrow \;\; R_{\text{Aj}}^2= 1 - \frac{s_R^2}{s_Y^2}\]</span> Cuando la relación <span class="math inline">\(n/p\)</span> se hace grande, es decir que el número de datos supera mucho al número de parámetros, los dos coeficientes se acercan en sus valores. Si con <span class="math inline">\(n=10\)</span> puntos se ajusta un polinomio de grado 8 (<span class="math inline">\(p=9\)</span>) y resulta un coeficiente de determinación <span class="math inline">\(R^2= 90\%\)</span>, podrá dar la falsa impresión de que estamos ante un buen modelo. Sin embargo, utilizando las fórmulas anteriores es fácil deducir que $R^2 =$0,1, es decir, nos indica que en esas condiciones el valor creíble del coeficiente de determinación es el 10 %. El ajuste es bastante pobre.</p>
+<p>Sin embargo, supongamos ahora la misma situación anterior donde lo único que cambia es que se tienen <span class="math inline">\(n=90\)</span> observaciones. En este caso tenemos <span class="math inline">\(R^2\text{-Aj} =0,89\)</span>. Pasamos del 90 al 89 %, es decir que ha tenido muy poco cambio. Note que en esta ocasión se cumple la recomendación empírica de que haya 10 observaciones por cada parámetro, es decir, que la razón <span class="math inline">\(n/p\)</span> valga por lo menos 10.</p>
+<section id="bonus-track" class="level4">
+<h4 class="anchored" data-anchor-id="bonus-track">Bonus track</h4>
+<p>Usted puede construir un modelo que explique perfectamente la cotización en bolsa de las 5 grandes empresas que desee. Tome esas las 5 cotizaciones de hoy (que serán las <span class="math inline">\(Y\)</span>) seleccione ahora las temperaturas máximas de ayer en 5 capitales europeas (<span class="math inline">\(X_1\)</span>), el tipo de cambio de las 5 monedas que usted elija frente al dólar (<span class="math inline">\(X_2\)</span>), los precios de 5 materias primas en el mercado de Londres (<span class="math inline">\(X_3\)</span>) y la temperatura media en Cali en los últimos 5 días (<span class="math inline">\(X_4\)</span>). Obtenga el modelo que explica Y en función de <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, <span class="math inline">\(X_3\)</span>, <span class="math inline">\(X_4\)</span>. ¡Ajuste perfecto! Lástima que para hoy llega tarde, y para mañana es totalmente inútil.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

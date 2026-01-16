@@ -16,6 +16,7 @@ book:
   
   chapters:
     - index.qmd
+    - Lista.qmd
     
     - part: Estadística. Lo que es y lo que no es
       chapters: 

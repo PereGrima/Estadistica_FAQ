@@ -1,3 +1,109 @@
 # ¿Se pueden usar variables cualitativas en ecuaciones de regresión? {.unnumbered}
 
-texto
+Sí se puede, pero no como si fueran cuantitativas. Si queremos usar el día de la semana como variable explicativa y tenemos los días codificados como lunes = 1, martes = 2, ..., es evidente que esta variable no se puede considerar así, ya que el modelo entendería que el domingo es 7 veces el lunes, cosa evidentemente falsa. Sin embargo sí hay forma de utilizar variables cualitativas.
+
+En la siguiente tabla tenemos los datos correspondientes al peso, la estatura y el sexo de 20 individuos[^0710_variables_cualitativas-1]. Se trata de encontrar una ecuación para explicar el peso en función de la estatura y el sexo.
+
+[^0710_variables_cualitativas-1]: <small>Son datos ficticios, hemos puesto unos valores que ilustren de forma clara la situación que queremos mostrar</small>
+
+```{=html}
+<div class="tabla-wrapper">
+<table class="tabla-muestras">
+  <thead>
+    <tr>
+      <th>Individuo</th>
+      <th>Peso (kg)</th>
+      <th>Altura (cm)</th>
+      <th>Sexo: Hom/Muj</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+    <tr> <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+  <tr style="border-bottom: 1px solid #000;">
+  <td>1</td> <td>55,0</td> <td>1,60</td> <td>M</td> </tr>
+  </tbody>
+</table>
+</div>
+```
+
+
+Lo primero será echar un vistazo a los datos a través de un gráfico. En este caso basta con un diagrama bivariante usando distinto símbolo según el sexo (figura [-@fig-Cualitativas1]). Está claro que tanto la estatura como el sexo influyen en el peso.
+
+![Datos del ejemplo estratificados según el sexo](07_Fig_Regresion/1001_VarCualitativas.png){#fig-Cualitativas1 .fig-compacta2 fig-align="center" width="85%"}
+
+Cuando tenemos una variable cualitativa que solo toma dos valores se puede introducir en el modelo codificándola con valores numéricos. Para facilitar la interpretación de los resultados lo mejor es codificar un valor como 0 y el otro como 1. En este caso convenimos: Mujer = 0 y Hombre = 1. Ajustando la ecuación de regresión se obtiene:
+
+![](07_Fig_Regresion/1002_Modelo1.png){.fig-compacta2 fig-align="center" width="85%"}
+
+Del resultado anterior se deduce que sí hay diferencias debido al sexo, ya que el coeficiente de esta variable es significativo. Sustituyéndola por sus valores 0 y 1, se obtienen los modelos específicos para mujeres y hombres:
+
+```{=tex}
+\begin{itemize}[itemsep=-1mm, leftmargin=*]
+    \item Mujeres (sexo = 0): $\text{Peso = -169,7 + 137,6·Altura}$
+    \item Hombres (sexo = 1): $\text{Peso = -157,3 + 137,6·Altura}$
+\end{itemize}
+```
+Así de sencillo, pero ajustando el modelo de esta forma la pendiente de la recta siempre es la misma, tanto para mujeres como para hombres (figura [-@fig-Cualitativas2]). Esto es debido a que al cambiar el valor de la variable codificada solo cambia el intercepto $b_0$.
+
+![Ajustes sin considerar el término Sexo\*Estatura](07_Fig_Regresion/1003_VarCualitativas.png){#fig-Cualitativas2 .fig-compacta2 fig-align="center" width="85%"}
+
+Si queremos que la pendiente de las rectas pueda ser distinta deberemos incluir en el modelo el producto de la variable cualitativa por las otras variables regresoras (en este caso sólo la altura). De esta forma se obtiene la siguiente ecuación:
+
+![](07_Fig_Regresion/1004_Modelo2.png){.fig-compacta2 fig-align="center" width="85%"}
+
+La significación del término Altura\*Sexo pone de manifiesto la diferencia en las pendientes de las rectas. Los modelos que se obtienen en este caso son:
+
+```{=tex}
+\vspace{-0.2cm}
+\begin{itemize}[itemsep=-1mm, leftmargin=*]
+    \item Mujeres (sexo = 0): $\text{Peso = -102,3 + 97,9·Altura}$
+    \item Hombres (sexo = 1): $\text{Peso = -208,7 + 167,3·Altura}$
+\end{itemize}
+```
+En la figura [-@fig-Cualitativas3]} tenemos su representación gráfica. Seguro que ahora nos quedamos más tranquilos con los ajustes obtenidos.
+
+![Ajustes considerando el término Sexo\*Estatura](07_Fig_Regresion/1005_VarCualitativas.png){#fig-Cualitativas3 .fig-compacta2 fig-align="center" width="85%"}
+
+¿Y si la variable cualitativa tiene más de dos valores distintos? La regla general es que una variable cualitativa con \$ k \$ valores debe sustituirse por \$ k-1 \$ variables binarias que toman valores 0 y 1. En el caso de la variable “día de la semana”, como $k=7$ habrá que sustituirla por 6 variables binarias tal como se indica en la siguiente tabla.
+
++------------+----------------------+
+| Valores \  | Variables auxiliares |
+| originales |                      |
++============+======================+
+| \$Z_1\$    | \$Z_2\$              |
++------------+----------------------+
+| Lunes      | 1                    |
++------------+----------------------+
+| Martes     | 0                    |
++------------+----------------------+
+| Miércoles  | 0                    |
++------------+----------------------+
+| Jueves     | 0                    |
++------------+----------------------+
+| Viernes    | 0                    |
++------------+----------------------+
+| Sábado     | 0                    |
++------------+----------------------+
+| Domingo    | 0                    |
++------------+----------------------+
+
+Si el número de observaciones de que se dispone no da para estimar con solvencia tantos coeficientes, una opción podría ser usar los días clasificados solo como laborables y festivos. De esta forma el análisis es más sencillo y la presentación de los resultados se puede realizar de forma más clara y compacta, lo cual también es importante.
