@@ -148,7 +148,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Lista.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">LISTA DE PREGUNTAS</span></span></a>
+ <span class="menu-text">LISTA DE PREGUNTAS</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -163,25 +163,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0101_Estadistica_Matematicas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿La estadística es una parte de las matemáticas?</span></a>
+ <span class="menu-text">1.1 ¿La estadística es una parte de las matemáticas?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0102_Probabilidad_Estadistica.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿El cálculo de probabilidades es una parte de la estadística?</span></a>
+ <span class="menu-text">1.2 ¿El cálculo de probabilidades es una parte de la estadística?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0103_Que_es_Estadistica.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Qué es la estadística?</span></a>
+ <span class="menu-text">1.3 ¿Qué es la estadística?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0104_DataScience.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Qué es la ciencia de datos (o <em>Data Science</em>)?</span></a>
+ <span class="menu-text">1.4 ¿Qué es la ciencia de datos (o <em>Data Science</em>)?</span></a>
   </div>
 </li>
       </ul>
@@ -264,7 +264,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0212_Graficos_NO_usar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Qué gráfico NO debo usar para representar mis datos?</span></a>
+ <span class="menu-text">¿Qué gráficos NO debo usar para representar mis datos?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -678,7 +678,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0401_Creemos_muestra.html">Muestreo y Estimación</a></li><li class="breadcrumb-item"><a href="./0404_Elementos_muestra.html">¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?</h1>
+<h1 class="title"><span id="elementosMuestra" class="quarto-section-identifier">¿Cuántos elementos debe tener una muestra para que las conclusiones sean fiables?</span></h1>
 </div>
 
 
@@ -713,621 +713,123 @@ window.Quarto = {
 <section id="n-el-tamaño-de-la-población" class="level5">
 <h5 class="anchored" data-anchor-id="n-el-tamaño-de-la-población"><strong><em>N</em></strong>: El tamaño de la población</h5>
 <p>Parece que esta es la variable cuya influencia está más justificada, pero no es así. Si la población es grande –y esto es lo más habitual– su tamaño prácticamente no influye. Usando la fórmula que hemos visto y con la ayuda de una hoja de cálculo se puede construir la siguiente tabla donde se aprecia la poca influencia del tamaño de la población.</p>
-<table style="border-collapse:collapse; width:90%; font-size:0.85em; text-align:center; margin-bottom:2em;">
-<style>
-/* Selecciona cada 5ª fila del cuerpo de la tabla */
-table tbody tr:nth-child(5n) {
-    border-bottom: 2px solid #d3d3d3 !important;
-}
-</style>
-<caption style="caption-side:top; text-align:center; font-size:1em; font-style:italic; margin-bottom:0.5em;">
-Tamaños de muestra para la estimación de una proporción con un nivel de confianza del 95 %
-</caption>
+<table class="caption-top table">
+<caption>Tamaños de muestra para la estimación de una proporción con un nivel de confianza del 95 %</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 25%">
+</colgroup>
 <thead>
-<tr style="border-top:1px solid #000; border-bottom:1px solid #000;">
-<th rowspan="2" style="padding:4px;">
-Tamaño de <br>la población
-</th>
-<th colspan="6" style="padding:4px;">
-Margen de error
-</th>
-</tr>
-<tr style="border-bottom:1px solid #000;">
-<th>
-±1 %
-</th>
-<th>
-±2 %
-</th>
-<th>
-±3 %
-</th>
-<th>
-±4 %
-</th>
-<th>
-±5 %
-</th>
-<th>
-±10 %
-</th>
+<tr class="header">
+<th>Tamaño de<br>
+la población</th>
+<th>Margen de error</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
-500
-</td>
-<td>
-476
-</td>
-<td>
-414
-</td>
-<td>
-341
-</td>
-<td>
-273
-</td>
-<td>
-218
-</td>
-<td>
-81
-</td>
+<tr class="odd">
+<td>±1 %</td>
+<td>±2 %</td>
 </tr>
-<tr>
-<td>
-1.000
-</td>
-<td>
-906
-</td>
-<td>
-707
-</td>
-<td>
-517
-</td>
-<td>
-376
-</td>
-<td>
-278
-</td>
-<td>
-88
-</td>
+<tr class="even">
+<td>500</td>
+<td>476</td>
 </tr>
-<tr>
-<td>
-1.500
-</td>
-<td>
-1.298
-</td>
-<td>
-924
-</td>
-<td>
-624
-</td>
-<td>
-429
-</td>
-<td>
-306
-</td>
-<td>
-91
-</td>
+<tr class="odd">
+<td>1.000</td>
+<td>906</td>
 </tr>
-<tr>
-<td>
-2.000
-</td>
-<td>
-1.656
-</td>
-<td>
-1.092
-</td>
-<td>
-697
-</td>
-<td>
-462
-</td>
-<td>
-323
-</td>
-<td>
-92
-</td>
+<tr class="even">
+<td>1.500</td>
+<td>1.298</td>
 </tr>
-<tr>
-<td>
-2.500
-</td>
-<td>
-1.984
-</td>
-<td>
-1.225
-</td>
-<td>
-749
-</td>
-<td>
-485
-</td>
-<td>
-334
-</td>
-<td>
-93
-</td>
+<tr class="odd">
+<td>2.000</td>
+<td>1.656</td>
 </tr>
-<tr>
-<td>
-3.000
-</td>
-<td>
-2.287
-</td>
-<td>
-1.334
-</td>
-<td>
-788
-</td>
-<td>
-501
-</td>
-<td>
-341
-</td>
-<td>
-94
-</td>
+<tr class="even">
+<td>2.500</td>
+<td>1.984</td>
 </tr>
-<tr>
-<td>
-3.500
-</td>
-<td>
-2.566
-</td>
-<td>
-1.425
-</td>
-<td>
-818
-</td>
-<td>
-513
-</td>
-<td>
-347
-</td>
-<td>
-94
-</td>
+<tr class="odd">
+<td>3.000</td>
+<td>2.287</td>
 </tr>
-<tr>
-<td>
-4.000
-</td>
-<td>
-2.825
-</td>
-<td>
-1.501
-</td>
-<td>
-843
-</td>
-<td>
-523
-</td>
-<td>
-351
-</td>
-<td>
-94
-</td>
+<tr class="even">
+<td>3.500</td>
+<td>2.566</td>
 </tr>
-<tr>
-<td>
-4.500
-</td>
-<td>
-3.065
-</td>
-<td>
-1.566
-</td>
-<td>
-863
-</td>
-<td>
-530
-</td>
-<td>
-355
-</td>
-<td>
-95
-</td>
+<tr class="odd">
+<td>4.000</td>
+<td>2.825</td>
 </tr>
-<tr>
-<td>
-5.000
-</td>
-<td>
-3.289
-</td>
-<td>
-1.623
-</td>
-<td>
-880
-</td>
-<td>
-536
-</td>
-<td>
-357
-</td>
-<td>
-95
-</td>
+<tr class="even">
+<td>4.500</td>
+<td>3.065</td>
 </tr>
-<tr>
-<td>
-6.000
-</td>
-<td>
-3.694
-</td>
-<td>
-1.715
-</td>
-<td>
-907
-</td>
-<td>
-546
-</td>
-<td>
-362
-</td>
-<td>
-95
-</td>
+<tr class="odd">
+<td>5.000</td>
+<td>3.289</td>
 </tr>
-<tr>
-<td>
-7.000
-</td>
-<td>
-4.050
-</td>
-<td>
-1.788
-</td>
-<td>
-927
-</td>
-<td>
-553
-</td>
-<td>
-365
-</td>
-<td>
-95
-</td>
+<tr class="even">
+<td>6.000</td>
+<td>3.694</td>
 </tr>
-<tr>
-<td>
-8.000
-</td>
-<td>
-4.365
-</td>
-<td>
-1.847
-</td>
-<td>
-942
-</td>
-<td>
-559
-</td>
-<td>
-367
-</td>
-<td>
-95
-</td>
+<tr class="odd">
+<td>7.000</td>
+<td>4.050</td>
 </tr>
-<tr>
-<td>
-9.000
-</td>
-<td>
-4.647
-</td>
-<td>
-1.896
-</td>
-<td>
-955
-</td>
-<td>
-563
-</td>
-<td>
-369
-</td>
-<td>
-96
-</td>
+<tr class="even">
+<td>8.000</td>
+<td>4.365</td>
 </tr>
-<tr>
-<td>
-10.000
-</td>
-<td>
-4.900
-</td>
-<td>
-1.937
-</td>
-<td>
-965
-</td>
-<td>
-567
-</td>
-<td>
-370
-</td>
-<td>
-96
-</td>
+<tr class="odd">
+<td>9.000</td>
+<td>4.647</td>
 </tr>
-<tr>
-<td>
-15.000
-</td>
-<td>
-5.856
-</td>
-<td>
-2.070
-</td>
-<td>
-997
-</td>
-<td>
-578
-</td>
-<td>
-375
-</td>
-<td>
-96
-</td>
+<tr class="even">
+<td>10.000</td>
+<td>4.900</td>
 </tr>
-<tr>
-<td>
-20.000
-</td>
-<td>
-6.489
-</td>
-<td>
-2.144
-</td>
-<td>
-1.014
-</td>
-<td>
-583
-</td>
-<td>
-377
-</td>
-<td>
-96
-</td>
+<tr class="odd">
+<td>15.000</td>
+<td>5.856</td>
 </tr>
-<tr>
-<td>
-25.000
-</td>
-<td>
-6.939
-</td>
-<td>
-2.191
-</td>
-<td>
-1.024
-</td>
-<td>
-587
-</td>
-<td>
-379
-</td>
-<td>
-96
-</td>
+<tr class="even">
+<td>20.000</td>
+<td>6.489</td>
 </tr>
-<tr>
-<td>
-50.000
-</td>
-<td>
-8.057
-</td>
-<td>
-2.291
-</td>
-<td>
-1.045
-</td>
-<td>
-594
-</td>
-<td>
-382
-</td>
-<td>
-96
-</td>
+<tr class="odd">
+<td>25.000</td>
+<td>6.939</td>
 </tr>
-<tr>
-<td>
-100.000
-</td>
-<td>
-8.763
-</td>
-<td>
-2.345
-</td>
-<td>
-1.056
-</td>
-<td>
-597
-</td>
-<td>
-383
-</td>
-<td>
-96
-</td>
+<tr class="even">
+<td>50.000</td>
+<td>8.057</td>
 </tr>
-<tr>
-<td>
-500.000
-</td>
-<td>
-9.423
-</td>
-<td>
-2.390
-</td>
-<td>
-1.065
-</td>
-<td>
-600
-</td>
-<td>
-384
-</td>
-<td>
-97
-</td>
+<tr class="odd">
+<td>100.000</td>
+<td>8.763</td>
 </tr>
-<tr>
-<td>
-1.000.000
-</td>
-<td>
-9.513
-</td>
-<td>
-2.396
-</td>
-<td>
-1.066
-</td>
-<td>
-600
-</td>
-<td>
-384
-</td>
-<td>
-97
-</td>
+<tr class="even">
+<td>500.000</td>
+<td>9.423</td>
 </tr>
-<tr>
-<td>
-1.500.000
-</td>
-<td>
-9.543
-</td>
-<td>
-2.398
-</td>
-<td>
-1.067
-</td>
-<td>
-600
-</td>
-<td>
-385
-</td>
-<td>
-97
-</td>
+<tr class="odd">
+<td>1.000.000</td>
+<td>9.513</td>
 </tr>
-<tr>
-<td>
-2.000.000
-</td>
-<td>
-9.558
-</td>
-<td>
-2.399
-</td>
-<td>
-1.067
-</td>
-<td>
-601
-</td>
-<td>
-385
-</td>
-<td>
-97
-</td>
+<tr class="even">
+<td>1.500.000</td>
+<td>9.543</td>
 </tr>
-<tr style="border-bottom:1px solid #000;">
-<td>
-50.000.000
-</td>
-<td>
-9.602
-</td>
-<td>
-2.401
-</td>
-<td>
-1.068
-</td>
-<td>
-601
-</td>
-<td>
-385
-</td>
-<td>
-97
-</td>
+<tr class="odd">
+<td>2.000.000</td>
+<td>9.558</td>
+</tr>
+<tr class="even">
+<td>50.000.000</td>
+<td>9.602</td>
 </tr>
 </tbody>
 </table>
