@@ -145,6 +145,12 @@ window.Quarto = {
  <span class="menu-text">PRESENTACIÓN</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Lista.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LISTA DE PREGUNTAS</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -689,7 +695,84 @@ window.Quarto = {
 </header>
 
 
-<p>texto</p>
+<p>Respecto a las probabilidades de ganar en la ruleta, nos cuesta quitarnos de encima esa idea de que si la proporción de veces que la bola cae en rojo y en negro se va igualando a medida que se lanzan bolas, si han salido muchas negras seguidas, en las próximas tiradas deben aparecer más rojas que negras para que se cumpla la ley establecida.</p>
+<p>Pero es bien sabido que ni las bolas ni la ruleta tienen memoria, lo que sí puede ocurrir es que la ruleta esté desequilibrada. Se pueden dar dos situaciones:</p>
+<ol type="1">
+<li><p><strong>La ruleta está desequilibrada</strong>. Es posible que por alguna razón la ruleta no esté perfectamente equilibrada y la bola tenga tendencia a caer con más frecuencia en el rojo.</p></li>
+<li><p><strong>La ruleta está equilibrada</strong>. En este caso la probabilidad de que caiga en el rojo o en el negro es exactamente la misma.</p></li>
+</ol>
+<p>En el primer caso habría que apostar al rojo y en el segundo es indiferente apostar a rojo o negro. Si aparece una racha de un color es más razonable apostar por ese color que por el otro. Si estamos en el caso 1 nuestra probabilidad de ganar será algo mayor y si estamos en el caso 2 será la misma.</p>
+<p>Por otra parte, las rachas de un mismo color son más habituales de lo que parece incluso estando la ruleta perfectamente equilibrada. Supongamos que una ruleta funciona 6 horas al día y se realiza un lanzamiento cada minuto, es decir, 360 lanzamientos por jornada. Hemos simulado los lanzamientos de 1000 jornadas y nos hemos fijado en la aparición de rachas. Los resultados están en la siguiente tabla:</p>
+<div class="tabla-wrapper">
+
+<table class="tabla-muestras2 caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Longitud<br>
+de la racha</th>
+<th data-quarto-table-cell-role="th">Días que ocurre<br>
+(sobre 1000)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5</td>
+<td>1000</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>998</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>937</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>755</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>492</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>304</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>159</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>73</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>22</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>13</td>
+</tr>
+<tr class="even" style="border-bottom: 1px solid #000;">
+<td>16</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>Rachas de 5, 6 y hasta 7 veces el mismo color aparecen en casi todas las jornadas (en más de 900). Aproximadamente en la mitad de las jornadas aparecen rachas de 9 y una vez de cada 100 (esto sería 3 o 4 veces al año) aparecen rachas de hasta 15 o 16 veces seguidas el mismo color. Si en un casino hay 10 ruletas esas rachas tan largas se verán aproximadamente cada 10 días.</p>
+<p>Por tanto, lo raro es que no aparezcan rachas. Que aparezcan con la frecuencia prevista lo explica el azar y en ese caso no hay ninguna señal que nos ayude a tomar una mejor decisión.</p>
 
 
 

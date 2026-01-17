@@ -193,3 +193,82 @@ table.fila-ultra-compacta tr {
   line-height: 1.4; 
 }
 
+/***   Pregunta 7.10 Tabla 7.2  ***/
+
+.tabla-peq2 {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  max-width: 600px;
+}
+
+.tabla-peq2 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 3px; 
+    padding-bottom: 3px;      /* altura de fila más pequeña */
+    line-height: 1.1;      /* compacta como en LaTeX */
+    font-size: 0.98em;
+        border: none;
+}
+
+.tabla-peq2 td {
+  font-size: 0.98em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 2px 6px;      /* altura de fila más pequeña */
+  line-height: 1.4;      /* compacta como en LaTeX */
+    border: none;
+}
+
+.tabla-wrapper {
+  margin-bottom: 4.5ex;
+}
+
+/*** Tabla 8.1  ***/
+
+.tabla-muestras2 {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+/* Líneas superior e inferior */
+.tabla-muestras2 thead tr:first-child th {
+  border-top: 1px solid #000;
+}
+
+.tabla-muestras2 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 3px; 
+    padding-bottom: 1px;      /* altura de fila más pequeña */
+    line-height: 1.4;      /* compacta como en LaTeX */
+    font-size: 1em;
+    border: none;
+}
+
+.tabla-muestras2 td {
+  font-size: 0.90em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 2px 6px;      /* altura de fila más pequeña */
+  line-height: 1.2;      /* compacta como en LaTeX */
+    border: none;
+}
+
+.tabla-muestras2 thead tr:last-child th {
+  border-bottom: 1px solid #000;
+}
+
+/* Línea cada 4 filas */
+.tabla-muestras2 tbody tr:nth-child(4n) {
+  border-bottom: 2px solid #d3d3d3;
+}
+
+/* Última fila */
+.tabla-muestras2 tbody tr:last-child {
+  border-bottom: 1px solid #000;
+}
+

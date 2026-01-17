@@ -148,7 +148,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Lista.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">LISTA DE PREGUNTAS</span></span></a>
+ <span class="menu-text">LISTA DE PREGUNTAS</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -881,53 +881,101 @@ Figura&nbsp;3: Ajustes considerando el término Sexo*Estatura
 </figure>
 </div>
 <p>¿Y si la variable cualitativa tiene más de dos valores distintos? La regla general es que una variable cualitativa con $ k $ valores debe sustituirse por $ k-1 $ variables binarias que toman valores 0 y 1. En el caso de la variable “día de la semana”, como <span class="math inline">\(k=7\)</span> habrá que sustituirla por 6 variables binarias tal como se indica en la siguiente tabla.</p>
-<table class="caption-top table">
+<div class="tabla-wrapper">
+
+<table class="tabla-peq2 caption-top table">
 <colgroup>
-<col style="width: 18%">
-<col style="width: 31%">
+<col style="width: 25%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
-<tr class="header">
-<th>Valores<br>
+<tr class="header" style="border-top:1px solid #000;">
+<th rowspan="2" data-quarto-table-cell-role="th">Valores<br>
 originales</th>
-<th>Variables auxiliares</th>
+<th colspan="6" data-quarto-table-cell-role="th">Variables auxiliares</th>
+</tr>
+<tr class="even" style="border-bottom:1px solid #000;">
+<th data-quarto-table-cell-role="th">Z<sub>1</sub></th>
+<th data-quarto-table-cell-role="th">Z<sub>2</sub></th>
+<th data-quarto-table-cell-role="th">Z<sub>3</sub></th>
+<th data-quarto-table-cell-role="th">Z<sub>4</sub></th>
+<th data-quarto-table-cell-role="th">Z<sub>5</sub></th>
+<th data-quarto-table-cell-role="th">Z<sub>6</sub></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>$Z_1$</td>
-<td>$Z_2$</td>
-</tr>
-<tr class="even">
 <td>Lunes</td>
 <td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Martes</td>
 <td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Miércoles</td>
 <td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Jueves</td>
 <td>0</td>
-</tr>
-<tr class="even">
-<td>Viernes</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<td>Sábado</td>
+<td>Viernes</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
 <td>0</td>
 </tr>
 <tr class="even">
+<td>Sábado</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd" style="border-bottom: 1px solid #000;">
 <td>Domingo</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 <td>0</td>
 </tr>
 </tbody>
 </table>
+
+</div>
 <p>Si el número de observaciones de que se dispone no da para estimar con solvencia tantos coeficientes, una opción podría ser usar los días clasificados solo como laborables y festivos. De esta forma el análisis es más sencillo y la presentación de los resultados se puede realizar de forma más clara y compacta, lo cual también es importante.</p>
 
 

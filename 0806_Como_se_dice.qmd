@@ -1,3 +1,42 @@
 # ¿Cómo se dice? ¿Qué significa? {.unnumbered}
 
-texto
+#### **En torno a la media**
+
+Cuando hablamos de la media solemos referirnos al valor medio de un conjunto de valores (la nota media de una asignatura) pero también puede ser un valor puramente teórico referido a una distribución de probabilidad (jugando a una determinada loteria se pierde una media de 30 céntimos por cada boleto que se compra). En el primer caso también se puede hablar de promedio y en el segundo de esperanza matemática.
+
+#### **¿Varianza o variancia?**
+
+Las dos son correctas y ambas aparecen en el diccionario de la RAE.
+
+#### **Otros nombres para la desviación típica**
+
+También se puede llamar desviación estándar pero no de otra manera, aunque algunos textos se refieren a ella como desviación tipo o desvío típico.
+
+#### **Distribución Normal**
+
+Llamarla “normal” fue, sin duda, una mala idea. Es una distribución "central" en la teoría estadística, pero no merece el calificativo de "normal" porque las otras no son raras. Para que quede claro que Normal no un adjetivo, cuando nos referimos a la distribución lo escribimos con mayúscula.
+
+#### **¿Distribución Chi-cuadrado o Ji-cuadrado?**
+
+La letra griega $\chi$ en español se lee "ji"''". Así se indica en el diccionario de la RAE:  "ji: Vigesimosegunda letra del alfabeto griego...". Si se busca "chi" no se encuentra nada. Pero en inglés se escribe "chi" (en latex hay que poner \verb+$\chi$+) y seguramente por esta razón es tan frecuente verlo también escrito de esta manera.
+
+#### **¿F de Snedecor o F de Fisher?**
+
+La idea original sobre la utilidad de una distribución de este tipo fue de Fisher. Esta distribución en concreto fue definida por Snedecor y le llamó F en honor a Fisher. También se designa como distribución de Fisher-Snedecor o, simplemente, distribución F.
+
+#### **Error tipo I y error tipo II**
+
+Si el que propuso estos nombres quería usar un lenguaje críptico y poco claro para complicar la vida a los estudiantes, no lo pudo hacer mejor. En el ámbito de los análisis clínicos se habla de falso positivo y falso negativo, que es lo mismo y se entiende mejor.
+
+#### **¿Que significa $P(X=x)$?**
+
+En nuestra notación, como en las contraseñas, no es lo mismo que el nombre de una variable esté en mayúscula o en minúscula.  $X$ mayúscula representa una variable aleatoria en general, como las estaturas de las personas y la $x$ minúscula se refiere a un valor concreto. Por tanto, la expresión anterior hay que entenderla como la probabilidad de que la variable aleatoria $X$ tome el valor concreto $x$. Dicho de otra manera, la $X$ mayúscula siempre es una $X$ mayúscula, la minúscula se podría sustituir por un número.
+
+#### **Letras griegas y letras latinas**
+
+Utilizamos letras griegas para designar parámetros de la población: $\mu$ para la media, $\sigma$ para la desviación típica o $\rho$ para el coeficiente de correlación. Los valores que calculamos con los datos de la muestra --o muestras-- se escriben con letras latinas, a veces con algún añadido como en el caso de la media, que se designa con la misma letra que la variable aleatoria pero con una barra encima: $\bar{x}$; para la desviación típica usamos $s$ y para el coeficiente de correlación $r$. También hay excepciones, para una proporción en la población suele usarse $p$ --no $\pi$-- y para referirnos a su estimador escribimos $\hat{p}$. En general, con un ``gorro'' encima de una letra nos referimos al estimador del parámetro designado con esa letra.
+
+#### **Error**
+
+Lo que en estadística llamamos "error" no es una equivocación ni tiene ninguna connotación negativa. Nos referimos a la diferencia entre el valor observado y el valor real o entre el valor observado y el valor teórico según el modelo establecido. Esa diferencia no existiría si no hubiera una cierta imprecisión en los procesos de medida o no existiera variabilidad en las variables que estudiamos. Es un "error" inevitable. Seguramente sería mejor llamarle de otra forma, pero así se ha quedado.
+
