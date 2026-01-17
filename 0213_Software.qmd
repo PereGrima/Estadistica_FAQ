@@ -1,4 +1,4 @@
-# ¿Cuales son los mejores programas para analizar datos gráficamente? {.unnumbered}
+# ¿Cuales son los mejores programas para analizar datos gráficamente? {.unnumbered #software}
 
 En internet hay muchas páginas donde se explica cuales son los mejores paquetes para la representación gráfica de datos. Sin tener un conocimiento exhaustivo de todo lo que existe --que además va cambiando--, creemos que vale la pena tener presentes las siguientes opciones:
 

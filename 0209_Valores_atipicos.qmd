@@ -1,4 +1,4 @@
-# ¿Qué hay que hacer cuando nos encontramos con valores atípicos? {.unnumbered}
+# ¿Qué hay que hacer cuando nos encontramos con valores atípicos? {.unnumbered #atipicos}
 
 Para empezar vamos a decir dos cosas que \textbf{no deben hacerse}: 1) ignorarlos como si no existieran o 2) eliminarlos inmediatamente sin más consideraciones.
 
@@ -115,7 +115,7 @@ A continuación se hacen las mismas mediciones pero colocando un coche de la pol
  </table>
 ```
 \
-Si realizamos el test de la $t$ de Student para muestras independientes contrastando la hipótesis nula de que las velocidades medias son iguales frente a la alternativa de que con el coche de la policía son menores, se obtiene un p-valor de 0,167, por lo que del estudio no se podría deducir que el coche de policía tiene efecto disuasorio. 
+Si realizamos el test de la $t$ de Student para muestras independientes contrastando la hipótesis nula de que las velocidades medias son iguales frente a la alternativa de que con el coche de la policía son menores, se obtiene un p-valor de 0,167, por lo que del estudio no se podría deducir que el coche de policía tiene efecto disuasorio.
 
 Sin embargo, realizando el análisis exploratorio de los datos, se obtiene el gráfico de la figura [-@fig-Anomalias_1] en el que se observan unos valores atípicos, tanto con coche de la policía como sin él, que corresponden a vehículos que han pasado a unos 20-25 km/h. ¿Qué hay que hacer con estos valores? Lo primero es preguntarse a qué corresponden, cómo se han producido. En este caso se llega a la conclusión de que corresponden a vehículos de transporte agrícola que siempre van a esta velocidad, porque no pueden ir a más. Está claro que la posible influencia del método disuasorio no va con este tipo de vehículos y lo más razonable es excluirlos del estudio.
 
@@ -131,7 +131,7 @@ Otro aspecto a tener en cuenta es que el análisis de las anomalías puede ser l
 
 ![Rendimiento en función de la temperatura](02_Fig_Descriptiva/0903_Anomalias_3.png){#fig-rendimiento .fig-compacta2 fig-align="center" width="45%"}
 
-Si lo hiciéramos así nos perderíamos la oportunidad de incorporar información valiosa a nuestro conocimiento del proceso. Lo más adecuado sería preguntarnos: ¿Por qué se han dado estas situaciones?, ¿qué ha ocurrido a 185 grados para que se hayan producido unos rendimientos tan anormalmente altos?, ¿por qué una vez a 205 grados y se obtuvo un rendimiento tan bajo? Es posible que la respuesta a estas preguntas aporte una información que puede ser muy útil para tener un mayor dominio  del proceso.
+Si lo hiciéramos así nos perderíamos la oportunidad de incorporar información valiosa a nuestro conocimiento del proceso. Lo más adecuado sería preguntarnos: ¿Por qué se han dado estas situaciones?, ¿qué ha ocurrido a 185 grados para que se hayan producido unos rendimientos tan anormalmente altos?, ¿por qué una vez a 205 grados y se obtuvo un rendimiento tan bajo? Es posible que la respuesta a estas preguntas aporte una información que puede ser muy útil para tener un mayor dominio del proceso.
 
 En definitiva, ante un valor atípico lo que hay que hacer es intentar averiguar el por qué se ha producido. Si está claro que la causa es un error se elimina y asunto resuelto. Si no es un error habrá que valorar la conveniencia de incluirlo en el estudio, según sea la razón por la cual se ha producido y la frecuencia con que se esperan valores similares.
 

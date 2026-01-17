@@ -1,15 +1,14 @@
-# ¿De dónde sale el 1,5 utilizado para marcar las anomalías en un boxplot? {.unnumbered}
+# ¿De dónde sale el 1,5 utilizado para marcar las anomalías en un boxplot? {.unnumbered #anomalias}
 
-Parece que ese 1,5 es un número caprichoso. También el 1 o el 2 podrían ser buenos candidatos con la ventaja de ser más sencillos,  pero veamos que ocurriría si fueran estos los elegidos.
+Parece que ese 1,5 es un número caprichoso. También el 1 o el 2 podrían ser buenos candidatos con la ventaja de ser más sencillos, pero veamos que ocurriría si fueran estos los elegidos.
 
 En primer lugar debemos tener en cuenta que los valores que aparecen en la zona de anomalías de un boxplot tienen sentido como tales anomalías, si la población de la que provienen es Normal. Consideremos por tanto una distribución Normal, y puestos a elegir una tomaremos $Z \sim N(0;1)$ ya que los cálculos serán más sencillos y no va a restringir nuestras conclusiones. Para determinar los cuartiles buscamos el valor de $z$ que deja un área de cola de 0,25 y resulta ser: $Z_{0,25} = 0,674$. Por tanto, el rango intercuartílico de una distribución $N(0;1)$ es: $IQR = 0,674 - (-0,674) = 1,348$.
 
-#### Anomalías a partir de Cuartiles $\boldsymbol{\pm 1 \cdot IQR}$ 
+#### Anomalías a partir de Cuartiles $\boldsymbol{\pm 1 \cdot IQR}$
 
-En este caso, fijándonos en el lado derecho, la zona de anomalías empieza en  $Q_3 + 1 \cdot IQR = 0,674 + 1,348 = 2,022$, y $P(Z>2,022) = 0,02$. Por tanto, la probabilidad de que un valor que pertenezca a la distribución considerada aparezca en la zona de anomalías es del 4\% (2\% por cada lado).
+En este caso, fijándonos en el lado derecho, la zona de anomalías empieza en $Q_3 + 1 \cdot IQR = 0,674 + 1,348 = 2,022$, y $P(Z>2,022) = 0,02$. Por tanto, la probabilidad de que un valor que pertenezca a la distribución considerada aparezca en la zona de anomalías es del 4% (2% por cada lado).
 
 ![Zona de anomalías con el criterio de $\pm 1 \cdot IQR$](02_Fig_Descriptiva/0801_boxplot_1.png){#fig-boxplot_1 .fig-compacta2 fig-align="center" width="65%"}
-
 
 #### Anomalías a partir de Cuartiles $\boldsymbol{\pm 2 \cdot IQR}$
 
