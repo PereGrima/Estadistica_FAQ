@@ -1,4 +1,4 @@
-# ¿La estadística es una parte de las matemáticas? {#Matematicas .unnumbered}
+# 1.1 ¿La estadística es una parte de las matemáticas? {#Matematicas .unnumbered}
 
 La materia prima de los análisis estadísticos son los datos --en general numéricos-- y como los números pertenecen al reino de las matemáticas, muchas veces se considera que la estadística es una parte de las matemáticas. Los métodos estadísticos, por supuesto, usan las matemáticas, pero la estadística tiene un enfoque, unos objetivos y una metodología que son diferentes.
 

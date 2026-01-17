@@ -1,15 +1,14 @@
-# ¿Tiene alguna aplicación práctica la media geométrica? {.unnumbered}
+# ¿Tiene alguna aplicación práctica la media geométrica? {.unnumbered #geometrica}
 
 Sí la tiene, pero mucho menos que la media aritmética. Un caso típico de uso de la media geométrica lo tenemos en el cálculo del valor medio de una tasa de crecimiento. Si una población tenía 10.000 habitantes en el año cero, creció el primer año a una tasa del 5 %, el segundo a una tasa del 20 % y el tercer año al 50 % ¿A que tasa promedio ha crecido en estos tres años?
 
 ::: tabla-pequena
-
-|               |                   |                     |                     |                            |
+|         |                      |                     |                     |                            |
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
 | <br>Año | Población<br>inicial | Tasa de crecimiento | Factor de expansión | Población al final del año |
-|  1  |      10.000       |        0,05         |        1,05         |           10.500           |
-|  2  |      10.500       |        0,20         |        1,20         |           12.600           |
-|  3  |      12.600       |        0,50         |        1,50         |           18.900           |
+|    1    |        10.000        |        0,05         |        1,05         |           10.500           |
+|    2    |        10.500        |        0,20         |        1,20         |           12.600           |
+|    3    |        12.600        |        0,50         |        1,50         |           18.900           |
 
 : {tbl-colwidths="\[20,20,20,20,20\]"}
 :::
@@ -17,13 +16,12 @@ Sí la tiene, pero mucho menos que la media aritmética. Un caso típico de uso 
 Si calculamos la media aritmética de la tasa de crecimiento tenemos: $(0,05 + 0,20 + 0,50)/3 = 0,25$ y el factor medio de expansión sería $1,25$. Pero si la población hubiera crecido los tres años de esta forma, no se llegaría al mismo resultado final:
 
 ::: tabla-pequena
-|               |                   |                     |                     |                            |
+|         |                      |                     |                     |                            |
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
 | <br>Año | Población<br>inicial | Tasa de crecimiento | Factor de expansión | Población al final del año |
-|  1  |      10.000       |        0,25         |        1,25         |           12.500           |
-|  2  |      12.500       |        0,25         |        1,25         |           15.625           |
-|  3  |      15.625       |        0,25         |        1,25         |           19.531           |
-
+|    1    |        10.000        |        0,25         |        1,25         |           12.500           |
+|    2    |        12.500        |        0,25         |        1,25         |           15.625           |
+|    3    |        15.625        |        0,25         |        1,25         |           19.531           |
 :::
 
 Por tanto, la media aritmética no es un buen indicador de la tasa media de crecimiento.

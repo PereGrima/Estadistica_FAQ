@@ -1,4 +1,4 @@
-# ¿Por qué cuando se calcula la varianza de una muestra se divide por n-1? {.unnumbered}
+# ¿Por qué cuando se calcula la varianza de una muestra se divide por n-1? {.unnumbered #n-1}
 
 Para hacer más fácil la explicación vamos a trabajar con un ejemplo suponiendo que conocemos la población completa, lujo que no tendremos en la práctica. Los elementos que componen la población, junto con sus mediciones respectivas, son:
 
@@ -42,104 +42,130 @@ Supongamos que nosotros queremos estimar (“hacernos una idea”) el valor $\mu
 ::: tabla-pequena
 <table style="width:98%;">
 <colgroup>
-<col style="width: 23%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
 <col style="width: 6%" />
 <col style="width: 6%" />
 </colgroup>
 <tbody>
-
 <tr class="odd">
-<td>Muestra nº</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">11</td>
-<td style="text-align: center;">12</td>
-<td style="text-align: center;">13</td>
-<td style="text-align: center;">14</td>
-<td style="text-align: center;">15</td>
+<td><p>Muestra nº</p></td>
+<td style="text-align: center;"><p>1</p></td>
+<td style="text-align: center;"><p>2</p></td>
+<td style="text-align: center;"><p>3</p></td>
+<td style="text-align: center;"><p>4</p></td>
+<td style="text-align: center;"><p>5</p></td>
+<td style="text-align: center;"><p>6</p></td>
+<td style="text-align: center;"><p>7</p></td>
+<td style="text-align: center;"><p>8</p></td>
+<td style="text-align: center;"><p>9</p></td>
+<td style="text-align: center;"><p>10</p></td>
+<td style="text-align: center;"><p>11</p></td>
+<td style="text-align: center;"><p>12</p></td>
+<td style="text-align: center;"><p>13</p></td>
+<td style="text-align: center;"><p>14</p></td>
+<td style="text-align: center;"><p>15</p></td>
 </tr>
-
 <tr class="even">
-<td >Unidades de la muestra</td>
-<td style="text-align: center;">A<br>B</td>
-<td style="text-align: center;">A<br>C</td>
-<td style="text-align: center;">A<br>D</td>
-<td style="text-align: center;">A<br>E</td>
-<td style="text-align: center;">A<br>F</td>
-<td style="text-align: center;">B<br>C</td>
-<td style="text-align: center;">B<br>D</td>
-<td style="text-align: center;">B<br>E</td>
-<td style="text-align: center;">B<br>F</td>
-<td style="text-align: center;">C<br>D</td>
-<td style="text-align: center;">C<br>E</td>
-<td style="text-align: center;">C<br>F</td>
-<td style="text-align: center;">D<br>E</td>
-<td style="text-align: center;">D<br>F</td>
-<td style="text-align: center;">E<br>F</td>
+<td><p>Unidades de la muestra</p></td>
+<td style="text-align: center;"><p>A<br />
+B</p></td>
+<td style="text-align: center;"><p>A<br />
+C</p></td>
+<td style="text-align: center;"><p>A<br />
+D</p></td>
+<td style="text-align: center;"><p>A<br />
+E</p></td>
+<td style="text-align: center;"><p>A<br />
+F</p></td>
+<td style="text-align: center;"><p>B<br />
+C</p></td>
+<td style="text-align: center;"><p>B<br />
+D</p></td>
+<td style="text-align: center;"><p>B<br />
+E</p></td>
+<td style="text-align: center;"><p>B<br />
+F</p></td>
+<td style="text-align: center;"><p>C<br />
+D</p></td>
+<td style="text-align: center;"><p>C<br />
+E</p></td>
+<td style="text-align: center;"><p>C<br />
+F</p></td>
+<td style="text-align: center;"><p>D<br />
+E</p></td>
+<td style="text-align: center;"><p>D<br />
+F</p></td>
+<td style="text-align: center;"><p>E<br />
+F</p></td>
 </tr>
-
 <tr class="odd">
-<td>Valores en la muestra</td>
-<td style="text-align: center;">2<br>6</td>
-<td style="text-align: center;">2<br>8</td>
-<td style="text-align: center;">2<br>10</td>
-<td style="text-align: center;">2<br>10</td>
-<td style="text-align: center;">2<br>12</td>
-<td style="text-align: center;">6<br>8</td>
-<td style="text-align: center;">6<br>10</td>
-<td style="text-align: center;">6<br>10</td>
-<td style="text-align: center;">6<br>12</td>
-<td style="text-align: center;">8<br>10</td>
-<td style="text-align: center;">8<br>10</td>
-<td style="text-align: center;">8<br>12</td>
-<td style="text-align: center;">10<br>10</td>
-<td style="text-align: center;">10<br>12</td>
-<td style="text-align: center;">10<br>12</td>
+<td><p>Valores en la muestra</p></td>
+<td style="text-align: center;"><p>2<br />
+6</p></td>
+<td style="text-align: center;"><p>2<br />
+8</p></td>
+<td style="text-align: center;"><p>2<br />
+10</p></td>
+<td style="text-align: center;"><p>2<br />
+10</p></td>
+<td style="text-align: center;"><p>2<br />
+12</p></td>
+<td style="text-align: center;"><p>6<br />
+8</p></td>
+<td style="text-align: center;"><p>6<br />
+10</p></td>
+<td style="text-align: center;"><p>6<br />
+10</p></td>
+<td style="text-align: center;"><p>6<br />
+12</p></td>
+<td style="text-align: center;"><p>8<br />
+10</p></td>
+<td style="text-align: center;"><p>8<br />
+10</p></td>
+<td style="text-align: center;"><p>8<br />
+12</p></td>
+<td style="text-align: center;"><p>10<br />
+10</p></td>
+<td style="text-align: center;"><p>10<br />
+12</p></td>
+<td style="text-align: center;"><p>10<br />
+12</p></td>
 </tr>
-
-<tr class="odd">
-<td>Media muestral</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">11</td>
-<td style="text-align: center;">11</td>
+<tr class="even">
+<td><p>Media muestral</p></td>
+<td style="text-align: center;"><p>4</p></td>
+<td style="text-align: center;"><p>5</p></td>
+<td style="text-align: center;"><p>6</p></td>
+<td style="text-align: center;"><p>6</p></td>
+<td style="text-align: center;"><p>7</p></td>
+<td style="text-align: center;"><p>7</p></td>
+<td style="text-align: center;"><p>8</p></td>
+<td style="text-align: center;"><p>8</p></td>
+<td style="text-align: center;"><p>9</p></td>
+<td style="text-align: center;"><p>9</p></td>
+<td style="text-align: center;"><p>9</p></td>
+<td style="text-align: center;"><p>10</p></td>
+<td style="text-align: center;"><p>10</p></td>
+<td style="text-align: center;"><p>11</p></td>
+<td style="text-align: center;"><p>11</p></td>
 </tr>
-
 </tbody>
 </table>
 :::
+
 \
 Cuando se seleccione al azar una muestra de dos unidades, el resultado será necesariamente alguna de estas 15 posibles combinaciones de 2 elementos, con su media $\bar{x}$ correspondiente.
 
@@ -157,90 +183,102 @@ $$  \sigma_{N}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6} = 10,67 $$
 
 Ahora calculamos la varianza para cada muestra de 2 unidades, con la fórmula: $$  S_{n}^{2}= \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{2} $$
 
-obteniéndose los resultados que aparecen en la siguiente tabla: 
+obteniéndose los resultados que aparecen en la siguiente tabla:
 
 ::: tabla-pequena
 <table style="width:98%;">
 <colgroup>
-<col style="width: 23%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
 <col style="width: 6%" />
 <col style="width: 6%" />
 </colgroup>
 <tbody>
-
 <tr class="odd">
-<td>Muestra nº</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">11</td>
-<td style="text-align: center;">12</td>
-<td style="text-align: center;">13</td>
-<td style="text-align: center;">14</td>
-<td style="text-align: center;">15</td>
+<td><p>Muestra nº</p></td>
+<td style="text-align: center;"><p>1</p></td>
+<td style="text-align: center;"><p>2</p></td>
+<td style="text-align: center;"><p>3</p></td>
+<td style="text-align: center;"><p>4</p></td>
+<td style="text-align: center;"><p>5</p></td>
+<td style="text-align: center;"><p>6</p></td>
+<td style="text-align: center;"><p>7</p></td>
+<td style="text-align: center;"><p>8</p></td>
+<td style="text-align: center;"><p>9</p></td>
+<td style="text-align: center;"><p>10</p></td>
+<td style="text-align: center;"><p>11</p></td>
+<td style="text-align: center;"><p>12</p></td>
+<td style="text-align: center;"><p>13</p></td>
+<td style="text-align: center;"><p>14</p></td>
+<td style="text-align: center;"><p>15</p></td>
 </tr>
-
+<tr class="even">
+<td><p>Valores en la muestra</p></td>
+<td style="text-align: center;"><p>2<br />
+6</p></td>
+<td style="text-align: center;"><p>2<br />
+8</p></td>
+<td style="text-align: center;"><p>2<br />
+10</p></td>
+<td style="text-align: center;"><p>2<br />
+10</p></td>
+<td style="text-align: center;"><p>2<br />
+12</p></td>
+<td style="text-align: center;"><p>6<br />
+8</p></td>
+<td style="text-align: center;"><p>6<br />
+10</p></td>
+<td style="text-align: center;"><p>6<br />
+10</p></td>
+<td style="text-align: center;"><p>6<br />
+12</p></td>
+<td style="text-align: center;"><p>8<br />
+10</p></td>
+<td style="text-align: center;"><p>8<br />
+10</p></td>
+<td style="text-align: center;"><p>8<br />
+12</p></td>
+<td style="text-align: center;"><p>10<br />
+10</p></td>
+<td style="text-align: center;"><p>10<br />
+12</p></td>
+<td style="text-align: center;"><p>10<br />
+12</p></td>
+</tr>
 <tr class="odd">
-<td>Valores en la muestra</td>
-<td style="text-align: center;">2<br>6</td>
-<td style="text-align: center;">2<br>8</td>
-<td style="text-align: center;">2<br>10</td>
-<td style="text-align: center;">2<br>10</td>
-<td style="text-align: center;">2<br>12</td>
-<td style="text-align: center;">6<br>8</td>
-<td style="text-align: center;">6<br>10</td>
-<td style="text-align: center;">6<br>10</td>
-<td style="text-align: center;">6<br>12</td>
-<td style="text-align: center;">8<br>10</td>
-<td style="text-align: center;">8<br>10</td>
-<td style="text-align: center;">8<br>12</td>
-<td style="text-align: center;">10<br>10</td>
-<td style="text-align: center;">10<br>12</td>
-<td style="text-align: center;">10<br>12</td>
+<td><p>Media muestral</p></td>
+<td style="text-align: center;"><p>4</p></td>
+<td style="text-align: center;"><p>9</p></td>
+<td style="text-align: center;"><p>16</p></td>
+<td style="text-align: center;"><p>16</p></td>
+<td style="text-align: center;"><p>25</p></td>
+<td style="text-align: center;"><p>1</p></td>
+<td style="text-align: center;"><p>4</p></td>
+<td style="text-align: center;"><p>4</p></td>
+<td style="text-align: center;"><p>9</p></td>
+<td style="text-align: center;"><p>1</p></td>
+<td style="text-align: center;"><p>1</p></td>
+<td style="text-align: center;"><p>4</p></td>
+<td style="text-align: center;"><p>0</p></td>
+<td style="text-align: center;"><p>1</p></td>
+<td style="text-align: center;"><p>1</p></td>
 </tr>
-
-<tr class="odd">
-<td>Media muestral</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">25</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-
 </tbody>
 </table>
 :::
+
 \
 
 Veamos si el promedio de las posibles varianzas muestrales, coincide con 10,67 que es el valor obtenido para $\sigma_{N}^{2}$.

@@ -1,4 +1,4 @@
-# ¿Por qué damos tanta importancia a la variabilidad? {.unnumbered}
+# ¿Por qué damos tanta importancia a la variabilidad? {.unnumbered #variabilidad}
 
 Porque considerar la variabilidad es fundamental para describir la realidad, para entenderla y para tomar mejores decisiones.
 
@@ -6,13 +6,10 @@ Es muy conocido el chiste que dice que si un señor se come un pollo y otro no c
 
 En el ámbito de la gestión de empresas, supongamos que debe elegir entre dos proveedores que son iguales en todo (precio, calidad, etc.) excepto en el plazo de entrega: uno tarda un promedio de 4,25 días y el otro de 5,75, ¿con cuál se queda? Seguramente habrá pensado que con el que sirve más rápido, pero 4,25 es el promedio de: 3, 5, 4, 3, 7, 4, 2 y 6, mientras que 5,75 lo es de: 6, 5, 6, 6, 6, 5, 6 y 6. ¿Qué piensa ahora? Es más previsible el que tarda 5,75 y seguro que usted se podrá organizar mejor con este. Con el otro deberá hacer los pedidos un mínimo de 7 días antes, y alguna vez lo recibirá a los 2 días y no sabrá donde ponerlo.
 
-En el mundo industrial ignorar la variabilidad también conduce a una visión equivocada del funcionamiento de las cosas. Veamos un ejemplo donde usaremos la ley de Ohm (Recuerde: I=V/R, si esto no le suena de nada puede saltarse este párrafo). Supongamos que le encargan fabricar un lote de circuitos muy sencillos que solo constan de un fuente de alimentación (V) y de una resistencia (R). Vamos a suponer que el voltaje de la fuente de alimentación siempre es igual a 100 V mientras que las resistencias presentan una cierta variabilidad y tienen un valor real que es igual al valor nominal ±5 $\Omega$. Se desea que en cada circuito la intensidad sea de 10 A y se considerará defectuoso si esa intensidad está fuera del intervalo 10±3 A ¿de qué valor nominal debe pedir las resistencias para minimizar la proporción de circuitos defectuosos? Quizá usted está pensando que si se quiere tener I=10 A, si V=100 V se debe pedir R=10 $\Omega$. Esto sería verdad si no hubiera variabilidad pero en nuestro caso habría que pedirlas de 11 $\Omega$[^nota].
+En el mundo industrial ignorar la variabilidad también conduce a una visión equivocada del funcionamiento de las cosas. Veamos un ejemplo donde usaremos la ley de Ohm (Recuerde: I=V/R, si esto no le suena de nada puede saltarse este párrafo). Supongamos que le encargan fabricar un lote de circuitos muy sencillos que solo constan de un fuente de alimentación (V) y de una resistencia (R). Vamos a suponer que el voltaje de la fuente de alimentación siempre es igual a 100 V mientras que las resistencias presentan una cierta variabilidad y tienen un valor real que es igual al valor nominal ±5 $\Omega$. Se desea que en cada circuito la intensidad sea de 10 A y se considerará defectuoso si esa intensidad está fuera del intervalo 10±3 A ¿de qué valor nominal debe pedir las resistencias para minimizar la proporción de circuitos defectuosos? Quizá usted está pensando que si se quiere tener I=10 A, si V=100 V se debe pedir R=10 $\Omega$. Esto sería verdad si no hubiera variabilidad pero en nuestro caso habría que pedirlas de 11 $\Omega$[^0203_variabilidad-1].
+
+[^0203_variabilidad-1]: <small> El circuito es defectuoso si su intensidad está por debajo de 7 A o por encima de 13 A, es decir, si la resistencia que se coloca está por encima de 14,3 $\Omega$ o por debajo de 7,7 $\Omega$. Para huir de esos valores lo mejor es pedir un valor nominal que esté en el centro, es decir: (7,7+14,3)/2 = 11 $\Omega$. \<\small\>
 
 En el ámbito de la medicina, para que una vacuna o un nuevo medicamento sean aprobados deben probarse en una amplia muestra de las personas a que va dirigido. Si todos fuéramos iguales -si no hubiera variabilidad- bastaría hacer la prueba en una sola persona, una cualquiera, y si en esa funciona funcionaría en todas.
 
 En fin, si no existiera la variabilidad no habría estadística. Ni estadística, ni evolución de las especies ni muchas otras cosas. Tampoco estaríamos nosotros.
-
-
-[^nota]: <small> El circuito es defectuoso si su intensidad está por debajo de 7 A o por encima de 13 A, es decir, si la resistencia que se coloca está por encima de 14,3 $\Omega$ o por debajo de 7,7 $\Omega$. Para huir de esos valores lo mejor es pedir un valor nominal que esté en el centro, es decir: (7,7+14,3)/2 = 11 $\Omega$.
-<\small>
-

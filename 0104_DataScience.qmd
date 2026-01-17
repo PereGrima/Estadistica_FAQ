@@ -1,4 +1,4 @@
-# ¿Qué es la ciencia de datos (o *Data Science*)? {.unnumbered}
+# 1.4 ¿Qué es la ciencia de datos (o *Data Science*)? {#DataScience .unnumbered}
 
 El mantra que tanto hemos repetido en las clases de Estadística de que "los datos son siempre un recurso escaso" dejó de ser cierto en muchos casos, aunque en muchos otros (en los sondeos electorales, sin ir más lejos) sigue siendo tan válido como siempre.
 
@@ -8,7 +8,7 @@ Después de ser capaces de almacenar tantos datos, lo siguiente es intentar saca
 
 Básicamente, lo que se ha dado en llamar “Ciencia de Datos” es un conjunto de conocimientos relacionados con la captación, almacenamiento y análisis de datos para crear algoritmos que permitan identificar patrones, casi siempre con el objetivo de hacer previsiones. Algunos de estos algoritmos son capaces de reajustarse automáticamente aprendiendo de sus errores (machine learning). En terrenos como la identificación de imágenes (reconocimiento facial) o de sonidos (“Alexa, ¿qué hora es?”) son excelentes. También en otros casos, como la previsión de valores que evolucionan en el tiempo, el uso de unos algoritmos llamados redes neuronales suele ofrecer mejores resultados que los métodos clásicos.
 
-También es verdad que no es oro todo lo que reluce. Seguramente algunas de sus posibilidades han sido sobrevaloradas por empresas consultoras que ven en estas técnicas con nombre sugerente (Inteligencia artificial, *deep learning*…) la posibilidad de vender nuevos productos.
+También es verdad que no es oro todo lo que reluce. Seguramente algunas de sus posibilidades han sido sobrevaloradas por empresas consultoras que ven en estas técnicas con nombre sugerente (*machine earning*, *deep learning*…) la posibilidad de vender nuevos productos.
 
 Una peculiaridad de esos algoritmos es que actúan como \`\`cajas negras'' en las que se tienen unas variables de entrada $X$, y otras de salida $Y$, y lo que se pretende es tener buenas previsiones de los valores de $Y$ dado un conjunto de valores de $X$, pero sin llegar a entender cómo esos valores de $X$ están afectando a los de $Y$. El no conocer las relaciones causa-efecto limita sus posibilidades en la solución de problemas cuando es necesario conocer cuales son las causas que los provocan para poder plantear soluciones eficaces. Por otra parte, el esfuerzo que se realiza intentado obtener información de grandes volúmenes de datos de dudosa calidad (muchas veces misión imposible) sería mejor reorientarlo a plantearse qué datos se necesitan y planificar su recogida con el rigor y la estructura adecuadas para que de manera transparente y fiable se pueda obtener la información deseada así como un mejor conocimiento del proceso en estudio.
 

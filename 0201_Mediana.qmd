@@ -1,4 +1,4 @@
-# ¿Para qué sirve la mediana si ya tenemos la media aritmética? {.unnumbered}
+# ¿Para qué sirve la mediana si ya tenemos la media aritmética? {.unnumbered #Mediana}
 
 La media aritmética es una excelente medida de tendencia central, muy usada y también muy apreciada, a veces demasiado, como cuando se pretende resumir en ella toda la información que contienen los datos. La mediana tiene unas propiedades de las que carece la media, por lo que es un buen complemento informativo e incluso puede ser una medida más útil en algunos casos. Vamos a ver estas propiedades.
 

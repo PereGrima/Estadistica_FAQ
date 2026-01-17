@@ -1,4 +1,4 @@
-# ¿El cálculo de probabilidades es una parte de la estadística? {.unnumbered}
+# 1.2 ¿El cálculo de probabilidades es una parte de la estadística? {#Probabilidad .unnumbered}
 
 La teoría de la probabilidad y el cálculo de probabilidades son una parte de las matemáticas. Una parte que puede resultar muy útil en el marco de un análisis estadístico, pero no creemos que deba considerarse parte de la estadística.
 

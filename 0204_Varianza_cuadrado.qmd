@@ -1,4 +1,4 @@
-# ¿Por qué en la fórmula de la varianza se utiliza el cuadrado en vez del módulo? {.unnumbered}
+# ¿Por qué en la fórmula de la varianza se utiliza el cuadrado en vez del módulo? {.unnumbered #cuadrado}
 
 Cuando se calcula la varianza, las diferencias entre cada valor y la media se elevan al cuadrado para evitar que se compensen las positivas con las negativas. Esto provoca que sus unidades sean el cuadrado de las que tienen los datos, lo cual resulta poco intuitivo y difícil de interpretar (no parece natural medir la variabilidad de longitudes en unidades de superficie). Este problema se resuelve usando una nueva medida que es la raíz cuadrada de la varianza: la desviación típica. Todos hemos pensado alguna vez que se podría evitar tener esas dos medidas usando el valor absoluto de las diferencias en vez de su cuadrado. Así ya estaríamos midiendo la variabilidad en las mismas unidades que los datos.
 
