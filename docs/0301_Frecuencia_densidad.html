@@ -148,7 +148,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Lista.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">LISTA DE PREGUNTAS</span></span></a>
+ <span class="menu-text">LISTA DE PREGUNTAS</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -163,25 +163,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0101_Estadistica_Matematicas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿La estadística es una parte de las matemáticas?</span></a>
+ <span class="menu-text">1.1 ¿La estadística es una parte de las matemáticas?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0102_Probabilidad_Estadistica.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿El cálculo de probabilidades es una parte de la estadística?</span></a>
+ <span class="menu-text">1.2 ¿El cálculo de probabilidades es una parte de la estadística?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0103_Que_es_Estadistica.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Qué es la estadística?</span></a>
+ <span class="menu-text">1.3 ¿Qué es la estadística?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0104_DataScience.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Qué es la ciencia de datos (o <em>Data Science</em>)?</span></a>
+ <span class="menu-text">1.4 ¿Qué es la ciencia de datos (o <em>Data Science</em>)?</span></a>
   </div>
 </li>
       </ul>
@@ -264,7 +264,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0212_Graficos_NO_usar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Qué gráfico NO debo usar para representar mis datos?</span></a>
+ <span class="menu-text">¿Qué gráficos NO debo usar para representar mis datos?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -678,7 +678,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0301_Frecuencia_densidad.html">Distribuciones de probabilidad</a></li><li class="breadcrumb-item"><a href="./0301_Frecuencia_densidad.html">¿Cómo se pasa de la frecuencia a la densidad de probabilidad?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">¿Cómo se pasa de la frecuencia a la densidad de probabilidad?</h1>
+<h1 class="title"><span id="frecuencia" class="quarto-section-identifier">¿Cómo se pasa de la frecuencia a la densidad de probabilidad?</span></h1>
 </div>
 
 
@@ -772,7 +772,7 @@ Figura&nbsp;3: Histograma con frecuencias absolutas (izquierda) y con densidad d
 </div>
 <p>La función que describe esas líneas que hemos añadido es la <strong>función densidad de probabilidad</strong>. Respecto a las muestras hablamos de <strong>frecuencia</strong>, mientras que en el contexto de las poblaciones usamos el término <strong>probabilidad</strong>.</p>
 <p>En este caso la función densidad de probabilidad <span class="math inline">\(f(x)\)</span> es:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 
    f(x) = \left \{
 
@@ -786,9 +786,9 @@ Figura&nbsp;3: Histograma con frecuencias absolutas (izquierda) y con densidad d
 
    \right.
 
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>En la muestra, la frecuencia entre 0,5 y 1,5 será igual a la suma de las áreas de las barras que se encuentran en esos valores. Para la población, la probabilidad de que <span class="math inline">\(x\)</span> se encuentre entre esos valores será igual al área que definen en el triángulo:</p>
-<p><span class="math display">\[P(0,5 \leq x \leq 1,5) = \int_{0,5}^1 x \; dx + \int_1^{1,5}(2-x) \; dx =\frac{3}{4}\]</span> <img src="03_Fig_Distribuciones/0104_Densidad_4.png" id="fig-Densidad3" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center anchored" style="width:90.0%" alt="Cálculo de frecuencias (izquierda) y de probabilidades (derecha) a través de áreas"></p>
+<p><span class="math display">\[P(0,5 \leq x \leq 1,5) = \int_{0,5}^1 x \; dx + \int_1^{1,5}(2-x) \; dx =\frac{3}{4}\]</span> <img src="03_Fig_Distribuciones/0104_Densidad_4.png" class="fig-compacta2 img-fluid quarto-figure quarto-figure-center" style="width:90.0%" alt="Cálculo de frecuencias (izquierda) y de probabilidades (derecha) a través de áreas"></p>
 <p>Si en vez de una distribución triangular tenemos -por ejemplo- una distribución Normal, la expresión de <span class="math inline">\(f(x)\)</span> es más complicada, pero el planteamiento es exactamente el mismo.</p>
 
 
