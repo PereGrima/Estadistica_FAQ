@@ -1,8 +1,8 @@
-# ¿Por qué para la distribución Normal solo se necesita la tabla de la N(0; 1)? {.unnumbered}
+# ¿Por qué para la distribución Normal solo se necesita la tabla de la N(0; 1)? {.unnumbered #N01}
 
 Aunque las tablas estadísticas ya son algo del pasado, es interesante ver porqué habiendo infinitas distribuciones Normales (tantas como parejas $\mu$, $\sigma$) basta la tabla de solo una para poder calcular probabilidades en todas ellas.
 
-Lo veremos con razonamientos básicamente geométricos. Sea $X \sim N(\mu; \sigma)$ y deseamos calcular $P(X>x)$. Si definimos $Y = X - \mu$ está claro que  $Y \sim N(0; \sigma)$ y con ayuda de la figura [-@fig-Normal01_1] es fácil observar que $P(X>x)=P(Y>x-\mu)$ ya que la forma de las dos distribuciones es idéntica y al punto $x$ en la distribución de $X$ le corresponde $x-\mu$ en la de $Y$.
+Lo veremos con razonamientos básicamente geométricos. Sea $X \sim N(\mu; \sigma)$ y deseamos calcular $P(X>x)$. Si definimos $Y = X - \mu$ está claro que $Y \sim N(0; \sigma)$ y con ayuda de la figura [-@fig-Normal01_1] es fácil observar que $P(X>x)=P(Y>x-\mu)$ ya que la forma de las dos distribuciones es idéntica y al punto $x$ en la distribución de $X$ le corresponde $x-\mu$ en la de $Y$.
 
 ![Transformación de $X \sim N(\mu; \sigma)$ en $Y \sim N(0; \sigma)$](03_Fig_Distribuciones/0501_Normal01_1.png){#fig-Normal01_1 .fig-compacta2 fig-align="center" width="95%"}
 
@@ -14,13 +14,12 @@ Recordando que la función densidad de probabilidad de $Y \sim N(0; \sigma)$ es:
 
 $$ f(ky) = \frac{1}{k\sigma \sqrt{2 \pi}}e^{- \frac{k^2y^2}{2 k^2 \sigma^2}} = \frac{1}{k}f(y) $$
 
-![Distribución con $\sigma$ =1 o con  $\sigma = k$ según la escala](03_Fig_Distribuciones/0502_Normal01_2.png){#fig-Normal01_2 .fig-compacta2 fig-align="center" width="57%"}
-
+![Distribución con $\sigma$ =1 o con $\sigma = k$ según la escala](03_Fig_Distribuciones/0502_Normal01_2.png){#fig-Normal01_2 .fig-compacta2 fig-align="center" width="57%"}
 
 \noindent Por tanto, las campanas se pueden representar de forma idéntica multiplicando por $k$ el eje de abscisas y dividiendo por el mismo valor el de ordenadas (que no hemos representado).
 
-Si hacemos $k= \frac{1}{\sigma}$ tendremos $Z = \frac{Y}{\sigma}$, o lo que es lo mismo: $Z = (X-\mu)/ \sigma$. Por lo comentado anteriormente, la distribución de $Z$ se puede representar con la misma campana que la utilizada para la distribución de $ Y $ ([-@fig-Normal01_3]).
+Si hacemos $k= \frac{1}{\sigma}$ tendremos $Z = \frac{Y}{\sigma}$, o lo que es lo mismo: $Z = (X-\mu)/ \sigma$. Por lo comentado anteriormente, la distribución de $Z$ se puede representar con la misma campana que la utilizada para la distribución de \$ Y \$ ([-@fig-Normal01_3]).
 
-![Transformación de  $Y \sim N(0; \sigma)$ en $Z \sim N(0; 1)$}](03_Fig_Distribuciones/0503_Normal01_3.png){#fig-Normal01_3 .fig-compacta2 fig-align="center" width="57%"}
+![Transformación de $Y \sim N(0; \sigma)$ en $Z \sim N(0; 1)$}](03_Fig_Distribuciones/0503_Normal01_3.png){#fig-Normal01_3 .fig-compacta2 fig-align="center" width="57%"}
 
 Si la forma de las campanas es la misma y solo hemos sustituido el punto $x - \mu$ por el $\frac{x - \mu}{\sigma}$ resulta claro que $P \left( Z > \frac{x -\mu}{\sigma} \right) = P\left( Y > X - \mu \right)$ y, por tanto, $P\left( X>x\right) = P\left(Z> \frac{x-\mu}{\sigma}\right)$.

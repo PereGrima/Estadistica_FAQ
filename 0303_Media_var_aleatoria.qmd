@@ -1,6 +1,6 @@
-# ¿Por qué se dice que la media es una variable aleatoria? {.unnumbered}
+# ¿Por qué se dice que la media es una variable aleatoria? {.unnumbered #mediaAleatoria}
 
-Antes de hablar de medias hablaremos de observaciones individuales y utilizaremos el ejemplo de la distribución de las estaturas. 
+Antes de hablar de medias hablaremos de observaciones individuales y utilizaremos el ejemplo de la distribución de las estaturas.
 
 La estatura de una persona concreta es un número. Por ejemplo, Juan mide 1,73 metros, Antonio 1,82 y María 1,76. Estos valores son números fijos y concretos, puesto que Juan, al igual que Antonio y María, siempre miden lo mismo.
 
@@ -8,18 +8,18 @@ Otra cosa es si nos referimos a la altura de una persona genérica, la que en es
 
 Algo análogo ocurre con las medias de las muestras. La media de una muestra formada por unos individuos concretos es también un número concreto. Si la muestra está formada por Juan, Antonio y María, su estatura media es 1,77 metros. Pero si hablamos de una muestra de tres individuos tomados al azar, la media de esa muestra es una variable aleatoria, ya que está formada por observaciones individuales que a su vez son también variables aleatorias.
 
-Lo más interesante de este tema es que la media muestral se distribuye siempre con la misma media que las observaciones individuales y con una varianza que es la enésima parte (siendo $n$ el tamaño de la  muestra) de la que tienen esas observaciones. Además, si $n$ no es muy pequeño, su distribución es muy próxima a la Normal con independencia de la distribución de la población.
+Lo más interesante de este tema es que la media muestral se distribuye siempre con la misma media que las observaciones individuales y con una varianza que es la enésima parte (siendo $n$ el tamaño de la muestra) de la que tienen esas observaciones. Además, si $n$ no es muy pequeño, su distribución es muy próxima a la Normal con independencia de la distribución de la población.
 
 Pensemos, por ejemplo, en la estatura de 20 personas, si representamos sus valores en un diagrama de puntos, podemos obtener un gráfico como el de la figura [-@fig-MediaVA1].
 
 ![Estaturas de 20 personas](03_Fig_Distribuciones/0301_MediaVA_1.png){#fig-MediaVA1 .fig-compacta2 fig-align="center" width="80%"}
 
 \
-Sin embargo, si pensamos en la altura media de grupos de 25 personas, ya no podemos dar valores tan extremos, puesto que aunque es perfectamente posible que una persona mida 1,85 metros, es prácticamente imposible que esta sea la altura media de un grupo de 25 personas tomadas al azar, ya que en este grupo cabe esperar que haya un número parecido de personas por encima y por debajo de la media general, de forma que los valores de sus alturas se compensarán dando un valor medio cercano a la media de la población. En la figura  [-@fig-MediaVA2] se muestra el diagrama de puntos de unos valores que podrían corresponder a las alturas medias de 20 grupos con 25 individuos cada uno. Estos valores se han obtenido por simulación suponiendo que las alturas individuales siguen una N(1,70 m; 0,07 m). Obsérvese como su dispersión es menor que para las alturas individuales.
+Sin embargo, si pensamos en la altura media de grupos de 25 personas, ya no podemos dar valores tan extremos, puesto que aunque es perfectamente posible que una persona mida 1,85 metros, es prácticamente imposible que esta sea la altura media de un grupo de 25 personas tomadas al azar, ya que en este grupo cabe esperar que haya un número parecido de personas por encima y por debajo de la media general, de forma que los valores de sus alturas se compensarán dando un valor medio cercano a la media de la población. En la figura [-@fig-MediaVA2] se muestra el diagrama de puntos de unos valores que podrían corresponder a las alturas medias de 20 grupos con 25 individuos cada uno. Estos valores se han obtenido por simulación suponiendo que las alturas individuales siguen una N(1,70 m; 0,07 m). Obsérvese como su dispersión es menor que para las alturas individuales.
 
 ![Estaturas medias de 20 grupos de 25 personas cada uno](03_Fig_Distribuciones/0302_MediaVA_2.png){#fig-MediaVA2 .fig-compacta2 fig-align="center" width="80%"}
 
 \
-Si suponemos que la distribución de las estaturas sigue la distribución Normal que hemos comentado, podemos afirmar que las medias de muestras de $ n $ individuos seguirán también una distribución Normal, con la misma media que la población, $\mu_{\bar{x}}$=1,70, y una desviación típica que será: $\sigma_{\bar{x}}=\sigma/\sqrt{n}$, en nuestro caso: $0,07/\sqrt{25} = 0,014$.
+Si suponemos que la distribución de las estaturas sigue la distribución Normal que hemos comentado, podemos afirmar que las medias de muestras de \$ n \$ individuos seguirán también una distribución Normal, con la misma media que la población, $\mu_{\bar{x}}$=1,70, y una desviación típica que será: $\sigma_{\bar{x}}=\sigma/\sqrt{n}$, en nuestro caso: $0,07/\sqrt{25} = 0,014$.
 
 En definitiva, la media muestral, protagonista destacada en muchos estudios estadísticos, es una variable aleatoria nada misteriosa, con un comportamiento noble y fácil de prever.

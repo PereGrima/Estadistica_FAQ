@@ -1,4 +1,4 @@
-# ¿Cómo se pasa de la frecuencia a la densidad de probabilidad? {.unnumbered}
+# ¿Cómo se pasa de la frecuencia a la densidad de probabilidad? {.unnumbered #frecuencia}
 
 Al construir un histograma lo habitual es colocar la frecuencia en el eje vertical, pero también se puede usar la *densidad de frecuencia*. Para cada intervalo $i$, la densidad de frecuencia $f_i^*$ es igual a su frecuencia relativa $f_i$ dividida por su anchura $c_i$. Es decir: $f_i^\ast= f_i/c_i$. De esta forma el área de cada barra $(c_i\cdot f_i/c_i)$ es igual a la frecuencia relativa. Si todos los intervalos tienen la misma anchura usar la densidad de frecuencia es una complicación innecesaria ya que tanto la altura de las barras como su área son proporcionales a la frecuencia y es más directo fijarse en la altura. Sin embargo, si los intervalos tienen distinta anchura resulta más apropiado usar la densidad.
 

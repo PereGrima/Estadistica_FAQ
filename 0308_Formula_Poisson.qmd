@@ -1,33 +1,34 @@
-# ¿De dónde sale la fórmula de la distribución de Poisson? {.unnumbered}
+# ¿De dónde sale la fórmula de la distribución de Poisson? {.unnumbered #Poisson}
 
-Vamos a partir de la distribución binomial cuando el número de pruebas $n$ tiende a infinito y la probabilidad de éxito $p$ tiende a cero,  manteniéndose constante el valor $np$ al que llamamos $\lambda$.
+Vamos a partir de la distribución binomial cuando el número de pruebas $n$ tiende a infinito y la probabilidad de éxito $p$ tiende a cero, manteniéndose constante el valor $np$ al que llamamos $\lambda$.
 
 Sabemos que si $X$ sigue una distribución binomial con parámetros $n$, $p$:
 
+```{=tex}
 \begin{equation*}
-	\begin{split}
-	P(X=x) &=\frac{n!}{x!(n-x)!}p^x(1-p)^{n-x} \\
-		&= \frac{n!}{x!(n-x)!} \left(\frac{\lambda}{n} \right )^{x} \left(1-\frac{\lambda}{n} \right )^{n-x}\\
-		&=\frac{n(n-1) \ldots (n-x+1)}{x!} \cdot \frac{\lambda^{x}}{n^x} \cdot \left(1-\frac{\lambda}{n} \right )^{n} \left(1-\frac{\lambda}{n} \right)^{-x}\\
-		&= \underbrace{\vphantom{\left(1-\frac{\lambda}{n} \right )^{-x}} \frac{n(n-1)\ldots(n-x+1)}{n^x} }_1 \cdot 
-			\underbrace{\vphantom{\left(1-\frac{\lambda}{n} \right )^{-x}} {\frac{\lambda^x}{x!}}}_2 \cdot 		
-		\underbrace{\left(1-\frac{\lambda}{n} \right )^{n}}_3  \underbrace{\left(1-\frac{\lambda}{n} \right )^{-x}}_4
+    \begin{split}
+    P(X=x) &=\frac{n!}{x!(n-x)!}p^x(1-p)^{n-x} \\
+        &= \frac{n!}{x!(n-x)!} \left(\frac{\lambda}{n} \right )^{x} \left(1-\frac{\lambda}{n} \right )^{n-x}\\
+        &=\frac{n(n-1) \ldots (n-x+1)}{x!} \cdot \frac{\lambda^{x}}{n^x} \cdot \left(1-\frac{\lambda}{n} \right )^{n} \left(1-\frac{\lambda}{n} \right)^{-x}\\
+        &= \underbrace{\vphantom{\left(1-\frac{\lambda}{n} \right )^{-x}} \frac{n(n-1)\ldots(n-x+1)}{n^x} }_1 \cdot 
+            \underbrace{\vphantom{\left(1-\frac{\lambda}{n} \right )^{-x}} {\frac{\lambda^x}{x!}}}_2 \cdot      
+        \underbrace{\left(1-\frac{\lambda}{n} \right )^{n}}_3  \underbrace{\left(1-\frac{\lambda}{n} \right )^{-x}}_4
 \end{split}
-\end{equation*}	
-
+\end{equation*}
+```
 En el primer paso simplemente se ha sustituido $p$ por $\lambda/n$. A continuación se simplifica la expresión del número combinatorio y se realizan cambios evidentes. Finalmente se intercambian los valores de $n^x$ y $x!$ en los denominadores de los 2 primeros términos y dividimos la expresión en 4 partes que analizamos a continuación:
 
 #### Parte 1:
 
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\frac{n(n-1)\ldots(n-x+1)}{n^x} &=\frac{n}{n} \cdot \frac{n-1}{n} \cdot \frac{n-2}{n}\ldots\frac{n-x+1}{n}= \\ 
-		&=1 \cdot\left(1-\frac{1}{n} \right) \left(1-\frac{2}{n} \right) \ldots \left(1-\frac{x-1}{n} \right)
-	\end{split}
+    \begin{split}
+        \frac{n(n-1)\ldots(n-x+1)}{n^x} &=\frac{n}{n} \cdot \frac{n-1}{n} \cdot \frac{n-2}{n}\ldots\frac{n-x+1}{n}= \\ 
+        &=1 \cdot\left(1-\frac{1}{n} \right) \left(1-\frac{2}{n} \right) \ldots \left(1-\frac{x-1}{n} \right)
+    \end{split}
 \end{equation*}
-
-Está claro que si $n \to \infty$ manteniéndose $x$ constante, cada uno de los términos tiende a 1 y, por tanto:
-$$\displaystyle\lim_{n \to \infty} \frac{n(n-1) \ldots (n-x+1)}{n^x} =1 $$
+```
+Está claro que si $n \to \infty$ manteniéndose $x$ constante, cada uno de los términos tiende a 1 y, por tanto: $$\displaystyle\lim_{n \to \infty} \frac{n(n-1) \ldots (n-x+1)}{n^x} =1 $$
 
 #### Parte 2:
 
@@ -35,21 +36,18 @@ La expresión $\frac{\lambda^x}{x!}$ la dejamos tal como está.
 
 #### Parte 3:
 
-El análisis de esta tercera parte va a ser un poco más largo. Partiremos de la definición del número $e$ como $\displaystyle\lim_{n \to \infty} \left( 1+\frac{1}{n} \right)^n$ e intentaremos poner nuestra expresión de una forma parecida a esta. 
+El análisis de esta tercera parte va a ser un poco más largo. Partiremos de la definición del número $e$ como $\displaystyle\lim_{n \to \infty} \left( 1+\frac{1}{n} \right)^n$ e intentaremos poner nuestra expresión de una forma parecida a esta.
 
-Para empezar puede comprobarse que se verifica:
-$$\left( 1-\frac{\lambda}{n} \right)^n =  \left [\left( 1-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}} \right ]^{-\lambda}$$
-Operando solo con la expresión del interior del corchete:
-$$\left( 1-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}}=\left( \frac{n/\lambda}{n/\lambda}-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}} =  \left( \frac{n/\lambda-1}{n/\lambda} \right)^{\frac{-n}{\lambda}} = \left( \frac{n/\lambda}{n/\lambda-1} \right )^{\frac{n}{\lambda}}$$
-y también podemos hacer:
+Para empezar puede comprobarse que se verifica: $$\left( 1-\frac{\lambda}{n} \right)^n =  \left [\left( 1-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}} \right ]^{-\lambda}$$ Operando solo con la expresión del interior del corchete: $$\left( 1-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}}=\left( \frac{n/\lambda}{n/\lambda}-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}} =  \left( \frac{n/\lambda-1}{n/\lambda} \right)^{\frac{-n}{\lambda}} = \left( \frac{n/\lambda}{n/\lambda-1} \right )^{\frac{n}{\lambda}}$$ y también podemos hacer:
 
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\left(\frac{n/\lambda}{n/\lambda-1} \right)^{\frac{n}{\lambda}}&=\left(1+\frac{1}{n/\lambda-1} \right)^{\frac{n}{\lambda}} =\\
-		&= \left(1+\frac{1}{n/\lambda-1} \right)^{\frac{n}{\lambda}-1} \cdot \left(1+\frac{1}{n/\lambda-1} \right)
-	\end{split}
+    \begin{split}
+        \left(\frac{n/\lambda}{n/\lambda-1} \right)^{\frac{n}{\lambda}}&=\left(1+\frac{1}{n/\lambda-1} \right)^{\frac{n}{\lambda}} =\\
+        &= \left(1+\frac{1}{n/\lambda-1} \right)^{\frac{n}{\lambda}-1} \cdot \left(1+\frac{1}{n/\lambda-1} \right)
+    \end{split}
 \end{equation*}
-
+```
 Obsérvese que siendo $\lambda$ una constante, cuando $n \to\infty$ también $(n/\lambda-1) \to\infty$. Por tanto el primer factor de la última expresión es igual a $e$ cuando $n \to\infty$. El segundo factor evidentemente es igual a 1 cuando $n \to\infty$, por tanto:
 
 $$ \displaystyle\lim_{n \to \infty} \left( 1-\frac{\lambda}{n} \right)^n  = \displaystyle\lim_{n \to \infty} \left [\left( 1-\frac{1}{n/\lambda} \right)^{\frac{-n}{\lambda}} \right ]^{-\lambda} = e^{-\lambda} $$
@@ -61,4 +59,3 @@ En esta última parte resulta claro que $\displaystyle\lim_{n \to \infty} \left(
 Recopilando, tenemos que en las condiciones indicadas de $n \to\infty$, $p \to 0$ con $np$ constante e igual a $\lambda$, se verifica que:
 
 $$P(X=x)=e^{-\lambda}\frac{\lambda^x}{x!}$$
-

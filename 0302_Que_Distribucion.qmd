@@ -1,4 +1,4 @@
-# ¿Cómo se sabe qué distribución sigue una variable aleatoria? {.unnumbered}
+# ¿Cómo se sabe qué distribución sigue una variable aleatoria? {.unnumbered #distribucion}
 
 #### Preámbulo: ¿qué es una distribución de probabilidad?
 
@@ -18,14 +18,12 @@ Si la variable es **discreta** (solo pueden tomar valores a saltos -en general n
 
 Al principio puede costar distinguir cuando una variable sigue una distribución binomial o de Poisson, pero es muy fácil fijándose en los detalles que se indican en la siguiente tabla.
 
-
 ::: tabla-pequena
-|                |                                                                            |                                                                                                                    |                                              
-|:--------------:|:--------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------:|
-|                | Binomial                                                                   |    Poisson                                                                                                         |      
-|Forma de contar | Se pueden contar éxitos o <br>fracasos, piezas correctas o <br>piezas defectuosas  | Solo hay una forma de contar las <br>ocurrencias. No se puede contar el <br>número de veces que no se <br>estropea un ascensor | 
-|Valor máximo    | Existe un máximo. En un lote <br>de 100 piezas como máximo <br>hay 100 defectuosas | No hay valor máximo (al menos en <br>teoría). No hay máximo en el <br>número de veces que se puede <br>estropear el ascensor                                            |
-
+|                 |                                                                                    |                                                                                                                                |
+|:------------:|:--------------------:|:----------------------------------:|
+|                 |                                      Binomial                                      |                                                            Poisson                                                             |
+| Forma de contar | Se pueden contar éxitos o <br>fracasos, piezas correctas o <br>piezas defectuosas  | Solo hay una forma de contar las <br>ocurrencias. No se puede contar el <br>número de veces que no se <br>estropea un ascensor |
+|  Valor máximo   | Existe un máximo. En un lote <br>de 100 piezas como máximo <br>hay 100 defectuosas |  No hay valor máximo (al menos en <br>teoría). No hay máximo en el <br>número de veces que se puede <br>estropear el ascensor  |
 :::
 
 \
