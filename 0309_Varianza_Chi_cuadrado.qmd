@@ -1,20 +1,20 @@
-# ¿Cómo se relaciona la varianza muestral con la distribución Chi-cuadrado? {.unnumbered}
+# ¿Cómo se relaciona la varianza muestral con la distribución Chi-cuadrado? {.unnumbered #Chi2}
 
 Utilizaremos la definición de $\chi^2$ con $\nu$ grados de libertad como $\sum_{i=1}^{\nu} z_{i}^2$ siendo las $z_i$ variables aleatorias independientes con distribución $N(0; 1)$. Respecto a la notación utilizada consideraremos que $X \sim N(\mu;\sigma)$ y que $\bar{X}$ y $S^2$ son la media y la varianza de muestras aleatorias de tamaño $n$. Tenemos:
 
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\sum_{i=1}^n (X_i-\mu)^2 &= \sum_{i=1}^n \left[ (X_i-\bar{X})+(\bar{X}-\mu) \right]^2\\
-		&= \sum_{i=1}^n (X_i-\bar{X})^2+2(\bar{X}-\mu) \sum_{i=1}^n (X_i-\bar{X})+ \sum_{i=1}^n (\bar{X}-\mu)^2 \\
-	\end{split}
+    \begin{split}
+        \sum_{i=1}^n (X_i-\mu)^2 &= \sum_{i=1}^n \left[ (X_i-\bar{X})+(\bar{X}-\mu) \right]^2\\
+        &= \sum_{i=1}^n (X_i-\bar{X})^2+2(\bar{X}-\mu) \sum_{i=1}^n (X_i-\bar{X})+ \sum_{i=1}^n (\bar{X}-\mu)^2 \\
+    \end{split}
 \end{equation*}
+```
+y como $\sum_{i=1}^n (X_i-\bar{X})=0$ y $(\bar{X}-\mu)^2$ es una constante: $$\sum_{i=1}^n (X_i-\mu)^2 = \sum_{i=1}^n (X_i-\bar{X})^2 + n(\bar{X}-\mu)^2$$
 
-y como $\sum_{i=1}^n (X_i-\bar{X})=0$ y $(\bar{X}-\mu)^2$ es una constante:
-$$\sum_{i=1}^n (X_i-\mu)^2 = \sum_{i=1}^n (X_i-\bar{X})^2 + n(\bar{X}-\mu)^2$$
+Como $S^2= \frac{\sum_{i=1}^n (X_i-\bar{X})^2}{n-1}$ podemos escribir:
 
-Como $S^2= \frac{\sum_{i=1}^n (X_i-\bar{X})^2}{n-1}$ podemos escribir: 
-
-$$\sum_{i=1}^n (X_i-\bar{X})^2 = S^2(n-1)$$ 
+$$\sum_{i=1}^n (X_i-\bar{X})^2 = S^2(n-1)$$
 
 Sustituyendo en la expresión anterior y dividiéndolo todo por $\sigma^2$:
 

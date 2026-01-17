@@ -1,8 +1,14 @@
 # PRESENTACIÓN {.unnumbered}
 
-Respondemos a preguntas que pueden surgir en un curso general de estadística. Tratan sobre el material del curso y también sobre temas que pueden aparecer en discusiones sobre lo que es la estadística, sus dificultades y sus aplicaciones.
+Respondemos a preguntas que suelen surgir en un curso general de estadística. Se refieren tanto al contenido propio del curso como a cuestiones que aparecen habitualmente en discusiones sobre qué es la estadística, cuáles son sus dificultades y cuáles son sus aplicaciones.
 
-Es el resultado de nuestra experienca moviéndonos en este terreno y esperamos que sea útil a estudiantes, profesores que empiezan, e intersados por la estadística en general. Cualquier comentario o sugerencia será bienvenido.
+Este libro es el resultado de nuestra experiencia en este ámbito y esperamos que sea útil a estudiantes, a profesores que se inician en la docencia y a personas interesadas en la estadística en general. Cualquier comentario o sugerencia será bienvenido.
+
+<!-- <p style="font-size: 1.2em;"> -->
+<!--   **Lista de preguntas**. -->
+<!-- </p> -->
+
+<!-- ### Lista de preguntas -->
 
 Versión 4.0 (Marzo de 2026)
 

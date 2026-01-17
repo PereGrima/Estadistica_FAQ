@@ -18,7 +18,7 @@ book:
     - index.qmd
     - Lista.qmd
     
-    - part: Estadística. Lo que es y lo que no es
+    - part: "Estadística. Lo que es y lo que no es"
       chapters: 
         - 0101_Estadistica_Matematicas.qmd
         - 0102_Probabilidad_Estadistica.qmd

@@ -1,36 +1,32 @@
-# ¿De dónde sale la expresión del intervalo de confianza? {.unnumbered}
+# ¿De dónde sale la expresión del intervalo de confianza? {.unnumbered #IC}
 
-Vamos a empezar con el intervalo de confianza para la media de una población Normal, con desviación típica conocida y calculado a partir de una sola observación. 
+Vamos a empezar con el intervalo de confianza para la media de una población Normal, con desviación típica conocida y calculado a partir de una sola observación.
 
 En la figura [-@fig-IC] tenemos representada la distribución cuya media $\mu$ se desea estimar. Se han sombreado las colas de forma que la probabilidad de que una observación caiga en esa zona sea igual a $\alpha$ ($\alpha$/2 en cada lado). Por tanto, la probabilidad de que caiga en la zona interior es $1-\alpha$.
 
 ![Intervalos construidos sumando y restando $z_{\alpha/2}\sigma$ a un valor obtenido al azar](04_Fig_Muestreo/0201_IntConf_1.png){#fig-IC .fig-compacta2 fig-align="center" width="65%"}
 
-Veamos ahora cuánto vale la distancia desde la media $\mu$ al punto  $x_{\alpha/2}$ en que empieza la zona sombreada. Como el valor de $\alpha/2$ es conocido (lo hemos elegido nosotros) podemos determinar el valor de $Z \sim N(0; 1)$ que deja esa área de cola. 
+Veamos ahora cuánto vale la distancia desde la media $\mu$ al punto $x_{\alpha/2}$ en que empieza la zona sombreada. Como el valor de $\alpha/2$ es conocido (lo hemos elegido nosotros) podemos determinar el valor de $Z \sim N(0; 1)$ que deja esa área de cola.
 
-Por otra parte, sabemos que si $X \sim N(\mu; \sigma)$ entonces $Z = \frac{X-\mu}{\sigma}$ sigue una distribución $N(0; 1)$, por tanto:
-$$ z_{\alpha/2} = \frac{x_{\alpha/2} - \mu} {\sigma} $$
+Por otra parte, sabemos que si $X \sim N(\mu; \sigma)$ entonces $Z = \frac{X-\mu}{\sigma}$ sigue una distribución $N(0; 1)$, por tanto: $$ z_{\alpha/2} = \frac{x_{\alpha/2} - \mu} {\sigma} $$
 
-Y ya es inmediato deducir que la distancia entre $x_{\alpha/2}$ y $\mu$ es igual a $z_{\alpha/2}\sigma$. Sumando y restando esa distancia un valor ($x$) obtenido al azar, tenemos el intervalo:
-$$x \pm z_{\alpha/2}\sigma $$ 
+Y ya es inmediato deducir que la distancia entre $x_{\alpha/2}$ y $\mu$ es igual a $z_{\alpha/2}\sigma$. Sumando y restando esa distancia un valor ($x$) obtenido al azar, tenemos el intervalo: $$x \pm z_{\alpha/2}\sigma $$
 
-Observe que si el valor de $x$ está en la zona de probabilidad $1 - \alpha$, tal como ocurre con $x_1$ y $x_2$ en la figura [-@fig-IC], el intervalo obtenido incluye el valor de $\mu$. Sin embargo, si $x$ cae en la zona de las colas, como ocurre con $x_3$, el intervalo no llega a alcanzar el valor de $\mu$. Por tanto, los intervalos calculados con este procedimiento aciertan si el valor obtenido al azar cae en la zona $1- \alpha$ y esto ocurre una proporción de veces $1 - \alpha$. Por esta razón se denominan intervalos de confianza $1 - \alpha$. El valor $1 - \alpha$ se da normalmente en porcentaje y si $\alpha = 0,05$ hablaremos de intervalo de confianza del 95\%.
+Observe que si el valor de $x$ está en la zona de probabilidad $1 - \alpha$, tal como ocurre con $x_1$ y $x_2$ en la figura [-@fig-IC], el intervalo obtenido incluye el valor de $\mu$. Sin embargo, si $x$ cae en la zona de las colas, como ocurre con $x_3$, el intervalo no llega a alcanzar el valor de $\mu$. Por tanto, los intervalos calculados con este procedimiento aciertan si el valor obtenido al azar cae en la zona $1- \alpha$ y esto ocurre una proporción de veces $1 - \alpha$. Por esta razón se denominan intervalos de confianza $1 - \alpha$. El valor $1 - \alpha$ se da normalmente en porcentaje y si $\alpha = 0,05$ hablaremos de intervalo de confianza del 95%.
 
 #### ¿Y si lo que tenemos no es una única observación sino una muestra?
 
-Construimos el intervalo en torno a la media de la muestra. La media muestral también sigue una distribución Normal con la misma media $\mu$ que la población pero ahora la desviación típica será $\sigma /\sqrt{n}$. La media de nuestra muestra, $\bar{x}$, pertenerá a la distribución de las medias, así que la expresión del intervalo de confianza ahora será:
-$$ \bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $$
+Construimos el intervalo en torno a la media de la muestra. La media muestral también sigue una distribución Normal con la misma media $\mu$ que la población pero ahora la desviación típica será $\sigma /\sqrt{n}$. La media de nuestra muestra, $\bar{x}$, pertenerá a la distribución de las medias, así que la expresión del intervalo de confianza ahora será: $$ \bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $$
 
 #### ¿Y si la población no es Normal?
 
-Si la muestra no muy pequeña, pongamos que tiene más de 10 observaciones, sabemos que la media también seguirá una distribución aproximadamente Normal. A efectos prácticos puede calcularse el intervalo como si la población fuera Normal. 
+Si la muestra no muy pequeña, pongamos que tiene más de 10 observaciones, sabemos que la media también seguirá una distribución aproximadamente Normal. A efectos prácticos puede calcularse el intervalo como si la población fuera Normal.
 
 #### ¿Y si no conocemos el valor de $\sigma$?
 
-En este caso hay que sustituir $\sigma$ por su estimador $s$ pero este cambio tiene consecuencias porque la distribución de $ \frac{x_{\alpha/2}- \mu}{s} $ ya no es una distribución $ N(0; 1) $ sino una t-Student con los mismos grados de libertad, $\nu$, que tiene $s$. Así pues, la expresión del intervalo de confianza queda:
-$$ \bar{x} \pm t_{\nu;\alpha/2} \frac{s}{\sqrt{n}} $$
+En este caso hay que sustituir $\sigma$ por su estimador $s$ pero este cambio tiene consecuencias porque la distribución de \$ \frac{x_{\alpha/2}- \mu}{s} \$ ya no es una distribución \$ N(0; 1) \$ sino una t-Student con los mismos grados de libertad, $\nu$, que tiene $s$. Así pues, la expresión del intervalo de confianza queda: $$ \bar{x} \pm t_{\nu;\alpha/2} \frac{s}{\sqrt{n}} $$
 
-Siendo esta es la expresión de uso más habitual del intervalo de confianza para la media de la población. 
+Siendo esta es la expresión de uso más habitual del intervalo de confianza para la media de la población.
 
 #### ¿Y si lo que queremos estimar es una proporción?
 
@@ -38,12 +34,10 @@ Proporción y media son más similares de lo que parece. En realidad son lo mism
 
 Hay 3 defectos en 10 piezas, una proporción de 0,3, y esa proporción es precisamente la media de los 10 valores.
 
-Cuando los elementos de una población se pueden clasificar en dos grupos: el grupo de interés, con una probabilidad de ocurrencia $p$ y el resto con una probabilidad $1-p$,  en una muestra de tamaño $n$ la proporción de elementos que pertenecen al grupo de interés es una variable aleatoria $\hat{p}$ con media $p$ y varianza $p(1-p)/n$. 
+Cuando los elementos de una población se pueden clasificar en dos grupos: el grupo de interés, con una probabilidad de ocurrencia $p$ y el resto con una probabilidad $1-p$, en una muestra de tamaño $n$ la proporción de elementos que pertenecen al grupo de interés es una variable aleatoria $\hat{p}$ con media $p$ y varianza $p(1-p)/n$.
 
-Si $n$ no es muy pequeña ni $p$ muy cercana a 0 o a 1, la variable $\hat{p}$ se puede aproximar a la distribución Normal.
-$$ \hat{p} \sim N \left( p; \sqrt{\frac{p(1-p)}{n}} \right)$$
+Si $n$ no es muy pequeña ni $p$ muy cercana a 0 o a 1, la variable $\hat{p}$ se puede aproximar a la distribución Normal. $$ \hat{p} \sim N \left( p; \sqrt{\frac{p(1-p)}{n}} \right)$$
 
-Siguiendo el mismo razonamiento que conduce a la expresión del intervalo de confianza para $\mu$, usando el valor de $\hat{p}$ (el de $p$ no lo conocemos) llegamos a la siguiente expresión para el intervalo de confianza $1-\alpha$ para $p$:
-$$ \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $$
+Siguiendo el mismo razonamiento que conduce a la expresión del intervalo de confianza para $\mu$, usando el valor de $\hat{p}$ (el de $p$ no lo conocemos) llegamos a la siguiente expresión para el intervalo de confianza $1-\alpha$ para $p$: $$ \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $$
 
 En todos los casos hemos supuesto que la población es infinita. Esto es lo habitual, ya que la población es un modelo teórico o es tan grande que a efectos prácticos puede considerarse infinita. Si la población es finita las fórmulas cambian un poco, pero eso lo comentamos en la siguiente pregunta.

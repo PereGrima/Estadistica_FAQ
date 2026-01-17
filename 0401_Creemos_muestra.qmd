@@ -1,4 +1,4 @@
-# ¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos? {.unnumbered}
+# ¿Por qué nos creemos los resultados de una muestra sabiendo que si tomáramos otra serían distintos? {.unnumbered #creemosMuestra}
 
 En pocas palabras: porque serán distintos pero \textbf{no muy distintos}. Además, sabemos como se comportan nuestras estimaciones y usando las propiedades de las distribuciones de probabilidad --las que convengan en cada caso-- podemos obtener los niveles de confianza y los márgenes de error deseados. Claro que hace falta que las muestras sean aleatorias y de tamaño suficiente.
 
@@ -14,11 +14,10 @@ También es cierto que al tomar una sola muestra conocemos un solo valor de la m
 
 Supongamos que la variabilidad de los datos viene definida por $\sigma=4$. Podemos calcular el número de elementos que debemos incluir en la muestra para que, por ejemplo, el 99,7 % de las medias muestrales, caigan a una distancia de menos de 2 unidades de la media poblacional.
 
-El tamaño de muestra requerido para cumplir con estas especificaciones es[^nota-1] n=36. Si se toman muchas muestras de este tamaño, ¿qué tan distintos serán los valores que presentarán sus medias? En este caso, el 99,7 % de las veces caerán a una distancia de menos de 2 unidades de la verdadera media poblacional.
+El tamaño de muestra requerido para cumplir con estas especificaciones es[^0401_creemos_muestra-1] n=36. Si se toman muchas muestras de este tamaño, ¿qué tan distintos serán los valores que presentarán sus medias? En este caso, el 99,7 % de las veces caerán a una distancia de menos de 2 unidades de la verdadera media poblacional.
 
-[^nota-1]: <small>La fórmula que permite calcular el tamaño de la muestra, cuando el tamaño de la población se supone infinito, o muy grande respecto al tamaño de la muestra, es: $n=z_{\alpha/2}^2 \sigma^2 /E^2$, donde el valor $z_{\alpha/2}$ depende del nivel de confianza (para el 99,7 % vale 2,97), $\sigma$ es la desviación típica de la población y $E$ es el margen de error. Si suponemos $\sigma=4$, el nivel de confianza indicado y $E=2$, se obtiene $n=35,3$. Este valor siempre se redondea por exceso.</small>
+[^0401_creemos_muestra-1]: <small>La fórmula que permite calcular el tamaño de la muestra, cuando el tamaño de la población se supone infinito, o muy grande respecto al tamaño de la muestra, es: $n=z_{\alpha/2}^2 \sigma^2 /E^2$, donde el valor $z_{\alpha/2}$ depende del nivel de confianza (para el 99,7 % vale 2,97), $\sigma$ es la desviación típica de la población y $E$ es el margen de error. Si suponemos $\sigma=4$, el nivel de confianza indicado y $E=2$, se obtiene $n=35,3$. Este valor siempre se redondea por exceso.</small>
 
 Está claro que en la práctica tomaremos una sola muestra pero, sabiendo que "casi" en todos los casos su media se encontrará a menos de 2 unidades de la media poblacional, esperamos que la obtenida por nosotros sea una de esas, aunque a decir verdad, no podremos asegurarlo puesto que 3 de cada mil se salen de esa distancia. No tenemos más remedio que asumir un cierto riesgo de equivocarnos pero nosotros hemos podido fijar previamente la magnitud de ese riesgo. En nuestro ejemplo, equivale a comprar 997 boletos de una rifa que tiene 1000 y que no nos toque el premio. Hay que tener muy mala suerte para que esto pase.
 
 En resumen, siempre que en base a una muestra queramos conocer un rasgo de la población con un margen de error especificado, corremos un riesgo de equivocarnos, pero este riesgo se puede controlar, llevándolo al valor que convenga, utilizando el tamaño de muestra adecuado. Otra cosa es que dispongamos del presupuesto y de los medios necesarios para tomar una muestra aleatoria del tamaño necesario.
-

@@ -1,4 +1,4 @@
-# ¿Qué relación hay entre tamaño de muestra y tamaño de población? {.unnumbered}
+# ¿Qué relación hay entre tamaño de muestra y tamaño de población? {.unnumbered #relacion}
 
 Guiándonos solo por la intuición parece razonable considerar que el tamaño de la muestra debe estar muy relacionado con el de la población. Nos parece que para un país de 50 millones de habitantes hará falta una muestra mucho mayor que para una ciudad de 50 mil. A veces se ponen en duda los resultados de un estudio con el argumento de que la muestra no llega ni al 10 % de la población. Pues resulta que esas intuiciones son falsas.
 

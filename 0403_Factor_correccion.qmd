@@ -1,4 +1,4 @@
-# ¿Qué es el factor de corrección por población finita? {.unnumbered}
+# ¿Qué es el factor de corrección por población finita? {.unnumbered #factorCorreccion}
 
 Aunque sobre esto no se habla mucho, la fórmula de la varianza muestral \$\sigma\_{\bar{x}}\^2 =\sigma\^2/n \$ donde $\sigma^2$ es la varianza poblacional y $n$ el tamaño de muestra, solo es válida si la población es infinita.
 
