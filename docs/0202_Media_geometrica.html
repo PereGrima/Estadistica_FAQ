@@ -198,7 +198,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0201_Mediana.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Para qué sirve la mediana si ya tenemos la media aritmética?</span></a>
+ <span class="menu-text">2.1 ¿Para qué sirve la mediana si ya tenemos la media aritmética?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -695,7 +695,7 @@ window.Quarto = {
 </header>
 
 
-<p>Sí la tiene, pero mucho menos que la media aritmética. Un caso típico de uso de la media geométrica lo tenemos en el cálculo del valor medio de una tasa de crecimiento. Si una población tenía 10.000 habitantes en el año cero, creció el primer año a una tasa del 5 %, el segundo a una tasa del 20 % y el tercer año al 50 % ¿A que tasa promedio ha crecido en estos tres años?</p>
+<p>Sí la tiene, aunque muchas menos que la media aritmética. Un caso típico de uso de la media geométrica lo tenemos en el cálculo del valor medio de una tasa de crecimiento. Si una población tenía 10.000 habitantes en el año cero, creció el primer año a una tasa del 5 %, el segundo a una tasa del 20 % y el tercero al 50 % ¿A qué tasa promedio ha crecido durante estos tres años?</p>
 <div class="tabla-pequena">
 <table class="caption-top table">
 <colgroup>
@@ -737,7 +737,7 @@ window.Quarto = {
 </tbody>
 </table>
 </div>
-<p>Si calculamos la media aritmética de la tasa de crecimiento tenemos: <span class="math inline">\((0,05 + 0,20 + 0,50)/3 = 0,25\)</span> y el factor medio de expansión sería <span class="math inline">\(1,25\)</span>. Pero si la población hubiera crecido los tres años de esta forma, no se llegaría al mismo resultado final:</p>
+<p>Si calculamos la media aritmética de la tasa de crecimiento tenemos: <span class="math inline">\((0,05 + 0,20 + 0,50)/3 = 0,25\)</span> y el factor medio de expansión sería <span class="math inline">\(1,25\)</span>. Sin embargo, si la población hubiera crecido los tres años de esta forma, no se llegaría al mismo resultado final:</p>
 <div class="tabla-pequena">
 <table class="caption-top table">
 <colgroup>
@@ -780,26 +780,26 @@ window.Quarto = {
 </table>
 </div>
 <p>Por tanto, la media aritmética no es un buen indicador de la tasa media de crecimiento.</p>
-<p>Si la población crece a una tasa constante <span class="math inline">\(i\)</span>, para que al final del tercer año tenga el mismo efecto que las tasas del ejemplo, se debe verificar que:</p>
+<p>Si la población creciera a una tasa constante <span class="math inline">\(i\)</span>, para que al final del tercer año produjera el mismo efecto que las tasas del ejemplo, se debe verificar que:</p>
 <p><span class="math display">\[ 10\,000(1+i)(1+i)(1+i)=10\,000(1+0,05)(1+0,20)(1+0,50) \]</span></p>
 <p>De donde:</p>
 <p><span class="math display">\[(1+i)= \sqrt[3]{1,05 \cdot 1,20 \cdot 1,50}=1,2364\]</span></p>
-<p>Si se hubiera tenido este factor de expansión cada año (nótese que es la media geométrica), hubiera conducido a una población final igual a la que tenemos.</p>
+<p>Si se hubiera tenido este factor de expansión cada año (nótese que se trata de la media geométrica), se habría llegado exactamente a la misma población final.</p>
 <p>Curiosidades sobre la media geométrica son:</p>
 <ul>
 <li><p>A diferencia de la media aritmética, la media geométrica sólo se define para números positivos.</p></li>
-<li><p>La media geométrica nunca es mayor que la media aritmética. La demostración para el caso de 2 valores es fácil por reducción al absurdo. Supongamos que: <span class="math inline">\(\sqrt{ab} &gt; (a+b)/2\)</span>, entonces <span class="math inline">\(ab &gt; (a^2+2ab+b^2)/4\)</span>, de donde: <span class="math inline">\(0 &gt;a^2-2ab+b^2\)</span>. Como <span class="math inline">\(a^2-2ab+b^2=(a-b)^2\)</span> es imposible que este valor sea negativo, luego es imposible que <span class="math inline">\(\sqrt{ab}&gt;(a+b)/2\)</span>.</p></li>
+<li><p>La media geométrica nunca es mayor que la media aritmética. La demostración para el caso de dos valores es fácil por reducción al absurdo. Supongamos que: <span class="math inline">\(\sqrt{ab} &gt; (a+b)/2\)</span>, entonces <span class="math inline">\(ab &gt; (a^2+2ab+b^2)/4\)</span>, de donde se deduce: <span class="math inline">\(0 &gt;a^2-2ab+b^2\)</span>. Como <span class="math inline">\(a^2-2ab+b^2=(a-b)^2\)</span> es imposible que este valor sea negativo, luego es imposible que <span class="math inline">\(\sqrt{ab}&gt;(a+b)/2\)</span>.</p></li>
 </ul>
 <p>Y ya puestos a hablar de otras medias, podemos hacer un comentario sobre la media armónica, mucho menos conocida pero también útil en algunos casos.</p>
-<p>Se define la media armónica de <span class="math inline">\(x_1, x_2, ..., x_N\)</span> como:</p>
+<p>Se define la media armónica de <span class="math inline">\(x_1, x_2, \ldots..., x_N\)</span> como:</p>
 <p><span class="math display">\[Mh = \frac{N}{\large{\frac{1}{x_1}+\frac{1}{x_2}+...+\frac{1}{x_N}}}\]</span></p>
-<p>Parece que esto sea un retorcimiento sin ningún interés, pero no. Si un coche recorre cierta distancia a una velocidad de 100 km/h y vuelve por el mismo camino a 120 km/h, la velocidad media a que ha realizado el viaje es:</p>
+<p>Parece que esto sea un retorcimiento sin ningún interés, pero no. Si un coche recorre cierta distancia a una velocidad de 100 km/h y vuelve por el mismo camino a 120 km/h, la velocidad media del viaje es:</p>
 <p><span class="math display">\[Mh = \frac{2}{\large{\frac{1}{100}+\frac{1}{120}}} = 109,1 \text{ km/h}\]</span></p>
 <p>y no 110 km/h como en principio se podría pensar.</p>
 <p>Observe que la velocidad es igual a la distancia recorrida dividida por el tiempo tardado en recorrerla,</p>
 <p>es decir <span class="math inline">\(v=d/t\)</span> y por tanto <span class="math inline">\(t=d/v\)</span>. En nuestro caso, si la distancia a recorrer es <span class="math inline">\(d\)</span>, el tiempo tardado en la ida es <span class="math inline">\(t_1 =d/100\)</span> y el tiempo tardado en el regreso es <span class="math inline">\(t_2 =d/120\)</span>. De esta manera el tiempo total invertido en todo el recorrido <span class="math inline">\((2d)\)</span> será <span class="math inline">\(t=t_1+t_2\)</span> y la velocidad media se calcula de la forma:</p>
 <p><span class="math display">\[ \text{Velocidad media} = \frac{\text{Distancia total recorrida}}{\text{Tiempo total empleado}} = \frac{2d}{\large{\frac{d}{100}+\frac{d}{120}}} \]</span></p>
-<p>Otro ejemplo: Un avión recorre 3000 km. Los 1000 primeros a 700 km/h, los 1000 siguientes a 800 km/h, y los 1000 restantes a 900 km/h ¿Cuál ha sido su velocidad media? No ha sido 800 km/h sino 791,6 km/h.</p>
+<p>Otro ejemplo: un avión recorre 3000 km. Los 1000 primeros a 700 km/h, los 1000 siguientes a 800 km/h, y los 1000 restantes a 900 km/h ¿Cuál ha sido su velocidad media? No ha sido 800 km/h sino 791,6 km/h.</p>
 
 
 
@@ -1206,8 +1206,8 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./0201_Mediana.html" class="pagination-link" aria-label="¿Para qué sirve la mediana si ya tenemos la media aritmética?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Para qué sirve la mediana si ya tenemos la media aritmética?</span>
+      <a href="./0201_Mediana.html" class="pagination-link" aria-label="2.1 ¿Para qué sirve la mediana si ya tenemos la media aritmética?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.1 ¿Para qué sirve la mediana si ya tenemos la media aritmética?</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
