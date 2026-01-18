@@ -1,63 +1,61 @@
-# ¿Por qué cuando se calcula la varianza de una muestra se divide por n-1? {.unnumbered #n-1}
+# 2.5 ¿Por qué cuando se calcula la varianza de una muestra se divide por n-1? {#n-1 .unnumbered}
 
-Para hacer más fácil la explicación vamos a trabajar con un ejemplo suponiendo que conocemos la población completa, lujo que no tendremos en la práctica. Los elementos que componen la población, junto con sus mediciones respectivas, son:
+Para facilitar la explicación trabajaremos con un ejemplo en el que suponemos que conocemos la población completa, un lujo que no tendremos en la práctica.. Los elementos que componen la población, junto con sus mediciones respectivas, son:
 
 ```{=html}
-<h6>
-    <table width="350" cellpadding="1"  border="0" class="center" style="margin: 0 auto;">
-<tr style="border-bottom:0px solid grey">
-<td colspan="100%"></td>
-  </tr>
-<tr>
-<td style="text-align:center">(A)</td>
-<td style="text-align:center">(B)</td>
-<td style="text-align:center">(C)</td>
-<td style="text-align:center">(D)</td>
-<td style="text-align:center">(E)</td>
-<td style="text-align:center">(F)</td>
-</tr>
-<tr style="border-bottom:0px solid grey">
+<div class="tabla-wrapper2">
+<table class="tabla-0205_1">
 
 <tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">10</td>
-<td style="text-align:center">10</td>
-<td style="text-align:center">12</td>
+<td>(A)</td>
+<td>(B)</td>
+<td>(C)</td>
+<td>(D)</td>
+<td>(E)</td>
+<td>(F)</td>
 </tr>
-<tr style="border-bottom:0px solid grey">
- </h6> 
+
+<tr>
+<td>2</td>
+<td>6</td>
+<td>8</td>
+<td>10</td>
+<td>10</td>
+<td>12</td>
+</tr>
+
  </table>
+</div>
 ```
-\
-En primer lugar ilustraremos la propiedad de insesgamiento de un estimador para el caso de la media, con la cual estamos más familiarizados, y luego repetiremos la experiencia para el caso que nos ocupa de la varianza.
 
-La media poblacional $\mu$, de los datos del ejemplo, es:
+En primer lugar ilustraremos la propiedad de insesgamiento de un estimador en el caso de la media, con la cual estamos más familiarizados, y luego repetiremos el razonamiento para el caso que nos ocupa, el de la varianza.
+
+La media poblacional $\mu$, correspondiente a los datos del ejemplo, es:
 
 $$\mu = \frac{2+6+8+10+10+12}{6}=8$$
 
-Supongamos que nosotros queremos estimar (“hacernos una idea”) el valor $\mu$, usando una muestra aleatoria de $n = 2$ unidades. En este caso, en que la población consta sólo de 6 unidades, podemos hacer un listado de todas las muestras que pueden resultar al escoger dos unidades al azar. Estas muestras aparecen enumeradas en la siguiente tabla:
+Supongamos que queremos estimar (“hacernos una idea”) el valor $\mu$, usando una muestra aleatoria de $n = 2$ unidades. En este caso, como la población consta sólo de 6 unidades, podemos hacer un listado de todas las muestras que pueden resultar al escoger dos unidades al azar. Estas muestras aparecen enumeradas en la siguiente tabla:
 
-::: tabla-pequena
-<table style="width:98%;">
+```{=html}
+<div class="tabla-wrapper2">
+<table class="tabla-pequena">
 <colgroup>
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
+<col style="width: 17.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -164,20 +162,20 @@ F</p></td>
 </tr>
 </tbody>
 </table>
-:::
+</div
+```
 
-\
 Cuando se seleccione al azar una muestra de dos unidades, el resultado será necesariamente alguna de estas 15 posibles combinaciones de 2 elementos, con su media $\bar{x}$ correspondiente.
 
 Decimos que $\bar{x}$ es un estimador insesgado de $\mu$ si el promedio de todas las posibles medias coincide exactamente con la media de la población. Para verificarlo, hagamos el promedio de nuestras 15 posibles medias: $$ \frac{4+5+6+6+7+7+8+8+9+9+9+10+10+11+11}{15}=8 $$
 
-El promedio coincide con $\mu$. Esto pasa en todos los casos, independientemente del tipo de población o del tamaño de la muestra, por eso decimos que $\bar{x}$ es un estimador insesgado de $\mu$.
+El promedio coincide con $\mu$. Esto ocurre en todos los casos, independientemente del tipo de población o del tamaño de la muestra, por eso decimos que $\bar{x}$ es un estimador insesgado de $\mu$.
 
 Veamos ahora si el estadístico: $$  S_{n}^{2}= \frac{ \sum_{i=1}^{n}{(x_i-\bar{x})^2} }{n} $$
 
 donde $n$ es el tamaño de las muestras, es un estimador insesgado para la varianza $\sigma_{N}^{2}$, calculada como: $$  \sigma_{N}^{2}= \frac{ \sum_{i=1}^{N}{(x_i-\mu)^2} }{N} $$
 
-donde $N$ es el tamaño de la población. Queremos saber si el promedio de los valores de $S_{n}^{2}$, para cada una de las posibles muestras, da el valor de $\sigma_{N}^{2}$ y para averiguarlo, en primer lugar vamos a calcular la varianza poblacional:
+donde $N$ es el tamaño de la población. Queremos saber si el promedio de los valores de $S_{n}^{2}$, para cada una de las posibles muestras, coincide con el valor de $\sigma_{N}^{2}$ y para averiguarlo, en primer lugar vamos a calcular la varianza poblacional:
 
 $$  \sigma_{N}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6} = 10,67 $$
 
@@ -185,25 +183,26 @@ Ahora calculamos la varianza para cada muestra de 2 unidades, con la fórmula: $
 
 obteniéndose los resultados que aparecen en la siguiente tabla:
 
-::: tabla-pequena
-<table style="width:98%;">
+```{=html}
+<div class="tabla-wrapper2">
+<table class="tabla-pequena">
 <colgroup>
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
+<col style="width: 17.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
+<col style="width: 5.5%" />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -258,7 +257,7 @@ obteniéndose los resultados que aparecen en la siguiente tabla:
 12</p></td>
 </tr>
 <tr class="odd">
-<td><p>Media muestral</p></td>
+<td><p>Varianza muestral</p></td>
 <td style="text-align: center;"><p>4</p></td>
 <td style="text-align: center;"><p>9</p></td>
 <td style="text-align: center;"><p>16</p></td>
@@ -277,9 +276,8 @@ obteniéndose los resultados que aparecen en la siguiente tabla:
 </tr>
 </tbody>
 </table>
-:::
-
-\
+</div
+```
 
 Veamos si el promedio de las posibles varianzas muestrales, coincide con 10,67 que es el valor obtenido para $\sigma_{N}^{2}$.
 
@@ -287,9 +285,9 @@ $$ \bar{S}^2 = \frac{4+9+16+16+25+1+4+4+9+...+1}{15} = 6,4 $$
 
 No coincide y, por tanto, $S_{n}^{2}$ no es un estimador insesgado de $\sigma_{N}^{2}$. Sin embargo $S_{n-1}^{2}$, definido de la forma: $$  S_{n-1}^{2}= \frac{ \sum_{i=1}^{n}{(x_i-\bar{x})^2} }{n-1} $$
 
-aunque tampoco es un estimador insesgado para $\sigma_{N}^{2}$, sí lo es para $\sigma_{N-1}^{2}$ definido como: $$  \sigma_{N-1}^{2}= \frac{ \sum_{i=1}^{N-1}{(x_i-\mu)^2} }{N-1} $$
+aunque tampoco es un estimador insesgado para $\sigma_{N}^{2}$, sí lo es de $\sigma_{N-1}^{2}$ definido como: $$  \sigma_{N-1}^{2}= \frac{ \sum_{i=1}^{N-1}{(x_i-\mu)^2} }{N-1} $$
 
-Efectivamente, $\sigma_{N-1}^{2$ tiene el valor: $$  \sigma_{N-1}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6-1} = 12,8 $$
+Efectivamente, $\sigma_{N-1}^2$ tiene el valor: $$  \sigma_{N-1}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6-1} = 12,8 $$
 
 Y si calculamos $S_{n-1}^{2}$ para cada una de nuestras muestras deberemos aplicar la fórmula:
 
@@ -299,4 +297,6 @@ Es decir que todos los valores de la varianza que aparecen en la tabla anterior,
 
 $$ \bar{S}_{n-1}^{2}= 2\cdot 6,4 = 12,8 $$
 
-Quizá este resultado decepcione, y hasta sorprenda, porque seguramente lo esperado era que $S_{n-1}^{2}$ fuera un estimador insesgado de $\sigma_{N}^{2}$ y no de $\sigma_{N-1}^{2}$, pero no hay que preocuparse demasiado. A efectos prácticos es casi lo mismo cuando la población es grande, y nosotros no vamos a estimar a través de muestras las características de una población de 6 elementos (en nuestro ejemplo esta ha sido una población “de juguete” para entender lo que estábamos haciendo). Cuando estimemos la varianza de una población se tratará de una población grande, en la que $\sigma_{N}^{2}$ será prácticamente igual a $\sigma_{N-1}^{2}$. En realidad, el caso más frecuente es tener poblaciones teóricas (infinitas), en las que es exactamente lo mismo $\sigma_{N}^{2}$ que $\sigma_{N-1}^{2}$.
+Quizá este resultado decepcione, y hasta sorprenda, porque seguramente lo esperado era que $S_{n-1}^{2}$ fuera un estimador insesgado de $\sigma_{N}^{2}$ y no de $\sigma_{N-1}^{2}$, pero no hay que preocuparse demasiado. A efectos prácticos es casi lo mismo cuando la población es grande, y no vamos a estimar, a partir de muestras, las características de una población de 6 elementos (en nuestro ejemplo esta ha sido una población “de juguete” para entender el razonamiento). 
+
+Cuando estimemos la varianza de una población se tratará de una población grande, en la que $\sigma_{N}^{2}$ será prácticamente igual a $\sigma_{N-1}^{2}$. En realidad, el caso más frecuente es tener poblaciones teóricas (infinitas), en las que es exactamente lo mismo $\sigma_{N}^{2}$ que $\sigma_{N-1}^{2}$.

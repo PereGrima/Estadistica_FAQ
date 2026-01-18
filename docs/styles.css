@@ -3,6 +3,49 @@ h1, h2, h3, h4, h5, h6 {
   color: #0038CF;
 }
 
+/*** Tabla 2.5_1  ***/
+
+.tabla-0205_1 {
+  margin: auto;
+  width: 55%;
+  max-width: 600px;
+  border-top: 0px solid #d3d3d3;
+  border-bottom: 0px solid #d3d3d3;
+  margin-bottom: 0;
+}
+
+.tabla-0205_1 td {
+  text-align: center;    /* celdas centradas */
+  padding: 2px 2px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+  border-top: 0px solid #d3d3d3;
+  border-bottom: 0px solid #d3d3d3;
+}
+
+.tabla-wrapper2 {
+  margin-bottom: 2ex;
+}
+
+/*********************/
+
+.tabla-pequena {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+.tabla-pequena th {
+  padding: 4px 6px;     /* menos relleno vertical */
+  line-height: 1.2;    /* reduce altura de línea */
+}
+.tabla-pequena td p {
+  margin: 0px;           /* elimina espacio extra */
+} 
+    
+    
+    
+    
 /* Images */
 
 .figure-caption {
