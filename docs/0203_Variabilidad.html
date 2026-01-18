@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>¿Por qué damos tanta importancia a la variabilidad? – Estadística. Preguntas frecuentes</title>
+<title>2.3 ¿Por qué damos tanta importancia a la variabilidad? – Estadística. Preguntas frecuentes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./0203_Variabilidad.html">¿Por qué damos tanta importancia a la variabilidad?</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./0203_Variabilidad.html">2.3 ¿Por qué damos tanta importancia a la variabilidad?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -198,19 +198,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0201_Mediana.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Para qué sirve la mediana si ya tenemos la media aritmética?</span></a>
+ <span class="menu-text">2.1 ¿Para qué sirve la mediana si ya tenemos la media aritmética?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0202_Media_geometrica.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Tiene alguna aplicación práctica la media geométrica?</span></a>
+ <span class="menu-text">2.2 ¿Tiene alguna aplicación práctica la media geométrica?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0203_Variabilidad.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">¿Por qué damos tanta importancia a la variabilidad?</span></a>
+ <span class="menu-text">2.3 ¿Por qué damos tanta importancia a la variabilidad?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -676,9 +676,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./0203_Variabilidad.html">¿Por qué damos tanta importancia a la variabilidad?</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0201_Mediana.html">Estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./0203_Variabilidad.html">2.3 ¿Por qué damos tanta importancia a la variabilidad?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="variabilidad" class="quarto-section-identifier">¿Por qué damos tanta importancia a la variabilidad?</span></h1>
+<h1 class="title"><span id="variabilidad" class="quarto-section-identifier">2.3 ¿Por qué damos tanta importancia a la variabilidad?</span></h1>
 </div>
 
 
@@ -696,9 +696,9 @@ window.Quarto = {
 
 
 <p>Porque considerar la variabilidad es fundamental para describir la realidad, para entenderla y para tomar mejores decisiones.</p>
-<p>Es muy conocido el chiste que dice que si un señor se come un pollo y otro no come nada, la estadística lo explicará diciendo que en promedio se han comido medio pollo cada uno. Hace gracia por lo descabellado que es contar así las cosas, pero lo hacemos con más frecuencia de la que creemos. Por ejemplo, cuando se habla de la renta per cápita de un país se está hablando del medio pollo que se come cada uno, sin hacer ninguna referencia a si todos comen más o menos lo mismo o si unos comen mucho y otros prácticamente nada. En el terreno de la educación, cuando se dan los resultados de las pruebas PISA se dan unos valores por países y pocos se preguntan sobre las diferencias dentro de cada país, lo cual también es una información relevante.</p>
-<p>En el ámbito de la gestión de empresas, supongamos que debe elegir entre dos proveedores que son iguales en todo (precio, calidad, etc.) excepto en el plazo de entrega: uno tarda un promedio de 4,25 días y el otro de 5,75, ¿con cuál se queda? Seguramente habrá pensado que con el que sirve más rápido, pero 4,25 es el promedio de: 3, 5, 4, 3, 7, 4, 2 y 6, mientras que 5,75 lo es de: 6, 5, 6, 6, 6, 5, 6 y 6. ¿Qué piensa ahora? Es más previsible el que tarda 5,75 y seguro que usted se podrá organizar mejor con este. Con el otro deberá hacer los pedidos un mínimo de 7 días antes, y alguna vez lo recibirá a los 2 días y no sabrá donde ponerlo.</p>
-<p>En el mundo industrial ignorar la variabilidad también conduce a una visión equivocada del funcionamiento de las cosas. Veamos un ejemplo donde usaremos la ley de Ohm (Recuerde: I=V/R, si esto no le suena de nada puede saltarse este párrafo). Supongamos que le encargan fabricar un lote de circuitos muy sencillos que solo constan de un fuente de alimentación (V) y de una resistencia (R). Vamos a suponer que el voltaje de la fuente de alimentación siempre es igual a 100 V mientras que las resistencias presentan una cierta variabilidad y tienen un valor real que es igual al valor nominal ±5 <span class="math inline">\(\Omega\)</span>. Se desea que en cada circuito la intensidad sea de 10 A y se considerará defectuoso si esa intensidad está fuera del intervalo 10±3 A ¿de qué valor nominal debe pedir las resistencias para minimizar la proporción de circuitos defectuosos? Quizá usted está pensando que si se quiere tener I=10 A, si V=100 V se debe pedir R=10 <span class="math inline">\(\Omega\)</span>. Esto sería verdad si no hubiera variabilidad pero en nuestro caso habría que pedirlas de 11 <span class="math inline">\(\Omega\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>Es muy conocido el chiste que dice que si un señor se come un pollo y otro no come nada, la estadística lo explicará diciendo que, en promedio, se han comido medio pollo cada uno. Hace gracia por lo descabellado que es contar así las cosas, pero lo hacemos con más frecuencia de la que creemos. Por ejemplo, cuando se habla de la renta per cápita de un país se está hablando del “medio pollo” que se come cada uno, sin hacer ninguna referencia a si todos comen más o menos lo mismo o si unos comen mucho y otros prácticamente nada. En el terreno de la educación, cuando se dan los resultados de las pruebas PISA se dan unos valores por países y pocos se preguntan sobre las diferencias dentro de cada país, lo cual también es una información relevante.</p>
+<p>En el ámbito de la gestión de empresas, supongamos que debe elegir entre dos proveedores que son iguales en todo (precio, calidad, etc.) excepto en el plazo de entrega: uno tarda un promedio de 4,25 días y el otro de 5,75. ¿Con cuál se quedaría? Seguramente habrá pensado que con el que sirve más rápido, pero 4,25 es el promedio de: <span class="math display">\[3,\; 5,\; 4,\; 3,\; 7,\; 4,\; 2\;\, \text{y}\;\, 6\]</span> mientras que 5,75 lo es de: <span class="math display">\[6,\; 5,\; 6,\; 6,\; 6,\; 5\;\,\text{y}\;\, 6\]</span> Qué piensa ahora? El proveedor que tarda 5,75 días es más previsible y seguro que usted se podrá organizar mejor con este. Con el otro deberá hacer los pedidos un mínimo de 7 días antes, y alguna vez lo recibirá a los 2 días y no sabrá donde ponerlo.</p>
+<p>En el mundo industrial ignorar la variabilidad también conduce a una visión equivocada del funcionamiento de las cosas. Veamos un ejemplo donde usaremos la ley de Ohm (Recuerde: I=V/R, si esto no le suena de nada puede saltarse este párrafo). Supongamos que le encargan fabricar un lote de circuitos muy sencillos que solo constan de una fuente de alimentación (V) y de una resistencia (R). Vamos a suponer que el voltaje de la fuente de alimentación siempre es igual a 100 V mientras que las resistencias presentan una cierta variabilidad y tienen un valor real que es igual al valor nominal ±5 <span class="math inline">\(\Omega\)</span>. Se desea que en cada circuito la intensidad sea de 10 A y se considerará defectuoso si esa intensidad está fuera del intervalo 10±3 A. ¿Qué valor nominal debe pedir para las resistencias con el fin de minimizar la proporción de circuitos defectuosos? Quizá esté pensando que para tener I=10 A, si V=100 V debe pedir R=10 <span class="math inline">\(\Omega\)</span>. Esto sería verdad si no hubiera variabilidad pero en nuestro caso habría que pedirlas de 11 <span class="math inline">\(\Omega\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <p>En el ámbito de la medicina, para que una vacuna o un nuevo medicamento sean aprobados deben probarse en una amplia muestra de las personas a que va dirigido. Si todos fuéramos iguales -si no hubiera variabilidad- bastaría hacer la prueba en una sola persona, una cualquiera, y si en esa funciona funcionaría en todas.</p>
 <p>En fin, si no existiera la variabilidad no habría estadística. Ni estadística, ni evolución de las especies ni muchas otras cosas. Tampoco estaríamos nosotros.</p>
 
@@ -1113,8 +1113,8 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./0202_Media_geometrica.html" class="pagination-link" aria-label="¿Tiene alguna aplicación práctica la media geométrica?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">¿Tiene alguna aplicación práctica la media geométrica?</span>
+      <a href="./0202_Media_geometrica.html" class="pagination-link" aria-label="2.2 ¿Tiene alguna aplicación práctica la media geométrica?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.2 ¿Tiene alguna aplicación práctica la media geométrica?</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
