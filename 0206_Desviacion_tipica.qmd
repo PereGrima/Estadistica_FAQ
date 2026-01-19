@@ -1,4 +1,4 @@
-# ¿Por qué la desviación típica es la medida típica de dispersión? {#tipica .unnumbered}
+# 2.6 ¿Por qué la desviación típica es la medida típica de dispersión? {#tipica .unnumbered}
 
 Existen diversas razones por las que la desviación típica --o desviación estándar-- es tan valorada y tan necesaria en el ámbito de la estadística. Una de esas razones es que, junto con la media, forman una "pareja perfecta" para describir el comportamiento de muchas variables aleatorias. Otra podría ser el formar parte del "ADN" de la distribución Normal. Veamos algunos de sus méritos.
 

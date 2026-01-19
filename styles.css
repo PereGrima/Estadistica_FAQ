@@ -82,7 +82,28 @@ h1, h2, h3, h4, h5, h6 {
 /*** Esto último es para que no salga raya entre las dos primeras líneas ***/
 /**********************************/
 
+/*** Tabla 2.9  ***/
 
+.tabla-0209 {
+  margin: auto;
+  width: 82%;
+  max-width: 600px;
+  border-top: 0px solid #d3d3d3;
+  border-bottom: 0px solid #d3d3d3;
+  margin-bottom: 0;
+}
+
+.tabla-0209 td {
+  text-align: center;    /* celdas centradas */
+  padding: 2px 2px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+  border-top: 0px solid #d3d3d3;
+  border-bottom: 0px solid #d3d3d3;
+}
+
+.tabla-wrapper2 {
+  margin-bottom: 2ex;
+}
 
 
 

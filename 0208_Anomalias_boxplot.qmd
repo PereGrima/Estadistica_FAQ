@@ -1,23 +1,23 @@
-# ¿De dónde sale el 1,5 utilizado para marcar las anomalías en un boxplot? {.unnumbered #anomalias}
+# 2.8 ¿De dónde sale el 1,5 utilizado para marcar las anomalías en un boxplot? {#anomalias .unnumbered}
 
-Parece que ese 1,5 es un número caprichoso. También el 1 o el 2 podrían ser buenos candidatos con la ventaja de ser más sencillos, pero veamos que ocurriría si fueran estos los elegidos.
+A primera vista, ese 1,5 puede parecer un número caprichoso. También el 1 o el 2 podrían ser buenos candidatos con la ventaja de ser más sencillos, pero veamos qué ocurriría si fueran estos los elegidos.
 
-En primer lugar debemos tener en cuenta que los valores que aparecen en la zona de anomalías de un boxplot tienen sentido como tales anomalías, si la población de la que provienen es Normal. Consideremos por tanto una distribución Normal, y puestos a elegir una tomaremos $Z \sim N(0;1)$ ya que los cálculos serán más sencillos y no va a restringir nuestras conclusiones. Para determinar los cuartiles buscamos el valor de $z$ que deja un área de cola de 0,25 y resulta ser: $Z_{0,25} = 0,674$. Por tanto, el rango intercuartílico de una distribución $N(0;1)$ es: $IQR = 0,674 - (-0,674) = 1,348$.
+En primer lugar debemos tener en cuenta que los valores que aparecen en la zona de anomalías de un boxplot tienen sentido como tales anomalías si la población de la que proceden es Normal. Consideremos por tanto una distribución Normal, y puestos a elegir una tomaremos $Z \sim N(0;1)$ ya que los cálculos serán más sencillos y no va a restringir nuestras conclusiones. Para determinar los cuartiles buscamos el valor de $z$ que deja un área de cola de 0,25 y resulta ser: $Z_{0,25} = 0,674$. Por tanto, el rango intercuartílico de una distribución $N(0;1)$ es: $IQR = 0,674 - (-0,674) = 1,348$.
 
 #### Anomalías a partir de Cuartiles $\boldsymbol{\pm 1 \cdot IQR}$
 
-En este caso, fijándonos en el lado derecho, la zona de anomalías empieza en $Q_3 + 1 \cdot IQR = 0,674 + 1,348 = 2,022$, y $P(Z>2,022) = 0,02$. Por tanto, la probabilidad de que un valor que pertenezca a la distribución considerada aparezca en la zona de anomalías es del 4% (2% por cada lado).
+En este caso, fijándonos en el lado derecho, la zona de anomalías empieza en $Q_3 + 1 \cdot IQR = 0,674 + 1,348 = 2,022$, y $P(Z>2,022) = 0,02$. Por tanto, la probabilidad total de que un valor extraído de la distribución considerada aparezca en la zona de anomalías es del 4 % (2 % por cada lado).
 
-![Zona de anomalías con el criterio de $\pm 1 \cdot IQR$](02_Fig_Descriptiva/0801_boxplot_1.png){#fig-boxplot_1 .fig-compacta2 fig-align="center" width="65%"}
+![Zona de anomalías con el criterio de $\pm 1 \cdot IQR$](02_Fig_Descriptiva/0801_boxplot_1.png){#fig-boxplot_1 .fig-compacta2 fig-align="center" width="75%"}
 
 #### Anomalías a partir de Cuartiles $\boldsymbol{\pm 2 \cdot IQR}$
 
-Si en vez de 1 tomamos el valor 2 como multiplicador del rango intercuartílico, tendremos que: $Q_3 + 2 \cdot IQR = 0,674 + 2 \cdot 1,348 = 3,37$ y $P(Z>3,37) = 0,0004$, por lo la probabilidad de que un valor aparezca como anomalía es 0,0008.
+Si en vez de 1 tomamos el valor 2 como multiplicador del rango intercuartílico, tendremos que: $Q_3 + 2 \cdot IQR = 0,674 + 2 \cdot 1,348 = 3,37$ y $P(Z>3,37) = 0,0004$, por lo que la probabilidad de que un valor aparezca como anomalía en alguno de los dos extremos es 0,0008.
 
-![Zona de anomalías con el criterio de $\pm 1 \cdot IQR$](02_Fig_Descriptiva/0802_boxplot_2.png){#fig-boxplot_1 .fig-compacta2 fig-align="center" width="65%"}
+![Zona de anomalías con el criterio de $\pm 1 \cdot IQR$](02_Fig_Descriptiva/0802_boxplot_2.png){#fig-boxplot_1 .fig-compacta2 fig-align="center" width="75%"}
 
-John Tukey, \index{Tukey, John} que fue el primero en plantear el uso de los boxplots, ya contempló la posibilidad de usar los valores 1 o 2, pero consideró que 1 es demasiado pequeño ya que la zona de anomalías con este criterio incluye valores que no merecen ser considerados como tales, y el valor 2 resulta excesivamente grande ya que aleja demasiado esta zona y por tanto pueden pasar desapercibidos valores que deben ser considerados como anómalos.
+John Tukey, \index{Tukey, John} fue el primero en plantear el uso de los boxplots y ya contempló la posibilidad de usar los valores 1 o 2, pero consideró que 1 es demasiado pequeño ya que la zona de anomalías con este criterio incluye valores que no merecen ser considerados como tales, y el valor 2 resulta excesivamente grande ya que aleja demasiado esta zona y por tanto pueden pasar desapercibidos valores que deben ser considerados como anómalos.
 
 #### Anomalías a partir de Cuartiles $\boldsymbol{\pm 1,5 \cdot IQR}$
 
-Descartado el 1 y el 2, y estando claro que el más adecuado es un valor entre ellos, aparece la opción del 1,5 como número más sencillo. Este valor define una zona de anomalías con probabilidades muy razonables (p = 0,007) así que este fue el valor que se propuso y así se ha quedado.
+Descartados los valores 1 y 2, y dado que el multiplicador adecuado debe situarse entre ambos, aparece la opción del 1,5 como número más sencillo. Este valor define una zona de anomalías con probabilidades muy razonables (p = 0,007) así que este fue el valor que se propuso y así se ha quedado.

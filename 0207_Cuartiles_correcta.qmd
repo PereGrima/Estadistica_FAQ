@@ -1,4 +1,4 @@
-# ¿Cuál es la forma correcta de calcular los cuartiles? {#cuartiles .unnumbered}
+# 2.7 ¿Cuál es la forma correcta de calcular los cuartiles? {#cuartiles .unnumbered}
 
 Existen diferentes criterios para determinar los valores de los cuartiles y no todos dan el mismo resultado. Veamos algunos ejemplos.
 
