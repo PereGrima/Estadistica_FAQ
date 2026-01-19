@@ -1,10 +1,10 @@
-# ¿Por qué la desviación típica es la medida típica de dispersión? {.unnumbered #tipica}
+# ¿Por qué la desviación típica es la medida típica de dispersión? {#tipica .unnumbered}
 
-Existen diversas razones por las que la desviación típica --o desviación estándar-- es tan valorada y tan necesaria en el ámbito de la Estadística. Una de esas razones es formar con la media una "pareja perfecta" para describir el comportamiento de muchas variables aleatorias. Otra podría ser el formar parte del \`\`ADN'' de la distribución Normal. Veamos algunos de sus méritos.
+Existen diversas razones por las que la desviación típica --o desviación estándar-- es tan valorada y tan necesaria en el ámbito de la estadística. Una de esas razones es que, junto con la media, forman una "pareja perfecta" para describir el comportamiento de muchas variables aleatorias. Otra podría ser el formar parte del "ADN" de la distribución Normal. Veamos algunos de sus méritos.
 
 #### Relación con la media y con la distribución Normal}
 
-Si una variable aleatoria tiene distribución Normal, basta conocer su media y su desviación típica para calcular cualquier probabilidad relacionada con los valores que puede tomar. Si el peso de unos paquetes de azúcar sigue una distribución Normal con una media de 1000 g y una desviación típica de 15 g, podemos decir que aproximadamente el 95 % de los paquetes tendrán un peso comprendido entre 970 y 1030 g, y también podemos decir que el 68 % tendrá un peso comprendido entre 985 y 1015. Además, podríamos responder cualquier pregunta similar, por ejemplo qué porcentaje de paquetes tendrá un peso por debajo de 980 g (será el 9 %).
+Si una variable aleatoria tiene distribución Normal, basta conocer su media y su desviación típica para calcular cualquier probabilidad relacionada con los valores que puede tomar. Si el peso de unos paquetes de azúcar sigue una distribución Normal con una media de 1000 g y una desviación típica de 15 g, podemos decir que aproximadamente el 95 % de los paquetes tendrán un peso comprendido entre 970 y 1030 g, y también podemos decir que el 68 % tendrá un peso comprendido entre 985 y 1015 g. Además, podríamos responder cualquier pregunta similar, por ejemplo qué porcentaje de paquetes tendrá un peso por debajo de 980 g (será el 9 %).
 
 #### Importancia en otras distribuciones
 
@@ -12,13 +12,13 @@ Si la variable considerada no sigue una distribución Normal ¿sigue siendo úti
 
 #### Cuando no se conoce la distribución
 
-\noindent ¿Sirve la desviación típica para hacer cálculos aproximados de probabilidades asociadas a una variable aleatoria si no tenemos ni idea de cual es su distribución? Esta pregunta la respondió el matemático ruso Pafnuty Chebyshev (su apellido se puede ver escrito de distintas formas) \index{desigualdad de Chebyshev} en la conocida como desigualdad de Chebyshev. La idea es que para una amplia variedad de distribuciones, en el intervalo $\mu \pm k\sigma$ se tiene como mínimo una proporción de observaciones igual a $1-1/k^2$. Es decir, si $k=\sqrt{2}$, el intervalo es $\mu \pm \sqrt{2}\sigma$ y podemos afirmar que, con independencia del tipo de distribución, tendremos como mínimo el 50 % de las observaciones dentro de ese intervalo, y si $k=2$ tendremos como mínimo el 75 %. Una curiosa propiedad en la que nuestra pareja media--desviación típica también es protagonista.
+\noindent ¿Sirve la desviación típica para hacer cálculos aproximados de probabilidades asociadas a una variable aleatoria si no tenemos ni idea de cuál es su distribución? Esta pregunta la respondió el matemático ruso Pafnuty Chebyshev (su apellido se puede ver escrito de distintas formas) \index{desigualdad de Chebyshev} en la conocida como desigualdad de Chebyshev. La idea es que para una amplia variedad de distribuciones, en el intervalo $\mu \pm k\sigma$ se tiene como mínimo una proporción de observaciones igual a $1-1/k^2$. Es decir, si $k=\sqrt{2}$, el intervalo es $\mu \pm \sqrt{2}\sigma$ y podemos afirmar que, con independencia del tipo de distribución, tendremos como mínimo el 50 % de las observaciones dentro de ese intervalo, y si $k=2$ tendremos como mínimo el 75 %. Una curiosa propiedad en la que nuestra pareja media--desviación típica también es protagonista.
 
 #### Su papel en la estimación de la media poblacional
 
 En muchas situaciones nuestro interés está en estimar la media poblacional $\mu$. Para ello tomamos una muestra y calculamos su media $\bar{x}$ para hacernos una idea del valor desconocido del parámetro $\mu$.
 
-Cada vez que se tome una muestra, el valor de la media muestral $\bar{x}$ cambiará, pero sabemos que si tomamos muchas muestras de tamaño $n$, sus medias estarán alrededor del verdadero valor de la media poblacional $\mu$. Pero decir que están alrededor de $\mu$ no significa que estén cerca de $\mu$. ¿Cómo podemos saber que tan cerca están? En la respuesta a esta pregunta la desviación típica también tiene un papel protagonista. La desviación típica de esas medias muestrales \textbf{siempre} es igual a la desviación típica de la población dividida por $\sqrt{n}$. Esto es verdad para \textbf{todas} las distribuciones, no solo para la Normal.
+Cada vez que se tome una muestra, el valor de la media muestral $\bar{x}$ cambiará, pero sabemos que si tomamos muchas muestras de tamaño $n$, sus medias estarán alrededor del verdadero valor de la media poblacional $\mu$. Pero decir que están alrededor de $\mu$ no significa que estén cerca de $\mu$. ¿Cómo podemos saber qué tan cerca están? En la respuesta a esta pregunta la desviación típica también tiene un papel protagonista. La desviación típica de esas medias muestrales se llama error típico y \textbf{siempre} es igual a la desviación típica de la población dividida por $\sqrt{n}$. Esto es verdad para \textbf{todas} las distribuciones, no solo para la Normal.
 
 #### Estandarización de los datos
 

@@ -198,31 +198,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0201_Mediana.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Para qué sirve la mediana si ya tenemos la media aritmética?</span></a>
+ <span class="menu-text">2.1 ¿Para qué sirve la mediana si ya tenemos la media aritmética?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0202_Media_geometrica.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Tiene alguna aplicación práctica la media geométrica?</span></a>
+ <span class="menu-text">2.2 ¿Tiene alguna aplicación práctica la media geométrica?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0203_Variabilidad.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Por qué damos tanta importancia a la variabilidad?</span></a>
+ <span class="menu-text">2.3 ¿Por qué damos tanta importancia a la variabilidad?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0204_Varianza_cuadrado.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Por qué en la fórmula de la varianza se utiliza el cuadrado en vez del módulo?</span></a>
+ <span class="menu-text">2.4 ¿Por qué en la fórmula de la varianza se utiliza el cuadrado en vez del módulo?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./0205_Dividir_n_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">¿Por qué cuando se calcula la varianza de una muestra se divide por n-1?</span></a>
+ <span class="menu-text">2.5 ¿Por qué cuando se calcula la varianza de una muestra se divide por n-1?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -704,7 +704,7 @@ window.Quarto = {
 </figure>
 </div>
 </div>
-<p>Y si los datos son 2, 4, 6, y 8 (número par):</p>
+<p>Y si los datos son 2, 4, 6 y 8 (número par):</p>
 <div class="fig-compacta">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -712,7 +712,7 @@ window.Quarto = {
 </figure>
 </div>
 </div>
-<p><strong>David Moore y George McCabe</strong> en su libro “Introduction to the Practice of Statistics”, muy valorado por su carácter pedagógico e innovador, proponen un método similar al de Tukey pero sin incluir la mediana global en la determinación de las medianas de cada una de las mitades. Cuando el número de datos es par el valor de los cuartiles coincide con el método de Tukey, pero en general no coincide cuando el número de datos es impar.</p>
+<p><strong>David Moore y George McCabe</strong> en su libro “Introduction to the Practice of Statistics”, muy valorado por su carácter pedagógico e innovador, proponen un método similar al de Tukey, pero sin incluir la mediana global en la determinación de las medianas de cada una de las mitades. Cuando el número de datos es par el valor de los cuartiles coincide con el método de Tukey, pero en general no coincide cuando el número de datos es impar.</p>
 <div class="fig-compacta">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -720,9 +720,9 @@ window.Quarto = {
 </figure>
 </div>
 </div>
-<p>El paquete de software estadístico <strong>Minitab</strong> utiliza las expresiones <span class="math inline">\(0,25(n+1)\)</span> y <span class="math inline">\(0,75(n+1)\)</span> para determinar las posiciones de <span class="math inline">\(Q_1\)</span> y <span class="math inline">\(Q_3\)</span> respectivamente. Si la posición obtenida para <span class="math inline">\(Q_1\)</span> es, por ejemplo, 1,25, su valor estará comprendido entre <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span> interpolando de la forma: <span class="math inline">\(Q_1 = x_1 + 0,25(x_2-x_1)\)</span>. Utilizando los mismos datos que en los ejemplos anteriores resultaaa:</p>
+<p>El paquete de software estadístico <strong>Minitab</strong> utiliza las expresiones <span class="math inline">\(0.25(n+1)\)</span> y <span class="math inline">\(0.75(n+1)\)</span> para determinar las posiciones de <span class="math inline">\(Q_1\)</span> y <span class="math inline">\(Q_3\)</span> respectivamente. Si la posición obtenida para <span class="math inline">\(Q_1\)</span> es, por ejemplo, 1,25, su valor estará comprendido entre <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span> interpolando de la forma: <span class="math inline">\(Q_1 = x_1 + 0,25(x_2-x_1)\)</span>. Utilizando los mismos datos que en los ejemplos anteriores resulta:</p>
 <p><span class="math inline">\(\bullet \;\)</span> Datos: 2, 4, 6, 8, 10 <br> Posición de <span class="math inline">\(Q_1\)</span>: <span class="math inline">\(\;0.25 \cdot 6 = 1.5\)</span>; <span class="math inline">\(\;\)</span> Valor de <span class="math inline">\(Q_1\)</span>: <span class="math inline">\(\; 2  +0.5(4-2) = 3\)</span> <br> Posición de <span class="math inline">\(Q_3\)</span>: $;0.75 = 4.5); <span class="math inline">\(\;\)</span> Valor de <span class="math inline">\(Q_3\)</span>: <span class="math inline">\(\; 8 + 0.5(10-8) = 9\)</span></p>
-<p><span class="math inline">\(\bullet \;\)</span> Datos: 2, 4, 6, 8 <br> Posición <span class="math inline">\(Q_1\)</span>: <span class="math inline">\(\;0.25 \cdot 5 = 1.25)\)</span>; <span class="math inline">\(\;\)</span> Valor <span class="math inline">\(Q_1\)</span>: <span class="math inline">\(\; 2 + 0.25(4-2) = 2.5)\)</span> <br> Posición <span class="math inline">\(Q_3\)</span>: <span class="math inline">\(\;0.75 \cdot 5 = 3.75)\)</span>; <span class="math inline">\(\;\)</span> Valor <span class="math inline">\(Q_3\)</span>: <span class="math inline">\(\; 6 + 0.75(8-6) = 7.5)\)</span></p>
+<p><span class="math inline">\(\bullet \;\)</span> Datos: 2, 4, 6, 8 <br> Posición <span class="math inline">\(Q_1\)</span>: <span class="math inline">\(\;0.25 \cdot 5 = 1.25)\)</span>; <span class="math inline">\(\;\)</span> Valor <span class="math inline">\(Q_1\)</span>: <span class="math inline">\(\; 2 + 0.25(4-2) = 2.5\)</span> <br> Posición <span class="math inline">\(Q_3\)</span>: <span class="math inline">\(\;0.75 \cdot 5 = 3.75)\)</span>; <span class="math inline">\(\;\)</span> Valor <span class="math inline">\(Q_3\)</span>: <span class="math inline">\(\; 6 + 0.75(8-6) = 7.5\)</span></p>
 <p><strong>Excel</strong> dispone de la función CUARTIL que identifica la posición de los cuartiles mediante las expresiones: <span class="math inline">\(0.25(n-1)+1\)</span> y <span class="math inline">\(0.75(n-1)+1\)</span> y los calcula interpolando igual que hace Minitab. Seguramente no satisfechos con su forma de identificar los cuartiles, en las últimas versiones se ha mantenido esa función (se indica que por compatibilidad con versiones anteriores) y se han añadido:</p>
 <div class="lista-compacta">
 <ul>
@@ -742,29 +742,32 @@ Figura&nbsp;1: Cálculo de los cuartiles con Excel
 </figure>
 </div>
 <p>En resumen, los valores obtenidos con los métodos comentados han sido:</p>
-<table class="caption-top table">
+<div class="tabla-wrapper2">
+
+<table class="tabla-0207 caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 32%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
 </colgroup>
+<thead>
+<tr class="header">
+<th rowspan="2" data-quarto-table-cell-role="th" style="text-align: left; vertical-align: middle;">Método</th>
+<th colspan="2" style="text-align: center;" data-quarto-table-cell-role="th">&nbsp; Datos: 2, 4, 6, 8</th>
+<th colspan="2" style="text-align: center;" data-quarto-table-cell-role="th">Datos: 2, 4, 6, 8, 10</th>
+</tr>
+<tr class="even">
+<th style="text-align: center;" data-quarto-table-cell-role="th">&nbsp; &nbsp; Q<sub>1</sub></th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Q<sub>3</sub> &nbsp; &nbsp;</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">&nbsp; &nbsp; Q<sub>1</sub></th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Q<sub>3</sub> &nbsp; &nbsp;</th>
+</tr>
+</thead>
 <tbody>
-<tr class="fila-compacta odd">
-<td colspan="2" rowspan="2" class="celda-centrada">Método</td>
-<td colspan="2" style="text-align: center;">&nbsp; Datos: 2, 4, 6, 8</td>
-<td colspan="2" style="text-align: center;">Datos: 2, 4, 6, 8, 10</td>
-</tr>
-<tr class="fila-compacta even">
-<td style="text-align: center;">&nbsp; &nbsp; Q<sub>1</sub></td>
-<td style="text-align: center;">Q<sub>3</sub> &nbsp; &nbsp;</td>
-<td style="text-align: center;">&nbsp; &nbsp; Q<sub>1</sub></td>
-<td style="text-align: center;">Q<sub>3</sub> &nbsp; &nbsp;</td>
-</tr>
-<tr class="fila-compacta2 odd">
-<td colspan="2" style="text-align: left;">Tukey<br>
+<tr class="odd">
+<td style="text-align: left;">Tukey<br>
 Moore y McCabe<br>
 Minitab<br>
 Excel, CUARTIL.INC<br>
@@ -792,6 +795,8 @@ Excel, CUARTIL.EXC</td>
 </tr>
 </tbody>
 </table>
+
+</div>
 <p><br>
 ¿Qué método es el correcto? ¿Cuál debemos utilizar? <strong>En la práctica no importa demasiado</strong>. Solo se está interesado en conocer los cuartiles cuando el conjunto de datos es grande (nunca si tenemos solo 4 o 5 datos) y en este caso las diferencias entre los distintos métodos no son relevantes. Por ejemplo, si tenemos 500 valores, la posición del primer cuartil con el método de Minitab es 125,25 y con la función CUARTIL.INC de Excel es 125,75. Como habrá poca diferencia entre los valores que ocupan las posiciones 125 y 126, la diferencia en el valor del cuartil no será relevante.</p>
 
