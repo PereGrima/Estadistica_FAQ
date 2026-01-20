@@ -3,6 +3,46 @@ h1, h2, h3, h4, h5, h6 {
   color: #0038CF;
 }
 
+/*** Tablas 2.2  ***/
+
+.tabla-0202 {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 0.95em;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+
+.tabla-0202 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 4px; 
+    padding-bottom: 4px;      /* altura de fila más pequeña */
+    line-height: 1.15;      /* compacta como en LaTeX */
+    font-size: 1em;
+    border: none;
+}
+
+.tabla-0202 td {
+  font-size: 1em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 3px 4px;      /* altura de fila más pequeña */
+  line-height: 1.15;      /* compacta como en LaTeX */
+  border: none;
+}
+
+.tabla-0202 thead tr {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.tabla-0202 tbody tr:last-child {
+  border-bottom: 1px solid #000;
+}
+
+/**********************************/   
+
 /*** Tabla 2.5_1  ***/
 
 .tabla-0205_1 {
@@ -29,21 +69,38 @@ h1, h2, h3, h4, h5, h6 {
 /**********************************/
 /*** Resto tablas pregunta 2.5  ***/
 
-.tabla-pequena {
+.tabla-0205_2 {
   margin: auto;
   width: 100%;
   max-width: 600px;
   font-size: 0.9em;
   vertical-align: middle;
+  border-collapse: collapse;
 }
-.tabla-pequena th {
-  padding: 4px 6px;     /* menos relleno vertical */
-  line-height: 1.2;    /* reduce altura de línea */
+
+.tabla-0205_2 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 4px; 
+    padding-bottom: 4px;      /* altura de fila más pequeña */
+    line-height: 1.15;      /* compacta como en LaTeX */
+    font-size: 0.9em;
+    border: none;
 }
-.tabla-pequena td p {
-  margin: 0px;           /* elimina espacio extra */
-} 
-    
+
+.tabla-0205_2 td {
+  font-size: 1em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 3px 4px;      /* altura de fila más pequeña */
+  line-height: 1.15;      /* compacta como en LaTeX */
+  border: none;
+}
+
+.tabla-0205_2 tr {
+  border-bottom: 0.5px solid black;
+  border-top: 0.5px solid black;
+}
+
 /*** Tabla en 2.7  ***/
 
 .tabla-0207 {
@@ -101,8 +158,78 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 0px solid #d3d3d3;
 }
 
-.tabla-wrapper2 {
-  margin-bottom: 2ex;
+/*** Tabla 3.1  ***/
+
+.tabla-antiguedad {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 0.9em;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+
+.tabla-antiguedad th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 3px; 
+    padding-bottom: 3px;      /* altura de fila más pequeña */
+    line-height: 1.1;      /* compacta como en LaTeX */
+    font-size: 1em;
+    border: none;
+}
+
+.tabla-antiguedad td {
+  font-size: 0.95em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 2px 4px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+  border: none;
+}
+
+.tabla-antiguedad thead tr {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.tabla-antiguedad tbody tr:last-child {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+/**********************************/   
+/***   Tabla de pregunta 3.2    ***/
+
+.tabla-0302 {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 0.9em;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+
+.tabla-0302 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 4px; 
+    padding-bottom: 4px;      /* altura de fila más pequeña */
+    line-height: 1.15;      /* compacta como en LaTeX */
+    font-size: 0.9em;
+    border: none;
+}
+
+.tabla-0302 td {
+  font-size: 1em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 8px 8px;      /* altura de fila más pequeña */
+  line-height: 1.2;      /* compacta como en LaTeX */
+  border: none;
+}
+
+.tabla-0302 tr {
+  border-bottom: 0.5px solid black;
+  border-top: 0.5px solid black;
 }
 
 
@@ -124,10 +251,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .center-text {
   text-align: center;
-}
-
-.tabla-pequena table {
-  font-size: 0.9em;
 }
 
 figure figcaption {
@@ -161,16 +284,6 @@ figure figcaption {
 .fig-compacta2 {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-}
-
-.tabla-pequena td,
-.tabla-pequena th {
-  padding: 4px 6px;     /* menos relleno vertical */
-  line-height: 1.2;    /* reduce altura de línea */
-}
-
-.tabla-pequena td p {
-  margin: 0px;           /* elimina espacio extra */
 }
 
 /*** Tabla 7.10  ***/
@@ -381,3 +494,34 @@ table.fila-ultra-compacta tr {
   border-bottom: 1px solid #000;
 }
 
+.tabla-wrapper2 {
+  margin-bottom: 2ex;
+}
+
+.tabla-wrapper3 {
+  margin-bottom: 3ex;
+}
+
+.tabla-wrapper4 {
+  margin-bottom: 4ex;
+}
+
+/********************************************************/
+/***   Creo que lo que viene a continuación no sirve  ***/
+
+.tabla-pequena {
+  margin: auto;
+  width: 80%;
+  max-width: 400px;
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+.tabla-pequena th {
+  padding: 4px 6px;     /* menos relleno vertical */
+  line-height: 1.2;    /* reduce altura de línea */
+}
+.tabla-pequena td p {
+  margin: 0px;           /* elimina espacio extra */
+  padding: 2px 6px;      /* altura de fila más pequeña */
+  line-height: 1;      /* compacta como en LaTeX */
+} 
