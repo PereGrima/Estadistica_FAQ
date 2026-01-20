@@ -1,6 +1,6 @@
-# ¿Cómo se relaciona la varianza muestral con la distribución Chi-cuadrado? {.unnumbered #Chi2}
+# 3.9 ¿Cómo se relaciona la varianza muestral con la distribución Chi-cuadrado? {#Chi2 .unnumbered}
 
-Utilizaremos la definición de $\chi^2$ con $\nu$ grados de libertad como $\sum_{i=1}^{\nu} z_{i}^2$ siendo las $z_i$ variables aleatorias independientes con distribución $N(0; 1)$. Respecto a la notación utilizada consideraremos que $X \sim N(\mu;\sigma)$ y que $\bar{X}$ y $S^2$ son la media y la varianza de muestras aleatorias de tamaño $n$. Tenemos:
+Utilizaremos la definición de $\chi^2$ con $\nu$ grados de libertad como $\sum_{i=1}^{\nu} z_{i}^2$, siendo las $z_i$ variables aleatorias independientes con distribución $N(0;1)$. Respecto a la notación utilizada consideraremos que $X \sim N(\mu;\sigma)$ y que $\bar{X}$ y $S^2$ son la media y la varianza de muestras aleatorias de tamaño $n$. Tenemos:
 
 ```{=tex}
 \begin{equation*}
@@ -10,7 +10,7 @@ Utilizaremos la definición de $\chi^2$ con $\nu$ grados de libertad como $\sum_
     \end{split}
 \end{equation*}
 ```
-y como $\sum_{i=1}^n (X_i-\bar{X})=0$ y $(\bar{X}-\mu)^2$ es una constante: $$\sum_{i=1}^n (X_i-\mu)^2 = \sum_{i=1}^n (X_i-\bar{X})^2 + n(\bar{X}-\mu)^2$$
+Y como $\sum_{i=1}^n (X_i-\bar{X})=0$ y $(\bar{X}-\mu)^2$ es una constante, se obtiene que: $$\sum_{i=1}^n (X_i-\mu)^2 = \sum_{i=1}^n (X_i-\bar{X})^2 + n(\bar{X}-\mu)^2$$
 
 Como $S^2= \frac{\sum_{i=1}^n (X_i-\bar{X})^2}{n-1}$ podemos escribir:
 
@@ -24,6 +24,6 @@ Aceptando que los dos sumandos que aparecen a la derecha corresponden a variable
 
 $$\sum_{i=1}^{n} z_{i}^2 = \frac{S^2(n-1)}{\sigma^2}+z^2$$
 
-Y dado que la suma de variables aleatorias independientes distribuidas según $\chi^2$ sigue también esta misma distribución con un número de grados de libertad igual a la suma de los grados de libertad de las distribuciones sumadas, se espera que si $\sum_{i=1}^{n} z_{i}^2 \sim \chi_{n}^2$ y $z^2 \sim \chi_{1}^2$, entonces:
+Y dado que la suma de variables aleatorias independientes distribuidas según $\chi^2$ sigue también esta misma distribución con un número de grados de libertad igual a la suma de los grados de libertad de las distribuciones sumadas, se espera que si por un lado $\sum_{i=1}^{n} z_{i}^2 \sim \chi_{n}^2\;$ y por otro $z^2 \sim \chi_{1}^2$, entonces:
 
 $$\frac{S^2(n-1)}{\sigma^2} \sim \chi_{n-1}^2$$
