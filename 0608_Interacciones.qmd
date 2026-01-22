@@ -1,28 +1,27 @@
-# ¿Por qué se suponen no significativas las interacciones de tres o más factores? {.unnumbered}
+# 6.8 ¿Por qué se suponen no significativas las interacciones de tres o más factores? {.unnumbered}
 
-En primer lugar vamos a intentar ver geométricamente lo que significa una interacción de dos factores. La figura [-@fig-interac1] (izq.) muestra la superficie $Z=1+X+Y$. Si consideramos que $X$ e $Y$ son los factores y $Z$ es la respuesta, esta será una situación en que los factores no interaccionan, es decir, el efecto de $X$ sobre la respuesta no depende del valor de $Y$ (ni el efecto de $Y$ depende de $X$). En concreto, aumentar una unidad el valor de $X$ aumenta también una unidad el valor de $Z$, con idependencia del valor de $Y$. La parte derecha de la figura (es el cubo de la izquierda visto por la cara X) muestra claramente como el efecto de $X$ no depende de $Y$, las pendientes de las rectas son todas iguales.
+En primer lugar, vamos a intentar ver geométricamente lo que significa una interacción de dos factores. La figura [-@fig-interac1] (izq.) muestra la superficie $Z=1+X+Y$. Si consideramos que $X$ e $Y$ son los factores y $Z$ es la respuesta, esta será una situación en la que los factores no interaccionan, es decir, el efecto de $X$ sobre la respuesta no depende del valor de $Y$ (ni el efecto de $Y$ depende de $X$). En concreto, aumentar una unidad el valor de $X$ aumenta también una unidad el valor de $Z$, con independencia del valor de $Y$. La parte derecha de la figura (es el cubo de la izquierda visto por la cara X) muestra claramente cómo el efecto de $X$ no depende de $Y$, las pendientes de las rectas son todas iguales.
 
 ![Ejemplo de una respuesta ($Z$) en función de dos factores ($X$ e $Y$) que no interaccionan: $Z=1+X+Y$](06_Fig_DEX/0801_Interac3.png){#fig-interac1 fig-align="center" width="90%"}
 
-Veamos ahora la ecuación de la superficie representada por $Z=1,5+2X+Y+1,5XY$. En este caso $X$ e $Y$ sí que interaccionan, ya que el efecto de $X$ sobre la respuesta depende del valor de $Y$. Al pasar $X$ de -1 a +1 crece más la respuesta cuando $Y$ toma el valor +1 que cuando toma el –1.
+Veamos ahora la ecuación de la superficie representada por $Z=1{,}5+2X+Y+1{,}5XY$. En este caso, $X$ e $Y$ sí que interaccionan, ya que el efecto de $X$ sobre la respuesta depende del valor de $Y$. Al pasar $X$ de -1 a +1 crece más la respuesta cuando $Y$ toma el valor +1 que cuando toma el –1.
 
 ![Ejemplo de una respuesta ($Z$) en función de dos factores ($X$ e $Y$) que interaccionan: $Z=1,5+2X+Y+1,5XY$](06_Fig_DEX/0802_Interac3.png){#fig-interac2 fig-align="center" width="90%"}
 
-Obsérvese que la existencia o no de interacción está relacionada con lo "retorcida" que es la superficie. Lo que ocurre cuando se tiene una interacción de tres factores interacción!de tres factores no es fácil representarlo gráficamente (tres factores más la respuesta exigirían cuatro dimensiones), pero la idea general es que cuanto mayor es el grado de las interacciones que hacen falta para describir una superficie, más irregular o “sofisticada” resulta ser.
+Obsérvese que la existencia o no de interacción está relacionada con lo "retorcida" que es la superficie. Lo que ocurre cuando se tiene una interacción de tres factores no es fácil representarlo gráficamente (tres factores más la respuesta exigirían cuatro dimensiones), pero la idea general es que cuanto mayor es el grado de las interacciones que hacen falta para describir una superficie, más irregular o “sofisticada” resulta ser.
 
 Cuando en la práctica se explora una superficie de respuesta, no se espera que sea muy irregular por las siguientes razones:
 
-1.    Las superficies que responden a fenómenos físicos no son superficies caprichosas. En general responden a unos ciertos tipos conocidos que presentan suavidad y continuidad (se excluyen los casos en que hayan cambios de estado en la región de experimentación).
-	
-2.    Siempre se experimenta en un rango limitado de variación de los factores. Así, aunque la superficie pueda tener cierta complicación, es muy probable que en el reducido rango en que se está experimentando, pueda ser explicada por una ecuación sencilla.
-	
-3.    Siempre se conoce alguna cosa de la superficie que se explora y, en muchos casos se puede tener la certeza de que no va a ser necesario incluir interacciones de tres o más factores.
+1.  Las superficies que responden a fenómenos físicos no son superficies caprichosas. En general, responden a unos ciertos tipos conocidos que presentan suavidad y continuidad (se excluyen los casos en que haya cambios de estado en la región de experimentación).
 
+2.  Siempre se experimenta en un rango limitado de variación de los factores. Así, aunque la superficie pueda tener cierta complejidad, es muy probable que en el reducido rango en que se está experimentando pueda ser explicada por una ecuación sencilla.
 
-De hecho, si no fuera por estas razones, la experimentación sería una técnica poco prometedora, ya que, como se dice en el texto de Box, Hunter y Hunter[^nota-1]: “... Esto es una suerte, ya que de lo contrario, hacer un mapa de una superficie llena de estalagmitas, o parecida al lomo de un erizo sería totalmente imposible con un número razonable de experimentos”.
+3.  Siempre se conoce alguna cosa de la superficie que se explora y, en muchos casos se puede tener la certeza de que no va a ser necesario incluir interacciones de tres o más factores.
 
-[^nota-1]: "Statistics for Experimenters'', 1ª edición, pág. 300"
+De hecho, si no fuera por estas razones, la experimentación sería una técnica poco prometedora, ya que, como se dice en el texto de Box, Hunter y Hunter[^0608_interacciones-1]: “... Esto es una suerte, ya que de lo contrario, hacer un mapa de una superficie llena de estalagmitas, o parecida al lomo de un erizo, sería totalmente imposible con un número razonable de experimentos”.
+
+[^0608_interacciones-1]: "Statistics for Experimenters'', 1ª edición, pág. 300"
 
 Por otra parte, mediante los diseños factoriales a dos niveles, lo que hacemos es buscar una aproximación a la relación funcional que liga los factores con la respuesta, del tipo de la que se obtendría al descomponer una función en serie de Taylor. No es que el modelo obtenido a través de la experimentación sea la descomposición en serie de Taylor de la función buscada, sino que es una aproximación del mismo tipo. Si estamos ante una función de las que esperamos encontrarnos en la práctica (suave, regular, sin grandes altibajos), la zona de experimentación se podrá aproximar razonablemente bien descomponiéndola en serie de Taylor hasta el término de las derivadas cruzadas de segundo orden, sin necesidad de utilizar los términos correspondientes a las derivadas cruzadas de tercer orden (equivalente a las interacciones de 3 factores) y menos aún términos de cuarto orden (interacciones de 4) o superiores.
 
-Tampoco es que se dogmatice la no existencia de interacciones de 3 o más factores, pero como el número de experimentos a realizar siempre resulta escaso, vale la pena ser consciente de la importancia de cada uno de los efectos que es posible estimar y dedicar los esfuerzos sólo a aquellos que mejor ayudarán a explicar el comportamiento de la respuesta. Por suerte, las interacciones de 3 o más factores no suelen ser importantes.
+Tampoco es que se dogmatice la no existencia de interacciones de 3 o más factores, pero como el número de experimentos a realizar siempre resulta escaso, vale la pena ser consciente de la importancia de cada uno de los efectos que es posible estimar y dedicar los esfuerzos solo a aquellos que mejor ayudarán a explicar el comportamiento de la respuesta. Por suerte, las interacciones de 3 o más factores no suelen ser importantes.
