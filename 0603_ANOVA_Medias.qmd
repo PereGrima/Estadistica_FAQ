@@ -1,38 +1,39 @@
-# ¿Por qué se llama *Análisis de la Varianza* si lo que se compara son medias? {.unnumbered}
+# 6.3 ¿Por qué se llama *Análisis de la Varianza* si lo que se compara son medias? {.unnumbered}
 
 No es por ganas de confundir. Supongamos que se desea comparar las medias de las muestras representadas en la figura [-@fig-dotplot1].
 
-![La diferencia de medias está clara](06_Fig_DEX/0301_PorqueANOVA.png){#fig-dotplot1 .fig-compacta2 fig-align="center" width="75%"}
+![La diferencia de medias está clara](06_Fig_DEX/0301_PorqueANOVA.png){#fig-dotplot1 .fig-compacta2 fig-align="center" width="77%"}
 
-¿Qué impresión nos da este gráfico? Estará de acuerdo que parece claro que B da un nivel de respuesta mayor que A o C, no apreciándose diferencias entre estos dos últimos.
+¿Qué impresión nos da este gráfico? Estará de acuerdo en que parece claro que B da un nivel de respuesta mayor que A o C, y que no se aprecian diferencias entre estos dos últimos.
 
 Veamos ahora otra situación. Supongamos que los valores obtenidos son los de la figura [-@fig-dotplot2].
 
-![La diferencia de medias está clara](06_Fig_DEX/0302_PorqueANOVA.png){#fig-dotplot2 .fig-compacta2 fig-align="center" width="75%"}
+![La diferencia de medias está clara](06_Fig_DEX/0302_PorqueANOVA.png){#fig-dotplot2 .fig-compacta2 fig-align="center" width="77%"}
 
 ¿Qué opina sobre las diferencias en este caso? Ahora no está tan claro que sean significativas. Las tres muestras pueden provenir perfectamente de la misma población.
 
-Veamos ahora cuales son las medias en ambos casos:
+Veamos ahora cuáles son las medias en ambos casos:
 
 ```{=html}
-<div class="tabla-wrapper">
-<table class="tabla-peq">
+<div class="tabla-wrapper0603">
+<table class="tabla-0603">
   <thead>
-    <tr style="border-top:1px solid #000;">
-      <th colspan="2">Caso 1</th>
-      <th style="width:1.5em;"></th>
-      <th colspan="2">Caso 2</th>
+     <tr>
+        <th colspan="2">Caso 1</th>
+        <th>&nbsp &nbsp</th>
+        <th colspan="2">Caso 2</th>
     </tr>
-    <tr style="border-bottom:1px solid #000;">
+    
+    <tr>
+    <th>Muestra</th>
+      <th>Media</th>
+      <th>&nbsp &nbsp</th>
       <th>Muestra</th>
       <th>Media</th>
-      <th></th>
-      <th>Muestra</th>
-      <th>Media</th>
     </tr>
-  </thead>
-
-  <tbody>
+   </thead>
+    
+     <tbody>
     <tr>
       <td>A</td>
       <td>13,73</td>
@@ -47,7 +48,7 @@ Veamos ahora cuales son las medias en ambos casos:
       <td>E</td>
       <td>15,71</td>
     </tr>
-    <tr style="border-bottom: 1px solid #000;">
+    <tr>
       <td>C</td>
       <td>14,00</td>
       <td></td>
@@ -63,7 +64,7 @@ Veamos ahora cuales son las medias en ambos casos:
 
 Porque, de una forma intuitiva, hemos comparado la variabilidad de los valores en cada muestra con las diferencias (es decir, también variabilidad) que presentan sus medias. En el primer caso, si las tres muestras provienen de la misma población, las diferencias entre sus medias son mayores de lo que cabe esperar a partir de la variabilidad observada dentro de cada muestra. En el segundo caso, la variabilidad dentro de las muestras es mucho mayor y por eso nos parece que la diferencia de medias es compatible con el hecho de que las tres provengan de la misma población.
 
-En ambos casos hemos llegado a nuestras conclusiones sobre la igualdad de medias analizando variabilidades. Cuando la comparación se realiza analíticamente (en vez de gráficamente como hemos hecho nosotros) las variabilidades se miden a través de las varianzas. Lo que se hace es comparar varianzas. Por eso la técnica se llama Análisis de la Varianza.
+En ambos casos hemos llegado a nuestras conclusiones sobre la igualdad de medias analizando variabilidades. Cuando la comparación se realiza analíticamente (en vez de gráficamente, como hemos hecho nosotros) las variabilidades se miden a través de las varianzas. Lo que se hace es comparar varianzas. Por eso la técnica se llama Análisis de la Varianza.
 
 $$\bullet \;\;\;\; \bullet \;\;\;\; \bullet$$
 
@@ -118,4 +119,3 @@ Situación 2:
   </tbody>
 </table>
 ```
-

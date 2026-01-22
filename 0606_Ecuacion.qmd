@@ -1,6 +1,6 @@
-# ¿Cómo se puede escribir una ecuación para la respuesta con los resultados de un diseño factorial? {.unnumbered}
+# 6.6 ¿Cómo se puede escribir una ecuación para la respuesta con los resultados de un diseño factorial? {.unnumbered}
 
-Supongamos que tenemos un circuito como el de la figura [-@fig-ecuacion1] y deseamos conocer cuál es la intensidad (I) que circula en función del valor de la resistencia (R) y de la fuente de alimentación (V). En un caso como este la relación es perfectamente conocida, se trata de la ley de Ohm: $I=V/R$.
+Supongamos que tenemos un circuito como el de la figura [-@fig-ecuacion1] y deseamos conocer cuál es la intensidad (I) que circula en función del valor de la resistencia (R) y de la fuente de alimentación (V). En un caso como este, la relación es perfectamente conocida: se trata de la ley de Ohm: $I=V/R$.
 
 ![Ejemplo de circuito con resistencia](06_Fig_DEX/0601_Ecuacion.png){#fig-ecuacion1 .fig-ecuacion1 fig-align="center" width="80%"}
 
@@ -8,33 +8,57 @@ Pero supongamos que no conocemos esa relación y queremos deducirla a través de
 
 [^0606_ecuacion-1]: <small>En general, mediante la experimentación no se pretende deducir la relación funcional exacta, sino una aproximación que resulte útil para cumplir los objetivos que se hayan planteado.</small>
 
-::: {.tabla-pequena2 style="width:40%; margin-left:auto; margin-right:auto;margin-bottom:1em;"}
-|                        |                        |                                    |
-|:---------------------------:|:--------------------:|:--------------------:|
-|           V            |           R            |                 I                  |
-| 6 <br> 9 <br> 6 <br> 9 | 2 <br> 2 <br> 4 <br> 4 | 3,00 <br> 4,50 <br> 1,50 <br> 2,25 |
-:::
+```{=html}
+<div class="tabla-wrapper0606">
+<table class="tabla-0606">
 
-Usando un paquete de software estadístico para calcular los efectos o, en un caso tan sencillo, también a mano, se obtiene: $$ \text{Media}=2,8125\;\;\;\; V=1,125 \;\;\;\; R=-1,875 \;\;\;\;  VR = -0,375 $$
+<thead>
+<tr>
+<th>V</th>
+<th>R</th>
+<th>I</th>
+</tr>
+</thead>
 
-Los efectos indican cuanto cambia la respuesta al pasar el factor del nivel –1 al +1, por tanto, el cambio al aumentar en 2 unidades --codificadas-- el valor del factor. Sin embargo, los coeficientes de una ecuación de regresión indican cuanto cambia la respuesta al aumentar en una unidad la variable regresora.
+<tbody>
+<tr>
+<td>6</td> <td>2</td> <td>3,00</td>
+</tr>
+<tr>
+<td>9</td> <td>2</td> <td>4,50</td>
+</tr>
+<tr>
+<td>6</td> <td>4</td> <td>1,50</td>
+</tr>
+<tr>
+<td>9</td> <td>4</td> <td>2,25</td>
+</tr>
+</tbody>
+</table>
+</div>
+```
 
-La ecuación para explicar el comportamiento de la respuesta se escribe colocando el valor medio como constante y corrigiendo esa media general con el valor de los factores (el subíndice C indica que están codificados con los valores –1 y +1) acompañados de unos coeficientes que son los valores de los efectos divididos por 2. En nuestro caso la ecuación tendrá la forma:
+Usando un paquete de software estadístico para calcular los efectos o, en un caso tan sencillo, también a mano, se obtiene: 
+$$ \text{Media}=2,8125\;\;\;\; V=1,125 \;\;\;\; R=-1,875 \;\;\;\;  VR = -0,375 $$
+
+Los efectos indican cuánto cambia la respuesta al pasar el factor del nivel –1 al +1; por tanto, el cambio al aumentar en 2 unidades --codificadas-- el valor del factor. Sin embargo, los coeficientes de una ecuación de regresión indican cuánto cambia la respuesta al aumentar en una unidad la variable regresora.
+
+La ecuación para explicar el comportamiento de la respuesta se escribe colocando el valor medio como constante y corrigiendo esa media general con el valor de los factores (el subíndice C indica que están codificados con los valores –1 y +1) acompañados de unos coeficientes que son los valores de los efectos divididos por 2. En nuestro caso, la ecuación tendrá la forma:
 
 <small> $$ I = \text{Media} + \frac{\text{Efec. ppal. }V}{2}V_C +  \frac{\text{Efec. ppal. }R}{2}R_C + \frac{\text{Interac.}VR}{2}V_C R_C $$ </small>
 
 Y sustituyendo queda: $$ I = 2,8125+0,5625V_C - 0,9375R_C - 0,1875V_CR_C $$
 
-\noindent Pero, tal como se ha comentado, en esta ecuación los valores de $V$ y $R$ deben introducirse codificados ya que al calcular los efectos se ha considerado que los valores tanto para $V$ como $R$ eran –1 y +1, sin tomar en consideración a qué valores (en voltios y en ohmios) corresponden esos niveles.
+Pero, tal como se ha comentado, en esta ecuación los valores de $V$ y $R$ deben introducirse codificados, ya que al calcular los efectos se ha considerado que los valores tanto para $V$ como para $R$ eran –1 y +1, sin tomar en consideración a qué valores (en voltios y en ohmios) corresponden esos niveles.
 
-Así, si queremos saber cuál será el valor de la intensidad para $V=9V$ y $R=2\Omega$, deberemos sustituir $V_C$ por +1 (9$V$ es el nivel + de esta variable) y $R_C$ por –1 (2$\Omega$ es el nivel – para $R$), obteniendo: \begin{equation*}
+Así, si queremos saber cuál será el valor de la intensidad para $V=9 V$ y $R=2 \Omega$, deberemos sustituir $V_C$ por +1 (9 $V$ es el nivel + de esta variable) y $R_C$ por –1 (2$\Omega$ es el nivel – para $R$), obteniendo: \begin{equation*}
     \begin{split}
         I &= 2,8125 + 0,5625(+1) - 0,9375(-1) - 0,1875(+1)(-1)\\
         I &= 4,5
     \end{split}
 \end{equation*}
 
-\noindent Para tener la ecuación en las unidades originales de $V$ y $R$ es necesario decodificarlas, para ello usamos la expresión: $$ X_C = -1 + 2 \left( \frac{X-X_{(-)}}{X_{(+)}-X_{(-)}} \right) $$ \noindent Siendo $X$ el valor de la variable sin codificar y $X_{(+)}$, $X_{(-)}$ sus niveles alto y bajo respectivamente. Aplicando esta transformación a nuestro modelo, tenemos:
+Para tener la ecuación en las unidades originales de $V$ y $R$ es necesario decodificarlas. Para ello usamos la expresión: $$ X_C = -1 + 2 \left( \frac{X-X_{(-)}}{X_{(+)}-X_{(-)}} \right) $$ \noindent Siendo $X$ el valor de la variable sin codificar y $X_{(+)}$, $X_{(-)}$ sus niveles alto y bajo respectivamente. Aplicando esta transformación a nuestro modelo, tenemos:
 
 ```{=tex}
 \begin{equation*}
@@ -47,7 +71,7 @@ Así, si queremos saber cuál será el valor de la intensidad para $V=9V$ y $R=2
 ```
 Y operando se llega a: $$ I = \frac{3}{4}V-\frac{1}{8}VR $$
 
-El modelo es una aproximación a la realidad. La figura [-@fig-ecuacion2] compara la superficie que corresponde a la relación real (curvada) junto con la obtenida a través del diseño $2^2$ que es una superficie plana apoyada en las 4 esquinas de la superficie real. \index{efectos!codificados|(}
+El modelo es una aproximación a la realidad. La figura [-@fig-ecuacion2] compara la superficie que corresponde a la relación real (curvada) con la obtenida a través del diseño $2^2$ que es una superficie plana apoyada en las cuatro esquinas de la superficie real. \index{efectos!codificados|(}
 
 ![Superficie que corresponde a la relación real (curvada) junto a la obtenida mediante un diseño $2^2$](06_Fig_DEX/0602_Ecuacion.png){#fig-ecuacion2 .fig-ecuacion2 fig-align="center" width="95%"}
 
@@ -55,17 +79,39 @@ El modelo es una aproximación a la realidad. La figura [-@fig-ecuacion2] compar
 
 ¿Qué ocurriría si en vez de la resistencia se mide la conductancia (su inversa: $G = 1/R$)? Ahora la fórmula es $I = V \cdot G$, y la tabla de resultados de la experimentación será:
 
+```{=html}
+<div class="tabla-wrapper0606">
+<table class="tabla-0606">
 
-::: {.tabla-pequena2 style="width:40%; margin-left:auto; margin-right:auto;margin-bottom:1em;"}
-|                        |                                    |                                    |
-|:---------------------------:|:--------------------:|:--------------------:|
-|           V            |                 R                  |                 I                  |
-| 6 <br> 9 <br> 6 <br> 9 | 0,25 <br> 0,25 <br> 0,50 <br> 0,50 | 1,50 <br> 2,25 <br> 3,00 <br> 4,50 |
-:::
+<thead>
+<tr>
+<th>V</th>
+<th>G</th>
+<th>I</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>6</td> <td>0,25</td> <td>1,50</td>
+</tr>
+<tr>
+<td>9</td> <td>0,25</td> <td>2,25</td>
+</tr>
+<tr>
+<td>6</td> <td>0,50</td> <td>3,00</td>
+</tr>
+<tr>
+<td>9</td> <td>0,50</td> <td>4,50</td>
+</tr>
+</tbody>
+</table>
+</div>
+```
 
 Obteniéndose los efectos: $$ \text{Media}=2,8125\;\;\;\; V=1,125 \;\;\;\; G=1,875 \;\;\;\;  VG = 0,375 $$
 
-\noindent Y a partir de los efectos podemos escribir el modelo: $$ I = 2,8125 + 0,5625V_C + 0,9375G_C + 0,1875 V_CG_C $$
+Y a partir de los efectos podemos escribir el modelo: $$ I = 2,8125 + 0,5625V_C + 0,9375G_C + 0,1875 V_CG_C $$
 
 \noindent Siendo ahora la expresión con las variables originales: \begin{equation*}
     \begin{split}
@@ -75,8 +121,8 @@ Obteniéndose los efectos: $$ \text{Media}=2,8125\;\;\;\; V=1,125 \;\;\;\; G=1,8
     \end{split}
 \end{equation*}
 
-\noindent Y esta expresión, después de operar y simplificar se reduce a:
+Y esta expresión, después de operar y simplificar, se reduce a:
 
 $$I = VG $$
 
-\noindent En este caso el modelo obtenido coincide perfectamente con la realidad. Es interesante observar como la selección de una métrica adecuada para los factores (medir la conductancia en vez de la resistencia) influye de forma importante en la bondad del modelo obtenido.
+\noindent En este caso el modelo obtenido coincide perfectamente con la realidad. Es interesante observar cómo la selección de una métrica adecuada para los factores (medir la conductancia en vez de la resistencia) influye de forma importante en la bondad del modelo obtenido.

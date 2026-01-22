@@ -1,25 +1,23 @@
-# ¿Por qué no se usa el test de la t-Student para comparar más de dos tratamientos? {.unnumbered}
+# 6.2 ¿Por qué no se usa el test de la t-Student para comparar más de dos tratamientos? {.unnumbered}
 
 Utilizar a fondo las técnicas disponibles \index{distribución!t-Student} es, desde luego, una buena idea, pero que no sirve para el caso que nos ocupa. No es lo mismo comparar todas las parejas de tratamientos que aplicar la técnica de análisis de la varianza. Vamos a verlo.
 
-Supongamos que tenemos muestras de 5 tratamientos: $A$, $B$, $C$, $D$ y $E$. Podemos calcular las medias: $\bar{y}_A$,  $\;\bar{y}_B$, ... y plantear para cada una de las 10 parejas que se pueden formar la hipótesis nula de que sus medias poblaciones son iguales frente a la alternativa de que son distintas.
+Supongamos que tenemos muestras de 5 tratamientos: $A$, $B$, $C$, $D$ y $E$. Podemos calcular las medias: $\bar{y}_A$, $\;\bar{y}_B,\ldots$ y plantear para cada una de las 10 parejas que se pueden formar la hipótesis nula de que sus medias poblaciones son iguales frente a la alternativa de que son distintas.
 
+Pareja 1: $\;\mu_A = \mu_B\;$ frente a $\;\mu_A \neq \mu_B$
 
-Pareja 1: $\;\mu_A = \mu_B\;$  frente a  $\;\mu_A \neq \mu_B$ 
-	
-Pareja 2: $\;\mu_A = \mu_C\;$  frente a  $\;\mu_A \neq \mu_C$
-	
+Pareja 2: $\;\mu_A = \mu_C\;$ frente a $\;\mu_A \neq \mu_C$
+
 $\cdots$
-	
-Pareja 10: $\;\mu_D = \mu_E\;$  frente a  $\;\mu_D \neq \mu_E$
 
+Pareja 10: $\;\mu_D = \mu_E\;$ frente a $\;\mu_D \neq \mu_E$
 
-Estos 10 contrastes se pueden abordar construyendo los 10 intervalos de confianza para las diferencias de las medias poblacionales. Si no existen diferencias entre los tratamientos la probabilidad de que un intervalo incluya el cero y por tanto nos conduzca a la conclusión correcta es igual a su nivel de confianza, supongamos –por ejemplo– del 95 %.
+Estos 10 contrastes se pueden abordar construyendo los 10 intervalos de confianza para las diferencias de las medias poblacionales. Si no existen diferencias entre los tratamientos la probabilidad de que un intervalo incluya el cero y, por tanto, nos conduzca a la conclusión correcta es igual a su nivel de confianza, supongamos –por ejemplo– del 95 %.
 
-¿Qué pasa con el análisis conjunto? Al ser iguales todos los tratamientos, sólo llegaremos a la conclusión correcta en el caso de no rechazar ninguna de las hipótesis nulas. Si fueran independientes, la probabilidad de que esto ocurra será de $0,95^{10}=0,60$.
+¿Qué pasa con el análisis conjunto? Al ser iguales todos los tratamientos, sólo llegaremos a la conclusión correcta en el caso de no rechazar ninguna de las hipótesis nulas. Si fueran independientes, la probabilidad de que esto ocurra será de $0{,}95^{10}=0{,}60$.
 
-El riesgo de rechazar “injustamente” la hipótesis nula aumenta al aumentar el número de tratamientos que se comparan de forma que los riesgos no son los que parecen a primera vista. Si las pruebas fueran independientes, para comparar $k$ parejas con un nivel de confianza $c$ global para toda la prueba, bastaría con calcular los intervalos individuales con un nivel de confianza $\sqrt[c]{k}$. Pero no se puede contar con la independencia ya que si un par de tratamientos presentan una diferencia significativa porque uno de ellos tiene la media anormalmente alta, esto aumenta la probabilidad de que otras diferencias aparezcan también como significativas.
+El riesgo de rechazar “injustamente” la hipótesis nula aumenta al aumentar el número de tratamientos que se comparan de forma que los riesgos no son los que parecen a primera vista. Si las pruebas fueran independientes, para comparar $k$ parejas con un nivel de confianza $c$ global para toda la prueba, bastaría con calcular los intervalos individuales con un nivel de confianza $\sqrt[k]{c}$. Pero no se puede contar con la independencia ya que si un par de tratamientos presentan una diferencia significativa porque uno de ellos tiene la media anormalmente alta, esto aumenta la probabilidad de que otras diferencias aparezcan también como significativas.
 
 El análisis de la varianza resuelve este problema al plantear un contraste de hipótesis conjunto sobre la igualdad de todas las medias frente a la alternativa de que alguna es distinta. Su punto débil es que cuando se rechaza la hipótesis nula no informa sobre cual o cuales son los tratamientos que deben considerarse distintos.
 
-Una buena forma de actuar es aplicar la técnica de análisis de la varianza y, si se rechaza la hipótesis de igualdad de medias, mirar los intervalos de confianza para identificar cuáles son distintas. También puede recurrirse a los denominados "test de comparaciones múltiples", entre los cuales se encuentra el test de Tukey. 
+Una buena forma de actuar es aplicar la técnica de análisis de la varianza y, si se rechaza la hipótesis de igualdad de medias, mirar los intervalos de confianza para identificar cuáles son distintas. También puede recurrirse a los denominados "test de comparaciones múltiples", entre los cuales se encuentra el test de Tukey.

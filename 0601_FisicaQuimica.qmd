@@ -1,13 +1,13 @@
-# ¿Cómo que diseño de experimentos? ¿no es eso de física o de química? {.unnumbered}
+# 6.1 ¿Cómo que diseño de experimentos? ¿no es eso de física o de química? {.unnumbered}
 
-Es verdad que *experimentar* suena más a tubos de ensayo y a laboratorios que a estadística, pero en estadística también hacemos experimentos. Los hacemos cuando queremos conocer cómo se comporta una variable --puede ser el rendimiento de una reacción química o el porcentaje de enfermos que se curan-- en unas condiciones determinadas. 
+Es verdad que *experimentar* suena más a tubos de ensayo y a laboratorios que a estadística, pero en estadística también hacemos experimentos. Los hacemos cuando queremos conocer cómo se comporta una variable --puede ser el rendimiento de una reacción química o el porcentaje de enfermos que se curan-- en unas condiciones determinadas.
 
-Cuando se realizan estudios estadísticos existen dos grandes formas de recoger los datos: por muestreo (valores al azar) y realizando experimentos. 
+Cuando se realizan estudios estadísticos existen dos grandes formas de recoger los datos: por muestreo (valores al azar) y realizando experimentos.
 
 En los procesos de producción el análisis de datos recogidos por muestreo se equipara a **escuchar** lo que nos dice el proceso. Pero si queremos saber qué ocurre al aumentar la temperatura o cambiar el catalizador, no podemos esperar que nos lo diga el proceso si siempre se trabaja a la misma temperatura y con el mismo catalizador. Hay que hacer pruebas y eso es como **interrogar** al proceso: ¿qué pasa si aumentamos la temperatura?
 
-Entre los diseños para lo que genéricamente se denomina "comparación de tratamientos" se encuentran aquellos que analizan si un medicamento es más eficaz que un placebo. En este caso hay que estar seguros de que las muestras, tanto del grupo de control que toma placebo como del grupo tratado con el medicamento, se han seleccionado de la forma adecuada y, desde luego, hay que cuidar los detalles para que no aparezcan sesgos en los resultados. Entre otras medidas para evitar esos sesgos, estas pruebas son de "doble ciego": ni el paciente ni el médico que informa sobre sus resultados saben si se ha tomado el medicamente o el placebo.
+Entre los diseños para lo que genéricamente se denomina "comparación de tratamientos" se encuentran aquellos que analizan si un medicamento es más eficaz que un placebo. En este caso hay que estar seguros de que las muestras, tanto del grupo de control que toma placebo como del grupo tratado con el medicamento, se han seleccionado de la forma adecuada y, desde luego, hay que cuidar los detalles para que no aparezcan sesgos en los resultados. Entre otras medidas para evitar esos sesgos, estas pruebas son de "doble ciego": ni el paciente ni el médico que informa sobre sus resultados saben si se ha tomado el medicamento o el placebo.
 
 En el ámbito de los procesos de producción siempre es complicado hacer pruebas, de manera que hay que pensarse muy bien la estrategia y las condiciones en que se van a realizar para obtener la máxima información con los recursos disponibles. Los llamados "diseños factoriales" son muy útiles para lograr este objetivo.
 
-En definitiva, el diseño de experimentos tiene que ver con la recogida de datos en condiciones controladas, y es una de las partes más importantes de muchos estudios estadísticos.
+En definitiva, el diseño de experimentos tiene que ver con la recogida de datos en condiciones controladas y es una de las partes más importantes de muchos estudios estadísticos.

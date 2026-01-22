@@ -1,23 +1,23 @@
-# ¿Por qué no hay que mover las variables una a una? {.unnumbered}
+# 6.4 ¿Por qué no hay que mover las variables una a una? {.unnumbered}
 
-Cuando se trata de estudiar experimentalmente como un conjunto de variables afectan a una respuesta parece que la mejor estrategia es fijar todas las variables menos una e ir moviendo esa no fijada hasta identificar con que valor se optimiza la respuesta. Después se sigue con la siguiente y así con todas, obteniendo de esta forma el valor más adecuado para cada una de ellas.
-  
- Veamos gráficamente como funciona este procedimiento en un caso con solo dos variables. Se desea maximizar la cantidad de producto obtenido en una reacción química en la que intervienen dos variables que pueden resultar influyentes: la temperatura del reactor (habitualmente fijada a 130$^\circ$C) y el tiempo de reacción (habitualmente 90 minutos); la cantidad que se obtiene en estas condiciones es de 70 gr.
- 
-Mantenemos fija la temperatura en su valor habitual y probamos distintos valores del tiempo, obteniéndose una cantidad máxima de 77 gr. cuando el tiempo es de 102 minutos. A continuación se fija el tiempo a 102 min. y se experimenta con diversos valores de la temperatura. La nueva cantidad máxima es de 92 gr. correspondiente a una temperatura de 141$^\circ$C. Los resultados están representados en la figura [-@fig-UnoAUno1].
+Cuando se trata de estudiar experimentalmente cómo un conjunto de variables afectan a una respuesta parece que la mejor estrategia es fijar todas las variables menos una e ir moviendo esa no fijada hasta identificar con qué valor se optimiza la respuesta. Después se sigue con la siguiente y así con todas, obteniendo de esta forma el valor más adecuado para cada una de ellas.
+
+Veamos gráficamente cómo funciona este procedimiento en un caso con solo dos variables. Se desea maximizar la cantidad de producto obtenido en una reacción química en la que intervienen dos variables que pueden resultar influyentes: la temperatura del reactor (habitualmente fijada a 130$^\circ$C) y el tiempo de reacción (habitualmente 90 minutos); la cantidad que se obtiene en estas condiciones es de 70 g.
+
+Mantenemos fija la temperatura en su valor habitual y probamos distintos valores del tiempo, obteniéndose una cantidad máxima de 77 g cuando el tiempo es de 102 minutos. A continuación se fija el tiempo a 102 min y se experimenta con diversos valores de la temperatura. La nueva cantidad máxima es de 92 g, correspondiente a una temperatura de 141$^\circ$C. Los resultados están representados en la figura [-@fig-UnoAUno1].
 
 ![Representación gráfica de las variables y la respuesta](06_Fig_DEX/0401_NoUnoAUno.png){#fig-UnoAUno1 .fig-compacta2 fig-align="center" width="85%"}
- 
- Así pues, una vez concluido el experimento, se ha conseguido aumentar la cantidad producida en 22 g. Pero, ¿hemos determinado realmente las condiciones óptimas de producción? En la figura [-@fig-UnoAUno2] la cantidad obtenida está representada por curvas de nivel en función del tiempo y de la temperatura y se han representado también los puntos que corresponden a los experimentos anteriores. Es evidente que no se ha alcanzado el óptimo.
- 
+
+Así pues, una vez concluido el experimento, se ha conseguido aumentar la cantidad producida en 22 g. Pero, ¿hemos determinado realmente las condiciones óptimas de producción? En la figura [-@fig-UnoAUno2], la cantidad obtenida está representada por curvas de nivel en función del tiempo y de la temperatura, y se han representado también los puntos que corresponden a los experimentos anteriores. Es evidente que no se ha alcanzado el óptimo.
+
 ![Representación gráfica de las variables y la respuesta](06_Fig_DEX/0402_NoUnoAUno.png){#fig-UnoAUno2 .fig-compacta2 fig-align="center" width="60%"}
 
-Este tipo de estrategia tiene la ventaja de que es fácil de entender y parece razonablemente buena (cuesta convencer a algunas personas de que hay alternativas mejores) pero tiene algunos inconvenientes que desaconsejan su uso:
+Este tipo de estrategia tiene la ventaja de que es fácil de entender y parece razonablemente buena (cuesta convencer a algunas personas de que hay alternativas mejores), pero tiene algunos inconvenientes que desaconsejan su uso:
 
-1.    Proporciona falsos óptimos, que pueden estar lejos del óptimo real dependiendo de donde se empiece la experimentación.
+1.  Proporciona falsos óptimos, que pueden estar lejos del óptimo real dependiendo de dónde se empiece la experimentación.
 
-2.    Es una estrategia lenta de acercamiento al óptimo. Podríamos volver a determinar el tiempo que maximiza la respuesta para la nueva temperatura encontrada, y después hacer lo mismo con el tiempo, y así sucesivamente, trazando líneas sobre la superficie de respuesta, pero es evidente que este no es el camino más rápido para acercarse al óptimo.
+2.  Es una estrategia lenta de acercamiento al óptimo. Podríamos volver a determinar el tiempo que maximiza la respuesta para la nueva temperatura encontrada y después hacer lo mismo con el tiempo, y así sucesivamente, trazando líneas sobre la superficie de respuesta, pero es evidente que este no es el camino más rápido para acercarse al óptimo.
 
-3.    No permite detectar interaccionesentre los factores, y esta es una limitación muy importante para entender como las variables afectan a la respuesta.
+3.  No permite detectar interacciones entre los factores, y esta es una limitación muy importante para entender cómo las variables afectan a la respuesta.
 
-Para estudiar a través de la experimentación como un conjunto de variables afectan a una respuesta, tenemos una alternativa mucho mejor. Son los diseños experimentales que conocemos con el nombre de diseños factoriales. A primera vista parecen un lío difícil de entender, pero cuando más se conocen más se aprecian. Si el tema le parece interesante y tiene la oportunidad, vale la pena dedicar un tiempo a conocerlos.
+Para estudiar a través de la experimentación cómo un conjunto de variables afectan a una respuesta, tenemos una alternativa mucho mejor. Son los diseños experimentales que conocemos con el nombre de diseños factoriales. A primera vista parecen un lío difícil de entender, pero cuanto más se conocen más se aprecian. Si el tema le parece interesante y tiene la oportunidad, vale la pena dedicar un tiempo a conocerlos.
