@@ -1,4 +1,4 @@
-# ¿Cómo elegir la hipótesis alternativa que conviene plantear? {.unnumbered}
+# 5.3 ¿Cómo elegir la hipótesis alternativa que conviene plantear? {.unnumbered}
 
 La selección de la hipótesis alternativa está relacionada con el planteamiento del problema y con la zona en que queremos situar el riesgo de equivocarnos al rechazar la hipótesis nula. Lo veremos a través de la reflexión sobre tres situaciones distintas.
 
@@ -6,25 +6,25 @@ La selección de la hipótesis alternativa está relacionada con el planteamient
 
 Una explotación agraria es informada de que añadiendo un cierto complejo mineral al fertilizante que usa en sus plantaciones de tomates, se obtiene una mayor cosecha. Para comprobar si esta afirmación es cierta se toman 20 plantas, en 10 de ellas se utiliza sólo el fertilizante habitual (grupo de control, A) y en las otras 10 se añade el complemento mineral (grupo tratado, B). Se quiere contrastar la hipótesis nula de que el peso medio de tomates por planta es igual en ambos casos. ¿Cuál debe ser la alternativa?
 
- Como nuestro interés está en saber si el complemento mineral es eficaz, sólo rechazaremos la hipótesis nula si la media del grupo tratado es mayor (en la magnitud requerida) que la media del grupo de control. Naturalmente no podremos decir que el complejo mineral es eficaz si la media del grupo tratado es menor. Por tanto, el riesgo de equivocarnos al rechazar la hipótesis nula lo situamos sólo hacia los valores mayores. En este caso la hipótesis alternativa debe ser: $H_1:\;\mu_A<\mu_B$. 
+Como nuestro interés está en saber si el complemento mineral es eficaz, sólo rechazaremos la hipótesis nula si la media del grupo tratado es mayor (en la magnitud requerida) que la media del grupo de control. Naturalmente no podremos decir que el complejo mineral es eficaz si la media del grupo tratado es menor. Por tanto, el riesgo de equivocarnos al rechazar la hipótesis nula lo situamos sólo hacia los valores mayores. En este caso la hipótesis alternativa debe ser: $H_1:\;\mu_A<\mu_B$.
 
 ![Solo rechazamos $H_0$ si la media del grupo tratado es "mucho" mayor](05_Fig_Contraste/0301_QueH1.png){#fig-Bayes .fig-compacta2 fig-align="center" width="85%"}
 
 #### Situación 2: ¿Tienen los sacos de fertilizante un peso menor al establecido?
 
-La explotación agrícola compra sacos de fertilizante y el proveedor asegura que el peso medio de los sacos es de 50 kg, con una desviación típica de 0,5 kg. Como el comprador sospecha que los sacos contienen en promedio menos de 50 kg, decide tomar una muestra y contrastar la hipótesis nula de que el peso medio es el que dice el proveedor, $H_0:\;\mu=50$, ¿frente a qué alternativa?
+La explotación agrícola compra sacos de fertilizante y el proveedor asegura que el peso medio de los sacos es de 50 kg, con una desviación típica de 0,5 kg. Como el comprador sospecha que los sacos contienen, en promedio, menos de 50 kg, decide tomar una muestra y contrastar la hipótesis nula de que el peso medio es el que dice el proveedor, $H_0:\;\mu=50$, ¿frente a qué alternativa?
 
-Para realizar la prueba podemos tomar 4 sacos, y comparar su peso medio con la distribución a que pertenecería si $\mu=50$. Lo que nos preocupa es que el peso sea menor y por tanto, sólo rechazaremos la hipótesis nula si la media de los 4 sacos es suficientemente menor que el valor nominal. Es decir, en este caso la hipótesis alternativa será: $H_1:\;\mu<50$, y con un nivel de significación $\alpha=0,05$, “suficientemente menor” significa menor que $50-z_{0,05}\sigma/\sqrt{n} = 49,59$ 
+Para realizar la prueba podemos tomar 4 sacos, y comparar su peso medio con la distribución a la que pertenecería si $\mu=50$. Lo que nos preocupa es que el peso sea menor y por tanto, solo rechazaremos la hipótesis nula si la media de los 4 sacos es suficientemente menor que el valor nominal. Es decir, en este caso la hipótesis alternativa será: $H_1:\;\mu<50$, y con un nivel de significación $\alpha=0,05$, “suficientemente menor” significa menor que $50-z_{0,05}\sigma/\sqrt{n} = 49,59$
 
-![Zona de rechazo de $H_0$ si lo que nos preocupa es que los sacos pesen menos de 50 kg](05_Fig_Contraste/0302_QueH1.png){#fig-Bayes .fig-compacta2 fig-align="center" width="85%"}
+![Zona de rechazo de $H_0$ si lo que nos preocupa es que los sacos pesen menos de 50 kg](05_Fig_Contraste/0302_QueH1.png){#fig-Bayes2 .fig-compacta2 fig-align="center" width="85%"}
 
-Obsérvese que este planteamiento beneficia al vendedor, ya que la carga de la prueba se le pone al comprador. El proceso se supone centrado “a no ser que se demuestre lo contrario”, y el riesgo de equivocarnos en contra del vendedor (que el promedio sea de 50 kg y digamos que es menor) está fijado de antemano en un valor bajo (probabilidad $\alpha$, en nuestro caso 0,05), pero nada se dice sobre el riesgo de que el promedio sea, por ejemplo, 49,5 kg y que demos el proceso por bueno. Este último riesgo --riego del comprador, probabilidad $\beta$-- con los números de nuestro ejemplo es igual al 36 % (nada despreciable).
+Obsérvese que este planteamiento beneficia al vendedor, ya que la carga de la prueba se le pone al comprador. El proceso se supone centrado “a no ser que se demuestre lo contrario”, y el riesgo de equivocarnos en contra del vendedor (que el promedio sea de 50 kg y digamos que es menor) está fijado de antemano en un valor bajo (probabilidad $\alpha$, en nuestro caso 0,05), pero nada se dice sobre el riesgo de que el promedio sea, por ejemplo, 49,5 kg y que demos el proceso por bueno. Este último riesgo --riesgo del comprador, probabilidad $\beta$-- con los números de nuestro ejemplo es igual al 36 % (nada despreciable).
 
 #### Situación 3: ¿Está el peso de los sacos fuera de tolerancias?
 
-El productor llena los sacos en una línea automática, y cada cierto tiempo pesa una muestra para verificar que el peso medio está en 50 kg. Al fabricante no le interesa dar más producto (pierde dinero) ni menos (da mala calidad). Su hipótesis nula es que el proceso se mantiene centrado. ¿Cuál debe ser la alternativa?
+El productor llena los sacos en una línea automática y, cada cierto tiempo, pesa una muestra para verificar que el peso medio está en 50 kg. Al fabricante no le interesa dar más producto (pierde dinero) ni menos (da mala calidad). Su hipótesis nula es que el proceso se mantiene centrado. ¿Cuál debe ser la alternativa?
 
-Tal como está planteado, al fabricante le preocupa lo mismo que el proceso se descentre hacia arriba o hacia abajo, así que deberá estar atento a los dos lados. Si su plan de control consiste en tomar muestras de 4 sacos y  acepta tener un 5 % de falsas alarmas, deberá repartir este riesgo entre valores por defecto (2,5 %) y valores por exceso (2,5 %). En este caso los valores críticos son: $50 \pm z_{0,025}\sigma/\sqrt{n}$, lo que resulta igual a 49,51 y 50,49.
+Tal como está planteado, al fabricante le preocupa lo mismo que el proceso se descentre hacia arriba o hacia abajo, así que deberá estar atento a los dos lados. Si su plan de control consiste en tomar muestras de 4 sacos y acepta tener un 5 % de falsas alarmas, deberá repartir este riesgo entre valores por defecto (2,5 %) y valores por exceso (2,5 %). En este caso los valores críticos son: $50 \pm z_{0,025}\sigma/\sqrt{n}$, lo que resulta igual a 49,51 y 50,49.
 
 ![Zona de rechazo de $H_0$ si lo que nos preocupa es que el peso de los sacos se desvíe tanto por exceso como por defecto](05_Fig_Contraste/0303_QueH1.png){#fig-Bayes .fig-compacta2 fig-align="center" width="85%"}
 

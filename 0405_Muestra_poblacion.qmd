@@ -1,4 +1,4 @@
-# ¿Qué relación hay entre tamaño de muestra y tamaño de población? {.unnumbered #relacion}
+# 4.5 ¿Qué relación hay entre tamaño de muestra y tamaño de población? {#relacion .unnumbered}
 
 Guiándonos solo por la intuición parece razonable considerar que el tamaño de la muestra debe estar muy relacionado con el de la población. Nos parece que para un país de 50 millones de habitantes hará falta una muestra mucho mayor que para una ciudad de 50 mil. A veces se ponen en duda los resultados de un estudio con el argumento de que la muestra no llega ni al 10 % de la población. Pues resulta que esas intuiciones son falsas.
 
@@ -20,4 +20,4 @@ $$ \bullet \;\;\;\;\; \bullet \;\;\;\;\; \bullet $$
 \
 La figura [-@fig-curvas] se ha construido usando la fórmula del tamaño de muestra para estimar una proporción. Puede apreciarse que a partir de un cierto tamaño de la población, que podemos situar en torno a 50.000, el tamaño de la muestra apenas cambia.
 
-![amaño de muestra en función del tamaño de la población para los márgenes de error (E) que se indican, bajo el supuesto de $p=q=0,5$ y un nivel de confianza del 80 %](04_Fig_Muestreo/0502_TamMuyPo.png){#fig-curvas .fig-compacta2 fig-align="center" width="60%"}
+![Tamaño de muestra en función del tamaño de la población para los márgenes de error (E) que se indican, bajo el supuesto de $p=q=0,5$ y un nivel de confianza del 95 %](04_Fig_Muestreo/0502_TamMuyPo.png){#fig-curvas .fig-compacta2 fig-align="center" width="60%"}

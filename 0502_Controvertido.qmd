@@ -1,41 +1,39 @@
-# ¿Por qué es controvertido el uso del contraste de hipótesis? {.unnumbered}
+# 5.2 ¿Por qué es controvertido el uso del contraste de hipótesis? {.unnumbered}
 
 Aunque es una pieza clave en el análisis estadístico --al menos en la estadística clásica-- el uso del contraste de hipótesis es discutido y se proponen alternativas en el ámbito de la llamada *Estadística Bayesiana*. Veamos algunas pegas que se le pueden poner.
 
 #### Si todos buscamos la diferencia, alguien la encontrará
 
-La probabilidad de error por rechazar equivocadamente la hipótesis nula se fija en un valor que se considera razonable, habitualmente del 5 %. Por tanto, si se realiza un estudio para analizar si un medicamento es eficaz, si en realidad no lo es la probabilidad de darlo por bueno será ese 5\  que se había fijado. El problema se presenta cuando muchos investigadores sospechan de la posible eficacia de ese medicamento y realizan estudios similares con la misma probabilidad de error. No será nada raro que en alguno de ellos la diferencia sea estadísticamente significativa. Basta con que se realicen 10 estudios para que la probabilidad de que en alguno se obtenga una diferencia significativa sea del 40 % ($1-0,95^{10}$), una cifra nada despreciable.
+La probabilidad de error por rechazar equivocadamente la hipótesis nula se fija en un valor que se considera razonable, habitualmente del 5 %. Por tanto, si se realiza un estudio para analizar si un medicamento es eficaz, si en realidad no lo es la probabilidad de darlo por bueno será ese 5 % que se había fijado. El problema se presenta cuando muchos investigadores sospechan de la posible eficacia de ese medicamento y realizan estudios similares con la misma probabilidad de error. No será nada raro que en alguno de ellos la diferencia sea estadísticamente significativa. Basta con que se realicen 10 estudios para que la probabilidad de que en alguno se obtenga una diferencia significativa sea del 40 % ($1-0,95^{10}$), una cifra nada despreciable.
 
-Si los que han obtenido resultados negativos no informan de su trabajo (al fin y al cabo no han encontrado nada nuevo) y los que sí han visto que el medicamento es eficaz (por casualidad, pero ellos no lo saben) publican su investigación en una revista científica, se dará validez a unos resultados que en realidad se han obtenido por azar.
+Si los que han obtenido resultados negativos no informan de su trabajo (al fin y al cabo, no han encontrado nada nuevo) y los que sí han visto que el medicamento es eficaz (por casualidad, pero ellos no lo saben) publican su investigación en una revista científica, se dará validez a unos resultados que en realidad se han obtenido por azar.
 
 #### Si ponemos muchos recursos para encontrar una diferencia, la encontraremos
 
 Cuando se comparan dos tratamientos seguro que sus resultados no son idénticos, seguro que se observará alguna diferencia si las mediciones se realizan con suficiente precisión. Otro tema es que esa diferencia sea relevante o que tenga importancia a efectos prácticos.
 
-Si se realizan estudios estadísticos con muestras suficientemente grandes llegaremos a notar diferencias que puede ser estadísticamente significativas, es decir, que no explica el azar, pero irrelevantes a efectos prácticos.
+Si se realizan estudios estadísticos con muestras suficientemente grandes llegaremos a notar diferencias que pueden ser estadísticamente significativas, es decir, que no explica el azar, pero que son irrelevantes a efectos prácticos.
 
-Es como si vemos dos animales a lo lejos y no sabemos si son un gato y un perro (diferentes) o son dos gatos (no diferentes). Con unos prismáticos podremos ver de qué se trata pero si los miramos a través de un telescopio los veremos tan ampliados que seguro que nos parecen distintos. Si miramos --por ejemplo-- las orejas de uno y otro seguro que no son iguales, pero tanto detalle no es útil a efectos de lo que interesa.
+Es como si vemos dos animales a lo lejos y no sabemos si son un gato y un perro (diferentes) o son dos gatos (no diferentes). Con unos prismáticos podremos ver de qué se trata, pero si los miramos a través de un telescopio los veremos tan ampliados que seguro que nos parecen distintos. Si miramos --por ejemplo-- las orejas de uno y otro, seguro que no son iguales, pero tanto detalle no es útil a efectos de lo que interesa.
 
 #### Todos los que ganan la lotería han hecho trampa
 
-A su vecino le ha tocado el primer premio de un sorteo realizado con fines benéficos y como alguien sospecha que quizá ha hecho trampa usted decide analizar la situación mediante un contraste de hipótesis. Planteará como hipótesis nula que el premio ha sido justo y como alternativa que ha habido trampa. Como en el sorteo había 10.000 boletos, la probabilidad de que le toque el primer premio --suponiendo que no haya hecho trampa-- es de 1/10.000. Este sería el p-valor de la prueba, tan pequeño que invita a pensar lo peor.
+A su vecino le ha tocado el primer premio de un sorteo realizado con fines benéficos y, como alguien sospecha que quizá ha hecho trampa, usted decide analizar la situación mediante un contraste de hipótesis. Planteará como hipótesis nula que el premio ha sido justo y como alternativa que ha habido trampa. Como en el sorteo había 10.000 boletos, la probabilidad de que le toque el primer premio --suponiendo que no haya hecho trampa-- es de 1/10.000. Este sería el $p$-valor de la prueba, tan pequeño que invita a pensar lo peor.
 
-Pero si su vecino es una persona honrada y usted no cree que tuviera ninguna intención de hacer trampa, esa conclusión no parece nada acertada. El enfoque bayesiano tiene en cuenta la información de que su vecino es una persona honrada. Considerando que la probabilidad *a priori* --antes de conocerse el ganador-- de que haya hecho trampa es de 1 entre 1 millón podemos construir el esquema de la Figura [-@fig-Bayes] donde el valor que aparece junto a cada línea indica la probabilidad de ocurrencia.
+Pero si su vecino es una persona honrada y usted no cree que tuviera ninguna intención de hacer trampa, esa conclusión no parece nada acertada. El enfoque bayesiano tiene en cuenta la información de que su vecino es una persona honrada. Considerando que la probabilidad *a priori* --antes de conocerse el ganador-- de que haya hecho trampa es de 1 entre 1 millón podemos construir el esquema de la figura [-@fig-Bayes] donde el valor que aparece junto a cada línea indica la probabilidad de ocurrencia.
 
 ![Probabilidades de hacer trampa y de ganar comprando un boleto](05_Fig_Contraste/0201_Bayes.png){#fig-Bayes .fig-compacta2 fig-align="center" width="85%"}
 
 Ahora, aplicando el teorema de Bayes, podemos volver a calcular la probabilidad de que haya hecho trampa sabiendo que ha ganado. La fórmula es la siguiente (G: Gana, T: hace trampa; Nt: No hace trampa):
 
-
+```{=tex}
 \begin{equation*}
-	\begin{split}
-	P(\text{T} |\text{G}) &= \frac{P(\text{G}| \text{T}) \cdot P(\text{T})}{P(\text{G}| \text{T}) \cdot P(\text{T})+P(\text{G}| \text{Nt}) \cdot P(\text{Nt})} \\\\
-	&=\frac{1 \cdot \frac{1}{\text{1.000.000}}} {1 \cdot \frac{1}{\text{1.000.000}} + \frac{\text{1}}{\text{10.000}} \cdot \frac{\text{999.999}} {\text{1.000.000}}} = \text{0,009901}
-	\end{split}
-\end{equation*}	
-
-
+    \begin{split}
+    P(\text{T} |\text{G}) &= \frac{P(\text{G}| \text{T}) \cdot P(\text{T})}{P(\text{G}| \text{T}) \cdot P(\text{T})+P(\text{G}| \text{Nt}) \cdot P(\text{Nt})} \\\\
+    &=\frac{1 \cdot \frac{1}{\text{1.000.000}}} {1 \cdot \frac{1}{\text{1.000.000}} + \frac{\text{1}}{\text{10.000}} \cdot \frac{\text{999.999}} {\text{1.000.000}}} = \text{0,009901}
+    \end{split}
+\end{equation*}
+```
 Con las suposiciones que hemos realizado llegamos a la conclusión de que la probabilidad de que nuestro vecino sea un tramposo es del orden del 1 %. Si hubiéramos supuesto que la probabilidad *a priori* era de 1 entre 10 millones, el resultado *a posteriori* sería de 1 entre mil.
 
-A algunos investigadores les parece "poco científico" dar un valor puramente especulativo a una variable que influirá en el resultado obtenido. Pero es evidente que no es lo mismo que el comprador del boleto sea una persona de conducta ejemplar o que haya sido condenado varias veces por estafa y además haya organizado él mismo el sorteo. Enfrentarse a un problema ignorando una información tan evidente y a la vez tan relevante, no parece que sea la mejor forma de aprovechar los recursos disponibles. Los que se adentren en este terrero tendrán ocasión de elegir en cada caso la alternativa que les parezca más razonable.
-
+A algunos investigadores les parece "poco científico" dar un valor puramente especulativo a una variable que influirá en el resultado obtenido. Pero es evidente que no es lo mismo que el comprador del boleto sea una persona de conducta ejemplar o que haya sido condenado varias veces por estafa y, además, haya organizado él mismo el sorteo. Enfrentarse a un problema ignorando una información tan evidente y a la vez tan relevante, no parece que sea la mejor forma de aprovechar los recursos disponibles. Los que se adentren en este terreno tendrán ocasión de elegir en cada caso la alternativa que les parezca más razonable.
