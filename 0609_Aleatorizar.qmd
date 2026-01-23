@@ -5,6 +5,11 @@ Siempre se insiste en que una cosa es el orden en que se presenta la matriz de d
 ```{=html}
 <div class="tabla-wrapper0609">
 <table class="tabla-0609">
+
+<caption style="caption-side:top; text-align:center; font-size:1em; font-style:italic; margin-bottom:0.5em;"> 
+Matriz de un diseño 2<sup>3</sup> en orden estándar.
+</caption>
+
   <thead>
     <tr>
         <th rowspan="2"> Orden </th>

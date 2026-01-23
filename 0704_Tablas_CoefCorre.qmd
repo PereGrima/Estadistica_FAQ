@@ -1,17 +1,16 @@
 # ¿Sirven las tablas del coeficiente de correlación si $X$ e $Y$ no son Normales? {.unnumbered}
 
-Las tablas se han construido identificando el contraste sobre el coeficiente de correlación con el que se realiza para la pendiente de la recta ajustada. Sabemos que para realizar este último contraste es necesario que los datos cumplan ciertas condiciones. Las hipótesis del modelo lineal exigen que $Y$ siga una distribución Normal para cada valor de $X$ (normalidad de los residuos) aunque en nuestro caso, como los valores críticos se determinan con $\rho =0$ (o $\beta_1 =0$, recta horizontal), basta con que $Y$ sea Normal, sin necesidad de más concreción. Nada dicen esas hipótesis sobre la distribuición de $X$ y de aquí ya se deduce una primera respuesta a la pregunta planteada: No es necesario que la variable $X$ sea Normal. 
+Las tablas se han construido identificando el contraste sobre el coeficiente de correlación con el que se realiza para la pendiente de la recta ajustada. Sabemos que para realizar este último contraste es necesario que los datos cumplan ciertas condiciones. Las hipótesis del modelo lineal exigen que $Y$ siga una distribución Normal para cada valor de $X$ (normalidad de los residuos), aunque en nuestro caso, como los valores críticos se determinan con $\rho =0$ (o $\beta_1 =0$, recta horizontal), basta con que $Y$ sea Normal, sin necesidad de más concreción. Nada dicen esas hipótesis sobre la distribución de $X$, y de aquí ya se deduce una primera respuesta a la pregunta planteada: No es necesario que la variable $X$ sea Normal.
 
-Pero el coeficiente de correlación entre $X$ e $Y$ es el mismo que entre $Y$ y $X$, y si es significativo en un caso también lo será en el otro. No importa a qué variable se llame $X$ y a cual se llame $Y$. Por tanto, lo único necesario es que una de las dos sea Normal.
+Pero el coeficiente de correlación entre $X$ e $Y$ es el mismo que entre $Y$ y $X$, y si es significativo en un caso también lo será en el otro. No importa a qué variable se llame $X$ y a cuál se llame $Y$. Por tanto, lo único necesario es que una de las dos sea Normal.
 
-¿Y que pasa si ninguna lo es? una forma rápida de verlo es simulando. En la figura [-@fig-Tablas1] cada punto representa el percentil del 97,5\% de 100.000 valores del coeficiente de correlación, cada uno de ellos obtenido de dos muestras aleatorias de las distribuciones y el tamaño que se indica. Cada una de estas simulaciones se ha repetido 25 veces y en el gráfico aparece una pequeña línea vertical en la media de los 25 valores obtenidos. Puede observarse que el valor medio se aleja del real si ninguna de las dos distribuciones es Normal. Esta diferencia disminuye al aumentar el tamaño de muestra, aunque si las distribuciones son muy asimétricas, la diferencia sigue siendo grande.
+¿Y qué pasa si ninguna lo es? Una forma rápida de verlo es simulando. En la figura [-@fig-Tablas1] cada punto representa el percentil del 97,5% de 100.000 valores del coeficiente de correlación, cada uno de ellos obtenido de dos muestras aleatorias de las distribuciones y el tamaño que se indica. Cada una de estas simulaciones se ha repetido 25 veces, y en el gráfico aparece una pequeña línea vertical en la media de los 25 valores obtenidos. Puede observarse que el valor medio se aleja del real si ninguna de las dos distribuciones es Normal. Esta diferencia disminuye al aumentar el tamaño de muestra, aunque si las distribuciones son muy asimétricas, la diferencia sigue siendo grande.
 
-![](07_Fig_Regresion/0401_Valores Criticos Corre_n10.png){.fig-compacta2 fig-align="center" width="85%"}
+![](07_Fig_Regresion/0401_Valores%20Criticos%20Corre_n10.png){.fig-compacta2 fig-align="center" width="82%"}
 
-![](07_Fig_Regresion/0402_Valores Criticos Corre_n20.png){.fig-compacta2 fig-align="center" width="85%"}
+![](07_Fig_Regresion/0402_Valores%20Criticos%20Corre_n20.png){.fig-compacta2 fig-align="center" width="82%"}
 
-![Valores críticos obtenidos por simulación para $\alpha=0,05$ (prueba bilateral) para el tamaño (n) y las distribuciones que se indican (N: Normal, U: uniforme,  Int: uniforme discreta, exp: exponencial). La línea vertical a trazos corresponde al valor exacto.](07_Fig_Regresion/0403_Valores Criticos Corre_n30.png){#fig-Tablas1 .fig-compacta2 fig-align="center" width="85%"}
-
+![Valores críticos obtenidos por simulación para $\alpha=0,05$ (prueba bilateral) para el tamaño (n) y las distribuciones que se indican (N: Normal, U: uniforme, Int: uniforme discreta, exp: exponencial). La línea vertical a trazos corresponde al valor exacto.](07_Fig_Regresion/0403_Valores%20Criticos%20Corre_n30.png){#fig-Tablas1 .fig-compacta2 fig-align="center" width="82%"}
 
 ##### Curiosidad:
 
