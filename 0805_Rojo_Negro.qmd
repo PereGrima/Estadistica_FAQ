@@ -1,16 +1,16 @@
-# Acaba de salir 5 veces el rojo ¿debo apostar al negro? {.unnumbered}
+# 8.5 Acaba de salir 5 veces el rojo, ¿debo apostar al negro? {.unnumbered}
 
-Respecto a las probabilidades de ganar en la ruleta, nos cuesta quitarnos de encima esa idea de que si la proporción de veces que la bola cae en rojo y en negro se va igualando a medida que se lanzan bolas, si han salido muchas negras seguidas, en las próximas tiradas deben aparecer más rojas que negras para que se cumpla la ley establecida.
+Respecto a las probabilidades de ganar en la ruleta, nos cuesta quitarnos de encima esa idea de que, como la proporción de veces que la bola cae en rojo y en negro se va igualando a medida que se lanzan bolas, si han salido muchas negras seguidas, en las próximas tiradas deben aparecer más rojas que negras para que se cumpla la ley establecida.
 
-Pero es bien sabido que ni las bolas ni la ruleta tienen memoria, lo que sí puede ocurrir es que la ruleta esté desequilibrada. Se pueden dar dos situaciones:\index{ruleta!rachas}
+Pero es bien sabido que ni las bolas ni la ruleta tienen memoria, lo que sí puede ocurrir es que la ruleta esté desequilibrada. Se pueden dar dos situaciones:
 
-1.    **La ruleta está desequilibrada**. Es posible que por alguna razón la ruleta no esté perfectamente equilibrada y la bola tenga tendencia a caer con más frecuencia en el rojo. 
+1.  **La ruleta está desequilibrada**. Es posible que, por alguna razón, la ruleta no esté perfectamente equilibrada y la bola tenga tendencia a caer con más frecuencia en el rojo.
 
-2.    **La ruleta está equilibrada**. En este caso la probabilidad de que caiga en el rojo o en el negro es exactamente la misma.
+2.  **La ruleta está equilibrada**. En este caso, la probabilidad de que caiga en el rojo o en el negro es exactamente la misma.
 
-En el primer caso habría que apostar al rojo y en el segundo es indiferente apostar a rojo o negro. Si aparece una racha de un color es más razonable apostar por ese color que por el otro. Si estamos en el caso 1 nuestra probabilidad de ganar será algo mayor y si estamos en el caso 2 será la misma.
+En el primer caso habría que apostar al rojo y en el segundo es indiferente apostar a rojo o negro. Si aparece una racha de un color, es más razonable apostar por ese color que por el otro. Si estamos en el caso 1 nuestra probabilidad de ganar será algo mayor y si estamos en el caso 2 será la misma.
 
-Por otra parte, las rachas de un mismo color son más habituales de lo que parece incluso estando la ruleta perfectamente equilibrada. Supongamos que una ruleta funciona 6 horas al día y se realiza un lanzamiento cada minuto, es decir, 360 lanzamientos por jornada. Hemos simulado los lanzamientos de 1000 jornadas y nos hemos fijado en la aparición de rachas. Los resultados están en la siguiente tabla:
+Por otra parte, las rachas de un mismo color son más habituales de lo que parece, incluso estando la ruleta perfectamente equilibrada. Supongamos que una ruleta funciona 6 horas al día y se realiza un lanzamiento cada minuto, es decir, 360 lanzamientos por jornada. Hemos simulado los lanzamientos de 1000 jornadas y nos hemos fijado en la aparición de rachas. Los resultados están en la siguiente tabla:
 
 ```{=html}
 <div class="tabla-wrapper">
@@ -40,7 +40,6 @@ Por otra parte, las rachas de un mismo color son más habituales de lo que parec
 </table>
 </div>
 ```
-
-Rachas de 5, 6 y hasta 7 veces el mismo color aparecen en casi todas las jornadas (en más de 900). Aproximadamente en la mitad de las jornadas aparecen rachas de 9 y una vez de cada 100 (esto sería 3 o 4 veces al año) aparecen rachas de hasta 15 o 16 veces seguidas el mismo color. Si en un casino hay 10 ruletas esas rachas tan largas se verán aproximadamente cada 10 días.
+Rachas de 5, 6 y hasta 7 veces el mismo color aparecen en casi todas las jornadas (en más de 900). Aproximadamente en la mitad de las jornadas aparecen rachas de 9 y una vez de cada 100 (esto sería 3 o 4 veces al año) aparecen rachas de hasta 15 o 16 veces seguidas del mismo color. Si en un casino hay 10 ruletas esas rachas tan largas se verán aproximadamente cada 10 días.
 
 Por tanto, lo raro es que no aparezcan rachas. Que aparezcan con la frecuencia prevista lo explica el azar y en ese caso no hay ninguna señal que nos ayude a tomar una mejor decisión.

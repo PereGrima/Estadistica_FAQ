@@ -1,27 +1,21 @@
-# Cuando se habla de transformación logarítmica ¿se refiere al logaritmo decimal o al neperiano? {.unnumbered}
+# 8.1 Cuándo se habla de transformación logarítmica, ¿se refiere al logaritmo decimal o al neperiano? {.unnumbered}
 
-Si el objetivo que se pretende es la normalidad de los datos o la homogeneidad de su varianza, es indiferente cual sea la base de la transformación logarítmica.
+Si el objetivo que se pretende es la normalidad de los datos o la homogeneidad de su varianza, es indiferente cuál sea la base de la transformación logarítmica.
 
-Recordemos que $z$ es el logaritmo en base $a$ de $y$ si $a^z=y$. En el caso del logaritmo neperiano la base es el famoso número $e$ y tenemos:
-$$\ln(y) = x \qquad  \Leftrightarrow \qquad e^x = y$$
+Recordemos que $z$ es el logaritmo en base $a$ de $y$ si $a^z=y$. En el caso del logaritmo neperiano la base es el famoso número $e$ y tenemos: $$\ln(y) = x \qquad  \Leftrightarrow \qquad e^x = y$$
 
-\noindent Comparemos ahora el $\ln(y)$, con el logaritmo en cualquier otra base, por ejemplo en base 10. Tenemos:
+Comparemos ahora el $\ln(y)$ con el logaritmo en cualquier otra base, por ejemplo, en base 10. Tenemos:
 
-$$x=\ln(y) \qquad \;\, \Leftrightarrow \qquad e^x = y$$
-$$z=\log_{10}(y) \qquad  \Leftrightarrow \qquad 10^z = y$$
+$$x=\ln(y) \qquad \;\, \Leftrightarrow \qquad e^x = y$$ $$z=\log_{10}(y) \qquad  \Leftrightarrow \qquad 10^z = y$$
 
-Por tanto, podemos escribir:
-\begin{equation*}
-	\begin{split}
-		e^x &=10^z\\
-		\ln(e^x)&= \ln(10^z)\\
-		x &= \ln(10^z) = z\ln(10)
-	\end{split}
+Por tanto, podemos escribir: \begin{equation*}
+    \begin{split}
+        e^x &=10^z\\
+        \ln(e^x)&= \ln(10^z)\\
+        x &= \ln(10^z) = z\ln(10)
+    \end{split}
 \end{equation*}
 
-\noindent Como $x$ es el nombre que hemos dado a $\ln(y)$, el $\ln(10)$ es una constante igual a 2,3026 y $z$ es el nombre asignado a $\log_{10}(y)$, tenemos:
-$$\ln(y)=z\ln(10)=2,3026z=2,3026\log_{10}(y)$$
+\noindent Como $x$ es el nombre que hemos dado a $\ln(y)$, el $\ln(10)$ es una constante igual a 2,3026 y $z$ es el nombre asignado a $\log_{10}(y)$, tenemos: $$\ln(y)=z\ln(10)=2,3026z=2,3026\log_{10}(y)$$
 
-Es decir que el logaritmo neperiano se convierte en logaritmo en base 10 al multiplicarlo por una constante, lo cual significa que si al aplicar una transformación con logaritmo neperiano se logra la distribución Normal o la homogeneidad de varianza, idéntico efecto surte la aplicación del logaritmo en cualquier otra base, en particular en base 10.
-
-
+Es decir que el logaritmo neperiano se convierte en logaritmo en base 10 al multiplicarlo por una constante, lo cual significa que si al aplicar una transformación con logaritmo neperiano se logra la distribución Normal o la homogeneidad de varianza, se obtiene un efecto idéntico al aplicar el logaritmo en cualquier otra base, en particular en base 10.
