@@ -1,4 +1,4 @@
-# 8.2 ¿Debe decirse “Teorema central del límite” o “Teorema del límite central”? {.unnumbered}
+# 8.2 ¿Debe decirse “Teorema central del límite” o “Teorema del límite central”? {.unnumbered #teorema}
 
 Lo central, en el sentido de clave o fundamental, es el teorema, no el límite, que es como todos los límites. Debe decirse, por tanto, “**Teorema central del límite**” y no de la otra forma.
 

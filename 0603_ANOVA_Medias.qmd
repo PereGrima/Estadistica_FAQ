@@ -1,4 +1,4 @@
-# 6.3 ¿Por qué se llama *Análisis de la Varianza* si lo que se compara son medias? {.unnumbered}
+# 6.3 ¿Por qué se llama *Análisis de la Varianza* si lo que se compara son medias? {.unnumbered #ANOVA}
 
 No es por ganas de confundir. Supongamos que se desea comparar las medias de las muestras representadas en la figura [-@fig-dotplot1].
 
@@ -59,7 +59,6 @@ Veamos ahora cuáles son las medias en ambos casos:
 </table>
 </div>
 ```
-
 ¡Las medias son idénticas! Entonces, ¿por qué las conclusiones han sido distintas?
 
 Porque, de una forma intuitiva, hemos comparado la variabilidad de los valores en cada muestra con las diferencias (es decir, también variabilidad) que presentan sus medias. En el primer caso, si las tres muestras provienen de la misma población, las diferencias entre sus medias son mayores de lo que cabe esperar a partir de la variabilidad observada dentro de cada muestra. En el segundo caso, la variabilidad dentro de las muestras es mucho mayor y por eso nos parece que la diferencia de medias es compatible con el hecho de que las tres provengan de la misma población.

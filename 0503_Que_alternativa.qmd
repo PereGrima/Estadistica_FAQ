@@ -1,4 +1,4 @@
-# 5.3 ¿Cómo elegir la hipótesis alternativa que conviene plantear? {.unnumbered}
+# 5.3 ¿Cómo elegir la hipótesis alternativa que conviene plantear? {.unnumbered #alternativa}
 
 La selección de la hipótesis alternativa está relacionada con el planteamiento del problema y con la zona en que queremos situar el riesgo de equivocarnos al rechazar la hipótesis nula. Lo veremos a través de la reflexión sobre tres situaciones distintas.
 

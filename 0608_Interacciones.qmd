@@ -1,4 +1,4 @@
-# 6.8 ¿Por qué se suponen no significativas las interacciones de tres o más factores? {.unnumbered}
+# 6.8 ¿Por qué se suponen no significativas las interacciones de tres o más factores? {.unnumbered #interacciones}
 
 En primer lugar, vamos a intentar ver geométricamente lo que significa una interacción de dos factores. La figura [-@fig-interac1] (izq.) muestra la superficie $Z=1+X+Y$. Si consideramos que $X$ e $Y$ son los factores y $Z$ es la respuesta, esta será una situación en la que los factores no interaccionan, es decir, el efecto de $X$ sobre la respuesta no depende del valor de $Y$ (ni el efecto de $Y$ depende de $X$). En concreto, aumentar una unidad el valor de $X$ aumenta también una unidad el valor de $Z$, con independencia del valor de $Y$. La parte derecha de la figura (es el cubo de la izquierda visto por la cara X) muestra claramente cómo el efecto de $X$ no depende de $Y$, las pendientes de las rectas son todas iguales.
 

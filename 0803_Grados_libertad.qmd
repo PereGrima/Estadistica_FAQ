@@ -1,4 +1,4 @@
-# 8.3 ¿Qué significan los llamados “grados de libertad”? {.unnumbered}
+# 8.3 ¿Qué significan los llamados “grados de libertad”? {.unnumbered #grados}
 
 Aunque el concepto de grados de libertad está muy presente en los métodos estadísticos, los libros de texto no suelen entrar en él con mucho detalle, quizá porque hacerlo implica meterse en el terreno de la geometría vectorial que complica las cosas y se aparta de los objetivos de un curso general de estadística. Nosotros, siguiendo con la intuición como principal arma, vamos a presentarlo primero desde un punto de vista geométrico para después pasar al contexto estadístico.
 

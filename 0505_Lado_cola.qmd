@@ -1,4 +1,4 @@
-# 5.5 ¿Cómo se sabe hacia qué lado hay que mirar el área de cola? {.unnumbered}
+# 5.5 ¿Cómo se sabe hacia qué lado hay que mirar el área de cola? {.unnumbered #LadoCola}
 
 Cuando se plantean dudas de este tipo siempre es mejor encontrar la respuesta razonando, ya que echar mano de recetas puede llevar a cometer errores de mucho bulto. Supongamos que el planteamiento del contraste es:
 

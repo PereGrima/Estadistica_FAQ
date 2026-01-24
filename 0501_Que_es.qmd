@@ -1,4 +1,4 @@
-# 5.1 ¿Qué es un contraste de hipótesis? {.unnumbered}
+# 5.1 ¿Qué es un contraste de hipótesis? {.unnumbered #Contraste}
 
 Es el tipo de razonamiento que se sigue en los test estadísticos.
 
@@ -10,10 +10,13 @@ La carga de la prueba la tiene el que afirma que algo es mejor, o --en general--
 
 1.  La hipótesis por defecto, lo que se supone que se cumple a no ser que se demuestre lo contrario, es lo que se denomina *hipótesis nula*, en nuestro caso, que los dos tratamientos dan el mismo resultado. La *hipótesis alternativa* es lo que se cumple si se rechaza la hipótesis nula, en nuestro caso, que el porcentaje de curación de B es mayor que el de A.
 
-2.  Una vez se tienen los datos[^nota1], calculamos un valor que resume el resultado obtenido. En nuestro caso este valor es el porcentaje de curados con el nuevo tratamiento. Sabemos que ese resultado es una variable aleatoria, es decir, que el azar también influye en su valor. A ese valor se le llama *estadístico de prueba*.
+2.  Una vez se tienen los datos[^0501_que_es-1], calculamos un valor que resume el resultado obtenido. En nuestro caso este valor es el porcentaje de curados con el nuevo tratamiento. Sabemos que ese resultado es una variable aleatoria, es decir, que el azar también influye en su valor. A ese valor se le llama *estadístico de prueba*.
 
-[^nota1]: <small>que, por cierto, no aparecen por arte de magia. Su obtención es la parte más delicada e importante del estudio.</small>
+[^0501_que_es-1]: <small>que, por cierto, no aparecen por arte de magia. Su obtención es la parte más delicada e importante del estudio.</small>
 
+```{=html}
+<!-- -->
+```
 3.  Se identifica la distribución de probabilidad a la cual pertenece el estadístico de prueba suponiendo cierta la hipótesis nula, esta distribución se denomina *distribución de referencia*. Distribuciones de referencia típicas son las que aparecen en los cursos de estadística: la $t$ de Student, la Chi-cuadrado o la *F* de Snedecor. También podemos usar un estadístico de prueba sin conocer su distribución de referencia y crearla por simulación. En nuestro caso, el número de curados en una muestra de $n=10$ sigue una distribución binomial. Es una distribución muy conocida, la misma que sigue el número de caras si lanzamos 10 veces una moneda al aire.
 
 4.  Finalmente calculamos la probabilidad de que el estadístico de prueba, o un valor más alejado que este, se dé por azar en la distribución de referencia. La figura [-@fig-CH] (izq.) muestra las probabilidades de que en un grupo de 10 pacientes se curen 0, 1, 2,... hasta 10 si la probabilidad de curarse es del 50 %. Vemos que la probabilidad de que se curen 7 o más es del 17,2 %. A esta probabilidad se le denomina *p-valor* y es el valor más buscado del listado que da el ordenador al realizar un test estadístico.

@@ -1,4 +1,4 @@
-# 5.2 ¿Por qué es controvertido el uso del contraste de hipótesis? {.unnumbered}
+# 5.2 ¿Por qué es controvertido el uso del contraste de hipótesis? {.unnumbered #controvertido}
 
 Aunque es una pieza clave en el análisis estadístico --al menos en la estadística clásica-- el uso del contraste de hipótesis es discutido y se proponen alternativas en el ámbito de la llamada *Estadística Bayesiana*. Veamos algunas pegas que se le pueden poner.
 

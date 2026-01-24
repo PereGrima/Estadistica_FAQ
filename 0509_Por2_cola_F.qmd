@@ -1,4 +1,4 @@
-# 5.9 ¿Es correcto multiplicar por dos el área de la cola en los test de igualdad de varianzas? {.unnumbered}
+# 5.9 ¿Es correcto multiplicar por dos el área de la cola en los test de igualdad de varianzas? {.unnumbered #Por2}
 
 En este tipo de test el estadístico de prueba es el cociente de las varianzas muestrales y la distribución de referencia es la $F$ de Snedecor, con los grados de libertad de las varianzas que hemos colocado en el numerador y el denominador, en este orden.
 

@@ -1,4 +1,4 @@
-# 6.1 ¿Cómo que diseño de experimentos? ¿no es eso de física o de química? {.unnumbered}
+# 6.1 ¿Cómo que diseño de experimentos? ¿no es eso de física o de química? {.unnumbered #FisicaQuimica}
 
 Es verdad que *experimentar* suena más a tubos de ensayo y a laboratorios que a estadística, pero en estadística también hacemos experimentos. Los hacemos cuando queremos conocer cómo se comporta una variable --puede ser el rendimiento de una reacción química o el porcentaje de enfermos que se curan-- en unas condiciones determinadas.
 

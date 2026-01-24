@@ -1,4 +1,4 @@
-# 6.2 ¿Por qué no se usa el test de la t-Student para comparar más de dos tratamientos? {.unnumbered}
+# 6.2 ¿Por qué no se usa el test de la t-Student para comparar más de dos tratamientos? {.unnumbered #tStudent}
 
 Utilizar a fondo las técnicas disponibles \index{distribución!t-Student} es, desde luego, una buena idea, pero que no sirve para el caso que nos ocupa. No es lo mismo comparar todas las parejas de tratamientos que aplicar la técnica de análisis de la varianza. Vamos a verlo.
 

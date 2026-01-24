@@ -1,4 +1,4 @@
-# 7.3 ¿Cómo se han calculado los valores críticos del coeficiente de correlación? {.unnumbered}
+# 7.3 ¿Cómo se han calculado los valores críticos del coeficiente de correlación? {.unnumbered #criticos}
 
 El coeficiente de correlación \index{coeficiente de correlación}$r$ tiene su propia función densidad de probabilidad y con ella se pueden calcular los valores críticos que se desee. Sin embargo, seguramente por economía de cálculo, las primeras tablas se construyeron usando la distribución $t$-Student.
 

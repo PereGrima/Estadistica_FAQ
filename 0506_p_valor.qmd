@@ -1,4 +1,4 @@
-# 5.6 ¿A partir de qué *p*-valor se debe rechazar la hipótesis nula? {.unnumbered}
+# 5.6 ¿A partir de qué *p*-valor se debe rechazar la hipótesis nula? {.unnumbered #pvalor}
 
 A todos nos gustan las reglas claras y sencillas, pero no es sensato tomar un p-valor como frontera universal y aplicarlo siempre con independencia del contexto en que esté situado. Fijar un valor frontera es lo mismo que decidir la probabilidad de equivocarnos si se rechaza la hipótesis nula, y la probabilidad de error que es razonable asumir depende de la situación en la que estemos y de las consecuencias de cometer ese error.
 

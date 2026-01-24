@@ -1,4 +1,4 @@
-# 6.7 ¿Qué es un diseño bloqueado? {.unnumbered}
+# 6.7 ¿Qué es un diseño bloqueado? {.unnumbered #bloqueado}
 
 Cuando se estudia la eficacia de una nueva vacuna, la muestra con la que se realiza la prueba se divide en dos grupos: el llamado grupo de control, al que se aplica un placebo, y el grupo tratado, al que se aplica la vacuna.
 

@@ -1,4 +1,4 @@
-# 7.2 ¿De dónde sale la fórmula del coeficiente de correlación? {.unnumbered}
+# 7.2 ¿De dónde sale la fórmula del coeficiente de correlación? {.unnumbered #correlacion}
 
 Simplemente se divide la expresión de la covarianza por el producto de las desviaciones típicas de las dos variables $X$ e $Y$. Es fácil comprobar que desaparecen los denominadores tanto de la covarianza como de las desviaciones típicas, quedando: $$ r  = \frac{\sum_{i=1}^n \left ( x_i - \bar{x} \right ) \left ( y_i - \bar{y} \right ) } 
         {\sqrt {\sum_{i=1}^n \left ( x_i - \bar{x} \right )^2}  \sqrt{\sum_{i=1}^n \left ( y_i - \bar{y} \right )^2 }} $$

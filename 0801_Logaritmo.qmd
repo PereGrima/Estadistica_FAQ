@@ -1,4 +1,4 @@
-# 8.1 Cuándo se habla de transformación logarítmica, ¿se refiere al logaritmo decimal o al neperiano? {.unnumbered}
+# 8.1 Cuándo se habla de transformación logarítmica, ¿se refiere al logaritmo decimal o al neperiano? {.unnumbered #logaritmo}
 
 Si el objetivo que se pretende es la normalidad de los datos o la homogeneidad de su varianza, es indiferente cuál sea la base de la transformación logarítmica.
 

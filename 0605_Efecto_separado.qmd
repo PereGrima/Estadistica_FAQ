@@ -1,4 +1,4 @@
-# 6.5 ¿Cómo es posible estudiar por separado el efecto de cada variable? {.unnumbered}
+# 6.5 ¿Cómo es posible estudiar por separado el efecto de cada variable? {.unnumbered #Separado}
 
 De entrada resulta chocante que para estudiar experimentalmente cómo un conjunto de variables afectan a una respuesta lo mejor sea moverlas todas a la vez realizando lo que se conoce como *diseño factorial*. Inmediatamente surgen dos pegas:
 
@@ -52,7 +52,6 @@ Entramos ya en el problema de interpretar los resultados si movemos todos los fa
 </table>
 </div>
 ```
-
 Estos resultados se pueden representar en los vértices de un cubo, tal como se indica en la figura [-@fig-dex1], donde cada eje corresponde a un factor. Observe que la única diferencia entre las condiciones que dan la respuesta $y_5$ y las que dan $y_1$ es la debida al nivel del factor $C$, no cambia nada más. Lo mismo ocurre con las diferencias entre $y_7$ e $y_3$, entre $y_8$ e $y_4$ y entre $y_6$ e $y_2$. Al promedio de esas cuatro diferencias se le denomina *efecto principal del factor C*. Ese mismo valor también se puede calcular como el promedio de respuestas con $C$ a nivel $+$ menos el promedio con $C$ a nivel $-$.
 
 ![Representación gráfica de las variables y la respuesta](06_Fig_DEX/0501_EstSeparado.png){#fig-dex1 .fig-compacta2 fig-align="center" width="95%"}

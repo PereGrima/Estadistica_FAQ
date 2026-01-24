@@ -1,4 +1,4 @@
-# 5.7 ¿Qué tipos de error se pueden cometer en un contraste de hipótesis? {.unnumbered}
+# 5.7 ¿Qué tipos de error se pueden cometer en un contraste de hipótesis? {.unnumbered #TiposError}
 
 Recordemos que se empieza suponiendo que las cosas son de una determinada forma, y que este planteamiento, normalmente conservador y relacionado con no cambiar, es lo que se denomina hipótesis nula. Esto será lo que creeremos a no ser que los datos lo contradigan, en cuyo caso consideraremos cierta la hipótesis alternativa (no pueden existir situaciones intermedias).
 

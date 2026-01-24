@@ -1,4 +1,4 @@
-# 8.6 ¿Cómo se dice? ¿Qué significa? {.unnumbered}
+# 8.6 ¿Cómo se dice? ¿Qué significa? {.unnumbered #dice}
 
 #### **En torno a la media**
 

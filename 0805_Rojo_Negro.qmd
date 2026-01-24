@@ -1,4 +1,4 @@
-# 8.5 Acaba de salir 5 veces el rojo, ¿debo apostar al negro? {.unnumbered}
+# 8.5 Acaba de salir 5 veces el rojo, ¿debo apostar al negro? {.unnumbered #casino}
 
 Respecto a las probabilidades de ganar en la ruleta, nos cuesta quitarnos de encima esa idea de que, como la proporción de veces que la bola cae en rojo y en negro se va igualando a medida que se lanzan bolas, si han salido muchas negras seguidas, en las próximas tiradas deben aparecer más rojas que negras para que se cumpla la ley establecida.
 

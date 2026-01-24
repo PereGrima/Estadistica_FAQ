@@ -1,4 +1,4 @@
-# 5.8 ¿Es lo mismo diferencia significativa que diferencia importante? {.unnumbered}
+# 5.8 ¿Es lo mismo diferencia significativa que diferencia importante? {.unnumbered #significativa}
 
 Aunque a veces se utiliza la palabra "significativo" para enfatizar la importancia o la relevancia de algo, en el contexto de los estudios estadísticos no es lo mismo significativo que importante. Una diferencia altamente significativa puede ser irrelevante a efectos prácticos, y también puede ocurrir que una diferencia importante no sea significativa.
 
@@ -43,8 +43,6 @@ Se decide comparar la pintura habitual, A, con otra alternativa, B, que aseguran
 </table>
 </div>
 ```
-
-
 \noindent Si los resultados son como los reflejados en la situación 1, la diferencia es claramente significativa, pero 2 kg sobre 1750 seguramente es una diferencia poco importante, y si cambiar de pintura entraña alguna dificultad o algún riesgo, por pequeño que sea, lo más probable es que no se cambie.
 
 En la situación 2 la diferencia son 100 kg, lo cual ya puede ser una diferencia importante, al menos por comparación con el caso anterior. Pero ahora la diferencia no es significativa, es decir, puede ser debida al azar y no estaría justificado cambiar de pintura en base a estos resultados.

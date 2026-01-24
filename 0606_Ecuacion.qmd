@@ -1,4 +1,4 @@
-# 6.6 ¿Cómo se puede escribir una ecuación para la respuesta con los resultados de un diseño factorial? {.unnumbered}
+# 6.6 ¿Cómo se puede escribir una ecuación para la respuesta con los resultados de un diseño factorial? {.unnumbered #ecuacion}
 
 Supongamos que tenemos un circuito como el de la figura [-@fig-ecuacion1] y deseamos conocer cuál es la intensidad (I) que circula en función del valor de la resistencia (R) y de la fuente de alimentación (V). En un caso como este, la relación es perfectamente conocida: se trata de la ley de Ohm: $I=V/R$.
 
@@ -37,9 +37,7 @@ Pero supongamos que no conocemos esa relación y queremos deducirla a través de
 </table>
 </div>
 ```
-
-Usando un paquete de software estadístico para calcular los efectos o, en un caso tan sencillo, también a mano, se obtiene: 
-$$ \text{Media}=2,8125\;\;\;\; V=1,125 \;\;\;\; R=-1,875 \;\;\;\;  VR = -0,375 $$
+Usando un paquete de software estadístico para calcular los efectos o, en un caso tan sencillo, también a mano, se obtiene: $$ \text{Media}=2,8125\;\;\;\; V=1,125 \;\;\;\; R=-1,875 \;\;\;\;  VR = -0,375 $$
 
 Los efectos indican cuánto cambia la respuesta al pasar el factor del nivel –1 al +1; por tanto, el cambio al aumentar en 2 unidades --codificadas-- el valor del factor. Sin embargo, los coeficientes de una ecuación de regresión indican cuánto cambia la respuesta al aumentar en una unidad la variable regresora.
 
@@ -108,7 +106,6 @@ El modelo es una aproximación a la realidad. La figura [-@fig-ecuacion2] compar
 </table>
 </div>
 ```
-
 Obteniéndose los efectos: $$ \text{Media}=2,8125\;\;\;\; V=1,125 \;\;\;\; G=1,875 \;\;\;\;  VG = 0,375 $$
 
 Y a partir de los efectos podemos escribir el modelo: $$ I = 2,8125 + 0,5625V_C + 0,9375G_C + 0,1875 V_CG_C $$

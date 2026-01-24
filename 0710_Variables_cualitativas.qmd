@@ -1,4 +1,4 @@
-# 7.10 ¿Se pueden usar variables cualitativas en ecuaciones de regresión? {.unnumbered}
+# 7.10 ¿Se pueden usar variables cualitativas en ecuaciones de regresión? {.unnumbered #cualitativas}
 
 Sí se puede, pero no como si fueran cuantitativas. Si queremos usar el día de la semana como variable explicativa y tenemos los días codificados como lunes = 1, martes = 2, ..., es evidente que esta variable no se puede considerar así, ya que el modelo entendería que el domingo es 7 veces el lunes, cosa evidentemente falsa. Sin embargo, sí hay forma de utilizar variables cualitativas.
 

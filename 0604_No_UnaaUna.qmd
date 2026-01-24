@@ -1,4 +1,4 @@
-# 6.4 ¿Por qué no hay que mover las variables una a una? {.unnumbered}
+# 6.4 ¿Por qué no hay que mover las variables una a una? {.unnumbered #UnaaUna}
 
 Cuando se trata de estudiar experimentalmente cómo un conjunto de variables afectan a una respuesta parece que la mejor estrategia es fijar todas las variables menos una e ir moviendo esa no fijada hasta identificar con qué valor se optimiza la respuesta. Después se sigue con la siguiente y así con todas, obteniendo de esta forma el valor más adecuado para cada una de ellas.
 

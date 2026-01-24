@@ -1,4 +1,4 @@
-# 7.9 ¿Por qué hace falta el valor de R2 -ajustado si ya tenemos el de $R^2$? {.unnumbered}
+# 7.9 ¿Por qué hace falta el valor de R2 -ajustado si ya tenemos el de $R^2$? {.unnumbered #R2Ajustado}
 
 El coeficiente de determinación $R^2$ es una excelente medida de bondad del ajuste en el ámbito de la regresión simple y también en el de la regresión múltiple cuando se comparan ajustes con el mismo número de variables regresoras. El problema que presenta $R^2$ es que su valor aumenta siempre al añadir nuevas variables, aunque estas no expliquen nada.
 

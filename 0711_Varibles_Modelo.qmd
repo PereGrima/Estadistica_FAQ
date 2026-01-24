@@ -1,4 +1,4 @@
-# 7.11 ¿Por qué las variables que se incluyen en el modelo no necesariamente son las más correlacionadas con la respuesta? {.unnumbered}
+# 7.11 ¿Por qué las variables que se incluyen en el modelo no necesariamente son las más correlacionadas con la respuesta? {.unnumbered #incluyen}
 
 Es muy fácil de entender con un ejemplo. Suponga que tiene que presentarse al examen de una asignatura cuyo programa consta de 100 temas y resulta que usted no sabe ninguno. Pero no todo está perdido, las reglas de este examen dicen que usted puede llevar compañeros de clase como asesores y, además, puestos a suponer, supondremos que usted sabe qué temas conoce cada uno de sus compañeros.
 

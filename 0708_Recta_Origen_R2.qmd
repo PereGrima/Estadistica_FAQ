@@ -1,10 +1,10 @@
-# 7.8 ¿Por qué cuando se ajusta la recta por el origen no se debe usar $R^2$? {.unnumbered}
+# 7.8 ¿Por qué cuando se ajusta la recta por el origen no se debe usar $R^2$? {.unnumbered #origen}
 
 Si se sabe que cuando $X=0$ seguro que $Y=0$ y además nuestros valores están en torno a esa zona, puede ser razonable forzar que la recta $y=b_0+b_1x$ pase por el origen[^0708_recta_origen_r2-1]. En este caso solo hay que calcular el valor de la pendiente $b_1$. Deducir su expresión es muy fácil, solo hay que minimizar: $S = \sum (y_i -b_1x_i)^2$ y, siguiendo el procedimiento habitual, tenemos: $$ \frac{\mathrm{d}S}{\mathrm{d}b_1}  = \frac{\mathrm{d}(\sum y_i^2-\sum 2y_ib_1x_i+ \sum b_1^2x_i^2)} {\mathrm{d} b_1} = -2 \sum x_iy_i +2 \sum x_i^2b_1$$
 
 [^0708_recta_origen_r2-1]: <small>Observe que no es suficiente con estar seguros de que si $X=0$ entonces $Y=0$. Al modelar el peso en función de la estatura sabemos que si la estatura es cero, el peso también será cero, pero no ajustamos a una recta por el origen porque los valores que se ajustan --valores reales-- están lejos del origen y no se puede extrapolar la relación. </small>
 
-Está claro que la segunda derivada es positiva (es una suma de cuadrados), por lo que tendremos un mínimo. Igualando a cero y despejando el valor de $b_1$ se obtiene: $$ b_1 = \frac{\sum x_iy_i}{\sum x_i^2} $$ Un aspecto singular de este caso es que el valor de $R^2$ no es una buena medida de calidad del ajuste. 
+Está claro que la segunda derivada es positiva (es una suma de cuadrados), por lo que tendremos un mínimo. Igualando a cero y despejando el valor de $b_1$ se obtiene: $$ b_1 = \frac{\sum x_iy_i}{\sum x_i^2} $$ Un aspecto singular de este caso es que el valor de $R^2$ no es una buena medida de calidad del ajuste.
 
 El primer problema surge cuando nos ponemos a calcularlo. Sabemos que $R^2$ mide la proporción en que se reduce la suma de los cuadrados de los residuos en la recta ajustada respecto a una recta que no usa la información de $X$ y que es, por tanto, una recta horizontal (la estimación del valor de $Y$ no depende del valor de $X$). En el caso de una recta ajustada sin restricciones está claro que la recta horizontal debe ser $y=\bar{y}$, de forma que la mejor estimación de $Y$ sea su valor medio. En la figura [-@fig-RectaOrigen1] tenemos un ejemplo sencillo de cálculo de $R^2$ en este caso.
 

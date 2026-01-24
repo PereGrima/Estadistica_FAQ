@@ -1,4 +1,4 @@
-# 7.7 ¿Cómo se interpreta el valor de $R^2$ {.unnumbered}
+# 7.7 ¿Cómo se interpreta el valor de $R^2$ {.unnumbered #R2}
 
 A la vista de una ecuación de regresión es imposible saber si el ajuste es bueno, regular o malo; hace falta añadir alguna medida que informe de lo que se ha dado en llamar "bondad del ajuste". También es verdad que si solo se tiene una variable regresora basta dar un vistazo a la nube de puntos para tener una idea de cómo es el ajuste, pero interesa una medida objetiva y que se pueda generalizar al caso de la regresión múltiple, donde los gráficos ya no son tan claros.
 

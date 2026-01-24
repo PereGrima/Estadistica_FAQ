@@ -1,4 +1,4 @@
-# 8.4 ¿Cuál es la mejor estrategia para que me toque la lotería? {.unnumbered}
+# 8.4 ¿Cuál es la mejor estrategia para que me toque la lotería? {.unnumbered #loteria}
 
 Si nos referimos sólo a juegos de azar, esos que se basan en la extracción de bolas de un bombo, esta pregunta no tiene respuesta, ya que no existe tal estrategia. Y es una lástima, porque a muchos les habrá parecido que esta era la pregunta más interesante del libro.
 

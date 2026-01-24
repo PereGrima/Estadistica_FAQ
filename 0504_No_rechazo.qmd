@@ -1,4 +1,4 @@
-# 5.4 ¿Por qué se habla de “no rechazo” y no de “aceptación”? {.unnumbered}
+# 5.4 ¿Por qué se habla de “no rechazo” y no de “aceptación”? {.unnumbered #NoRechazo}
 
 Esta es una característica general de la búsqueda del conocimiento científico. Veamos un ejemplo.
 
