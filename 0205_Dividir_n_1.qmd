@@ -259,6 +259,6 @@ Es decir que todos los valores de la varianza que aparecen en la tabla anterior,
 
 $$ \bar{S}_{n-1}^{2}= 2\cdot 6,4 = 12,8 $$
 
-Quizá este resultado decepcione, y hasta sorprenda, porque seguramente lo esperado era que $S_{n-1}^{2}$ fuera un estimador insesgado de $\sigma_{N}^{2}$ y no de $\sigma_{N-1}^{2}$, pero no hay que preocuparse demasiado. A efectos prácticos es casi lo mismo cuando la población es grande, y no vamos a estimar, a partir de muestras, las características de una población de 6 elementos (en nuestro ejemplo esta ha sido una población “de juguete” para entender el razonamiento).
+Quizá este resultado decepcione, y hasta sorprenda, porque seguramente lo esperado era que $S_{n-1}^{2}$ fuera un estimador insesgado de $\sigma_{N}^{2}$ y no de $\sigma_{N-1}^{2}$, pero no hay que preocuparse demasiado. A efectos prácticos es casi lo mismo cuando la población es grande, ya que no vamos a estimar, a partir de una muestra, las características de una población de 6 elementos (en nuestro ejemplo esta ha sido una población “de juguete” para entender el razonamiento).
 
 Cuando estimemos la varianza de una población se tratará de una población grande, en la que $\sigma_{N}^{2}$ será prácticamente igual a $\sigma_{N-1}^{2}$. En realidad, el caso más frecuente es tener poblaciones teóricas (infinitas), en las que es exactamente lo mismo $\sigma_{N}^{2}$ que $\sigma_{N-1}^{2}$.
