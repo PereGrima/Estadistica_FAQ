@@ -1,4 +1,4 @@
-# ¿Por qué los coeficientes de una ecuación de regresión son variables aleatorias? {.unnumbered #coeficientes}
+# 7.6 ¿Por qué los coeficientes de una ecuación de regresión son variables aleatorias? {#coeficientes .unnumbered}
 
 Si usted coloca un conjunto de puntos en un plano, por ejemplo (2; 3), (4; 3), (6; 7) y (8; 7), de forma que aquí no hay variables aleatorias ni ningún tipo de variabilidad, obtendrá que la recta que mejor se ajusta a estos puntos es: $Y = 1 + 0,8X$. Si los datos de partida son considerados números fijos, los coeficientes de la ecuación también lo son, y no hay más que decir. Pero esta no es la situación que nos planteamos cuando tratamos este tipo de problemas desde un punto de vista estadístico.
 

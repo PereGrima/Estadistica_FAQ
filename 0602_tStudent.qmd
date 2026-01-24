@@ -4,6 +4,7 @@ Utilizar a fondo las técnicas disponibles \index{distribución!t-Student} es, d
 
 Supongamos que tenemos muestras de 5 tratamientos: $A$, $B$, $C$, $D$ y $E$. Podemos calcular las medias: $\bar{y}_A$, $\;\bar{y}_B,\ldots$ y plantear para cada una de las 10 parejas que se pueden formar la hipótesis nula de que sus medias poblaciones son iguales frente a la alternativa de que son distintas.
 
+::: {.text-center}
 Pareja 1: $\;\mu_A = \mu_B\;$ frente a $\;\mu_A \neq \mu_B$
 
 Pareja 2: $\;\mu_A = \mu_C\;$ frente a $\;\mu_A \neq \mu_C$
@@ -11,6 +12,7 @@ Pareja 2: $\;\mu_A = \mu_C\;$ frente a $\;\mu_A \neq \mu_C$
 $\cdots$
 
 Pareja 10: $\;\mu_D = \mu_E\;$ frente a $\;\mu_D \neq \mu_E$
+:::
 
 Estos 10 contrastes se pueden abordar construyendo los 10 intervalos de confianza para las diferencias de las medias poblacionales. Si no existen diferencias entre los tratamientos la probabilidad de que un intervalo incluya el cero y, por tanto, nos conduzca a la conclusión correcta es igual a su nivel de confianza, supongamos –por ejemplo– del 95 %.
 

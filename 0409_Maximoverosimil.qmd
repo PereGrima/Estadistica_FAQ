@@ -1,4 +1,4 @@
-# ¿Qué es un estimador de máxima verosimilitud? {#maximoverosimil .unnumbered}
+# 4.9 ¿Qué es un estimador de máxima verosimilitud? {#maximoverosimil .unnumbered}
 
 Cuando queremos estimar un parámetro de una población cuya distribución es conocida (Normal, binomial, Poisson, ...), tomamos una muestra aleatoria para a partir de ella estimar dicho parámetro. Por ejemplo, si se sabe que una situación puede modelarse con una distribución de Poisson, para estimar el valor de su media $\lambda$, podemos tomar una muestra aleatoria $(x_1, x_2, ..., x_n)$ de $n$ observaciones e intentar responder a la siguiente pregunta ¿cuál de todos los posibles valores de $\lambda$ produce con mayor verosimilitud (credibilidad) una muestra como la observada? La respuesta a esta pregunta corresponde al estimador de máxima verosimilitud.
 

@@ -1,4 +1,4 @@
-# ¿Sirven las tablas del coeficiente de correlación si $X$ e $Y$ no son Normales? {.unnumbered #tablas}
+# 7.4 ¿Sirven las tablas del coeficiente de correlación si $X$ e $Y$ no son Normales? {#tablas .unnumbered}
 
 Las tablas se han construido identificando el contraste sobre el coeficiente de correlación con el que se realiza para la pendiente de la recta ajustada. Sabemos que para realizar este último contraste es necesario que los datos cumplan ciertas condiciones. Las hipótesis del modelo lineal exigen que $Y$ siga una distribución Normal para cada valor de $X$ (normalidad de los residuos), aunque en nuestro caso, como los valores críticos se determinan con $\rho =0$ (o $\beta_1 =0$, recta horizontal), basta con que $Y$ sea Normal, sin necesidad de más concreción. Nada dicen esas hipótesis sobre la distribución de $X$, y de aquí ya se deduce una primera respuesta a la pregunta planteada: No es necesario que la variable $X$ sea Normal.
 

@@ -1,4 +1,4 @@
-# ¿Cómo se justifica la fórmula de la covarianza? {.unnumbered #covarianza}
+# 7.1 ¿Cómo se justifica la fórmula de la covarianza? {#covarianza .unnumbered}
 
 La figura [-@fig-Covarianza] muestra la relación entre dos variables $X$ e $Y$. En la derecha el diagrama se ha dividido en cuatro cuadrantes trazando una línea vertical que pasa por la media de los valores de $X$ y una horizontal por la media de los valores de $Y$. A estos valores medios los designamos $\bar{x}$ e $\bar{y}$ respectivamente. Los cuadrantes van del I al IV en el sentido de las agujas del reloj.
 

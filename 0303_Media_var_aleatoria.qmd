@@ -14,12 +14,10 @@ Pensemos, por ejemplo, en la estatura de 20 personas, si representamos sus valor
 
 ![Estaturas de 20 personas](03_Fig_Distribuciones/0301_MediaVA_1.png){#fig-MediaVA1 .fig-compacta2 fig-align="center" width="80%"}
 
-\
 Sin embargo, si pensamos en la altura media de grupos de 25 personas, ya no podemos dar valores tan extremos, puesto que aunque es perfectamente posible que una persona mida 1,85 metros, es prácticamente imposible que esta sea la altura media de un grupo de 25 personas tomadas al azar, ya que en este grupo cabe esperar que haya un número parecido de personas por encima y por debajo de la media general, de forma que los valores de sus alturas se compensarán dando un valor medio cercano a la media de la población. En la figura [-@fig-MediaVA2] se muestra el diagrama de puntos de unos valores que podrían corresponder a las alturas medias de 20 grupos con 25 individuos cada uno. Estos valores se han obtenido por simulación suponiendo que las alturas individuales siguen una N(1,70 m; 0,07 m). Obsérvese cómo su dispersión es menor que la de las alturas individuales.
 
 ![Estaturas medias de 20 grupos de 25 personas cada uno](03_Fig_Distribuciones/0302_MediaVA_2.png){#fig-MediaVA2 .fig-compacta2 fig-align="center" width="80%"}
 
-\
 Si suponemos que la distribución de las estaturas sigue la distribución Normal que hemos comentado, podemos afirmar que las medias de muestras de $n$ individuos seguirán también una distribución Normal, con la misma media que la población, $\mu_{\bar{x}}$=1,70, y una desviación típica que será: $\sigma_{\bar{x}}=\sigma/\sqrt{n}$, en nuestro caso: $0,07/\sqrt{25} = 0,014$.
 
 En definitiva, la media muestral, protagonista destacada en muchos estudios estadísticos, es una variable aleatoria nada misteriosa, con un comportamiento noble y fácil de prever.
