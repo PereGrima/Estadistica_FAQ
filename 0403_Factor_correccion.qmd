@@ -30,7 +30,7 @@ Podemos verlo a través de un caso muy sencillo en que la población solo tiene 
 </table>
 </div>
 ```
-Se comprueba fácilmente que la varianza de las medias muestrales es: $\sigma_{\bar{x}}^2 = 1/6$, que es distinta de $\sigma^2 /n = 1/3$
+Se comprueba fácilmente que la varianza de las medias muestrales es: $\sigma_{\bar{x}}^2 = 1/6$, distinta de $\sigma^2 /n = 1/3$
 
 Las peculiaridades de las poblaciones finitas tienen que ver con que el muestreo se realiza sin reposición. Una vez elegido un elemento ese ya no forma parte de los elegibles y, en consecuencia, la probabilidad de incorporar a la muestra elementos de un cierto tipo depende de cuantos han salido ya de ese tipo. Esto complica los cálculos, pero solo cuando la población es finita. Con el supuesto de población infinita no importa si el muestreo es con o sin reposición: En una baraja infinita, si la probabilidad de sacar una carta de espadas es ¼, esa probabilidad se mantiene constante con independencia del palo a que pertenezcan las cartas que van saliendo. Sin embargo, en una baraja normal de 48 cartas, si la primera es de espadas, la segunda tiene una probabilidad menor de ser de espadas porque del resto de palos quedan 12 y de espadas solo 11.
 
