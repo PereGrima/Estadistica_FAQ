@@ -13,6 +13,8 @@ book:
   sidebar:
       collapse-level: 1
   site-url: https://peregrima.github.io/Estadistica_FAQ/
+  repo-url: https://github.com/PereGrima/Estadistica_FAQ/
+  repo-actions: [issue] # 'issue' adds the report link
   
   chapters:
     - index.qmd
