@@ -9,7 +9,7 @@ book:
   author: "Roberto Behar, Pere Grima"
   date: today
   date-format: medium
-  cover-image: cover.png
+  cover-image: coverPreguntas.jpg
   sidebar:
       collapse-level: 1
   site-url: https://peregrima.github.io/Estadistica_FAQ/
